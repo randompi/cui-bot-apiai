@@ -1,0 +1,15 @@
+name: Hermes CUI Bot
+description: A simple bot for demonstrating CUIs in the medical domain.
+avatar: resources/avatar.png
+background: resources/background.jpg
+config:
+  - name: LOG_LEVEL
+    friendly_name: Severity level to show for logging.
+    info: See https://docs.python.org/2/library/logging.html#levels
+    default: DEBUG
+  - name: SECRET
+    friendly_name: Shhhh
+    info: This is an secret option
+    type: secret
+    default: not secret though
+
