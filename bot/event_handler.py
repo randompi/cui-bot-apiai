@@ -73,7 +73,7 @@ class RtmEventHandler(object):
 
             msg_txt = event['text']
 
-            if self.clients.is_bot_mention(msg_txt):
+            if self.clients.is_bot_mention(msg_txt) or self._is_direct_message(event['channel']):
                 # e.g. user typed: "@pybot tell me a joke!"
                 if 'help' in msg_txt:
                     self.msg_writer.write_help_message(event['channel'])
@@ -84,6 +84,12 @@ class RtmEventHandler(object):
                 elif 'attachment' in msg_txt:
                     self.msg_writer.demo_attachment(event['channel'])
                 else:
+                    if msg_txt.startswith('<@U'):
+                        # message starts with something like: `<@U11T7N1U3>: `... (so strip off user mention)
+                        msg_txt = msg_txt[14:len(msg_txt)]
                     session_id = event['channel'] + ":" + event['user']
                     logger.debug('Sending message: {} to wit_client actions for session_id: {}'.format(msg_txt, session_id))
                     self.wit_client.run_actions(session_id, msg_txt, {})
+
+    def _is_direct_message(self, channel_id):
+        return channel_id.startswith('D')
