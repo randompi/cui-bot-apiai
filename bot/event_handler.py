@@ -130,7 +130,7 @@ class RtmEventHandler(object):
         gender = first_entity_value(entities, 'gender')
         if gender:
             context['gender'] = gender.lower()
-        age = first_entity_value(entities, 'age_of_person')
+        age = first_entity_value(entities, 'patient_age')
         if age:
             age_nums = re.findall('\d+', age)
             if len(age_nums) > 0:
