@@ -1,7 +1,7 @@
 import json
 import logging
 import re
-import sys
+import traceback
 from wit import Wit
 
 # TODO: make this configurable
@@ -111,8 +111,10 @@ class RtmEventHandler(object):
             'say': self.say,
             'merge': self.merge,
             'error': self.error,
+            'clearContext': self.clearContext,
             'lookupHCV': self.lookupHCV,
             'lookupNormalValue': self.lookupNormalValue,
+            'lookupBillingCode': self.lookupBillingCode,
         }
         self.wit_client = Wit(access_token, actions)
         self.context = {}
@@ -138,8 +140,35 @@ class RtmEventHandler(object):
         ventricle = first_entity_value(entities, 'ventricle_type')
         if ventricle:
             context['ventricle'] = ventricle.lower()
+        bct = first_entity_value(entities, 'billing_code_type')
+        if bct:
+            context['bct'] = bct
+        im = first_entity_value(entities, 'image_modality')
+        if im:
+            context['im'] = im
+        anl = first_entity_value(entities, 'anatomy_loc')
+        if anl:
+            context['anl'] = anl
+        # check has to come first to reverse priority
+        if 'ct' in context:
+            conf_stress = first_entity_value(entities, 'confirmation')
+            if conf_stress:
+                context['stress'] = conf_stress.lower()
+        if 'anl' in context:
+            conf_ct = first_entity_value(entities, 'confirmation')
+            if conf_ct:
+                context['ct'] = conf_ct.lower()
+
 
         logger.debug('end merge:: context: {}'.format(context))
+        return context
+
+    def lookupBillingCode(self, session_id, context):
+        logger.debug('lookupBillingCode:: session_id: {}, context: {}'.format(session_id, context))
+
+        # just for demo, in reality need catalog of billing codes given context values
+        context['billing_code'] = '\n> *75559* - _Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging_'
+
         return context
 
     def lookupNormalValue(self, session_id, context):
@@ -179,9 +208,14 @@ class RtmEventHandler(object):
 
         return context
 
+    def clearContext(self, session_id, context):
+        logger.debug('clearContext:: session_id: {}, context: {}'.format(session_id, context))
+        self.context = {}
+        return self.context
+
     def error(self, session_id, context, e):
         logger.debug('error:: session_id: {}, context: {}, e: {}'.format(session_id, context, e))
-        print(str(e))
+        logging.error(str(e))
 
     def handle(self, event):
 
@@ -227,8 +261,14 @@ class RtmEventHandler(object):
                         msg_txt = msg_txt[14:len(msg_txt)]
                     session_id = event['channel'] + ":" + event['user']
                     self.clients.send_user_typing_pause(event['channel'], sleep_time=0.0)
-                    logger.debug('Sending message: {} to wit_client actions for session_id: {} with context: {}'.format(msg_txt, session_id, self.context))
-                    self.wit_client.run_actions(session_id, msg_txt, self.context)
+                    logger.debug('Sending message: {} to wit_client actions for session_id: {} with self.context: {}'.format(msg_txt, session_id, self.context))
+                    try:
+                        self.context = self.wit_client.run_actions(session_id, msg_txt, self.context)
+                    except:
+                        err_msg = traceback.format_exc()
+                        logging.error('Unexpected error: {}'.format(err_msg))
+                        self.context = {}
+                        self.msg_writer.send_message(event['channel'], "_Please see my logs for an error I encountered._")
 
     def _is_direct_message(self, channel_id):
         return channel_id.startswith('D')
