@@ -18,9 +18,27 @@ class Messenger(object):
 
     def write_help_message(self, channel_id):
         bot_uid = self.clients.bot_user_id()
-        txt = '{}\n{}'.format(
-            "I'm a Bot that demonstrates various Conversational User Interfaces in the medical domain:",
-            "> See: https://wit.ai/kcherniwchan/My%20First%20App/stories for example conversations.")
+        txt = '{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}'.format(
+            "I'm a bot that demonstrates various conversational dialogs in the medical domain:",
+            "*Acronym Definitions*",
+            "> _*User:*_ What does ESV stand for?",
+            "> _*Bot:*_ `esv` stands for: _end-systolic volume_",
+            ">    * _Bot knows the following acronyms: (EDV, ESV, EF, SV, Mass)_",
+            "*Cardiac Anatomical Normal Values for a particular Patient Demographic*",
+            "> _*User:*_ What is the normal LV ESV for a 36 year old female?",
+            "> _*Bot:*_ The normal absolute esv value is 40 (ml) +/- 12 or within the range from 16 to 64",
+            "> _*User:*_ What is the normal right ventricle ejection fraction for a 22 year old male?",
+            "> _*Bot:*_ The normal absolute ef value is 61 (%) +/- 6 or within the range from 49 to 73",
+            "*Billing Code for a Procedure*",
+            "> _*User:*_ How can I find the CPT billing code to the MRI procedure we just preformed?",
+            "> _*Bot:*_ I can help with that.  Could you let me know what anatomic part it involved?",
+            "> _*User:*_ heart",
+            "> _*Bot:*_ Was contrast agent used?",
+            "> _*User:*_ no",
+            "> _*Bot:*_ Was the patient scanned using stress imaging?",
+            "> _*User:*_ yes",
+            "> _*Bot:*_ The CPT code you are interested in is:\n>> *75559* - _Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging_"
+        )
         self.send_message(channel_id, txt)
 
     def write_greeting(self, channel_id, user_id):
