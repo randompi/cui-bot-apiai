@@ -117,11 +117,14 @@ class RtmEventHandler(object):
             'lookupBillingCode': self.lookupBillingCode,
         }
         self.wit_client = Wit(access_token, actions)
+        self.dbg_ctx = False
         self.context = {}
 
     def say(self, session_id, context, msg):
         logger.debug('say:: session_id: {}, msg: {}'.format(session_id, msg))
         channel = session_id.split(':')[0]
+        if self.dbg_ctx:
+            msg = msg + '```context: {}```\n'.format(context)
         self.msg_writer.send_message(channel, msg)
 
     def merge(self, session_id, context, entities, msg):
@@ -132,7 +135,9 @@ class RtmEventHandler(object):
         gender = first_entity_value(entities, 'gender')
         if gender:
             context['gender'] = gender.lower()
-        age = first_entity_value(entities, 'patient_age')
+        age = first_entity_value(entities, 'age_of_person')
+        if age is None:
+            age = first_entity_value(entities, 'patient_age')
         if age:
             age_nums = re.findall('\d+', age)
             if len(age_nums) > 0:
@@ -140,16 +145,44 @@ class RtmEventHandler(object):
         ventricle = first_entity_value(entities, 'ventricle_type')
         if ventricle:
             context['ventricle'] = ventricle.lower()
-        bct = first_entity_value(entities, 'billing_code_type')
-        if bct:
-            context['bct'] = bct
-        im = first_entity_value(entities, 'image_modality')
-        if im:
-            context['im'] = im
+
         anl = first_entity_value(entities, 'anatomy_loc')
         if anl:
-            context['anl'] = anl
-        # check has to come first to reverse priority
+            if anl.lower() == 'cardiac':
+                context['anatomy_loc'] = anl
+                bct = first_entity_value(entities, 'billing_code_type')
+                if bct:
+                    context['billing_code_type'] = bct
+                im = first_entity_value(entities, 'image_modality')
+                if im:
+                    context['image_modality'] = im
+                ct_use = first_entity_value(entities, 'contrast_use')
+                if ct_use:
+                    logger.debug('ct_use: {}'.format(ct_use))
+                    if ct_use.startswith('no') or ct_use.startswith('without'):
+                        context['contrast_use'] = False
+                    else:
+                        context['contrast_use'] = True
+                    logger.debug('context[contrast_use]: {}'.format(context['contrast_use']))
+                stress_use = first_entity_value(entities, 'stress_use')
+                if stress_use:
+                    logger.debug('stress_use: {}'.format(stress_use))
+                    if stress_use.startswith('no') or stress_use.startswith('without'):
+                        context['stress_use'] = False
+                    else:
+                        context['stress_use'] = True
+                    logger.debug('context[stress_use]: {}'.format(context['stress_use']))
+            else:
+                context['anl'] = anl
+        else:
+            bct = first_entity_value(entities, 'billing_code_type')
+            if bct:
+                context['bct'] = bct
+            im = first_entity_value(entities, 'image_modality')
+            if im:
+                context['im'] = im
+
+        # confirmation checks have to come first to reverse priority
         if 'ct' in context:
             conf_stress = first_entity_value(entities, 'confirmation')
             if conf_stress:
@@ -210,7 +243,9 @@ class RtmEventHandler(object):
 
     def clearContext(self, session_id, context):
         logger.debug('clearContext:: session_id: {}, context: {}'.format(session_id, context))
-        self.context = {}
+        if 'hcv_meaning' in context or 'norm_val' in context or 'billing_code' in context:
+            self.context = {}
+
         return self.context
 
     def error(self, session_id, context, e):
@@ -255,6 +290,16 @@ class RtmEventHandler(object):
                     self.msg_writer.write_joke(event['channel'])
                 elif 'attachment' in msg_txt:
                     self.msg_writer.demo_attachment(event['channel'])
+                elif ';context' in msg_txt:
+                    if 'debug on' in msg_txt:
+                        self.dbg_ctx = True
+                    elif 'debug off' in msg_txt:
+                        self.dbg_ctx = False
+                    else:
+                        self.msg_writer.send_message(event['channel'], '```context: {}```'.format(self.context))
+                elif ';reset' in msg_txt:
+                    logger.debug('Resetting context to {}')
+                    self.context = {}
                 else:
                     if msg_txt.startswith('<@U'):
                         # message starts with something like: `<@U11T7N1U3>: `... (so strip off user mention)
@@ -264,6 +309,7 @@ class RtmEventHandler(object):
                     logger.debug('Sending message: {} to wit_client actions for session_id: {} with self.context: {}'.format(msg_txt, session_id, self.context))
                     try:
                         self.context = self.wit_client.run_actions(session_id, msg_txt, self.context)
+                        self.context = self.clearContext(session_id, self.context)
                     except:
                         err_msg = traceback.format_exc()
                         logging.error('Unexpected error: {}'.format(err_msg))
