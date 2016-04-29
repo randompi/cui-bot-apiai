@@ -2,11 +2,10 @@ import json
 import logging
 import re
 import traceback
-from wit import Wit
+import apiai
 
 # TODO: make this configurable
-# access_token = '3ASGKNIRJ4U6PDQ66SYNLYCSLEQIGZWD' # kcherniwchan / My First App
-access_token = 'T524XQBBYKKUSVTKG4US7B5KXJJINJHY' # randompi / cui-test
+access_token = '6a6d19088a2d49c2b0912c81c3661653'
 
 
 # TODO: Read these in from editable files
@@ -116,7 +115,7 @@ class RtmEventHandler(object):
             'lookupNormalValue': self.lookupNormalValue,
             'lookupBillingCode': self.lookupBillingCode,
         }
-        self.wit_client = Wit(access_token, actions)
+        self.apiai_client = apiai.ApiAI(access_token)
         self.dbg_ctx = False
         self.context = {}
 
@@ -306,10 +305,12 @@ class RtmEventHandler(object):
                         msg_txt = msg_txt[14:len(msg_txt)]
                     session_id = event['channel'] + ":" + event['user']
                     self.clients.send_user_typing_pause(event['channel'], sleep_time=0.0)
-                    logger.debug('Sending message: {} to wit_client actions for session_id: {} with self.context: {}'.format(msg_txt, session_id, self.context))
+                    logger.debug('Sending message: {} to apiai_client for session_id: {} with self.context: {}'.format(msg_txt, session_id, self.context))
                     try:
-                        self.context = self.wit_client.run_actions(session_id, msg_txt, self.context)
-                        self.context = self.clearContext(session_id, self.context)
+                        req = self.apiai_client.text_request()
+                        req.query = msg_txt
+                        response = req.getresponse()
+                        self.msg_writer.send_message(event['channel'], '```{}```'.format(response.read()))
                     except:
                         err_msg = traceback.format_exc()
                         logging.error('Unexpected error: {}'.format(err_msg))
