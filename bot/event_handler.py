@@ -1,5 +1,6 @@
 import json
 import logging
+import random
 import re
 import traceback
 import apiai
@@ -115,6 +116,7 @@ class RtmEventHandler(object):
             'lookupNormalValue': self.lookupNormalValue,
             'lookupBillingCode': self.lookupBillingCode,
         }
+        self.action_matcher = re.compile('\[.*?\]')
         self.apiai_client = apiai.ApiAI(access_token)
         self.dbg_ctx = False
         self.context = {}
@@ -240,6 +242,22 @@ class RtmEventHandler(object):
 
         return context
 
+    def lookupAcronym(self, acronym):
+        logger.debug('lookupAcronym:: acronym: {}'.format(acronym))
+        acronym_lower = acronym.lower()
+        if acronym_lower == 'edv':
+            return '_end-diastolic volume_'
+        elif acronym_lower == 'esv':
+            return '_end-systolic volume_'
+        elif acronym_lower == 'ef':
+            return '_ejection fraction_'
+        elif acronym_lower == 'sv':
+            return '_stroke volume_'
+        elif acronym_lower == 'mass':
+            return '_myocardial mass_'
+        else:
+            return 'unknown'
+
     def clearContext(self, session_id, context):
         logger.debug('clearContext:: session_id: {}, context: {}'.format(session_id, context))
         if 'hcv_meaning' in context or 'norm_val' in context or 'billing_code' in context:
@@ -289,10 +307,10 @@ class RtmEventHandler(object):
                     self.msg_writer.write_joke(event['channel'])
                 elif 'attachment' in msg_txt:
                     self.msg_writer.demo_attachment(event['channel'])
-                elif ';context' in msg_txt:
-                    if 'debug on' in msg_txt:
+                elif ';debug' in msg_txt:
+                    if 'on' in msg_txt:
                         self.dbg_ctx = True
-                    elif 'debug off' in msg_txt:
+                    elif 'off' in msg_txt:
                         self.dbg_ctx = False
                     else:
                         self.msg_writer.send_message(event['channel'], '```context: {}```'.format(self.context))
@@ -310,7 +328,11 @@ class RtmEventHandler(object):
                         req = self.apiai_client.text_request()
                         req.query = msg_txt
                         response = req.getresponse()
-                        self.msg_writer.send_message(event['channel'], '```{}```'.format(response.read()))
+                        resp_txt = response.read()
+                        resp = json.loads(resp_txt)
+                        self._handle_apiai_response(resp, event)
+                        if self.dbg_ctx:
+                            self.msg_writer.send_message(event['channel'], '```{}```'.format(resp_txt))
                     except:
                         err_msg = traceback.format_exc()
                         logging.error('Unexpected error: {}'.format(err_msg))
@@ -319,3 +341,40 @@ class RtmEventHandler(object):
 
     def _is_direct_message(self, channel_id):
         return channel_id.startswith('D')
+
+    def _handle_apiai_response(self, resp, event):
+        try:
+
+            if resp['result']['score'] > 0.5:
+                msg_resp = resp['result']['fulfillment']['speech']
+                logger.debug('msg_resp: {}'.format(msg_resp))
+                actions = self.action_matcher.findall(msg_resp)
+                for action in actions:
+                    action = action[1:len(action)-1]
+                    #logger.debug('hasattr({}):{}'.format(action, hasattr(self, action)))
+                    if hasattr(self, action):
+                        act_func = getattr(self, action)
+                        act_params = act_func.__code__.co_varnames[1:act_func.__code__.co_argcount]
+                        act_param_vals = {}
+                        for act_param in act_params:
+                            if act_param in resp['result']['parameters'].keys():
+                                act_param_vals[act_param] = resp['result']['parameters'][act_param]
+                        logger.debug('act_param_vals: {}'.format(act_param_vals))
+                        act_val = act_func(**act_param_vals)
+                        msg_resp = msg_resp.replace('[{}]'.format(action), act_val)
+                    else:
+                        logger.error('Undefined action: {} parsed in response message: {}'.format(action, msg_resp))
+                # end for action
+                self.msg_writer.send_message(event['channel'], msg_resp)
+            else:
+                misunderstandings = [
+                    "I'm sorry, I don't quite understand you... can you try saying it a different way?",
+                    "I'm confused. Could you say it differently?",
+                    "Unfortunately I'm not sure how to respond... I'm still learning and getting smarter every day.",
+                    "Do you mind trying something else?  I didn't understand what you wanted.",
+                    "Hmm... I'm not sure what you meant.  Can you elaborate?"
+                ]
+                self.msg_writer.send_message(event['channel'], random.choice(misunderstandings))
+        except Exception as e:
+            logger.exception('Failed to parse response from api.ai: {}', resp)
+            self.msg_writer.send_message(event['channel'], "_Please see my logs for an error I encountered._")
