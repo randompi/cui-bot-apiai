@@ -2,6 +2,7 @@ import json
 import logging
 import random
 import re
+import time
 import traceback
 import apiai
 
@@ -107,15 +108,6 @@ class RtmEventHandler(object):
     def __init__(self, slack_clients, msg_writer):
         self.clients = slack_clients
         self.msg_writer = msg_writer
-        actions = {
-            'say': self.say,
-            'merge': self.merge,
-            'error': self.error,
-            'clearContext': self.clearContext,
-            'lookupHCV': self.lookupHCV,
-            'lookupNormalValue': self.lookupNormalValue,
-            'lookupBillingCode': self.lookupBillingCode,
-        }
         self.action_matcher = re.compile('\[.*?\]')
         self.apiai_client = apiai.ApiAI(access_token)
         self.dbg_ctx = False
@@ -205,42 +197,35 @@ class RtmEventHandler(object):
 
         return context
 
-    def lookupNormalValue(self, session_id, context):
-        logger.debug('lookupNormalValue:: session_id: {}, context: {}'.format(session_id, context))
-        if 'hcv' in context and 'gender' in context and 'age' in context and 'ventricle' in context:
 
-            if context['age'] < 35:
-                age_key = 'lt35'
-            else:
-                age_key = 'gte35'
+    def lookupNormalValue(self, ventricle, hcv, gender, age_in_years):
+        logger.debug('lookupNormalValue:: ventricle:{}, hcv:{}, gender:{}, aged_in_years:{}'.format(ventricle, hcv, gender, age_in_years))
 
-            spec_norm_vals = abs_norm_values[context['gender']][age_key][context['ventricle']][context['hcv']]
-            context['norm_val'] = spec_norm_vals['value']
-            context['std_val'] = spec_norm_vals['sd']
-            context['range_lower'] = spec_norm_vals['range_lower']
-            context['range_upper'] = spec_norm_vals['range_upper']
-            context['hcv_units'] = abs_norm_values['units'][context['hcv']]
+        ventricle = ventricle.lower()
+        hcv = hcv.lower()
+        gender = gender.lower()
+        age = age_in_years['age']
 
-        return context
+        if age < 35:
+            age_key = 'lt35'
+            age_phrase = 'younger than 35 years old'
+        else:
+            age_key = 'gte35'
+            age_phrase = 'older than 35 years old'
 
-    def lookupHCV(self, session_id, context):
-        logger.debug('lookupHCV:: session_id: {}, context: {}'.format(session_id, context))
-        if 'hcv' in context:
-            hcv_val = context['hcv'].lower()
-            if hcv_val == 'edv':
-                context['hcv_meaning'] = '_end-diastolic volume_'
-            elif hcv_val == 'esv':
-                context['hcv_meaning'] = '_end-systolic volume_'
-            elif hcv_val == 'ef':
-                context['hcv_meaning'] = '_ejection fraction_'
-            elif hcv_val == 'sv':
-                context['hcv_meaning'] = '_stroke volume_'
-            elif hcv_val == 'mass':
-                context['hcv_meaning'] = '_myocardial mass_'
-            else:
-                context['hcv_meaning'] = 'unknown'
+        spec_norm_vals = abs_norm_values[gender][age_key][ventricle][hcv]
 
-        return context
+        return "The normal absolute {} {} for a {} {} is {} ({}) +/- {} or within the range from {} to {}".format(
+            ventricle,
+            hcv,
+            gender,
+            age_phrase,
+            spec_norm_vals['value'],
+            abs_norm_values['units'][hcv],
+            spec_norm_vals['sd'],
+            spec_norm_vals['range_lower'],
+            spec_norm_vals['range_upper'],
+        )
 
     def lookupAcronym(self, acronym):
         logger.debug('lookupAcronym:: acronym: {}'.format(acronym))
@@ -325,14 +310,16 @@ class RtmEventHandler(object):
                     self.clients.send_user_typing_pause(event['channel'], sleep_time=0.0)
                     logger.debug('Sending message: {} to apiai_client for session_id: {} with self.context: {}'.format(msg_txt, session_id, self.context))
                     try:
+                        start = time.time()
                         req = self.apiai_client.text_request()
                         req.query = msg_txt
                         response = req.getresponse()
                         resp_txt = response.read()
                         resp = json.loads(resp_txt)
+                        end = time.time()
                         self._handle_apiai_response(resp, event)
                         if self.dbg_ctx:
-                            self.msg_writer.send_message(event['channel'], '```{}```'.format(resp_txt))
+                            self.msg_writer.send_message(event['channel'], '```{}```\n> _Took {} secs_'.format(resp_txt, end-start))
                     except:
                         err_msg = traceback.format_exc()
                         logging.error('Unexpected error: {}'.format(err_msg))
@@ -348,6 +335,10 @@ class RtmEventHandler(object):
             if resp['result']['score'] > 0.5:
                 msg_resp = resp['result']['fulfillment']['speech']
                 logger.debug('msg_resp: {}'.format(msg_resp))
+
+                # searches the msg_resp for instances of '[action_name]', see if there is a function
+                # of that same name and if we can extract the necessary parameters, and if so then
+                # calls the function and replaces that string with the value returned from the function
                 actions = self.action_matcher.findall(msg_resp)
                 for action in actions:
                     action = action[1:len(action)-1]
