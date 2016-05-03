@@ -95,15 +95,6 @@ abs_norm_values = {
 logger = logging.getLogger(__name__)
 
 
-def first_entity_value(entities, entity):
-    if entity not in entities:
-        return None
-    val = entities[entity][0]['value']
-    if not val:
-        return None
-    return val['value'] if isinstance(val, dict) else val
-
-
 class RtmEventHandler(object):
     def __init__(self, slack_clients, msg_writer):
         self.clients = slack_clients
@@ -113,89 +104,21 @@ class RtmEventHandler(object):
         self.dbg_ctx = False
         self.context = {}
 
-    def say(self, session_id, context, msg):
-        logger.debug('say:: session_id: {}, msg: {}'.format(session_id, msg))
-        channel = session_id.split(':')[0]
-        if self.dbg_ctx:
-            msg = msg + '```context: {}```\n'.format(context)
-        self.msg_writer.send_message(channel, msg)
+    def lookupBillingCode(self, anatomical_locale, image_modality, contrast_use, stress_use):
+        logger.debug('lookupBillingCode:: anatomical_locale:{}, image_modality:{}, contrast_use:{}, stress_use:{}'.format(anatomical_locale, image_modality, contrast_use, stress_use))
 
-    def merge(self, session_id, context, entities, msg):
-        logger.debug('merge:: session_id: {}, context: {}, entities:{}, msg:{}'.format(session_id, context, entities, msg))
-        hcv_val = first_entity_value(entities, 'heart_chamber_value')
-        if hcv_val:
-            context['hcv'] = hcv_val.lower()
-        gender = first_entity_value(entities, 'gender')
-        if gender:
-            context['gender'] = gender.lower()
-        age = first_entity_value(entities, 'age_of_person')
-        if age is None:
-            age = first_entity_value(entities, 'patient_age')
-        if age:
-            age_nums = re.findall('\d+', age)
-            if len(age_nums) > 0:
-                context['age'] = age_nums[0]
-        ventricle = first_entity_value(entities, 'ventricle_type')
-        if ventricle:
-            context['ventricle'] = ventricle.lower()
-
-        anl = first_entity_value(entities, 'anatomy_loc')
-        if anl:
-            if anl.lower() == 'cardiac':
-                context['anatomy_loc'] = anl
-                bct = first_entity_value(entities, 'billing_code_type')
-                if bct:
-                    context['billing_code_type'] = bct
-                im = first_entity_value(entities, 'image_modality')
-                if im:
-                    context['image_modality'] = im
-                ct_use = first_entity_value(entities, 'contrast_use')
-                if ct_use:
-                    logger.debug('ct_use: {}'.format(ct_use))
-                    if ct_use.startswith('no') or ct_use.startswith('without'):
-                        context['contrast_use'] = False
-                    else:
-                        context['contrast_use'] = True
-                    logger.debug('context[contrast_use]: {}'.format(context['contrast_use']))
-                stress_use = first_entity_value(entities, 'stress_use')
-                if stress_use:
-                    logger.debug('stress_use: {}'.format(stress_use))
-                    if stress_use.startswith('no') or stress_use.startswith('without'):
-                        context['stress_use'] = False
-                    else:
-                        context['stress_use'] = True
-                    logger.debug('context[stress_use]: {}'.format(context['stress_use']))
-            else:
-                context['anl'] = anl
+        if contrast_use == 'yes':
+            contrast_txt = 'with'
         else:
-            bct = first_entity_value(entities, 'billing_code_type')
-            if bct:
-                context['bct'] = bct
-            im = first_entity_value(entities, 'image_modality')
-            if im:
-                context['im'] = im
+            contrast_txt = 'without'
 
-        # confirmation checks have to come first to reverse priority
-        if 'ct' in context:
-            conf_stress = first_entity_value(entities, 'confirmation')
-            if conf_stress:
-                context['stress'] = conf_stress.lower()
-        if 'anl' in context:
-            conf_ct = first_entity_value(entities, 'confirmation')
-            if conf_ct:
-                context['ct'] = conf_ct.lower()
-
-
-        logger.debug('end merge:: context: {}'.format(context))
-        return context
-
-    def lookupBillingCode(self, session_id, context):
-        logger.debug('lookupBillingCode:: session_id: {}, context: {}'.format(session_id, context))
+        if stress_use == 'yes':
+            stress_txt = 'with'
+        else:
+            stress_txt = 'without'
 
         # just for demo, in reality need catalog of billing codes given context values
-        context['billing_code'] = '\n> *75559* - _Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging_'
-
-        return context
+        return '\n> *75559* - _Cardiac magnetic resonance imaging for morphology and function {} contrast material; {} stress imaging_'.format(contrast_txt, stress_txt)
 
 
     def lookupNormalValue(self, ventricle, hcv, gender, age_in_years):
@@ -242,17 +165,6 @@ class RtmEventHandler(object):
             return '_myocardial mass_'
         else:
             return 'unknown'
-
-    def clearContext(self, session_id, context):
-        logger.debug('clearContext:: session_id: {}, context: {}'.format(session_id, context))
-        if 'hcv_meaning' in context or 'norm_val' in context or 'billing_code' in context:
-            self.context = {}
-
-        return self.context
-
-    def error(self, session_id, context, e):
-        logger.debug('error:: session_id: {}, context: {}, e: {}'.format(session_id, context, e))
-        logging.error(str(e))
 
     def handle(self, event):
 
