@@ -6,12 +6,21 @@ import time
 import traceback
 import apiai
 
+from apiai_client import ApiaiDevClient
+
 # TODO: make this configurable
 access_token = '6a6d19088a2d49c2b0912c81c3661653'
+dev_access_token = '5b9a5f58880e46cba523fbebf4c1bce2'
 
 
 # TODO: Read these in from editable files
-# 'value': , 'sd': , 'range_lower': , 'range_upper':
+acronyms = {
+    'edv': 'end-diastolic volume',
+    'esv': 'end-systolic volume',
+    'ef': 'ejection fraction',
+    'sv': 'stroke volume',
+    'mass': 'myocardial mass',
+}
 abs_norm_values = {
     'male':{
         'lt35':{
@@ -94,6 +103,8 @@ abs_norm_values = {
 
 logger = logging.getLogger(__name__)
 
+class BotUnknownException(Exception):
+    pass
 
 class RtmEventHandler(object):
     def __init__(self, slack_clients, msg_writer):
@@ -101,8 +112,11 @@ class RtmEventHandler(object):
         self.msg_writer = msg_writer
         self.action_matcher = re.compile('\[.*?\]')
         self.apiai_client = apiai.ApiAI(access_token)
+        self.apiai_dev_client = ApiaiDevClient(dev_access_token)
         self.dbg_ctx = False
         self.context = {}
+        self.intent_to_teach = None
+        self.user_is_teaching = False
 
     def lookupBillingCode(self, anatomical_locale, image_modality, contrast_use, stress_use):
         logger.debug('lookupBillingCode:: anatomical_locale:{}, image_modality:{}, contrast_use:{}, stress_use:{}'.format(anatomical_locale, image_modality, contrast_use, stress_use))
@@ -153,18 +167,10 @@ class RtmEventHandler(object):
     def lookupAcronym(self, acronym):
         logger.debug('lookupAcronym:: acronym: {}'.format(acronym))
         acronym_lower = acronym.lower()
-        if acronym_lower == 'edv':
-            return '_end-diastolic volume_'
-        elif acronym_lower == 'esv':
-            return '_end-systolic volume_'
-        elif acronym_lower == 'ef':
-            return '_ejection fraction_'
-        elif acronym_lower == 'sv':
-            return '_stroke volume_'
-        elif acronym_lower == 'mass':
-            return '_myocardial mass_'
+        if acronym_lower in acronyms:
+            return '_{}_'.format(acronyms[acronym_lower])
         else:
-            return 'unknown'
+            raise BotUnknownException('Unknown acronym: {}'.format(acronym_lower))
 
     def handle(self, event):
 
@@ -193,13 +199,16 @@ class RtmEventHandler(object):
         if 'user' in event and not self.clients.is_message_from_me(event['user']):
 
             msg_txt = event['text']
+            if msg_txt.startswith('<@U'):
+                # message starts with something like: `<@U11T7N1U3>: `... (so strip off user mention)
+                msg_txt = msg_txt[14:len(msg_txt)]
 
             if self.clients.is_bot_mention(msg_txt) or self._is_direct_message(event['channel']):
                 # e.g. user typed: "@pybot tell me a joke!"
                 if 'help' in msg_txt:
                     self.msg_writer.write_help_message(event['channel'])
-                elif re.search('hi|hey|hello|howdy', msg_txt):
-                    self.msg_writer.write_greeting(event['channel'], event['user'])
+                # elif re.search('^[hi|hey|hello|howdy]', msg_txt):
+                #     self.msg_writer.write_greeting(event['channel'], event['user'])
                 elif 'joke' in msg_txt:
                     self.msg_writer.write_joke(event['channel'])
                 elif 'attachment' in msg_txt:
@@ -214,10 +223,44 @@ class RtmEventHandler(object):
                 elif ';reset' in msg_txt:
                     logger.debug('Resetting context to {}')
                     self.context = {}
+                elif msg_txt.startswith(';learn'):
+                    cmd_parts = msg_txt.split(' ')
+                    if len(cmd_parts) >= 3:
+                        if cmd_parts[1] == 'acronym':
+                            if '=' in cmd_parts[2]:
+                                acronym_eq = ' '.join(cmd_parts[2:])
+                                self._learn_acronym(acronym_eq)
+                                self.msg_writer.send_message(event['channel'], 'Ok, from now on I will remember that `{}`. Thanks! :mortar_board:'.format(acronym_eq))
+                                return
+                            else:
+                                self.msg_writer.send_message(event['channel'], 'There was not an `=` in {}'.format(cmd_parts[2]))
+                        else:
+                            self.msg_writer.send_message(event['channel'], 'At the moment I only know how to learn an `acronym` and I do not know what a `{}` is... :disappointed:'.format(cmd_parts[1]))
+                    else:
+                        self.msg_writer.send_message(event['channel'], 'I had a problem learning that, I was expecting 3 arguments like: `;learn acronym EF=ejection fraction`')
+                elif self.user_is_teaching is True:
+                    if msg_txt.lower().startswith('y'):
+                        for param in self.intent_to_teach['result']['parameters'].keys():
+                            self.msg_writer.send_message(event['channel'], 'What is the `{}` in `{}`?\n(e.g. you can say something like: `LV=left ventricle`)'.format(param, self.intent_to_teach['result']['resolvedQuery']))
+                    elif '=' in msg_txt:
+                        self._learn_acronym(msg_txt)
+                        self.msg_writer.send_message(event['channel'], 'Ok, from now on I will remember that `{}`. Thanks! :mortar_board:'.format(msg_txt))
+                        self.msg_writer.send_message(event['channel'], 'You can also teach me using the `;learn` command, e.g. `;learn acronym LV=left ventricle`'.format(msg_txt))
+                        self.user_is_teaching = False
+                        self.intent_to_teach = None
+                    else:
+                        self.msg_writer.send_message(event['channel'], 'Sorry, you will have to train me in api.ai then: https://console.api.ai/api-client/#/agent/9fd02603-587a-40f0-bdd8-ccff6cbba764/logs')
+                        self.user_is_teaching = False
+                        self.intent_to_teach = None
+                elif self.intent_to_teach is not None:
+                    if msg_txt.lower().startswith('y'):
+                        self.msg_writer.send_message(event['channel'], 'Were you intending to: {}?'.format(self.intent_to_teach['result']['metadata']['intentName']))
+                        self.user_is_teaching = True
+                    else:
+                        self.intent_to_teach = None
+                        self.msg_writer.send_message(event['channel'], 'Ok, no worries! :simple_smile:')
                 else:
-                    if msg_txt.startswith('<@U'):
-                        # message starts with something like: `<@U11T7N1U3>: `... (so strip off user mention)
-                        msg_txt = msg_txt[14:len(msg_txt)]
+
                     session_id = event['channel'] + ":" + event['user']
                     self.clients.send_user_typing_pause(event['channel'], sleep_time=0.0)
                     logger.debug('Sending message: {} to apiai_client for session_id: {} with self.context: {}'.format(msg_txt, session_id, self.context))
@@ -237,6 +280,22 @@ class RtmEventHandler(object):
                         logging.error('Unexpected error: {}'.format(err_msg))
                         self.context = {}
                         self.msg_writer.send_message(event['channel'], "_Please see my logs for an error I encountered._")
+
+    def _learn_acronym(self, acronym_eq):
+        txt_parts = acronym_eq.split('=')
+        logger.debug("msg_txt: {}, txt_parts: {}".format(acronym_eq, txt_parts))
+        acronyms[txt_parts[0].lower()] = txt_parts[1]
+        entry = [
+            {
+                'value': txt_parts[0],
+                'synonyms': [
+                    txt_parts[0],
+                    txt_parts[0].lower(),
+                    txt_parts[1]
+                ]
+            }
+        ]
+        self.apiai_dev_client.post_entry('6cedca53-6027-44d2-8fd3-d6cf934ca920', entry)
 
     def _is_direct_message(self, channel_id):
         return channel_id.startswith('D')
@@ -263,8 +322,16 @@ class RtmEventHandler(object):
                             if act_param in resp['result']['parameters'].keys():
                                 act_param_vals[act_param] = resp['result']['parameters'][act_param]
                         logger.debug('act_param_vals: {}'.format(act_param_vals))
-                        act_val = act_func(**act_param_vals)
-                        msg_resp = msg_resp.replace('[{}]'.format(action), act_val)
+                        try:
+                            act_val = act_func(**act_param_vals)
+                            msg_resp = msg_resp.replace('[{}]'.format(action), act_val)
+                        except BotUnknownException as botUnkE:
+                            logger.warning('Caught BotUnknownException: {}'.format(botUnkE))
+                            # TODO: See if user can teach the bot?
+
+                            self.msg_writer.send_message(event['channel'], "Unfortunately I don't know that.  Would you like to teach me?")
+                            self.intent_to_teach = resp
+                            return
                     else:
                         logger.error('Undefined action: {} parsed in response message: {}'.format(action, msg_resp))
                 # end for action
