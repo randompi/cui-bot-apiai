@@ -5,6 +5,8 @@ import re
 import time
 import traceback
 import apiai
+import memory
+import os
 
 from apiai_client import ApiaiDevClient
 
@@ -113,10 +115,17 @@ class RtmEventHandler(object):
         self.action_matcher = re.compile('\[.*?\]')
         self.apiai_client = apiai.ApiAI(access_token)
         self.apiai_dev_client = ApiaiDevClient(dev_access_token)
+        self.persist_client = memory.InMemPersister()
         self.dbg_ctx = False
         self.context = {}
         self.intent_to_teach = None
         self.user_is_teaching = False
+
+        persist_token = os.getenv('BEEPBOOP_TOKEN')
+        persist_url = os.getenv('BEEPBOOP_PERSIST_URL')
+        if persist_token is not None and persist_url is not None:
+            logger.debug('Persistence env present - persist_token: {}, persist_url: {}'.format(persist_token, persist_url))
+            self.persist_client = memory.BeepBoopPersister(persist_url, persist_token)
 
     def lookupBillingCode(self, anatomical_locale, image_modality, contrast_use, stress_use):
         logger.debug('lookupBillingCode:: anatomical_locale:{}, image_modality:{}, contrast_use:{}, stress_use:{}'.format(anatomical_locale, image_modality, contrast_use, stress_use))
@@ -213,6 +222,22 @@ class RtmEventHandler(object):
                     self.msg_writer.write_joke(event['channel'])
                 elif 'attachment' in msg_txt:
                     self.msg_writer.demo_attachment(event['channel'])
+                elif ';get' in msg_txt:
+                    get_parts = msg_txt.split(' ')
+                    if len(get_parts) >= 2:
+                        try:
+                            val = self.persist_client.get(get_parts[1])
+                            self.msg_writer.send_message(event['channel'], '```{}```'.format(val))
+                        except memory.PersistenceException as pe:
+                            self.msg_writer.send_message(event['channel'], 'Sorry I encountered a problem:\n```{}```'.format(pe))
+                elif ';set' in msg_txt:
+                    set_parts = msg_txt.split(' ')
+                    if len(set_parts) >= 3:
+                        try:
+                            self.persist_client.set(set_parts[1], set_parts[2])
+                            self.msg_writer.send_message(event['channel'], 'Saved: ```{} : {}```'.format(set_parts[1], set_parts[2]))
+                        except memory.PersistenceException as pe:
+                            self.msg_writer.send_message(event['channel'], 'Sorry I encountered a problem:\n```{}```'.format(pe))
                 elif ';debug' in msg_txt:
                     if 'on' in msg_txt:
                         self.dbg_ctx = True
