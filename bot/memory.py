@@ -47,6 +47,7 @@ class BeepBoopPersister(object):
         if resp.status_code == 200:
             return self._unmarshal(resp.text)
         else:
+            logger.info('Unexpected response from get:: {}'.format(resp))
             raise PersistenceException('Unexpected response: {}'.format(resp.status_code))
 
     def set(self, key, value):
@@ -56,6 +57,7 @@ class BeepBoopPersister(object):
         logger.debug("set:: url: {}, value: {}".format(url, value))
         resp = requests.put(url, json=self._marshal(value))
         if resp.status_code != 200:
+            logger.info('Unexpected response from set:: {}'.format(resp))
             raise PersistenceException('Unexpected response: {}'.format(resp.status_code))
 
     def list(self, begins_with=None):
@@ -68,6 +70,7 @@ class BeepBoopPersister(object):
         if resp.status_code == 200:
             return self._unmarshal(resp.text)
         else:
+            logger.info('Unexpected response from list:: {}'.format(resp))
             raise PersistenceException('Unexpected response: {}'.format(resp.status_code))
 
     def _marshal(self, val):

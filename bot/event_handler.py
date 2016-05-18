@@ -124,7 +124,7 @@ class RtmEventHandler(object):
         persist_token = os.getenv('BEEPBOOP_TOKEN')
         persist_url = os.getenv('BEEPBOOP_PERSIST_URL')
         if persist_token is not None and persist_url is not None:
-            logger.debug('Persistence env present - persist_token: {}, persist_url: {}'.format(persist_token, persist_url))
+            logger.info('Persistence env present - persist_token: {}, persist_url: {}'.format(persist_token, persist_url))
             self.persist_client = memory.BeepBoopPersister(persist_url, persist_token)
 
     def lookupBillingCode(self, anatomical_locale, image_modality, contrast_use, stress_use):
