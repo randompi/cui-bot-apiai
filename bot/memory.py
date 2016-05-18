@@ -42,7 +42,7 @@ class BeepBoopPersister(object):
 
     def get(self, key):
         url = '{}/persist/kv/{}'.format(self.persist_url, key)
-        logger.debug("get:: url: {}".format(url))
+        logger.info("get:: url: {}".format(url))
         resp = requests.get(url, headers=self._prepare_headers())
         if resp.status_code == 200:
             return self._unmarshal(resp.text)
@@ -54,15 +54,15 @@ class BeepBoopPersister(object):
         if value == None:
             raise PersistenceException('Cannot set a value of None')
         url = '{}/persist/kv/{}'.format(self.persist_url, key)
-        logger.debug("set:: url: {}, value: {}".format(url, value))
+        logger.info("set:: url: {}, value: {}".format(url, value))
         resp = requests.put(url, headers=self._prepare_headers(), json=self._marshal(value))
         if resp.status_code != 200:
-            logger.info('Unexpected response from set:: {}'.format(resp))
-            raise PersistenceException('Unexpected response: {}'.format(resp.status_code))
+            logger.info('Unexpected response from set:: {}\ntext: {}'.format(resp, resp.text))
+            raise PersistenceException('Unexpected response: {}\ntext: {}'.format(resp, resp.text))
 
     def list(self, begins_with=None):
         url = '{}/persist/kv'.format(self.persist_url)
-        logger.debug("list:: url: {}, begins_with: {}".format(url, begins_with))
+        logger.info("list:: url: {}, begins_with: {}".format(url, begins_with))
         params = {}
         if begins_with is not None:
             params = {'begins':begins_with}
