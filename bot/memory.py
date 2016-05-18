@@ -24,8 +24,13 @@ class InMemPersister(object):
     def set(self, key, value):
         self.mem[key] = value
 
-    def list(self):
-        return self.mem.keys()
+    def list(self, begins_with=None):
+        if begins_with is not None:
+            keys = self.mem.keys()
+            filtered = [k for k in keys if k.startswith(begins_with)]
+            return filtered
+        else:
+            return self.mem.keys()
 
     def delete(self, key):
         del self.mem[key]
@@ -40,7 +45,7 @@ class BeepBoopPersister(object):
         logger.debug("get:: url: {}".format(url))
         resp = requests.get(url, headers=self._prepare_headers())
         if resp.status_code == 200:
-            return resp.json()
+            return self._unmarshal(resp.text)
         else:
             raise PersistenceException('Unexpected response: {}'.format(resp.status_code))
 
@@ -49,10 +54,27 @@ class BeepBoopPersister(object):
             raise PersistenceException('Cannot set a value of None')
         url = '{}/persist/kv/{}'.format(self.persist_url, key)
         logger.debug("set:: url: {}, value: {}".format(url, value))
-        resp = requests.put(url, json=json.loads(value))
+        resp = requests.put(url, json=self._marshal(value))
         if resp.status_code != 200:
             raise PersistenceException('Unexpected response: {}'.format(resp.status_code))
 
+    def list(self, begins_with=None):
+        url = '{}/persist/kv'.format(self.persist_url)
+        logger.debug("list:: url: {}, begins_with: {}".format(url, begins_with))
+        params = {}
+        if begins_with is not None:
+            params = {'begins':begins_with}
+        resp = requests.get(url, params=params)
+        if resp.status_code == 200:
+            return self._unmarshal(resp.text)
+        else:
+            raise PersistenceException('Unexpected response: {}'.format(resp.status_code))
+
+    def _marshal(self, val):
+        return json.dumps(val)
+
+    def _unmarshal(self, json):
+        return json.loads(json)
 
     def _prepare_headers(self):
         return {

@@ -238,6 +238,18 @@ class RtmEventHandler(object):
                             self.msg_writer.send_message(event['channel'], 'Saved: ```{} : {}```'.format(set_parts[1], set_parts[2]))
                         except memory.PersistenceException as pe:
                             self.msg_writer.send_message(event['channel'], 'Sorry I encountered a problem:\n```{}```'.format(pe))
+                elif ';list' in msg_txt:
+                    list_parts = msg_txt.split(' ')
+                    begins_with = None
+                    if len(list_parts) >= 2:
+                        begins_with = list_parts[1]
+                    try:
+                        keys = self.persist_client.list(begins_with=begins_with)
+                        self.msg_writer.send_message(event['channel'],
+                                                     'Keys: ```{}```'.format(keys))
+                    except memory.PersistenceException as pe:
+                        self.msg_writer.send_message(event['channel'],
+                                                     'Sorry I encountered a problem:\n```{}```'.format(pe))
                 elif ';debug' in msg_txt:
                     if 'on' in msg_txt:
                         self.dbg_ctx = True
