@@ -55,7 +55,7 @@ class BeepBoopPersister(object):
             raise PersistenceException('Cannot set a value of None')
         url = '{}/persist/kv/{}'.format(self.persist_url, key)
         logger.info("set:: url: {}, value: {}".format(url, value))
-        resp = requests.put(url, headers=self._prepare_headers(), json=self._marshal(value))
+        resp = requests.put(url, headers=self._prepare_headers(), data=self._marshal(value))
         if resp.status_code != 200:
             logger.info('Unexpected response from set:: {}\ntext: {}'.format(resp, resp.text))
             raise PersistenceException('Unexpected response: {}\ntext: {}'.format(resp, resp.text))
