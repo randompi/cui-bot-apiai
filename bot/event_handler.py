@@ -22,6 +22,18 @@ acronyms = {
     'ef': 'ejection fraction',
     'sv': 'stroke volume',
     'mass': 'myocardial mass',
+    'lv': 'left ventricle',
+    'rv': 'right ventricle',
+    'vf': 'ventricular fibrillation',
+    'ra': 'right atrium',
+    'la': 'left atria',
+    'ege': 'early gadolinium enhancement',
+    'mvo': 'microvascular obstruction',
+    'pa': 'pulmonary artery',
+    'lad': 'left anterior descending artery',
+    'cx': 'circumflex artery',
+    'gd': 'gadolinium',
+    'lvot': 'left ventricular outflow tract',
 }
 abs_norm_values = {
     'male':{
@@ -126,6 +138,10 @@ class RtmEventHandler(object):
         if persist_token is not None and persist_url is not None:
             logger.info('Persistence env present - persist_token: {}, persist_url: {}'.format(persist_token, persist_url))
             self.persist_client = memory.BeepBoopPersister(persist_url, persist_token)
+            # fetch latest from persistence on start up
+            self.cardio_acronyms = self.persist_client.get('acronyms')
+        else:
+            self.cardio_acronyms = acronyms
 
     def lookupBillingCode(self, anatomical_locale, image_modality, contrast_use, stress_use):
         logger.debug('lookupBillingCode:: anatomical_locale:{}, image_modality:{}, contrast_use:{}, stress_use:{}'.format(anatomical_locale, image_modality, contrast_use, stress_use))
@@ -176,8 +192,8 @@ class RtmEventHandler(object):
     def lookupAcronym(self, acronym):
         logger.debug('lookupAcronym:: acronym: {}'.format(acronym))
         acronym_lower = acronym.lower()
-        if acronym_lower in acronyms:
-            return '_{}_'.format(acronyms[acronym_lower])
+        if acronym_lower in self.cardio_acronyms:
+            return '_{}_'.format(self.cardio_acronyms[acronym_lower])
         else:
             raise BotUnknownException('Unknown acronym: {}'.format(acronym_lower))
 
@@ -213,15 +229,10 @@ class RtmEventHandler(object):
                 msg_txt = msg_txt[14:len(msg_txt)]
 
             if self.clients.is_bot_mention(msg_txt) or self._is_direct_message(event['channel']):
-                # e.g. user typed: "@pybot tell me a joke!"
+                # e.g. user typed: "@bot tell me a joke!"
                 if 'help' in msg_txt:
                     self.msg_writer.write_help_message(event['channel'])
-                # elif re.search('^[hi|hey|hello|howdy]', msg_txt):
-                #     self.msg_writer.write_greeting(event['channel'], event['user'])
-                elif 'joke' in msg_txt:
-                    self.msg_writer.write_joke(event['channel'])
-                elif 'attachment' in msg_txt:
-                    self.msg_writer.demo_attachment(event['channel'])
+
                 elif ';get' in msg_txt:
                     get_parts = msg_txt.split(' ')
                     if len(get_parts) >= 2:
@@ -336,7 +347,11 @@ class RtmEventHandler(object):
     def _learn_acronym(self, acronym_eq):
         txt_parts = acronym_eq.split('=')
         logger.debug("msg_txt: {}, txt_parts: {}".format(acronym_eq, txt_parts))
-        acronyms[txt_parts[0].lower()] = txt_parts[1]
+        self.cardio_acronyms[txt_parts[0].lower()] = txt_parts[1]
+        try:
+            self.persist_client.set('acronyms', self.cardio_acronyms)
+        except memory.PersistenceException as pe:
+            logger.error('Caught memory.PersistenceException: {}'.format(pe))
         entry = [
             {
                 'value': txt_parts[0],
@@ -390,7 +405,7 @@ class RtmEventHandler(object):
                 self.msg_writer.send_message(event['channel'], msg_resp)
             else:
                 misunderstandings = [
-                    "I'm sorry, I don't quite understand you... can you try saying it a different way?",
+                    "I'm sorry, I didn't quite understand you...",
                     "I'm confused. Could you say it differently?",
                     "Unfortunately I'm not sure how to respond... I'm still learning and getting smarter every day.",
                     "Do you mind trying something else?  I didn't understand what you wanted.",
