@@ -47,15 +47,14 @@ class BeepBoopPersister(object):
         if resp.status_code == 200:
             return self._unmarshal(resp.text)
         else:
-            logger.info('Unexpected response from get:: {}'.format(resp))
-            raise PersistenceException('Unexpected response: {}'.format(resp.status_code))
+            logger.info('Unexpected response from get:: {}\ntext: {}'.format(resp, resp.text))
+            raise PersistenceException('Unexpected response: {}\ntext: {}'.format(resp, resp.text))
 
     def set(self, key, value):
         if value == None:
             raise PersistenceException('Cannot set a value of None')
         url = '{}/persist/kv/{}'.format(self.persist_url, key)
-        if isinstance(value, basestring):
-            value = { value: value}
+        value = {'value': value}
         logger.info("set:: url: {}, value: {}".format(url, value))
         resp = requests.put(url, headers=self._prepare_headers(), json=value)
         if resp.status_code != 200:
@@ -72,8 +71,18 @@ class BeepBoopPersister(object):
         if resp.status_code == 200:
             return self._unmarshal(resp.text)
         else:
-            logger.info('Unexpected response from list:: {}'.format(resp))
-            raise PersistenceException('Unexpected response: {}'.format(resp.status_code))
+            logger.info('Unexpected response from list:: {}\ntext: {}'.format(resp, resp.text))
+            raise PersistenceException('Unexpected response: {}\ntext: {}'.format(resp, resp.text))
+
+    def delete(self, key):
+        url = '{}/persist/kv/{}'.format(self.persist_url, key)
+        logger.info("delete:: url: {}".format(url))
+        resp = requests.delete(url, headers=self._prepare_headers())
+        if resp.status_code == 200:
+            return
+        else:
+            logger.info('Unexpected response from delete:: {}\ntext: {}'.format(resp, resp.text))
+            raise PersistenceException('Unexpected response: {}\ntext: {}'.format(resp, resp.text))
 
     def _marshal(self, val):
         return json.dumps(val)

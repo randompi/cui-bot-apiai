@@ -257,6 +257,14 @@ class RtmEventHandler(object):
                     except memory.PersistenceException as pe:
                         self.msg_writer.send_message(event['channel'],
                                                      'Sorry I encountered a problem:\n```{}```'.format(pe))
+                elif ';del' in msg_txt:
+                    del_parts = msg_txt.split(' ')
+                    if len(del_parts) >= 2:
+                        try:
+                            self.persist_client.delete(del_parts[1])
+                            self.msg_writer.send_message(event['channel'], 'Deleted: ```{}```'.format(del_parts[1]))
+                        except memory.PersistenceException as pe:
+                            self.msg_writer.send_message(event['channel'], 'Sorry I encountered a problem:\n```{}```'.format(pe))
                 elif ';debug' in msg_txt:
                     if 'on' in msg_txt:
                         self.dbg_ctx = True
