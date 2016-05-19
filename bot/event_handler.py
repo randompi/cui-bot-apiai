@@ -238,6 +238,13 @@ class RtmEventHandler(object):
                             self.msg_writer.send_message(event['channel'], 'Saved: ```{} : {}```'.format(set_parts[1], set_parts[2]))
                         except memory.PersistenceException as pe:
                             self.msg_writer.send_message(event['channel'], 'Sorry I encountered a problem:\n```{}```'.format(pe))
+                    elif len(set_parts) == 2:
+                        if set_parts[1] == 'acronyms':
+                            try:
+                                self.persist_client.set('acronyms', acronyms)
+                                self.msg_writer.send_message(event['channel'],'Saved: ```{} : {}```'.format('acronyms', acronyms))
+                            except memory.PersistenceException as pe:
+                                self.msg_writer.send_message(event['channel'],'Sorry I encountered a problem:\n```{}```'.format(pe))
                 elif ';list' in msg_txt:
                     list_parts = msg_txt.split(' ')
                     begins_with = None
