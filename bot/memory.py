@@ -76,8 +76,8 @@ class BeepBoopPersister(object):
     def _marshal(self, val):
         return json.dumps(val)
 
-    def _unmarshal(self, json):
-        return json.loads(json)
+    def _unmarshal(self, val):
+        return json.loads(val)
 
     def _prepare_headers(self):
         return {
