@@ -54,8 +54,6 @@ class BeepBoopPersister(object):
         payload = {}
         if value == None:
             raise PersistenceException('Cannot set a value of None')
-        elif isinstance(value, basestring):
-            payload = {'value': value}
         else:
             payload = {'value': self._marshal(value)}
         url = '{}/persist/kv/{}'.format(self.persist_url, key)
