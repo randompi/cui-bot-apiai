@@ -346,7 +346,7 @@ class RtmEventHandler(object):
 
     def _learn_acronym(self, acronym_eq):
         txt_parts = acronym_eq.split('=')
-        logger.debug("msg_txt: {}, txt_parts: {}".format(acronym_eq, txt_parts))
+        logger.info("msg_txt: {}, txt_parts: {}, cardio_acronyms: {}".format(acronym_eq, txt_parts, self.cardio_acronyms))
         self.cardio_acronyms[txt_parts[0].lower()] = txt_parts[1]
         try:
             self.persist_client.set('acronyms', self.cardio_acronyms)
