@@ -45,7 +45,7 @@ class BeepBoopPersister(object):
         logger.info("get:: url: {}".format(url))
         resp = requests.get(url, headers=self._prepare_headers())
         if resp.status_code == 200:
-            return self._unmarshal(resp.text)['value']
+            return self._unmarshal(resp.json()['value'])
         else:
             logger.info('Unexpected response from get:: {}\ntext: {}'.format(resp, resp.text))
             raise PersistenceException('Unexpected response: {}\ntext: {}'.format(resp, resp.text))
