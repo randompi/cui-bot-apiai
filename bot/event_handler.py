@@ -139,9 +139,7 @@ class RtmEventHandler(object):
             logger.info('Persistence env present - persist_token: {}, persist_url: {}'.format(persist_token, persist_url))
             self.persist_client = memory.BeepBoopPersister(persist_url, persist_token)
             # fetch latest from persistence on start up
-            persited_acronyms = self.persist_client.get('acronyms')
-            logger.info('persisted_acronyms.type: {}, value: {}'.format(type(persited_acronyms), persited_acronyms))
-            self.cardio_acronyms = acronyms
+            self.cardio_acronyms = self.persist_client.get('acronyms')
         else:
             self.cardio_acronyms = acronyms
 
