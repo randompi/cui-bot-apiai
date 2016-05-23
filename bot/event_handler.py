@@ -40,7 +40,7 @@ abs_norm_values = {
         'lt35':{
             'lv':{
                 'edv':{'value': 173, 'sd': 29, 'range_lower': 115, 'range_upper': 231},
-                'esv':{'value': -1, 'sd': 15, 'range_lower': 27, 'range_upper': 87},
+                'esv':{'value': 57, 'sd': 15, 'range_lower': 27, 'range_upper': 87},
                 'sv':{'value': 118, 'sd': 18, 'range_lower': 82, 'range_upper': 154},
                 'ef':{'value': 67, 'sd': 5, 'range_lower': 57, 'range_upper': 77},
                 'mass':{'value': 131, 'sd': 21, 'range_lower': 89, 'range_upper': 173},

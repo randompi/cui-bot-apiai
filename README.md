@@ -1,14 +1,8 @@
-starter-python-bot
+CUI POC Api.ai Bot
 =============
 
 ## Overview
-A simple starting point for creating a Beep Boop hostable, Python based Slack bot.
-
-Visit [Beep Boop](https://beepboophq.com/docs/article/overview) to get the scoop on the the Beep Boop hosting platform. The Slack API documentation can be found [here](https://api.slack.com/).
-
-## Assumptions
-* You have already signed up with [Beep Boop](https://beepboophq.com) and have a local fork of this project.
-* You have sufficient rights in your Slack team to configure a bot and generate/access a Slack API token.
+The Conversational User Interface (CUI) proof-of-concept bot integrates with [api.ai](http://api.ai) on the back-end for intent matching, entity extraction, and slot filling in order to fulfill different conversational dialog scenarios in the medical domain.
 
 ## Usage
 
@@ -31,35 +25,10 @@ If you want change the logging level, prepend `export LOG_LEVEL=<your level>; ` 
 ### Run in BeepBoop
 If you have linked your local repo with the Beep Boop service (check [here](https://beepboophq.com/0_o/my-projects)), changes pushed to the remote master branch will automatically deploy.
 
-### First Conversations
-When you go through the `Add your App to Slack` flow, you'll setup a new Bot User and give them a handle (like @python-rtmbot).
+### Run Unit Tests
+From the root of the project directory:
 
-Here is an example interaction dialog that works with this bot:
-```
-Joe Dev [3:29 PM]
-hi @python-rtmbot
-
-Slacks PythonBot BOT [3:29 PM]
-Nice to meet you, @randall.barnhart!
-
-Joe Dev [3:30 PM]
-help @python-rtmbot
-
-Slacks PythonBot BOT [3:30 PM]
-I'm your friendly Slack bot written in Python.  I'll ​*​_respond_​*​ to the following commands:
->`hi @python-rtmbot` - I'll respond with a randomized greeting mentioning your user. :wave:
-> `@python-rtmbot joke` - I'll tell you one of my finest jokes, with a typing pause for effect. :laughing:
-> `@python-rtmbot attachment` - I'll demo a post with an attachment using the Web API. :paperclip:
-
-Joe Dev [3:31 PM]
-@python-rtmbot: joke
-
-Slacks PythonBot BOT [3:31 PM]
-Why did the python cross the road?
-
-[3:31]
-To eat the chicken on the other side! :laughing:
-```
+	python -m unittest discover -s tests -p "*_test.py"
 
 ## Code Organization
 If you want to add or change an event that the bot responds (e.g. when the bot is mentioned, when the bot joins a channel, when a user types a message, etc.), you can modify the `_handle_by_type` method in `event_handler.py`.
@@ -73,6 +42,3 @@ The `slack_clients.py` module provides a facade of two different Slack API clien
 
 The `slack_bot.py` module implements and interface that is needed to run a multi-team bot using the Beep Boop Resource API client, by implementing an interface that includes `start()` and `stop()` methods and a function that spawns new instances of your bot: `spawn_bot`.  It is the main run loop of your bot instance that will listen to a particular Slack team's RTM events, and dispatch them to the `event_handler`.
 
-## License
-
-See the [LICENSE](LICENSE.md) file for license rights and limitations (MIT).
