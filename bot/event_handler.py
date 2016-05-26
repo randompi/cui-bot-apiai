@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 import json
 import logging
 import random
@@ -114,6 +116,34 @@ abs_norm_values = {
     },
 }
 
+protocols = {
+    'myocardial_disease' : {
+        'DCM' : [0,1,2,3,7],
+        'HCM' : [0,1,4,5,7],
+        'LVNC' : [0,1,7],
+        'ARVC' : [0,1,3,7],
+        'Amyloidosis' : [0,1,2,6,7,8],
+        'Sarcoidosis' : [0,1,3,7],
+        'Endomyocardial Fibrosis' : [0,1,2,6,7],
+        'Iron Overload' : [0,1,2,9],
+        'Tako-Tsubo Cardiomyopathy' : [0,1,2,3,7],
+        'Myocarditis' : [0,1,2,3,7]
+    },
+}
+
+protocol_modules = [
+    'Anatomy module',
+    'LV Function module',
+    'Edema module',
+    'RV Function module',
+    'Velocity Encoding',
+    'LV tagging',
+    'EGE',
+    'LGE module',
+    'T1 Mapping',
+    'T2* Mapping',
+]
+
 
 logger = logging.getLogger(__name__)
 
@@ -196,6 +226,14 @@ class RtmEventHandler(object):
             return '_{}_'.format(self.cardio_acronyms[acronym_lower])
         else:
             raise BotUnknownException('Unknown acronym: {}'.format(acronym_lower))
+
+    def lookupProtocol(self, myocardial_disease):
+        logger.debug('lookupProtocol:: myocardial_disease: {}'.format(myocardial_disease))
+        protocol_str = 'The protocol for _{}_ is:\n'.format(myocardial_disease)
+        proto_mods = protocols['myocardial_disease'][myocardial_disease]
+        for proto_mod in proto_mods:
+            protocol_str += '> {}\n'.format(protocol_modules[proto_mod])
+        return protocol_str
 
     def handle(self, event):
 
