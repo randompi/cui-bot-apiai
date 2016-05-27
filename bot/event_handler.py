@@ -229,7 +229,7 @@ class RtmEventHandler(object):
 
     def lookupProtocol(self, myocardial_disease):
         logger.debug('lookupProtocol:: myocardial_disease: {}'.format(myocardial_disease))
-        protocol_str = 'The protocol for _{}_ is:\n'.format(myocardial_disease)
+        protocol_str = 'The SCMR recommended protocol for _{}_ is:\n'.format(myocardial_disease)
         proto_mods = protocols['myocardial_disease'][myocardial_disease]
         for proto_mod in proto_mods:
             protocol_str += '> {}\n'.format(protocol_modules[proto_mod])
