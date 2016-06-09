@@ -11,6 +11,7 @@ import memory
 import os
 
 from apiai_client import ApiaiDevClient
+import sqlyzer
 
 # TODO: make this configurable
 access_token = '6a6d19088a2d49c2b0912c81c3661653'
@@ -158,6 +159,7 @@ class RtmEventHandler(object):
         self.apiai_client = apiai.ApiAI(access_token)
         self.apiai_dev_client = ApiaiDevClient(dev_access_token)
         self.persist_client = memory.InMemPersister()
+        self.sqlyzer = None
         self.dbg_ctx = False
         self.context = {}
         self.intent_to_teach = None
@@ -267,53 +269,21 @@ class RtmEventHandler(object):
                 msg_txt = msg_txt[14:len(msg_txt)]
 
             if self.clients.is_bot_mention(msg_txt) or self._is_direct_message(event['channel']):
-                # e.g. user typed: "@bot tell me a joke!"
+
+
                 if 'help' in msg_txt:
                     self.msg_writer.write_help_message(event['channel'])
 
-                elif ';get' in msg_txt:
-                    get_parts = msg_txt.split(' ')
-                    if len(get_parts) >= 2:
-                        try:
-                            val = self.persist_client.get(get_parts[1])
-                            self.msg_writer.send_message(event['channel'], '```{}```'.format(val))
-                        except memory.PersistenceException as pe:
-                            self.msg_writer.send_message(event['channel'], 'Sorry I encountered a problem:\n```{}```'.format(pe))
-                elif ';set' in msg_txt:
-                    set_parts = msg_txt.split(' ')
-                    if len(set_parts) >= 3:
-                        try:
-                            self.persist_client.set(set_parts[1], set_parts[2])
-                            self.msg_writer.send_message(event['channel'], 'Saved: ```{} : {}```'.format(set_parts[1], set_parts[2]))
-                        except memory.PersistenceException as pe:
-                            self.msg_writer.send_message(event['channel'], 'Sorry I encountered a problem:\n```{}```'.format(pe))
-                    elif len(set_parts) == 2:
-                        if set_parts[1] == 'acronyms':
-                            try:
-                                self.persist_client.set('acronyms', acronyms)
-                                self.msg_writer.send_message(event['channel'],'Saved: ```{} : {}```'.format('acronyms', acronyms))
-                            except memory.PersistenceException as pe:
-                                self.msg_writer.send_message(event['channel'],'Sorry I encountered a problem:\n```{}```'.format(pe))
-                elif ';list' in msg_txt:
-                    list_parts = msg_txt.split(' ')
-                    begins_with = None
-                    if len(list_parts) >= 2:
-                        begins_with = list_parts[1]
-                    try:
-                        keys = self.persist_client.list(begins_with=begins_with)
-                        self.msg_writer.send_message(event['channel'],
-                                                     'Keys: ```{}```'.format(keys))
-                    except memory.PersistenceException as pe:
-                        self.msg_writer.send_message(event['channel'],
-                                                     'Sorry I encountered a problem:\n```{}```'.format(pe))
-                elif ';del' in msg_txt:
-                    del_parts = msg_txt.split(' ')
-                    if len(del_parts) >= 2:
-                        try:
-                            self.persist_client.delete(del_parts[1])
-                            self.msg_writer.send_message(event['channel'], 'Deleted: ```{}```'.format(del_parts[1]))
-                        except memory.PersistenceException as pe:
-                            self.msg_writer.send_message(event['channel'], 'Sorry I encountered a problem:\n```{}```'.format(pe))
+                # things like: ;list, ;get, ;set, and ;del
+                elif self._handle_persist_commands(msg_txt, event):
+                    pass
+
+                elif self._handle_parse_sql_schema(msg_txt, event):
+                    pass
+
+                elif self.context.get('is_mapping_schema'):
+                    self._handle_schema_mapping(msg_txt, event)
+
                 elif ';debug' in msg_txt:
                     if 'on' in msg_txt:
                         self.dbg_ctx = True
@@ -321,9 +291,11 @@ class RtmEventHandler(object):
                         self.dbg_ctx = False
                     else:
                         self.msg_writer.send_message(event['channel'], '```context: {}```'.format(self.context))
+
                 elif ';reset' in msg_txt:
                     logger.debug('Resetting context to {}')
                     self.context = {}
+
                 elif msg_txt.startswith(';learn'):
                     cmd_parts = msg_txt.split(' ')
                     if len(cmd_parts) >= 3:
@@ -350,7 +322,7 @@ class RtmEventHandler(object):
                         self.user_is_teaching = False
                         self.intent_to_teach = None
                     else:
-                        self.msg_writer.send_message(event['channel'], 'Sorry, you will have to train me in api.ai then: https://console.api.ai/api-client/#/agent/9fd02603-587a-40f0-bdd8-ccff6cbba764/logs')
+                        self.msg_writer.send_message(event['channel'], 'Sorry, you will have to train me in api.ai')
                         self.user_is_teaching = False
                         self.intent_to_teach = None
                 elif self.intent_to_teach is not None:
@@ -361,26 +333,118 @@ class RtmEventHandler(object):
                         self.intent_to_teach = None
                         self.msg_writer.send_message(event['channel'], 'Ok, no worries! :simple_smile:')
                 else:
+                    self._request_to_apiai(msg_txt, event, self._handle_apiai_response)
 
-                    session_id = event['channel'] + ":" + event['user']
-                    self.clients.send_user_typing_pause(event['channel'], sleep_time=0.0)
-                    logger.debug('Sending message: {} to apiai_client for session_id: {} with self.context: {}'.format(msg_txt, session_id, self.context))
+    def _handle_persist_commands(self, msg_txt, event):
+
+        if ';get' in msg_txt:
+            get_parts = msg_txt.split(' ')
+            if len(get_parts) >= 2:
+                try:
+                    val = self.persist_client.get(get_parts[1])
+                    self.msg_writer.send_message(event['channel'], '```{}```'.format(val))
+                except memory.PersistenceException as pe:
+                    self.msg_writer.send_message(event['channel'], 'Sorry I encountered a problem:\n```{}```'.format(pe))
+            return True
+
+        elif ';set' in msg_txt:
+            set_parts = msg_txt.split(' ')
+            if len(set_parts) >= 3:
+                try:
+                    self.persist_client.set(set_parts[1], set_parts[2])
+                    self.msg_writer.send_message(event['channel'], 'Saved: ```{} : {}```'.format(set_parts[1], set_parts[2]))
+                except memory.PersistenceException as pe:
+                    self.msg_writer.send_message(event['channel'], 'Sorry I encountered a problem:\n```{}```'.format(pe))
+            elif len(set_parts) == 2:
+                if set_parts[1] == 'acronyms':
                     try:
-                        start = time.time()
-                        req = self.apiai_client.text_request()
-                        req.query = msg_txt
-                        response = req.getresponse()
-                        resp_txt = response.read()
-                        resp = json.loads(resp_txt)
-                        end = time.time()
-                        self._handle_apiai_response(resp, event)
-                        if self.dbg_ctx:
-                            self.msg_writer.send_message(event['channel'], '```{}```\n> _Took {} secs_'.format(resp_txt, end-start))
-                    except:
-                        err_msg = traceback.format_exc()
-                        logging.error('Unexpected error: {}'.format(err_msg))
-                        self.context = {}
-                        self.msg_writer.send_message(event['channel'], "_Please see my logs for an error I encountered._")
+                        self.persist_client.set('acronyms', acronyms)
+                        self.msg_writer.send_message(event['channel'], 'Saved: ```{} : {}```'.format('acronyms', acronyms))
+                    except memory.PersistenceException as pe:
+                        self.msg_writer.send_message(event['channel'], 'Sorry I encountered a problem:\n```{}```'.format(pe))
+            return True
+
+        elif ';list' in msg_txt:
+            list_parts = msg_txt.split(' ')
+            begins_with = None
+            if len(list_parts) >= 2:
+                begins_with = list_parts[1]
+            try:
+                keys = self.persist_client.list(begins_with=begins_with)
+                self.msg_writer.send_message(event['channel'],
+                                             'Keys: ```{}```'.format(keys))
+            except memory.PersistenceException as pe:
+                self.msg_writer.send_message(event['channel'],
+                                             'Sorry I encountered a problem:\n```{}```'.format(pe))
+            return True
+
+        elif ';del' in msg_txt:
+            del_parts = msg_txt.split(' ')
+            if len(del_parts) >= 2:
+                try:
+                    self.persist_client.delete(del_parts[1])
+                    self.msg_writer.send_message(event['channel'], 'Deleted: ```{}```'.format(del_parts[1]))
+                except memory.PersistenceException as pe:
+                    self.msg_writer.send_message(event['channel'], 'Sorry I encountered a problem:\n```{}```'.format(pe))
+            return True
+
+        return False
+
+
+    def _handle_parse_sql_schema(self, msg_txt, event):
+
+        if ';parse' in msg_txt:
+            cmd_parts = msg_txt.split(' ')
+            if len(cmd_parts) == 2:
+                if cmd_parts[1] == 'BillingCodes.sql':
+                    self.msg_writer.send_message(event['channel'], 'Parsing {}: ```{}```'.format(cmd_parts[1], sqlyzer.billing_code_schema[0]))
+                    try:
+                        self.sqlyzer = sqlyzer.Sqlyzer(sqlyzer.billing_code_schema[0])
+                    except Exception as e:
+                        logger.error('Failed parsing with exception: {}'.format(e))
+                        return False
+
+                    self.msg_writer.send_message(event['channel'], '> Parsed: ```{}```'.format(self.sqlyzer.tables))
+                    self.context['is_mapping_schema'] = True
+                    self.context['mapping_tables'] = [self.sqlyzer.tables.keys()[0]]
+                    self._handle_schema_mapping(msg_txt, event)
+
+                    return True
+
+
+    def _handle_schema_mapping(self, msg_txt, event):
+
+        if self.context.get('confirm_intent'):
+            self._request_to_apiai(msg_txt, event, self._handle_confirm_intent)
+
+        mapping_tables = self.context.get('mapping_tables')
+        if mapping_tables:
+            mapping_columns = self.context.get('mapping_columns')
+            if mapping_columns is False:
+                self.msg_writer.send_message(event['channel'],
+                                             'Ok I\'ve mapped columns for the table: {}'.format(mapping_tables[-1]))
+            else:
+                self.msg_writer.send_message(event['channel'],
+                                     'Can you give an example of how you\'d naturally ask for data in {}?'.format(mapping_tables[-1]))
+                self.context['confirm_intent'] = True
+
+        #del self.context['is_mapping_schema']
+
+
+    def _handle_confirm_intent(self, resp, event):
+        logger.debug('_handle_confirm_intent::')
+        if resp['result']['score'] > 0.3:
+            self.msg_writer.send_message(event['channel'], 'Found matching intent: `{}`'.format(resp['result']['metadata']['intentName']))
+            columns = self.sqlyzer.tables.get(self.context.get('mapping_tables')[-1]).get('columns')
+            entities = resp['result']['parameters'].keys()
+            self.msg_writer.send_message(event['channel'],
+                                         'Please equate which columns in your table: `{}` map to these entities: `{}` (e.g. you can write: `{}={}, {}={}`)'.format(columns, entities, columns[0], entities[0], columns[1], entities[1]))
+            self.context['mapping_columns'] = True
+            del self.context['confirm_intent']
+        else:
+            self.msg_writer.send_message(event['channel'], 'I couldn\'t find a matching intent. :sad:')
+            del self.context['is_mapping_schema']
+
 
     def _learn_acronym(self, acronym_eq):
         txt_parts = acronym_eq.split('=')
@@ -402,10 +466,37 @@ class RtmEventHandler(object):
         ]
         self.apiai_dev_client.post_entry('6cedca53-6027-44d2-8fd3-d6cf934ca920', entry)
 
+
     def _is_direct_message(self, channel_id):
         return channel_id.startswith('D')
 
+
+    def _request_to_apiai(self, msg_txt, event, response_handler):
+        session_id = event['channel'] + ":" + event['user']
+        self.clients.send_user_typing_pause(event['channel'], sleep_time=0.0)
+        logger.debug(
+            'Sending message: {} to apiai_client for session_id: {} with self.context: {}'.format(msg_txt, session_id,
+                                                                                                  self.context))
+        try:
+            start = time.time()
+            req = self.apiai_client.text_request()
+            req.query = msg_txt
+            response = req.getresponse()
+            resp_txt = response.read()
+            resp = json.loads(resp_txt)
+            end = time.time()
+            response_handler(resp, event)
+            if self.dbg_ctx:
+                self.msg_writer.send_message(event['channel'],
+                                             '```{}```\n> _Took {} secs_'.format(resp_txt, end - start))
+        except:
+            err_msg = traceback.format_exc()
+            logging.error('Unexpected error: {}'.format(err_msg))
+            self.context = {}
+            self.msg_writer.send_message(event['channel'], "_Please see my logs for an error I encountered._")
+
     def _handle_apiai_response(self, resp, event):
+        logger.debug('_handle_apiai_response::')
         try:
 
             if resp['result']['score'] > 0.5:
