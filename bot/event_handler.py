@@ -175,7 +175,7 @@ class RtmEventHandler(object):
         else:
             self.cardio_acronyms = acronyms
 
-    def lookupBillingCode(self, anatomical_locale, image_modality, contrast_use, stress_use):
+    def lookupBillingCode(self, anatomical_locale, image_modality, contrast_use, stress_use, sql_select):
         logger.debug('lookupBillingCode:: anatomical_locale:{}, image_modality:{}, contrast_use:{}, stress_use:{}'.format(anatomical_locale, image_modality, contrast_use, stress_use))
 
         if contrast_use == 'yes':
@@ -183,13 +183,22 @@ class RtmEventHandler(object):
         else:
             contrast_txt = 'without'
 
-        if stress_use == 'yes':
+        if stress_use == 'True':
+            stress_bool = True
             stress_txt = 'with'
         else:
+            stress_bool = False
             stress_txt = 'without'
 
+        if sql_select is not None and len(sql_select) > 0 and self.sqlyzer is not None:
+            #TODO: Think about how to generalize this
+            params = {'image_modality':image_modality, 'contrast_use':contrast_txt, 'stress_use':stress_bool}
+            select_stmt = self.sqlyzer.generate_select_stmt(sql_select, params)
+        else:
+            select_stmt = ''
+
         # just for demo, in reality need catalog of billing codes given context values
-        return '\n> *75559* - _Cardiac magnetic resonance imaging for morphology and function {} contrast material; {} stress imaging_'.format(contrast_txt, stress_txt)
+        return '{}> *75559* - _Cardiac magnetic resonance imaging for morphology and function {} contrast material; {} stress imaging_'.format(select_stmt, contrast_txt, stress_txt)
 
 
     def lookupNormalValue(self, ventricle, hcv, gender, age_in_years):
@@ -274,15 +283,9 @@ class RtmEventHandler(object):
                 if 'help' in msg_txt:
                     self.msg_writer.write_help_message(event['channel'])
 
-                # things like: ;list, ;get, ;set, and ;del
-                elif self._handle_persist_commands(msg_txt, event):
-                    pass
-
-                elif self._handle_parse_sql_schema(msg_txt, event):
-                    pass
-
-                elif self.context.get('is_mapping_schema'):
-                    self._handle_schema_mapping(msg_txt, event)
+                elif ';reset' in msg_txt:
+                    logger.debug('Resetting context to {}')
+                    self.context = {}
 
                 elif ';debug' in msg_txt:
                     if 'on' in msg_txt:
@@ -292,9 +295,18 @@ class RtmEventHandler(object):
                     else:
                         self.msg_writer.send_message(event['channel'], '```context: {}```'.format(self.context))
 
-                elif ';reset' in msg_txt:
-                    logger.debug('Resetting context to {}')
-                    self.context = {}
+                elif ';sqltables' in msg_txt:
+                    self.msg_writer.send_message(event['channel'], '```sqltables: {}```'.format(self.sqlyzer.tables))
+
+                # things like: ;list, ;get, ;set, and ;del
+                elif self._handle_persist_commands(msg_txt, event):
+                    pass
+
+                elif self._handle_parse_sql_schema(msg_txt, event):
+                    pass
+
+                elif self.context.get('is_mapping_schema'):
+                    self._handle_schema_mapping(msg_txt, event)
 
                 elif msg_txt.startswith(';learn'):
                     cmd_parts = msg_txt.split(' ')
@@ -414,35 +426,78 @@ class RtmEventHandler(object):
 
     def _handle_schema_mapping(self, msg_txt, event):
 
+        # prep message string for comparison to column names
+        msg_txt = msg_txt.encode('ascii', 'ignore')
+
         if self.context.get('confirm_intent'):
             self._request_to_apiai(msg_txt, event, self._handle_confirm_intent)
+            return
 
         mapping_tables = self.context.get('mapping_tables')
         if mapping_tables:
             mapping_columns = self.context.get('mapping_columns')
-            if mapping_columns is False:
+            if mapping_columns is None:
+                self._handle_table_mapping(mapping_tables, event)
+            elif mapping_columns is True:
+                table_to_map = self.sqlyzer.tables.get(mapping_tables[-1])
+                # Expecting message format of <column_nameA>=<entity_paramB>, <column_nameB>=<entity_paramC>
+                equalities = msg_txt.replace(' ', '').split(',')
+                for equality in equalities:
+                    eq_parts = equality.split('=')
+                    if len(eq_parts) == 2:
+                        mapped_eq = False
+                        for col in table_to_map.get('columns'):
+                            logger.debug('eq_parts:{}, col.name: {}'.format(eq_parts, col.get('name')))
+                            if col.get('name') == eq_parts[0]:
+                                col['entity'] = eq_parts[1]
+                                mapped_eq = True
+                                break
+                            elif col.get('name') == eq_parts[1]:
+                                col['entity'] = eq_parts[0]
+                                mapped_eq = True
+                                break
+                        if not mapped_eq:
+                            self.msg_writer.send_message(event['channel'], ':x: Failed to find corresponding column for: `{}`'.format(equality))
+                    else:
+                        self.msg_writer.send_message(event['channel'], ':x: Failed to map: `{}`'.format(equality))
+                logger.debug('sqlyzer.tables: {}'.format(self.sqlyzer.tables))
                 self.msg_writer.send_message(event['channel'],
-                                             'Ok I\'ve mapped columns for the table: {}'.format(mapping_tables[-1]))
-            else:
-                self.msg_writer.send_message(event['channel'],
-                                     'Can you give an example of how you\'d naturally ask for data in {}?'.format(mapping_tables[-1]))
-                self.context['confirm_intent'] = True
+                                             'Ok I\'ve mapped columns: `{}`'.format(table_to_map))
 
-        #del self.context['is_mapping_schema']
+                # check for difference to see if there are more tables to map
+                tables_to_map = set(self.sqlyzer.tables.keys()) - set(mapping_tables)
+                if tables_to_map:
+                    mapping_tables.append(tables_to_map.pop())
+                    self.context.set('mapping_tables', mapping_tables)
+                    del self.context['mapping_columns']
+                    self._handle_table_mapping(mapping_tables, event)
+                else:
+                    self.msg_writer.send_message(event['channel'], 'Done mapping all tables in schema to the intent.  Feel free to use natural language to query your data. :speaking_head_in_silhouette:')
+                    del self.context['mapping_columns']
+                    del self.context['mapping_tables']
+                    del self.context['is_mapping_schema']
 
+
+    def _handle_table_mapping(self, mapping_tables, event):
+        self.msg_writer.send_message(event['channel'],
+                                     'Can you give an example of how you\'d naturally ask for data in `{}`?'.format(
+                                         mapping_tables[-1]))
+        self.context['confirm_intent'] = True
 
     def _handle_confirm_intent(self, resp, event):
         logger.debug('_handle_confirm_intent::')
         if resp['result']['score'] > 0.3:
+            table_to_map = self.sqlyzer.tables.get(self.context.get('mapping_tables')[-1])
+            table_to_map['intent_name'] = resp['result']['metadata']['intentName']
             self.msg_writer.send_message(event['channel'], 'Found matching intent: `{}`'.format(resp['result']['metadata']['intentName']))
-            columns = self.sqlyzer.tables.get(self.context.get('mapping_tables')[-1]).get('columns')
+            columns = table_to_map.get('columns')
             entities = resp['result']['parameters'].keys()
             self.msg_writer.send_message(event['channel'],
-                                         'Please equate which columns in your table: `{}` map to these entities: `{}` (e.g. you can write: `{}={}, {}={}`)'.format(columns, entities, columns[0], entities[0], columns[1], entities[1]))
+                                         'Please equate which columns in your table: `{}`\n map to these entities: `{}`\n (e.g. you can write: `{}={}, {}={}`)'.format(columns, entities, columns[0].get('name'), entities[0], columns[1].get('name'), entities[1]))
             self.context['mapping_columns'] = True
             del self.context['confirm_intent']
         else:
-            self.msg_writer.send_message(event['channel'], 'I couldn\'t find a matching intent. :sad:')
+            self.msg_writer.send_message(event['channel'], 'I couldn\'t find a matching intent. :frowning:')
             del self.context['is_mapping_schema']
 
 

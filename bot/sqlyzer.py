@@ -59,3 +59,29 @@ class Sqlyzer(object):
 
         return tables
 
+    def generate_select_stmt(self, intent_name, params):
+        for table_name, table in self.tables.iteritems():
+            if table.get('intent_name') == intent_name:
+                where_clause = self._generate_where_clause(table_name, params)
+                select_stmt = 'SELECT * FROM {} WHERE {};'.format(table_name, where_clause)
+                logger.debug('select_stmt: {}'.format(select_stmt))
+                return '```{}```\n'.format(select_stmt)
+
+        return ''
+
+    def _generate_where_clause(self, table_name, params):
+        first_param = True
+        where_clause = ''
+        for param, param_val in params.iteritems():
+            for col in self.tables.get(table_name).get('columns'):
+                if col.get('entity') == param:
+                    if first_param:
+                        first_param = False
+                    else:
+                        where_clause += 'AND '
+                    if isinstance(param_val, basestring):
+                        param_val = "'{}'".format(param_val)
+                    where_clause += col.get('name') + '=' + str(param_val) + ' '
+                    break
+
+        return where_clause
