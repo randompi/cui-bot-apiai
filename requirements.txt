@@ -1,8 +1,11 @@
 apiai==1.0.1
 beepboop==0.1.1
 docutils==0.12
+funcsigs==1.0.2
 lockfile==0.12.2
+mock==2.0.0
 numpy==1.11.0
+pbr==1.9.1
 python-daemon==2.1.1
 PyYAML==3.11
 requests==2.9.1
@@ -10,4 +13,5 @@ simplejson==3.8.2
 six==1.10.0
 slackclient==1.0.0
 slacker==0.9.9
+sqlparse==0.1.19
 websocket-client==0.37.0
