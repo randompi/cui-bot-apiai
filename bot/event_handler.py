@@ -9,6 +9,7 @@ import traceback
 import apiai
 import memory
 import os
+import pandas as pd
 
 from apiai_client import ApiaiDevClient
 import sqlyzer
@@ -145,6 +146,32 @@ protocol_modules = [
     'T2* Mapping',
 ]
 
+col1 = 'BillingCodeID'
+col2 = 'BillingCodeDesc'
+col3 = 'ImageModality'
+col4 = 'ConstrastMaterial'
+col5 = 'StressImaging'
+bc_df = pd.DataFrame([
+    {col1:75557,
+     col2:'Cardiac magnetic resonance imaging for morphology and function without contrast material',
+     col3: 'MRI', col4: 'Without', col5: False},
+    {col1:75559,
+     col2:'Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging',
+     col3: 'MRI', col4: 'Without', col5: True},
+    {col1: 75561,
+     col2: 'Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences',
+     col3: 'MRI', col4: 'With', col5: False},
+    {col1: 75563,
+     col2: 'Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging',
+     col3: 'MRI', col4: 'With', col5: True},
+    {col1: 75574,
+     col2: 'Computed tomographic angiography, heart, coronary arteries and bypass grafts (when present), with contrast material, including 3D image postprocessing (including evaluation of cardiac structure and morphology, assessment of cardiac function, and evaluation of venous structures, if performed)',
+     col3: 'CT', col4: 'With', col5: False},
+    {col1: 75571,
+     col2: 'Computed tomography, heart, without contrast material, with quantitative evaluation of coronary calcium',
+     col3: 'CT', col4: 'Without', col5: False},
+])
+
 
 logger = logging.getLogger(__name__)
 
@@ -179,13 +206,13 @@ class RtmEventHandler(object):
         logger.debug('lookupBillingCode:: anatomical_locale:{}, image_modality:{}, contrast_use:{}, stress_use:{}'.format(anatomical_locale, image_modality, contrast_use, stress_use))
 
         if contrast_use == 'yes':
-            contrast_txt = 'with'
+            contrast_txt = 'With'
         else:
-            contrast_txt = 'without'
+            contrast_txt = 'Without'
 
         if stress_use == 'True':
             stress_bool = True
-            stress_txt = 'with'
+            stress_txt = 'With'
         else:
             stress_bool = False
             stress_txt = 'without'
@@ -197,8 +224,10 @@ class RtmEventHandler(object):
         else:
             select_stmt = ''
 
+        results = bc_df[(bc_df[col3]==image_modality) & (bc_df[col4]==contrast_txt) & (bc_df[col5]==stress_bool)].to_string()
+
         # just for demo, in reality need catalog of billing codes given context values
-        return '{}> *75559* - _Cardiac magnetic resonance imaging for morphology and function {} contrast material; {} stress imaging_'.format(select_stmt, contrast_txt, stress_txt)
+        return '{}\n*Result(s)*:```{}```'.format(select_stmt, results)
 
 
     def lookupNormalValue(self, ventricle, hcv, gender, age_in_years):

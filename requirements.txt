@@ -5,8 +5,11 @@ funcsigs==1.0.2
 lockfile==0.12.2
 mock==2.0.0
 numpy==1.11.0
+pandas==0.18.1
 pbr==1.9.1
 python-daemon==2.1.1
+python-dateutil==2.5.3
+pytz==2016.4
 PyYAML==3.11
 requests==2.9.1
 simplejson==3.8.2
