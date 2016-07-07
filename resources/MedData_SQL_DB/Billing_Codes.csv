@@ -1,0 +1,6 @@
+CPT_Code,Code_Description,Contrast,Stress,CMS_Reimbursement
+75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94
+75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82
+75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92
+75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61
+75565,Cardiac magnetic resonance imaging for velocity flow mapping (List separately in addition to code for primary procedure),N,N,55.17

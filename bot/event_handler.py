@@ -12,6 +12,7 @@ import os
 import pandas as pd
 
 from apiai_client import ApiaiDevClient
+from data_models import DataModels
 import sqlyzer
 
 # TODO: make this configurable
@@ -182,6 +183,7 @@ class RtmEventHandler(object):
     def __init__(self, slack_clients, msg_writer):
         self.clients = slack_clients
         self.msg_writer = msg_writer
+        self.dm = DataModels()
         self.action_matcher = re.compile('\[.*?\]')
         self.apiai_client = apiai.ApiAI(access_token)
         self.apiai_dev_client = ApiaiDevClient(dev_access_token)
@@ -324,6 +326,9 @@ class RtmEventHandler(object):
                     else:
                         self.msg_writer.send_message(event['channel'], '```context: {}```'.format(self.context))
 
+                elif ';stats':
+                    self._handle_stats(msg_txt, event)
+
                 elif ';sqltables' in msg_txt:
                     self.msg_writer.send_message(event['channel'], '```sqltables: {}```'.format(self.sqlyzer.tables))
 
@@ -375,6 +380,15 @@ class RtmEventHandler(object):
                         self.msg_writer.send_message(event['channel'], 'Ok, no worries! :simple_smile:')
                 else:
                     self._request_to_apiai(msg_txt, event, self._handle_apiai_response)
+
+    def _handle_stats(self, msg_txt, event):
+
+        stats_parts = msg_txt.split(' ')
+        if len(stats_parts) >= 4:
+            data = self.dm.averageForGroup(stats_parts[1], stats_parts[2], stats_parts[3])
+            self.msg_writer.send_message(event['channel'], '```{}```'.format(data))
+        else:
+            self.msg_writer.send_message(event['channel'], 'Error, expecting args like: `;stats <table_name> <groupby> <col>`')
 
     def _handle_persist_commands(self, msg_txt, event):
 
