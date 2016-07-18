@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 
+import collections
 import json
 import logging
 import random
@@ -19,6 +20,8 @@ import sqlyzer
 access_token = '6a6d19088a2d49c2b0912c81c3661653'
 dev_access_token = '5b9a5f58880e46cba523fbebf4c1bce2'
 
+pd.set_option('display.width', 120)
+pd.set_option('display.max_colwidth', 12)
 
 # TODO: Read these in from editable files
 acronyms = {
@@ -180,6 +183,7 @@ class BotUnknownException(Exception):
     pass
 
 class RtmEventHandler(object):
+
     def __init__(self, slack_clients, msg_writer):
         self.clients = slack_clients
         self.msg_writer = msg_writer
@@ -203,6 +207,7 @@ class RtmEventHandler(object):
             self.cardio_acronyms = self.persist_client.get('acronyms')
         else:
             self.cardio_acronyms = acronyms
+
 
     def lookupBillingCode(self, anatomical_locale, image_modality, contrast_use, stress_use, sql_select):
         logger.debug('lookupBillingCode:: anatomical_locale:{}, image_modality:{}, contrast_use:{}, stress_use:{}'.format(anatomical_locale, image_modality, contrast_use, stress_use))
@@ -228,7 +233,6 @@ class RtmEventHandler(object):
 
         results = bc_df[(bc_df[col3]==image_modality) & (bc_df[col4]==contrast_txt) & (bc_df[col5]==stress_bool)].to_string()
 
-        # just for demo, in reality need catalog of billing codes given context values
         return '{}\n*Result(s)*:```{}```'.format(select_stmt, results)
 
 
@@ -261,6 +265,7 @@ class RtmEventHandler(object):
             spec_norm_vals['range_upper'],
         )
 
+
     def lookupAcronym(self, acronym):
         logger.debug('lookupAcronym:: acronym: {}'.format(acronym))
         acronym_lower = acronym.lower()
@@ -268,6 +273,7 @@ class RtmEventHandler(object):
             return '_{}_'.format(self.cardio_acronyms[acronym_lower])
         else:
             raise BotUnknownException('Unknown acronym: {}'.format(acronym_lower))
+
 
     def lookupProtocol(self, myocardial_disease):
         logger.debug('lookupProtocol:: myocardial_disease: {}'.format(myocardial_disease))
@@ -277,10 +283,20 @@ class RtmEventHandler(object):
             protocol_str += '> {}\n'.format(protocol_modules[proto_mod])
         return protocol_str
 
+
+    def handleDataQuery(self, parameters):
+        logger.debug('handleDataQuery:: parameters: {}'.format(parameters))
+
+        df = self.dm.queryData(parameters)
+
+        return '_*Results:*_\n```{}```'.format(df)
+
+
     def handle(self, event):
 
         if 'type' in event:
             self._handle_by_type(event['type'], event)
+
 
     def _handle_by_type(self, event_type, event):
         # See https://api.slack.com/rtm for a full list of events
@@ -326,8 +342,11 @@ class RtmEventHandler(object):
                     else:
                         self.msg_writer.send_message(event['channel'], '```context: {}```'.format(self.context))
 
-                elif ';stats':
+                elif ';stats' in msg_txt:
                     self._handle_stats(msg_txt, event)
+
+                elif ';frames' in msg_txt:
+                    self._handle_frames(msg_txt, event)
 
                 elif ';sqltables' in msg_txt:
                     self.msg_writer.send_message(event['channel'], '```sqltables: {}```'.format(self.sqlyzer.tables))
@@ -381,6 +400,7 @@ class RtmEventHandler(object):
                 else:
                     self._request_to_apiai(msg_txt, event, self._handle_apiai_response)
 
+
     def _handle_stats(self, msg_txt, event):
 
         stats_parts = msg_txt.split(' ')
@@ -389,6 +409,29 @@ class RtmEventHandler(object):
             self.msg_writer.send_message(event['channel'], '```{}```'.format(data))
         else:
             self.msg_writer.send_message(event['channel'], 'Error, expecting args like: `;stats <table_name> <groupby> <col>`')
+
+
+    def _handle_frames(self, msg_txt, event):
+
+        frame_parts = msg_txt.split(' ')
+
+        if len(frame_parts) == 1:
+            frame_summary = 'These are the frames I currently _know_ about:\n'
+            for f_k, f_v in self.dm.data_frames.iteritems():
+                frame_summary += '> *{}* _({} rows, {} cols)_\n'.format(f_k, f_v.shape[0], f_v.shape[1])
+            frame_summary += 'Type `;frames <name>` to get more details.'
+            self.msg_writer.send_message(event['channel'], '{}'.format(frame_summary))
+
+        elif len(frame_parts) == 2:
+            frame_details = ''
+            f_name = frame_parts[1]
+            head_num = 3
+            if f_name in self.dm.data_frames.keys():
+                frame_details += '*{}* _(first {} rows)_:\n```{}```'.format(f_name, head_num, self.dm.data_frames[f_name].head(head_num))
+            else:
+                frame_details += '`\'{}\'` is not a valid frame, should be one of:\n>  `{}`'.format(f_name, self.dm.data_frames.keys())
+            self.msg_writer.send_message(event['channel'], '{}'.format(frame_details))
+
 
     def _handle_persist_commands(self, msg_txt, event):
 
@@ -610,22 +653,26 @@ class RtmEventHandler(object):
                     #logger.debug('hasattr({}):{}'.format(action, hasattr(self, action)))
                     if hasattr(self, action):
                         act_func = getattr(self, action)
-                        act_params = act_func.__code__.co_varnames[1:act_func.__code__.co_argcount]
-                        act_param_vals = {}
-                        for act_param in act_params:
-                            if act_param in resp['result']['parameters'].keys():
-                                act_param_vals[act_param] = resp['result']['parameters'][act_param]
-                        logger.debug('act_param_vals: {}'.format(act_param_vals))
-                        try:
-                            act_val = act_func(**act_param_vals)
-                            msg_resp = msg_resp.replace('[{}]'.format(action), act_val)
-                        except BotUnknownException as botUnkE:
-                            logger.warning('Caught BotUnknownException: {}'.format(botUnkE))
-                            # TODO: See if user can teach the bot?
+                        if action == 'handleDataQuery':
+                            params = self._cleanse(resp['result']['parameters'])
+                            msg_resp = act_func(params)
+                        else:
+                            act_params = act_func.__code__.co_varnames[1:act_func.__code__.co_argcount]
+                            act_param_vals = {}
+                            for act_param in act_params:
+                                if act_param in resp['result']['parameters'].keys():
+                                    act_param_vals[act_param] = resp['result']['parameters'][act_param]
+                            logger.debug('act_param_vals: {}'.format(act_param_vals))
+                            try:
+                                act_val = act_func(**act_param_vals)
+                                msg_resp = msg_resp.replace('[{}]'.format(action), act_val)
+                            except BotUnknownException as botUnkE:
+                                logger.warning('Caught BotUnknownException: {}'.format(botUnkE))
+                                # TODO: See if user can teach the bot?
 
-                            self.msg_writer.send_message(event['channel'], "Unfortunately I don't know that.  Would you like to teach me?")
-                            self.intent_to_teach = resp
-                            return
+                                self.msg_writer.send_message(event['channel'], "Unfortunately I don't know that.  Would you like to teach me?")
+                                self.intent_to_teach = resp
+                                return
                     else:
                         logger.error('Undefined action: {} parsed in response message: {}'.format(action, msg_resp))
                 # end for action
@@ -642,3 +689,14 @@ class RtmEventHandler(object):
         except Exception as e:
             logger.exception('Failed to parse response from api.ai: {}', resp)
             self.msg_writer.send_message(event['channel'], "_Please see my logs for an error I encountered._")
+
+
+    def _cleanse(self, data):
+        if isinstance(data, basestring):
+            return data.encode('utf-8')
+        elif isinstance(data, collections.Mapping):
+            return dict(map(self._cleanse, data.iteritems()))
+        elif isinstance(data, collections.Iterable):
+            return type(data)(map(self._cleanse, data))
+        else:
+            return data
