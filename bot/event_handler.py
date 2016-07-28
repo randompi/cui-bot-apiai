@@ -287,9 +287,13 @@ class RtmEventHandler(object):
     def handleDataQuery(self, parameters):
         logger.debug('handleDataQuery:: parameters: {}'.format(parameters))
 
-        df = self.dm.queryData(parameters)
+        try:
+            df = self.dm.queryData(parameters)
+            result = '_*Results:*_\n```{}```'.format(df)
+        except Exception as e:
+            result = ':x: _{}_'.format(e.message)
 
-        return '_*Results:*_\n```{}```'.format(df)
+        return result
 
 
     def handle(self, event):

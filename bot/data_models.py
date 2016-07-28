@@ -38,30 +38,47 @@ class DataModels(object):
                     aggregables.append(relevantFrames[param_v])
                     frame = relevantFrames[param_v][0][0]
 
-            if param_k.startswith('op'):
+            if param_k.startswith('op') and param_v != '':
                 ops.append(param_v)
-
-        # TODO: Detect which frames need to be merged and on which keys
-        # relevantFrames <-> frame, group
 
         logger.debug('groupables: {}\naggregables: {}\nframe: {}\nops: {}'.format(groupables, aggregables, frame, ops))
 
         df = self.data_frames[frame]
         for groupable in groupables:
-            df = df.groupby(groupable[0][1])
+            # Detect which frames need to be merged and on which keys
+            if groupable[0][0] != frame:
+                #TODO impl
+                logger.debug('groupable:{} != frame:{}'.format(groupable[0][0], frame))
+                raise Exception('Merge across tables not implemented yet')
+            else:
+                # groupable part of same frame as aggregable
+                df = df.groupby(groupable[0][1])
+                logger.debug('df.first() after groupbys:\n{}'.format(df.first()))
 
-        logger.debug('df.first() after groupbys:\n{}'.format(df.first()))
+        if isinstance(df, pd.DataFrame):
+            # there were no groupables so just select aggregables
+            cols = []
+            for aggregable in aggregables:
+                cols.append(aggregable[0][1])
 
-        agg_map = {}
-        #TODO: We need to handle a map of op -> aggregable
-        for aggregable in aggregables:
-            agg_map[aggregable[0][1]] = {ops[0] + '_' + aggregable[0][1] : ops[0]}
+            result = df[cols]
 
-        logger.debug('agg_map: {}'.format(agg_map))
+            # TODO: try / except here if we are passing an op that DataFrame doesn't support
+            if len(ops) > 0:
+                op_func = getattr(pd.DataFrame, ops[0])
+                result = ops[0] + ':\n' + str(op_func(result)) #apply operation on selected cols
 
-        df = df.agg(agg_map)
+        else:
+            agg_map = {}
+            #TODO: We need to handle a map of op -> aggregable
+            for aggregable in aggregables:
+                agg_map[aggregable[0][1]] = ops
 
-        return df
+            logger.debug('agg_map: {}'.format(agg_map))
+
+            result = df.agg(agg_map)
+
+        return result
 
 
     def findRelevantFrames(self, query_params):
