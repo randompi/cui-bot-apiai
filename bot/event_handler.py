@@ -296,6 +296,18 @@ class RtmEventHandler(object):
         return result
 
 
+    def handleSelectData(self, parameters):
+        logger.debug('handleSelectData:: parameters: {}'.format(parameters))
+
+        # try:
+        df = self.dm.selectData(parameters)
+        result = '_*Results:*_\n```{}```'.format(df)
+        # except Exception as e:
+        #     result = ':x: _{}_'.format(e.message)
+
+        return result
+
+
     def handle(self, event):
 
         if 'type' in event:
@@ -657,7 +669,7 @@ class RtmEventHandler(object):
                     #logger.debug('hasattr({}):{}'.format(action, hasattr(self, action)))
                     if hasattr(self, action):
                         act_func = getattr(self, action)
-                        if action == 'handleDataQuery':
+                        if action == 'handleDataQuery' or action == 'handleSelectData':
                             params = self._cleanse(resp['result']['parameters'])
                             msg_resp = act_func(params)
                         else:
