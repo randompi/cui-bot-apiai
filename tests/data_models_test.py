@@ -84,3 +84,68 @@ class TestDataModels(unittest.TestCase):
         result = self.dms.max_levenshtein_ratio('c* _a+t', ['cArt', 's* _r+t'])
         self.assertEqual(result[0], 's* _r+t')
         self.assertAlmostEquals(result[1], 0.714285, 5)
+
+    def test_generate_column_queries(self):
+
+        result = self.dms.generate_column_queries(None)
+        self.assertEqual(result, [])
+
+        result = self.dms.generate_column_queries({})
+        self.assertEqual(result, [])
+
+        result = self.dms.generate_column_queries({'col1':'Scan Time'})
+        expected = self.dms.ColQuery(col='Scan_time', filter=None, comp=None)
+        self.assertEqual(result, [expected])
+
+        in_params_map = {
+            'col1': 'Scan Time',
+            'filter1': 25,
+        }
+        result = self.dms.generate_column_queries(in_params_map)
+        expected = self.dms.ColQuery(col='Scan_time', filter=25, comp='==')
+        self.assertEqual(result, [expected])
+
+        in_params_map = {
+            'col1': 'Scan Time',
+            'filter2': 'NA',
+        }
+        result = self.dms.generate_column_queries(in_params_map)
+        expected = self.dms.ColQuery(col='Scan_time', filter=None, comp=None)
+        self.assertEqual(result, [expected])
+
+        in_params_map = {
+            'col1': 'Scan Time',
+            'filter1': 25,
+            'comparison-filter1': 'greater than'
+        }
+        result = self.dms.generate_column_queries(in_params_map)
+        expected = self.dms.ColQuery(col='Scan_time', filter=25, comp='>')
+        self.assertEqual(result, [expected])
+
+        in_params_map = {
+            'col1': 'Scan Time',
+            'col2': 'indication',
+            'filter1': 25.35,
+            'filter2': 'HCM',
+            'comparison-filter1': 'greater than',
+        }
+        result = self.dms.generate_column_queries(in_params_map)
+        expected1 = self.dms.ColQuery(col='Scan_time', filter=25.35, comp='>')
+        expected2 = self.dms.ColQuery(col='Indication', filter='HCM', comp='==')
+        self.assertEqual(sorted(result), sorted([expected1, expected2]))
+
+        in_params_map = {
+            'col': 'gender',
+            'col1': 'Scan Time',
+            'col2': 'indication',
+            'filter': 'M',
+            'filter1': '25',
+            'filter2': 'HCM',
+            'comparison-filter1': 'greater than',
+        }
+        result = self.dms.generate_column_queries(in_params_map)
+        expected1 = self.dms.ColQuery(col='Scan_time', filter=25, comp='>')
+        expected2 = self.dms.ColQuery(col='Indication', filter='HCM', comp='==')
+        expected3 = self.dms.ColQuery(col='Gender', filter='M', comp='==')
+        self.assertEqual(sorted(result), sorted([expected1, expected2, expected3]))
+

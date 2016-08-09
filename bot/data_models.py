@@ -3,9 +3,17 @@
 import logging
 import pandas as pd
 import Levenshtein as ls
-from collections import Counter
+import re
+from collections import namedtuple
 
 logger = logging.getLogger(__name__)
+
+compstr_to_pyopstr = {
+    'less than' : '<',
+    'greater than' : '>',
+    'equals' : '==',
+    'not equals' : '!='
+}
 
 class DataModels(object):
 
@@ -13,11 +21,10 @@ class DataModels(object):
         self.data_frames = {}
         self.data_frames['Procedure_Revenue'] = pd.read_csv('resources/MedData_SQL_DB/Procedure_Revenue.csv')
         self.data_frames['Study_List'] = pd.read_csv('resources/MedData_SQL_DB/Study_List.csv')
+        self.trailing_digit_re = re.compile('.*([0-9])$')
+        self.ColQuery = namedtuple('ColQuery', ['col','filter','comp'])
 
     def selectData(self, parameters):
-        dfs = []
-        df_cols = []
-        df_filters = []
         most_cmn_frame = ''
 
         # map incoming params to instances and entities in the data frames
@@ -25,33 +32,38 @@ class DataModels(object):
 
             if param_k.startswith('row') and param_v != '':
                 best_match_df = self.map_to_frame(param_v)
-                dfs.append(best_match_df)
+                most_cmn_frame = best_match_df
 
-            if param_k.startswith('col') and param_v != '':
-                best_match_col = self.map_to_frame_col(param_v)
-                df_cols.append(best_match_col)
+        col_queries = self.generate_column_queries(parameters)
 
-            # TODO: need to pair filter with column
-            if param_k.startswith('filter') and param_v != '':
-                df_filters.append(param_v)
-
-        logger.debug('dfs: {}\ndf_cols: {}\ndf_filters: {}\nmost_cmn_frame: {}'.format(dfs, df_cols, df_filters, most_cmn_frame))
+        logger.debug('col_queries: {}'.format(col_queries))
 
         results = []
-        for df in dfs:
-            frame = self.data_frames[df]
-            if len(df_cols) > 0 and len(df_filters) > 0:
-                conditions = True
-                for col, df_filt in zip(df_cols, df_filters):
-                    conditions = conditions & (frame[col]==df_filt)
-                    results.append(frame[conditions])
-            elif len(df_cols) > 0:
-                results.append(frame[df_cols])
-            else:
-                results.append(frame.head())
+        frame = self.data_frames[most_cmn_frame]
+        if col_queries and len(col_queries) > 0:
+            # query data by columns
+            constraints = True
+            for col_query in col_queries:
+                if col_query.filter:
+                    # produces something like: frame['Age']>25
+                    col_constraint = self._gen_col_constraint_str(col_query)
+                    logger.debug('col_constraints: {}'.format(col_constraint))
+                    constraints = constraints & (eval(col_constraint))
+            # TODO: apply column selection qualifiers? (instead of currently returning all columns)
+            results.append(frame[constraints])
+            # TODO: handle the case when there are no constraints
+        else:
+            # query all the data in the frame
+            results.append(frame.head())
 
         return results
 
+
+    def _gen_col_constraint_str(self, col_query):
+        if isinstance(col_query.filter, basestring):
+            return 'frame[\'{}\']{}\'{}\''.format(col_query.col, col_query.comp, col_query.filter)
+        else:
+            return 'frame[\'{}\']{}{}'.format(col_query.col,col_query.comp,col_query.filter)
 
     def queryData(self, parameters):
         groupables = []
@@ -212,19 +224,68 @@ class DataModels(object):
 
         for comp_str in comp_strs:
 
-            logger.debug('target_str: {} <-> comp_str: {}'.format(target_str, comp_str))
+            #logger.debug('target_str: {} <-> comp_str: {}'.format(target_str, comp_str))
             # Levenshtein distance score, higher means less edits required to match
             ls_ratio = ls.ratio(target_str, comp_str)
-            logger.debug('ls_ratio: {}\n'.format(ls_ratio))
+            #logger.debug('ls_ratio: {}\n'.format(ls_ratio))
 
             if ls_ratio > max_ls_ratio:
                 max_ls_ratio = ls_ratio
                 max_comp_str = comp_str
 
-        logger.debug('max_comp_str: {}, max_ls_ratio: {}')
+        #logger.debug('max_comp_str: {}, max_ls_ratio: {}')
 
         return (max_comp_str, max_ls_ratio)
 
+
+    def generate_column_queries(self, params_map):
+        """ Given a map of parameters containing keys like col1, filter1, and comparison-filter1
+            generate a ColQuery namedtuple of these groupings (filter and comp could be None)
+        """
+        col_queries = []
+
+        if params_map:
+            for p_k, p_v in params_map.iteritems():
+                if p_k.startswith('col') and p_v:
+                    best_match_col = self.map_to_frame_col(p_v)
+                    filter_val = None
+                    comp_val = None
+                    col_num = ''
+                    col_num_matches = self.trailing_digit_re.findall(p_k)
+                    if col_num_matches:
+                        col_num = col_num_matches[0]
+
+                    filter_key = 'filter' + col_num
+                    if filter_key in params_map and params_map[filter_key]:
+                        filter_val = params_map[filter_key]
+                        try:
+                            filter_val = self.coerce_str(filter_val)
+                        except:
+                            pass
+                        comparator_key = 'comparison-filter' + col_num
+                        if comparator_key in params_map and params_map[comparator_key]:
+                            comp_str = params_map[comparator_key]
+                            if comp_str in compstr_to_pyopstr:
+                                comp_val = compstr_to_pyopstr[comp_str]
+                            else:
+                                comp_val = '=='
+                        else:
+                            comp_val = '=='
+
+                    col_queries.append(self.ColQuery(col=best_match_col, filter=filter_val, comp=comp_val))
+
+        return col_queries
+
+    def coerce_str(self, x):
+        try:
+            a = float(x)
+            b = int(x)
+            if a == b:
+                return b
+            else:
+                return a
+        except:
+            raise ValueError("failed to coerce str to int or float")
 
     def averageForGroup(self, df_name, group_name, col_to_avg):
         return self.data_frames[df_name].groupby(group_name).agg({col_to_avg:{'Average':'mean'}})
