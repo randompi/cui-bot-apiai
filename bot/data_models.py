@@ -256,11 +256,17 @@ class DataModels(object):
                         col_num = col_num_matches[0]
 
                     filter_key = 'filter' + col_num
+                    number_key = 'number' + col_num
                     if filter_key in params_map and params_map[filter_key]:
                         filter_val = params_map[filter_key]
+                    elif number_key in params_map and params_map[number_key]:
+                        filter_val = params_map[number_key]
+
+                    if  filter_val:
                         try:
-                            filter_val = self.coerce_str(filter_val)
+                            filter_val = self.coerce_str_to_numeric(filter_val)
                         except:
+                            # filter_val not a numeric so just leave as a string
                             pass
                         comparator_key = 'comparison-filter' + col_num
                         if comparator_key in params_map and params_map[comparator_key]:
@@ -276,16 +282,25 @@ class DataModels(object):
 
         return col_queries
 
-    def coerce_str(self, x):
+    def coerce_str_to_numeric(self, x):
+
         try:
-            a = float(x)
-            b = int(x)
-            if a == b:
-                return b
-            else:
-                return a
+            f = float(x)
         except:
-            raise ValueError("failed to coerce str to int or float")
+            raise ValueError("failed to coerce str to float")
+
+        try:
+            i = int(x)
+        except:
+            # not an int, but is a float
+            return f
+
+        # could be int or float, check for equality
+        if i == f:
+            return i
+        else:
+            return f
+
 
     def averageForGroup(self, df_name, group_name, col_to_avg):
         return self.data_frames[df_name].groupby(group_name).agg({col_to_avg:{'Average':'mean'}})

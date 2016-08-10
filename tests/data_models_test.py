@@ -115,11 +115,20 @@ class TestDataModels(unittest.TestCase):
 
         in_params_map = {
             'col1': 'Scan Time',
-            'filter1': 25,
+            'filter1': '25',
             'comparison-filter1': 'greater than'
         }
         result = self.dms.generate_column_queries(in_params_map)
         expected = self.dms.ColQuery(col='Scan_time', filter=25, comp='>')
+        self.assertEqual(result, [expected])
+
+        in_params_map = {
+            'col1': 'LVEDV',
+            'number1': '150.5',
+            'comparison-filter1': 'greater than'
+        }
+        result = self.dms.generate_column_queries(in_params_map)
+        expected = self.dms.ColQuery(col='LVEDV', filter=150.5, comp='>')
         self.assertEqual(result, [expected])
 
         in_params_map = {
