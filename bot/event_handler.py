@@ -300,8 +300,13 @@ class RtmEventHandler(object):
         logger.debug('handleSelectData:: parameters: {}'.format(parameters))
 
         # try:
-        df = self.dm.selectData(parameters)
-        result = '_*Results:*_\n```{}```'.format(df)
+        data_list = self.dm.selectData(parameters)
+        result = '_*Results:*_\n'
+        for i, data in enumerate(data_list):
+            if i < len(data_list) - 1:
+                result += data + '\n'
+            else:
+                result += '```{}```'.format(data)
         # except Exception as e:
         #     result = ':x: _{}_'.format(e.message)
 

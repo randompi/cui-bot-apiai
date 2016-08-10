@@ -27,6 +27,8 @@ class DataModels(object):
     def selectData(self, parameters):
         most_cmn_frame = ''
 
+        non_empty_params = {}
+
         # map incoming params to instances and entities in the data frames
         for param_k, param_v in parameters.iteritems():
 
@@ -34,11 +36,16 @@ class DataModels(object):
                 best_match_df = self.map_to_frame(param_v)
                 most_cmn_frame = best_match_df
 
+            if param_v:
+                non_empty_params[param_k] = param_v
+
         col_queries = self.generate_column_queries(parameters)
 
         logger.debug('col_queries: {}'.format(col_queries))
 
         results = []
+        results.append('> api.ai Parameters: {}'.format(non_empty_params))
+        results.append('> column constraints: {}'.format(col_queries))
         frame = self.data_frames[most_cmn_frame]
         if col_queries and len(col_queries) > 0:
             # query data by columns
@@ -54,7 +61,8 @@ class DataModels(object):
             # TODO: handle the case when there are no constraints
         else:
             # query all the data in the frame
-            results.append(frame.head())
+            results.append('_First 5 rows of {}_'.format(len(frame)))
+            results.append(frame.head(5))
 
         return results
 
