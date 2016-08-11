@@ -254,10 +254,12 @@ class DataModels(object):
 
         if params_map:
             for p_k, p_v in params_map.iteritems():
+
+                filter_val = None
+                comp_val = None
                 if p_k.startswith('col') and p_v:
                     best_match_col = self.map_to_frame_col(p_v)
-                    filter_val = None
-                    comp_val = None
+
                     col_num = ''
                     col_num_matches = self.trailing_digit_re.findall(p_k)
                     if col_num_matches:
@@ -288,7 +290,43 @@ class DataModels(object):
 
                     col_queries.append(self.ColQuery(col=best_match_col, filter=filter_val, comp=comp_val))
 
+                elif p_k.startswith('filter') and p_v:
+                    filter_val = p_v
+                    filt_num = ''
+                    filt_num_matches = self.trailing_digit_re.findall(p_k)
+                    if filt_num_matches:
+                        filt_num = filt_num_matches[0]
+
+                    col_key = 'col' + filt_num
+                    if col_key in params_map and params_map[col_key]:
+                        # we'll just defer to when the col gets processed above
+                        continue
+                    else:
+                        col_has_val = self.find_col_with_val(p_v)
+                        if col_has_val:
+                            comparator_key = 'comparison-filter' + filt_num
+                            if comparator_key in params_map and params_map[comparator_key]:
+                                comp_str = params_map[comparator_key]
+                                if comp_str in compstr_to_pyopstr:
+                                    comp_val = compstr_to_pyopstr[comp_str]
+                                else:
+                                    comp_val = '=='
+                            else:
+                                comp_val = '=='
+
+                        col_queries.append(self.ColQuery(col=col_has_val, filter=filter_val, comp=comp_val))
+
+
         return col_queries
+
+    def find_col_with_val(self, val):
+
+        for f_name, frame in self.data_frames.iteritems():
+            for col in list(frame.select_dtypes(include=['object']).columns):
+                if val.lower() in [col_val.lower() for col_val in frame[col].unique()]:
+                    return col
+
+        return None
 
     def coerce_str_to_numeric(self, x):
 
@@ -308,6 +346,7 @@ class DataModels(object):
             return i
         else:
             return f
+
 
 
     def averageForGroup(self, df_name, group_name, col_to_avg):
