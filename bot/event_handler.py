@@ -11,6 +11,7 @@ import apiai
 import memory
 import os
 import pandas as pd
+import matplotlib.pyplot as plt
 
 from apiai_client import ApiaiDevClient
 from data_models import DataModels
@@ -148,6 +149,12 @@ protocol_modules = [
     'LGE module',
     'T1 Mapping',
     'T2* Mapping',
+]
+
+handle_data_actions = [
+    'handleDataQuery',
+    'handleSelectData',
+    'handlePlotData',
 ]
 
 col1 = 'BillingCodeID'
@@ -309,6 +316,19 @@ class RtmEventHandler(object):
                 result += '```{}```'.format(data)
         # except Exception as e:
         #     result = ':x: _{}_'.format(e.message)
+
+        return result
+
+
+    def handlePlotData(self, parameters):
+        logger.debug('handleSelectData:: parameters: {}'.format(parameters))
+
+        plot = self.dm.data_frames['Study_List'].plot(x='Age', y='BMI', kind='scatter')
+        fig = plot.get_figure()
+        fig.savefig("Age_v_BMI.png")
+
+        result = '_*Plot:*_'
+        self.msg_writer.upload_file("Age_v_BMI.png", parameters['channel'])
 
         return result
 
@@ -674,8 +694,10 @@ class RtmEventHandler(object):
                     #logger.debug('hasattr({}):{}'.format(action, hasattr(self, action)))
                     if hasattr(self, action):
                         act_func = getattr(self, action)
-                        if action == 'handleDataQuery' or action == 'handleSelectData':
+                        if action in handle_data_actions:
                             params = self._cleanse(resp['result']['parameters'])
+                            if action.startswith('handlePlotData'):
+                                params['channel'] = event['channel']
                             msg_resp = act_func(params)
                         else:
                             act_params = act_func.__code__.co_varnames[1:act_func.__code__.co_argcount]
