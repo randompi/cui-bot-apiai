@@ -323,14 +323,20 @@ class RtmEventHandler(object):
     def handlePlotData(self, parameters):
         logger.debug('handleSelectData:: parameters: {}'.format(parameters))
 
-        plot = self.dm.data_frames['Study_List'].plot(x='Age', y='BMI', kind='scatter')
-        fig = plot.get_figure()
-        fig.savefig("Age_v_BMI.png")
+        self.clients.send_user_typing_pause(parameters['channel'], sleep_time=0.0)
 
-        result = '_*Plot:*_'
-        self.msg_writer.upload_file("Age_v_BMI.png", parameters['channel'])
-
-        return result
+        plot = self.dm.plotData(parameters)
+        if plot:
+            fig = plot.get_figure()
+            plot_name = 'plot.png'
+            fig.savefig(plot_name)
+            self.msg_writer.upload_file(plot_name, parameters['channel'])
+            return None
+        else:
+            if self.dm.prev_ret_data is None:
+                return ':x: _{}_'.format('Need to query for data before we can plot it.')
+            else:
+                return ':x: _{}_\n```{}```'.format('Failed to map parameters to data entities.', parameters)
 
 
     def handle(self, event):
@@ -719,7 +725,8 @@ class RtmEventHandler(object):
                     else:
                         logger.error('Undefined action: {} parsed in response message: {}'.format(action, msg_resp))
                 # end for action
-                self.msg_writer.send_message(event['channel'], msg_resp)
+                if msg_resp:
+                    self.msg_writer.send_message(event['channel'], msg_resp)
             else:
                 misunderstandings = [
                     "I'm sorry, I didn't quite understand you...",
