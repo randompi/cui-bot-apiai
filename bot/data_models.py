@@ -199,7 +199,10 @@ class DataModels(object):
             # plot a several columns
             # removing in place any columns that don't appear in the data_to_plot_from
             cols[:] = [col for col in cols if col in data_to_plot_from.columns]
-            plot = data_to_plot_from[cols].plot(kind=plot_type)
+            if cols:
+                plot = data_to_plot_from[cols].plot(kind=plot_type)
+            else:
+                return None
         else:
             # plot all data
             plot = data_to_plot_from.plot(kind=plot_type)

@@ -334,7 +334,7 @@ class RtmEventHandler(object):
             return None
         else:
             if self.dm.prev_ret_data is None:
-                return ':x: _{}_'.format('Need to query for data before we can plot it.')
+                return ':x: _{}_'.format('Need to query for data before we can plot it, or `;reset` context.')
             else:
                 return ':x: _{}_\n```{}```'.format('Failed to map parameters to data entities.', parameters)
 
@@ -380,6 +380,7 @@ class RtmEventHandler(object):
                 elif ';reset' in msg_txt:
                     logger.debug('Resetting context to {}')
                     self.context = {}
+                    self.dm.prev_ret_data = None
 
                 elif ';debug' in msg_txt:
                     if 'on' in msg_txt:
