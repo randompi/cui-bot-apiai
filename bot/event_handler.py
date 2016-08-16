@@ -11,6 +11,7 @@ import apiai
 import memory
 import os
 import pandas as pd
+import matplotlib.pyplot as plt
 
 from apiai_client import ApiaiDevClient
 from data_models import DataModels
@@ -148,6 +149,12 @@ protocol_modules = [
     'LGE module',
     'T1 Mapping',
     'T2* Mapping',
+]
+
+handle_data_actions = [
+    'handleDataQuery',
+    'handleSelectData',
+    'handlePlotData',
 ]
 
 col1 = 'BillingCodeID'
@@ -313,6 +320,25 @@ class RtmEventHandler(object):
         return result
 
 
+    def handlePlotData(self, parameters):
+        logger.debug('handleSelectData:: parameters: {}'.format(parameters))
+
+        self.clients.send_user_typing_pause(parameters['channel'], sleep_time=0.0)
+
+        plot = self.dm.plotData(parameters)
+        if plot:
+            fig = plot.get_figure()
+            plot_name = 'plot.png'
+            fig.savefig(plot_name)
+            self.msg_writer.upload_file(plot_name, parameters['channel'])
+            return None
+        else:
+            if self.dm.prev_ret_data is None:
+                return ':x: _{}_'.format('Need to query for data before we can plot it, or `;reset` context.')
+            else:
+                return ':x: _{}_\n```{}```'.format('Failed to map parameters to data entities.', parameters)
+
+
     def handle(self, event):
 
         if 'type' in event:
@@ -354,6 +380,7 @@ class RtmEventHandler(object):
                 elif ';reset' in msg_txt:
                     logger.debug('Resetting context to {}')
                     self.context = {}
+                    self.dm.prev_ret_data = None
 
                 elif ';debug' in msg_txt:
                     if 'on' in msg_txt:
@@ -674,8 +701,10 @@ class RtmEventHandler(object):
                     #logger.debug('hasattr({}):{}'.format(action, hasattr(self, action)))
                     if hasattr(self, action):
                         act_func = getattr(self, action)
-                        if action == 'handleDataQuery' or action == 'handleSelectData':
+                        if action in handle_data_actions:
                             params = self._cleanse(resp['result']['parameters'])
+                            if action.startswith('handlePlotData'):
+                                params['channel'] = event['channel']
                             msg_resp = act_func(params)
                         else:
                             act_params = act_func.__code__.co_varnames[1:act_func.__code__.co_argcount]
@@ -697,7 +726,8 @@ class RtmEventHandler(object):
                     else:
                         logger.error('Undefined action: {} parsed in response message: {}'.format(action, msg_resp))
                 # end for action
-                self.msg_writer.send_message(event['channel'], msg_resp)
+                if msg_resp:
+                    self.msg_writer.send_message(event['channel'], msg_resp)
             else:
                 misunderstandings = [
                     "I'm sorry, I didn't quite understand you...",

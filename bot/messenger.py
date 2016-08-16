@@ -75,3 +75,6 @@ class Messenger(object):
             "color": "#7CD197",
         }
         self.clients.web.chat.post_message(channel_id, txt, attachments=[attachment], as_user='true')
+
+    def upload_file(self, file, channel_id):
+        self.clients.web.files.upload(file, channels=channel_id)
