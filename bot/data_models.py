@@ -5,6 +5,7 @@ import pandas as pd
 import Levenshtein as ls
 import re
 from collections import namedtuple
+from collections import Counter
 
 logger = logging.getLogger(__name__)
 
@@ -19,6 +20,7 @@ class DataModels(object):
 
     def __init__(self):
         self._init_data_frames()
+        self.prev_ret_data = None # last Pandas data object returned as result of query
         self.trailing_digit_re = re.compile('.*([0-9])$')
         self.ColQuery = namedtuple('ColQuery', ['col','filter','comp'])
 
@@ -68,10 +70,12 @@ class DataModels(object):
                     logger.debug('col_constraints: {}'.format(col_constraint))
                     constraints = constraints & (eval(col_constraint))
             # TODO: apply column selection qualifiers? (instead of currently returning all columns)
+            self.prev_ret_data = frame[constraints]
             results.append(frame[constraints])
-            # TODO: handle the case when there are no constraints
+            # TODO: handle the case when there are no filter constraints
         else:
             # query all the data in the frame
+            self.prev_ret_data = frame
             results.append('_First 5 rows of {}_'.format(len(frame)))
             results.append(frame.head(5))
 
@@ -145,8 +149,89 @@ class DataModels(object):
 
             result = df.agg(agg_map)
 
+        self.prev_ret_data = result
         return result
 
+
+    def plotData(self, params):
+        """ Maps params to the data frame entities that are intended to be plot,
+            and then determines the appropriate style for the plot, returns generated plot
+        """
+
+        cols = []
+        x_col = None
+        y_col = None
+        plot_type = 'line' # default style
+
+        # map incoming params to instances and entities in the data frames
+        for param_k, param_v in params.iteritems():
+
+            if param_v:
+                if param_k.startswith('col'):
+                    cols.append(self.map_to_frame_col(param_v))
+
+                if param_k.startswith('x'):
+                    x_col = self.map_to_frame_col(param_v)
+
+                if param_k.startswith('y'):
+                    y_col = self.map_to_frame_col(param_v)
+
+                if param_k.startswith('plot-type'):
+                    plot_type = param_v
+
+        # check to see if we're plotting data that has been queried and returned before tracked
+        # in prev_ret_data, or if we need to infer the appropriate frame from params
+        if self.prev_ret_data is None:
+            if 'row' in params and params['row']:
+                frame_name = self.map_to_frame(params['row'])
+                data_to_plot_from = self.data_frames[frame_name]
+            elif cols:
+                most_ref_frame_name = self.find_most_referred_frame(cols)
+                if most_ref_frame_name:
+                    data_to_plot_from = self.data_frames[most_ref_frame_name]
+                else:
+                    # couldn't reconcile which data objects we should be plotting
+                    return None
+            else:
+                # couldn't reconcile which data objects we should be plotting
+                return None
+        else:
+            data_to_plot_from = self.prev_ret_data
+
+        # create a plot based on the variables and mappings we've been able to extract from params
+        if x_col and y_col and x_col in data_to_plot_from.columns and y_col in data_to_plot_from.columns:
+            # plot x vs y
+            plot = data_to_plot_from.plot(x=x_col, y=y_col, kind=plot_type)
+        elif x_col and x_col in data_to_plot_from.columns:
+            # plot over a single column
+            cols.append(x_col) # either add to existing cols, or if empty just add x_col
+            plot = data_to_plot_from[cols].plot(x=x_col, kind=plot_type)
+        elif cols:
+            # plot a several columns
+            # removing in place any columns that don't appear in the data_to_plot_from
+            cols[:] = [col for col in cols if col in data_to_plot_from.columns]
+            if cols:
+                plot = data_to_plot_from[cols].plot(kind=plot_type)
+            else:
+                return None
+        else:
+            # plot all data
+            plot = data_to_plot_from.plot(kind=plot_type)
+
+        return plot
+
+
+    def find_most_referred_frame(self, columns):
+        """ Assuming columns is a list of column names in our data_frames
+            which is the frame that has the most columns in it
+        """
+        f_name_counts = dict.fromkeys(self.data_frames.keys(), 0)
+        for col in columns:
+            for f_name, frame in self.data_frames.iteritems():
+                if col in frame.columns:
+                    f_name_counts[f_name] += 1
+
+        return Counter(f_name_counts).most_common(1)[0][0]
 
     def findRelevantFrames(self, query_params):
         # TODO: Possibly use gensim for semantic cosine similarity?
