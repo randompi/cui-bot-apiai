@@ -107,7 +107,7 @@ class TestDataModels(unittest.TestCase):
 
         in_params_map = {
             'col1': 'Scan Time',
-            'filter2': 'NA',
+            'filter2': 'FooBar',
         }
         result = self.dms.generate_column_queries(in_params_map)
         expected = self.dms.ColQuery(col='Scan_time', filter=None, comp=None)
@@ -157,4 +157,13 @@ class TestDataModels(unittest.TestCase):
         expected2 = self.dms.ColQuery(col='Indication', filter='HCM', comp='==')
         expected3 = self.dms.ColQuery(col='Gender', filter='M', comp='==')
         self.assertEqual(sorted(result), sorted([expected1, expected2, expected3]))
+
+        in_params_map = {
+            'col1': 'profit margin',
+            'filter1-percentage': '5%',
+            'comparison-filter1': 'greater than'
+        }
+        result = self.dms.generate_column_queries(in_params_map)
+        expected = self.dms.ColQuery(col='Profit_Margin', filter=0.05, comp='>')
+        self.assertEqual(result, [expected])
 

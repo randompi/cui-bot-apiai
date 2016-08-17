@@ -19,12 +19,23 @@ compstr_to_pyopstr = {
 class DataModels(object):
 
     def __init__(self):
-        self.data_frames = {}
-        self.data_frames['Procedure_Revenue'] = pd.read_csv('resources/MedData_SQL_DB/Procedure_Revenue.csv')
-        self.data_frames['Study_List'] = pd.read_csv('resources/MedData_SQL_DB/Study_List.csv')
+        self._init_data_frames()
         self.prev_ret_data = None # last Pandas data object returned as result of query
         self.trailing_digit_re = re.compile('.*([0-9])$')
         self.ColQuery = namedtuple('ColQuery', ['col','filter','comp'])
+
+    def _init_data_frames(self):
+        self.data_frames = {}
+        pr_df = pd.read_csv('resources/MedData_SQL_DB/Procedure_Revenue.csv')
+        sl_df = pd.read_csv('resources/MedData_SQL_DB/Study_List.csv')
+
+        # convert percentage Object type columns to float types
+        pr_df[['Profit_Margin']] = pr_df[['Profit_Margin']].replace('%','',regex=True).astype('float')/100
+        sl_df[['LVEF']] = sl_df[['LVEF']].replace('%','',regex=True).astype('float')/100
+
+        self.data_frames['Procedure_Revenue'] = pr_df
+        self.data_frames['Study_List'] = sl_df
+
 
     def selectData(self, parameters):
         most_cmn_frame = ''
@@ -352,10 +363,13 @@ class DataModels(object):
 
                     filter_key = 'filter' + col_num
                     number_key = 'number' + col_num
+                    percent_key = 'filter' + col_num + '-percentage'
                     if filter_key in params_map and params_map[filter_key]:
                         filter_val = params_map[filter_key]
                     elif number_key in params_map and params_map[number_key]:
                         filter_val = params_map[number_key]
+                    elif percent_key in params_map and params_map[percent_key]:
+                        filter_val = params_map[percent_key]
 
                     if  filter_val:
                         try:
@@ -383,7 +397,7 @@ class DataModels(object):
                         filt_num = filt_num_matches[0]
 
                     col_key = 'col' + filt_num
-                    if col_key in params_map and params_map[col_key]:
+                    if col_key in params_map and params_map[col_key] or p_k.endswith('percentage'):
                         # we'll just defer to when the col gets processed above
                         continue
                     else:
@@ -399,7 +413,7 @@ class DataModels(object):
                             else:
                                 comp_val = '=='
 
-                        col_queries.append(self.ColQuery(col=col_has_val, filter=filter_val, comp=comp_val))
+                            col_queries.append(self.ColQuery(col=col_has_val, filter=filter_val, comp=comp_val))
 
 
         return col_queries
@@ -414,6 +428,10 @@ class DataModels(object):
         return None
 
     def coerce_str_to_numeric(self, x):
+
+        # percentage so convert to float
+        if '%' in x:
+            return float(x.strip('%')) / 100
 
         try:
             f = float(x)
