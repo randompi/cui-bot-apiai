@@ -691,6 +691,8 @@ class RtmEventHandler(object):
             if resp['result']['score'] > 0.5:
                 msg_resp = resp['result']['fulfillment']['speech']
                 logger.debug('msg_resp: {}'.format(msg_resp))
+                if not msg_resp:
+                    msg_resp = '[{}]'.format(resp['result']['action'])
 
                 # searches the msg_resp for instances of '[action_name]', see if there is a function
                 # of that same name and if we can extract the necessary parameters, and if so then
