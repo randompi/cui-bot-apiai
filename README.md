@@ -4,6 +4,10 @@ CUI POC Api.ai Bot
 ## Overview
 The Conversational User Interface (CUI) proof-of-concept bot integrates with [api.ai](http://api.ai) on the back-end for intent matching, entity extraction, and slot filling in order to fulfill different conversational dialog scenarios in the medical domain.
 
+![Complex Queries and Plotting](resources/screens/6-Query_and_Plot.png "Showing more complicated selection and filtering queries, along with a groupable aggregation query, and a context aware plot of the resulting data.")
+
+More [Screenshots](https://github.com/RobotsAndPencils/cui-bot-apiai/wiki/Screenshots)
+
 ## Usage
 
 ### Environment Setup
@@ -46,7 +50,7 @@ From the root of the project directory:
 ## Code Organization
 The entry point for the bot is [app.py](bot/app.py) which is responsible for collecting environment variables like log level and slack token, and creating/starting a SlackBot instance from [slack_bot.py](bot/slack_bot.py).
 
-The `slack_bot.py` module implements an interface that is needed to run a multi-team bot using the Beep Boop Resource API client, by implementing an interface that includes `start()` and `stop()` methods and a function that spawns new instances of your bot: `spawn_bot`.  It is the main run loop of your bot instance that will listen to a particular Slack team's RTM events, and dispatch them to the `event_handler`.
+The [slack_bot.py](bot/slack_bot.py) module implements an interface that is needed to run a multi-team bot using the Beep Boop Resource API client, by implementing an interface that includes `start()` and `stop()` methods and a function that spawns new instances of your bot: `spawn_bot`.  It is the main run loop of the bot instance that will listen to a particular Slack team's RTM events, and dispatch them to the [event_handler.py](bot/event_handler.py) module.
 
 If you want to add or change an event that the bot responds (e.g. when the bot is mentioned, when the bot joins a channel, when a user types a message, etc.), you can modify the `_handle_by_type` method in `event_handler.py`.
 

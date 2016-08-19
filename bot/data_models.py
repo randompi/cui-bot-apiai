@@ -114,7 +114,12 @@ class DataModels(object):
 
         logger.debug('groupables: {}\naggregables: {}\nframe: {}\nops: {}'.format(groupables, aggregables, frame, ops))
 
-        df = self.data_frames[frame]
+        if self.prev_ret_data is not None:
+            # check to see if query references elements in prior data object
+            df = self._can_chain_data_query(self.prev_ret_data, groupables, aggregables)
+        else:
+            df = self.data_frames[frame]
+
         for groupable in groupables:
             # Detect which frames need to be merged and on which keys
             if groupable[0][0] != frame:
@@ -151,6 +156,26 @@ class DataModels(object):
 
         self.prev_ret_data = result
         return result
+
+
+    def _can_chain_data_query(self, prev_data, groupables, aggregables):
+        """ Checks to see if the columns referenced by groupables and aggregables
+            occur in the prev data we are trying to continue a chained query with,
+            otherwise raises exception with hint to reset context
+        """
+        reset_hint = 'Invoke `;reset` to start new query.'
+        cols = prev_data.columns
+        for groupable in groupables:
+            if groupable[0][1] not in cols:
+                raise Exception(
+                    '`{}` does not appear in previous data context :point_up:\n{}'.format(groupable[0][1], reset_hint))
+        for agg in aggregables:
+            if agg[0][1] not in cols:
+                raise Exception(
+                    '`{}` does not appear in previous data context :point_up:\n{}'.format(agg[0][1], reset_hint))
+        return prev_data
+
+
 
 
     def plotData(self, params):
@@ -251,9 +276,9 @@ class DataModels(object):
                 max_score = 0.0
                 for df_name, df in self.data_frames.iteritems():
                     for col_name in df.columns.values:
-                        logger.debug('q_param_v: {} <-> col_name: {}'.format(q_param_v, col_name))
+                        #logger.debug('q_param_v: {} <-> col_name: {}'.format(q_param_v, col_name))
                         sim_score = ls.ratio(q_param_v, col_name)
-                        logger.debug('score: {}\n'.format(sim_score))
+                        #logger.debug('score: {}\n'.format(sim_score))
                         if sim_score > max_score:
                             max_score = sim_score
                             params_to_df_col_map[q_param_v] = [(df_name, col_name, max_score)]

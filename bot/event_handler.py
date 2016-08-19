@@ -298,7 +298,7 @@ class RtmEventHandler(object):
             df = self.dm.queryData(parameters)
             result = '_*Results:*_\n```{}```'.format(df)
         except Exception as e:
-            result = ':x: _{}_'.format(e.message)
+            result = ':x: {}'.format(e.message)
 
         return result
 
