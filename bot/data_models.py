@@ -59,7 +59,13 @@ class DataModels(object):
         results = []
         results.append('> api.ai Parameters: {}'.format(non_empty_params))
         results.append('> column constraints: {}'.format(col_queries))
-        frame = self.data_frames[most_cmn_frame]
+
+        if self.prev_ret_data is not None:
+            # check to see if query references elements in prior data object
+            frame = self._can_chain_data_query(self.prev_ret_data, col_queries=col_queries)
+        else:
+            frame = self.data_frames[most_cmn_frame]
+
         if col_queries and len(col_queries) > 0:
             # query data by columns
             constraints = True
@@ -76,8 +82,7 @@ class DataModels(object):
         else:
             # query all the data in the frame
             self.prev_ret_data = frame
-            results.append('_First 5 rows of {}_'.format(len(frame)))
-            results.append(frame.head(5))
+            results.append(frame)
 
         return results
 
@@ -116,7 +121,7 @@ class DataModels(object):
 
         if self.prev_ret_data is not None:
             # check to see if query references elements in prior data object
-            df = self._can_chain_data_query(self.prev_ret_data, groupables, aggregables)
+            df = self._can_chain_data_query(self.prev_ret_data, groupables=groupables, aggregables=aggregables)
         else:
             df = self.data_frames[frame]
 
@@ -158,24 +163,31 @@ class DataModels(object):
         return result
 
 
-    def _can_chain_data_query(self, prev_data, groupables, aggregables):
-        """ Checks to see if the columns referenced by groupables and aggregables
+    def _can_chain_data_query(self, prev_data, **kwargs):
+        """ Checks to see if the columns referenced by iterables in kwargs
             occur in the prev data we are trying to continue a chained query with,
             otherwise raises exception with hint to reset context
         """
         reset_hint = 'Invoke `;reset` to start new query.'
         cols = prev_data.columns
-        for groupable in groupables:
-            if groupable[0][1] not in cols:
-                raise Exception(
-                    '`{}` does not appear in previous data context :point_up:\n{}'.format(groupable[0][1], reset_hint))
-        for agg in aggregables:
-            if agg[0][1] not in cols:
-                raise Exception(
-                    '`{}` does not appear in previous data context :point_up:\n{}'.format(agg[0][1], reset_hint))
+        if kwargs is not None:
+            if 'groupables' in kwargs:
+                for groupable in kwargs['groupables']:
+                    if groupable[0][1] not in cols:
+                        raise Exception(
+                            '`{}` does not appear in previous data context :point_up:\n{}'.format(groupable[0][1], reset_hint))
+            if 'aggregables' in kwargs:
+                for agg in kwargs['aggregables']:
+                    if agg[0][1] not in cols:
+                        raise Exception(
+                            '`{}` does not appear in previous data context :point_up:\n{}'.format(agg[0][1], reset_hint))
+            if 'col_queries' in kwargs:
+                for col_q in kwargs['col_queries']:
+                    if col_q.col not in cols:
+                        raise Exception(
+                            '`{}` does not appear in previous data context :point_up:\n{}'.format(col_q.col,
+                                                                                                  reset_hint))
         return prev_data
-
-
 
 
     def plotData(self, params):
