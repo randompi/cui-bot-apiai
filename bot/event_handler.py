@@ -316,7 +316,7 @@ class RtmEventHandler(object):
                 else:
                     result += '```{}```'.format(data)
         except Exception as e:
-            result = ':x: _{}_'.format(e.message)
+            result = ':x: {}'.format(e.message)
 
         return result
 
