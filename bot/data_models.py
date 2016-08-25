@@ -37,8 +37,7 @@ class DataModels(object):
         self.data_frames['Study_List'] = sl_df
 
 
-    def selectData(self, parameters):
-        most_cmn_frame = ''
+    def selectData(self, parameters, frame=''):
 
         non_empty_params = {}
 
@@ -47,7 +46,7 @@ class DataModels(object):
 
             if param_k.startswith('row') and param_v != '':
                 best_match_df = self.map_to_frame(param_v)
-                most_cmn_frame = best_match_df
+                frame = best_match_df
 
             if param_v:
                 non_empty_params[param_k] = param_v
@@ -62,9 +61,11 @@ class DataModels(object):
 
         if self.prev_ret_data is not None:
             # check to see if query references elements in prior data object
+            logger.debug('Checking _can_chain_data_query')
             frame = self._can_chain_data_query(self.prev_ret_data, col_queries=col_queries)
         else:
-            frame = self.data_frames[most_cmn_frame]
+            logger.debug('Using frame: {}'.format(frame))
+            frame = self.data_frames[frame]
 
         if col_queries and len(col_queries) > 0:
             # query data by columns
@@ -96,7 +97,7 @@ class DataModels(object):
     def queryData(self, parameters):
         groupables = []
         aggregables = []
-        frame_to_cols = {}
+        needs_select_filter = False
         frame = None
         ops = []
 
@@ -117,7 +118,15 @@ class DataModels(object):
             if param_k.startswith('op') and param_v != '':
                 ops.append(param_v)
 
-        logger.debug('groupables: {}\naggregables: {}\nframe: {}\nops: {}'.format(groupables, aggregables, frame, ops))
+            # this is a more complex query that we need to do a pre selection/filter for
+            # assumes that self.prev_ret_data will be set with the results
+            if (param_k.startswith('col') or param_k.startswith('filter')) and param_v != '':
+                needs_select_filter = True
+
+        logger.debug('groupables: {}\naggregables: {}\nframe: {}\nops: {}\nneeds_select_filter: {}'.format(groupables, aggregables, frame, ops, needs_select_filter))
+
+        if needs_select_filter:
+            self.selectData(parameters, frame)
 
         if self.prev_ret_data is not None:
             # check to see if query references elements in prior data object
@@ -125,6 +134,7 @@ class DataModels(object):
         else:
             df = self.data_frames[frame]
 
+        group_bys = []
         for groupable in groupables:
             # Detect which frames need to be merged and on which keys
             if groupable[0][0] != frame:
@@ -132,9 +142,10 @@ class DataModels(object):
                 logger.debug('groupable:{} != frame:{}'.format(groupable[0][0], frame))
                 raise Exception('Merge across tables not implemented yet')
             else:
-                # groupable part of same frame as aggregable
-                df = df.groupby(groupable[0][1])
-                logger.debug('df.first() after groupbys:\n{}'.format(df.first()))
+                group_bys.append(groupable[0][1])
+
+        if group_bys:
+            df = df.groupby(group_bys)
 
         if isinstance(df, pd.DataFrame):
             # there were no groupables so just select aggregables
