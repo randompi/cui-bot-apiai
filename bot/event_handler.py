@@ -735,9 +735,6 @@ class RtmEventHandler(object):
             else:
                 if resp['result']['source'] == 'agent':
                     low_confidence_msg = "I'm sorry, I haven't been trained enough to understand that query yet."
-                    confidence_pct = resp['result']['score'] * 100
-                    detected_intent = resp['result'].get('metadata').get('intentName')
-                    low_confidence_msg += "\n_I was only {:.0f}% confident that your intent was: {}_".format(confidence_pct, detected_intent)
                     self.msg_writer.send_message(event['channel'], low_confidence_msg)
                 elif resp['result']['source'] == 'domains':
                     speech_resp = resp['result'].get('fulfillment').get('speech')
