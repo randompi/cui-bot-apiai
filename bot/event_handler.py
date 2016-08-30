@@ -3,7 +3,7 @@
 import collections
 import json
 import logging
-import random
+import urllib
 import re
 import time
 import traceback
@@ -689,7 +689,8 @@ class RtmEventHandler(object):
         logger.debug('_handle_apiai_response::')
         try:
 
-            if resp['result']['score'] > 0.5:
+            confidence = 0.7  #TODO - make configurable
+            if resp['result']['score'] > confidence:
                 msg_resp = resp['result']['fulfillment']['speech']
                 logger.debug('msg_resp: {}'.format(msg_resp))
                 if not msg_resp:
@@ -732,14 +733,22 @@ class RtmEventHandler(object):
                 if msg_resp:
                     self.msg_writer.send_message(event['channel'], msg_resp)
             else:
-                misunderstandings = [
-                    "I'm sorry, I didn't quite understand you...",
-                    "I'm confused. Could you say it differently?",
-                    "Unfortunately I'm not sure how to respond... I'm still learning and getting smarter every day.",
-                    "Do you mind trying something else?  I didn't understand what you wanted.",
-                    "Hmm... I'm not sure what you meant.  Can you elaborate?"
-                ]
-                self.msg_writer.send_message(event['channel'], random.choice(misunderstandings))
+                if resp['result']['source'] == 'agent':
+                    low_confidence_msg = "I'm sorry, I haven't been trained enough to understand that query yet."
+                    confidence_pct = resp['result']['score'] * 100
+                    detected_intent = resp['result'].get('metadata').get('intentName')
+                    low_confidence_msg += "\n_I was only {:.0f}% confident that your intent was: {}_".format(confidence_pct, detected_intent)
+                    self.msg_writer.send_message(event['channel'], low_confidence_msg)
+                elif resp['result']['source'] == 'domains':
+                    speech_resp = resp['result'].get('fulfillment').get('speech')
+                    if speech_resp:
+                        self.msg_writer.send_message(event['channel'], speech_resp)
+                    else:
+                        query = urllib.urlencode({'q': event['text']})
+                        google_search_url = 'http://www.google.com/search?' + query
+                        self.msg_writer.send_message(event['channel'], "I don't know, but you could try: {}".format(google_search_url))
+                else:
+                    self.msg_writer.send_message(event['channel'], "Sorry I don't know how to answer that yet.")
         except Exception as e:
             logger.exception('Failed to parse response from api.ai: {}', resp)
             self.msg_writer.send_message(event['channel'], "_Please see my logs for an error I encountered._")
