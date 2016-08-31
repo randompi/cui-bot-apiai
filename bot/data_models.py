@@ -155,10 +155,22 @@ class DataModels(object):
 
             result = df[cols]
 
-            # TODO: try / except here if we are passing an op that DataFrame doesn't support
+            # TODO: handle multiple operations
             if len(ops) > 0:
-                op_func = getattr(pd.DataFrame, ops[0])
-                result = ops[0] + ':\n' + str(op_func(result)) #apply operation on selected cols
+                try:
+                    op_func = getattr(pd.DataFrame, ops[0])
+                    result = ops[0] + ':\n' + str(op_func(result)) #apply operation on selected cols
+                except Exception as e:
+                    if 'frequent' in ops[0]:
+                        if 'least' in ops[0]:
+                            ascending = True
+                        else:
+                            ascending = False
+                        logger.debug('Trying to apply value_counts function to: {}'.format(result.head()))
+                        if len(cols) == 1:
+                            result = ops[0] + ':\n' + str(result[cols[0]].value_counts(ascending=ascending))
+                    else:
+                        raise e
 
         else:
             agg_map = {}
