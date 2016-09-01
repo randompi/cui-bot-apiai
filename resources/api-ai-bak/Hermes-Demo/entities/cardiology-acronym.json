@@ -1,0 +1,203 @@
+{
+  "id": "6cedca53-6027-44d2-8fd3-d6cf934ca920",
+  "name": "cardiology-acronym",
+  "isOverridable": true,
+  "entries": [
+    {
+      "value": "EDV",
+      "synonyms": [
+        "EDV",
+        "edv",
+        "end-diastolic volume",
+        "end diastolic volume"
+      ]
+    },
+    {
+      "value": "ESV",
+      "synonyms": [
+        "ESV",
+        "esv",
+        "end-systolic volume",
+        "end systolic volume"
+      ]
+    },
+    {
+      "value": "EF",
+      "synonyms": [
+        "EF",
+        "ef",
+        "ejection fraction"
+      ]
+    },
+    {
+      "value": "SV",
+      "synonyms": [
+        "SV",
+        "sv",
+        "stroke volume"
+      ]
+    },
+    {
+      "value": "MASS",
+      "synonyms": [
+        "MASS",
+        "mass",
+        "myocardial mass"
+      ]
+    },
+    {
+      "value": "LV",
+      "synonyms": [
+        "LV",
+        "lv",
+        "left ventricle"
+      ]
+    },
+    {
+      "value": "RV",
+      "synonyms": [
+        "RV",
+        "rv",
+        "right ventricle"
+      ]
+    },
+    {
+      "value": "VF",
+      "synonyms": [
+        "VF",
+        "vf",
+        "ventricular fibrillation"
+      ]
+    },
+    {
+      "value": "BPA",
+      "synonyms": [
+        "BPA",
+        "bpa",
+        "burst promoting activity"
+      ]
+    },
+    {
+      "value": "RA",
+      "synonyms": [
+        "RA",
+        "ra",
+        "right atrium"
+      ]
+    },
+    {
+      "value": "LA",
+      "synonyms": [
+        "LA",
+        "la",
+        "left atria"
+      ]
+    },
+    {
+      "value": "EGE",
+      "synonyms": [
+        "EGE",
+        "ege",
+        "early gadolinium enhancement"
+      ]
+    },
+    {
+      "value": "MVO",
+      "synonyms": [
+        "MVO",
+        "mvo",
+        "microvascular obstruction"
+      ]
+    },
+    {
+      "value": "PA",
+      "synonyms": [
+        "PA",
+        "pa",
+        "pulmonary artery"
+      ]
+    },
+    {
+      "value": "RCA",
+      "synonyms": [
+        "RCA",
+        "rca",
+        "right coronary artery"
+      ]
+    },
+    {
+      "value": "LAD",
+      "synonyms": [
+        "LAD",
+        "lad",
+        "left anterior descending artery"
+      ]
+    },
+    {
+      "value": "CX",
+      "synonyms": [
+        "CX",
+        "cx",
+        "circumflex artery"
+      ]
+    },
+    {
+      "value": "Gd",
+      "synonyms": [
+        "Gd",
+        "gd",
+        "gadolinium"
+      ]
+    },
+    {
+      "value": "LVOT",
+      "synonyms": [
+        "LVOT",
+        "lvot",
+        "left ventricular outflow tract"
+      ]
+    },
+    {
+      "value": "chf",
+      "synonyms": [
+        "chf",
+        "chf",
+        "congestive heart failure"
+      ]
+    },
+    {
+      "value": "SCMR",
+      "synonyms": [
+        "SCMR",
+        "scmr",
+        "society for cardiovascular magnetic resonance"
+      ]
+    },
+    {
+      "value": "SCCT",
+      "synonyms": [
+        "scct",
+        "scct",
+        "society of cardiac computed tomography"
+      ]
+    },
+    {
+      "value": "PVC",
+      "synonyms": [
+        "PVC",
+        "pvc",
+        "premature ventricular contraction"
+      ]
+    },
+    {
+      "value": "HCM",
+      "synonyms": [
+        "HCM",
+        "hcm",
+        "hypertrophic cardiomyopathy"
+      ]
+    }
+  ],
+  "isEnum": false,
+  "automatedExpansion": false
+}

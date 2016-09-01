@@ -1,0 +1,37 @@
+{
+  "id": "3bffed57-054b-4ae1-b063-940a26f5f203",
+  "name": "gender",
+  "isOverridable": true,
+  "entries": [
+    {
+      "value": "female",
+      "synonyms": [
+        "female",
+        "Female",
+        "woman",
+        "girl",
+        "Woman",
+        "she",
+        "She",
+        "Her",
+        "her"
+      ]
+    },
+    {
+      "value": "male",
+      "synonyms": [
+        "male",
+        "Male",
+        "man",
+        "Man",
+        "boy",
+        "Him",
+        "him",
+        "He",
+        "he"
+      ]
+    }
+  ],
+  "isEnum": false,
+  "automatedExpansion": false
+}

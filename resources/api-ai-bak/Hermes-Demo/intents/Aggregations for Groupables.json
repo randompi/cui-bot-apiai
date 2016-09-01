@@ -1,0 +1,1475 @@
+{
+  "id": "e3f86243-1046-48e6-88c9-6c5cf32f38ce",
+  "name": "Aggregations for Groupables",
+  "auto": true,
+  "contexts": [],
+  "userSays": [
+    {
+      "id": "580e234a-8617-4281-95b9-3f60eaa0db7a",
+      "data": [
+        {
+          "text": "What is the "
+        },
+        {
+          "text": "average",
+          "alias": "op",
+          "meta": "@aggregation-op",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "reading time",
+          "alias": "aggregable",
+          "meta": "@aggregable",
+          "userDefined": true
+        },
+        {
+          "text": " for each "
+        },
+        {
+          "text": "physician",
+          "alias": "groupable",
+          "meta": "@groupable",
+          "userDefined": false
+        },
+        {
+          "text": "?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "827594d9-d1df-4e0b-88fe-f0da05c08e4c",
+      "data": [
+        {
+          "text": "What is the "
+        },
+        {
+          "text": "average",
+          "alias": "op",
+          "meta": "@aggregation-op",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "scan time",
+          "alias": "aggregable",
+          "meta": "@aggregable",
+          "userDefined": true
+        },
+        {
+          "text": " per "
+        },
+        {
+          "text": "indication",
+          "alias": "groupable",
+          "meta": "@groupable",
+          "userDefined": true
+        },
+        {
+          "text": "?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "297c7603-bf31-4ad5-a5e5-cdc819a21e03",
+      "data": [
+        {
+          "text": "What is the "
+        },
+        {
+          "text": "average",
+          "alias": "op",
+          "meta": "@aggregation-op",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "scan time",
+          "alias": "aggregable",
+          "meta": "@aggregable",
+          "userDefined": true
+        },
+        {
+          "text": " per "
+        },
+        {
+          "text": "physician",
+          "alias": "groupable1",
+          "meta": "@groupable",
+          "userDefined": true
+        },
+        {
+          "text": " per "
+        },
+        {
+          "text": "indication",
+          "alias": "groupable2",
+          "meta": "@groupable",
+          "userDefined": true
+        },
+        {
+          "text": "?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "e75ae573-6459-4a40-8525-a6c165d4f8c7",
+      "data": [
+        {
+          "text": "How many",
+          "alias": "op",
+          "meta": "@aggregation-op",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "studies",
+          "alias": "row",
+          "meta": "@row",
+          "userDefined": true
+        },
+        {
+          "text": " has each "
+        },
+        {
+          "text": "physician",
+          "alias": "groupable",
+          "meta": "@groupable",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "read",
+          "alias": "aggregable",
+          "meta": "@aggregable",
+          "userDefined": true
+        },
+        {
+          "text": "?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "7fbe44b1-39b5-49c9-bad3-b0eaba8c3e95",
+      "data": [
+        {
+          "text": "What is the "
+        },
+        {
+          "text": "average",
+          "alias": "op",
+          "meta": "@aggregation-op",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "profit margin",
+          "alias": "aggregable",
+          "meta": "@aggregable",
+          "userDefined": false
+        },
+        {
+          "text": " per "
+        },
+        {
+          "text": "hospital",
+          "alias": "groupable1",
+          "meta": "@groupable",
+          "userDefined": false
+        },
+        {
+          "text": "?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "229359b0-dfba-48bf-9ca2-72855bbd1785",
+      "data": [
+        {
+          "text": "What is the "
+        },
+        {
+          "text": "average",
+          "alias": "op",
+          "meta": "@aggregation-op",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "profit margin",
+          "alias": "aggregable",
+          "meta": "@aggregable",
+          "userDefined": false
+        },
+        {
+          "text": " per "
+        },
+        {
+          "text": "procedure billing code",
+          "alias": "groupable",
+          "meta": "@groupable",
+          "userDefined": true
+        },
+        {
+          "text": "?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "25de67bb-a2c7-4eb6-8554-20d9d992058f",
+      "data": [
+        {
+          "text": "What are the "
+        },
+        {
+          "text": "most frequent",
+          "alias": "op",
+          "meta": "@aggregation-op",
+          "userDefined": true
+        },
+        {
+          "text": " clinical "
+        },
+        {
+          "text": "indications",
+          "alias": "aggregable",
+          "meta": "@aggregable",
+          "userDefined": false
+        },
+        {
+          "text": "?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "dca5f178-cb63-4b75-ae70-890913fba676",
+      "data": [
+        {
+          "text": "What are the "
+        },
+        {
+          "text": "most frequent",
+          "alias": "op",
+          "meta": "@aggregation-op",
+          "userDefined": true
+        },
+        {
+          "text": " clinical "
+        },
+        {
+          "text": "indications",
+          "alias": "aggregable",
+          "meta": "@aggregable",
+          "userDefined": true
+        },
+        {
+          "text": " per "
+        },
+        {
+          "text": "hospital",
+          "alias": "groupable1",
+          "meta": "@groupable",
+          "userDefined": true
+        },
+        {
+          "text": "?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "71af5d19-fcdf-46e1-b19b-d89e0e5950d4",
+      "data": [
+        {
+          "text": "Average",
+          "alias": "op",
+          "meta": "@aggregation-op",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "LVEF",
+          "alias": "aggregable",
+          "meta": "@aggregable",
+          "userDefined": true
+        },
+        {
+          "text": " for all "
+        },
+        {
+          "text": "females",
+          "alias": "row",
+          "meta": "@row",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "over",
+          "alias": "comparison-filter",
+          "meta": "@comparison-filter",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "50 years old",
+          "alias": "age_in_years",
+          "meta": "@age_in_years",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "fd8dcaf6-9374-4e89-a4cb-9e7fa9071007",
+      "data": [
+        {
+          "text": "Average",
+          "alias": "op",
+          "meta": "@aggregation-op",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "LV Mass",
+          "alias": "aggregable",
+          "meta": "@aggregable",
+          "userDefined": true
+        },
+        {
+          "text": " for all "
+        },
+        {
+          "text": "males",
+          "alias": "row",
+          "meta": "@row",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "over",
+          "alias": "comparison-filter",
+          "meta": "@comparison-filter",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "40 years old",
+          "alias": "age_in_years",
+          "meta": "@age_in_years",
+          "userDefined": false
+        },
+        {
+          "text": " with "
+        },
+        {
+          "text": "HCM",
+          "alias": "groupable",
+          "meta": "@groupable",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "fa05e9db-6da4-4814-8377-145b44ff5a46",
+      "data": [
+        {
+          "text": "What is the primary "
+        },
+        {
+          "text": "scar pattern",
+          "alias": "groupable",
+          "meta": "@groupable",
+          "userDefined": false
+        },
+        {
+          "text": " of all the "
+        },
+        {
+          "text": "patients",
+          "alias": "groupable1",
+          "meta": "@groupable",
+          "userDefined": true
+        },
+        {
+          "text": " with "
+        },
+        {
+          "text": "ischemic",
+          "meta": "@sys.ignore",
+          "userDefined": true
+        },
+        {
+          "text": " heart disease?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "674614f7-7890-4a88-bac3-98cb0f0d164d",
+      "data": [
+        {
+          "text": "What is the "
+        },
+        {
+          "text": "average",
+          "alias": "op",
+          "meta": "@aggregation-op",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "LVEF",
+          "alias": "aggregable",
+          "meta": "@aggregable",
+          "userDefined": false
+        },
+        {
+          "text": " for all the "
+        },
+        {
+          "text": "patients",
+          "alias": "groupable",
+          "meta": "@groupable",
+          "userDefined": true
+        },
+        {
+          "text": " with "
+        },
+        {
+          "text": "ischemic heart disease",
+          "meta": "@sys.ignore",
+          "userDefined": true
+        },
+        {
+          "text": "?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "4072398a-228d-41d6-b970-6d6348f880c1",
+      "data": [
+        {
+          "text": "Median",
+          "alias": "op",
+          "meta": "@aggregation-op",
+          "userDefined": false
+        },
+        {
+          "text": " age for all "
+        },
+        {
+          "text": "male",
+          "alias": "row",
+          "meta": "@row",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "patients",
+          "alias": "groupable",
+          "meta": "@groupable",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "fd5a35cb-f88a-4773-8a5b-74efc65f72dd",
+      "data": [
+        {
+          "text": "What is the "
+        },
+        {
+          "text": "least frequent",
+          "alias": "op",
+          "meta": "@aggregation-op",
+          "userDefined": false
+        },
+        {
+          "text": " clinical "
+        },
+        {
+          "text": "indication",
+          "alias": "aggregable",
+          "meta": "@aggregable",
+          "userDefined": false
+        },
+        {
+          "text": "?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "f00f47f7-611d-4907-930e-b962e8ec8698",
+      "data": [
+        {
+          "text": "What is the "
+        },
+        {
+          "text": "min",
+          "alias": "op",
+          "meta": "@aggregation-op",
+          "userDefined": false
+        },
+        {
+          "text": ", "
+        },
+        {
+          "text": "max",
+          "alias": "op1",
+          "meta": "@aggregation-op",
+          "userDefined": false
+        },
+        {
+          "text": ", and "
+        },
+        {
+          "text": "average",
+          "alias": "op2",
+          "meta": "@aggregation-op",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "age",
+          "alias": "aggregable",
+          "meta": "@aggregable",
+          "userDefined": true
+        },
+        {
+          "text": " per "
+        },
+        {
+          "text": "gender",
+          "alias": "groupable",
+          "meta": "@groupable",
+          "userDefined": true
+        },
+        {
+          "text": "?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "ec047934-45c7-4883-8f64-8a8fca42012c",
+      "data": [
+        {
+          "text": "average",
+          "alias": "op",
+          "meta": "@aggregation-op",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "procedure",
+          "meta": "@sys.ignore",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "expense",
+          "alias": "aggregable",
+          "meta": "@aggregable",
+          "userDefined": false
+        },
+        {
+          "text": " per "
+        },
+        {
+          "text": "hospital",
+          "alias": "groupable1",
+          "meta": "@groupable",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "bae7d4b9-9426-4738-bd3a-be574c4da63a",
+      "data": [
+        {
+          "text": "what "
+        },
+        {
+          "text": "is",
+          "meta": "@sys.ignore",
+          "userDefined": false
+        },
+        {
+          "text": " the "
+        },
+        {
+          "text": "median",
+          "alias": "op",
+          "meta": "@aggregation-op",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "BMI",
+          "alias": "aggregable",
+          "meta": "@aggregable",
+          "userDefined": false
+        },
+        {
+          "text": " for all "
+        },
+        {
+          "text": "females",
+          "alias": "row",
+          "meta": "@row",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "f81921cb-1c8b-4d33-8de7-4f78289d1728",
+      "data": [
+        {
+          "text": "average",
+          "alias": "op",
+          "meta": "@aggregation-op",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "bsa",
+          "alias": "aggregable",
+          "meta": "@aggregable",
+          "userDefined": false
+        },
+        {
+          "text": " for all "
+        },
+        {
+          "text": "males",
+          "alias": "row",
+          "meta": "@row",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "b25b2444-052f-4838-b313-772a1489c488",
+      "data": [
+        {
+          "text": "mean",
+          "alias": "op",
+          "meta": "@aggregation-op",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "profit margin",
+          "alias": "aggregable",
+          "meta": "@aggregable",
+          "userDefined": true
+        },
+        {
+          "text": " per "
+        },
+        {
+          "text": "cpt code",
+          "alias": "groupable",
+          "meta": "@groupable",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "11fe839e-11e0-43a7-bd23-9905ddf302ec",
+      "data": [
+        {
+          "text": "what "
+        },
+        {
+          "text": "is",
+          "meta": "@sys.ignore",
+          "userDefined": false
+        },
+        {
+          "text": " the "
+        },
+        {
+          "text": "mean",
+          "alias": "op",
+          "meta": "@aggregation-op",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "revenue",
+          "alias": "aggregable",
+          "meta": "@aggregable",
+          "userDefined": false
+        },
+        {
+          "text": " and "
+        },
+        {
+          "text": "expense",
+          "alias": "aggregable1",
+          "meta": "@aggregable",
+          "userDefined": false
+        },
+        {
+          "text": " for each "
+        },
+        {
+          "text": "hospital",
+          "alias": "groupable",
+          "meta": "@groupable",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "626d75d8-4290-4db6-b93d-8b76d75ba7c6",
+      "data": [
+        {
+          "text": "mean,",
+          "alias": "op",
+          "meta": "@aggregation-op",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "min,",
+          "alias": "op2",
+          "meta": "@aggregation-op",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "max",
+          "alias": "op1",
+          "meta": "@aggregation-op",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "scan time",
+          "alias": "aggregable",
+          "meta": "@aggregable",
+          "userDefined": false
+        },
+        {
+          "text": " and "
+        },
+        {
+          "text": "read time",
+          "alias": "aggregable1",
+          "meta": "@aggregable",
+          "userDefined": false
+        },
+        {
+          "text": " for each "
+        },
+        {
+          "text": "indication",
+          "alias": "groupable",
+          "meta": "@groupable",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "de002ac6-af5a-4fb2-9151-e4f32e2a1341",
+      "data": [
+        {
+          "text": "what "
+        },
+        {
+          "text": "is",
+          "meta": "@sys.ignore",
+          "userDefined": false
+        },
+        {
+          "text": " the "
+        },
+        {
+          "text": "mean",
+          "alias": "op",
+          "meta": "@aggregation-op",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "revenue",
+          "alias": "aggregable",
+          "meta": "@aggregable",
+          "userDefined": false
+        },
+        {
+          "text": ", "
+        },
+        {
+          "text": "expense",
+          "alias": "aggregable1",
+          "meta": "@aggregable",
+          "userDefined": false
+        },
+        {
+          "text": " and "
+        },
+        {
+          "text": "profit margin",
+          "alias": "aggregable2",
+          "meta": "@aggregable",
+          "userDefined": true
+        },
+        {
+          "text": " for each "
+        },
+        {
+          "text": "hospital?",
+          "alias": "groupable",
+          "meta": "@groupable",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "b7e402fb-13f2-4ec0-a231-56103804bb53",
+      "data": [
+        {
+          "text": "mean,",
+          "alias": "op",
+          "meta": "@aggregation-op",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "min,",
+          "alias": "op2",
+          "meta": "@aggregation-op",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "max",
+          "alias": "op1",
+          "meta": "@aggregation-op",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "scan",
+          "alias": "col",
+          "meta": "@col",
+          "userDefined": true
+        },
+        {
+          "text": " and "
+        },
+        {
+          "text": "read times",
+          "alias": "col1",
+          "meta": "@col",
+          "userDefined": false
+        },
+        {
+          "text": " for each "
+        },
+        {
+          "text": "indication",
+          "alias": "groupable",
+          "meta": "@groupable",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "95b735b4-6039-4a8e-aad4-9ccaf3289eb4",
+      "data": [
+        {
+          "text": "mean",
+          "alias": "op",
+          "meta": "@aggregation-op",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "LVEF",
+          "alias": "aggregable",
+          "meta": "@aggregable",
+          "userDefined": true
+        },
+        {
+          "text": " for patients with "
+        },
+        {
+          "text": "HCM",
+          "alias": "filter",
+          "meta": "@filter",
+          "userDefined": true
+        },
+        {
+          "text": "?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "08939b1d-0f5e-40c9-915e-4642a3cb37c8",
+      "data": [
+        {
+          "text": "what "
+        },
+        {
+          "text": "is",
+          "meta": "@sys.ignore",
+          "userDefined": false
+        },
+        {
+          "text": " the "
+        },
+        {
+          "text": "total",
+          "alias": "op",
+          "meta": "@aggregation-op",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "revenue",
+          "alias": "aggregable",
+          "meta": "@aggregable",
+          "userDefined": false
+        },
+        {
+          "text": " and "
+        },
+        {
+          "text": "expense",
+          "alias": "aggregable1",
+          "meta": "@aggregable",
+          "userDefined": false
+        },
+        {
+          "text": " for each "
+        },
+        {
+          "text": "hospital",
+          "alias": "groupable",
+          "meta": "@groupable",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "2511b10b-bdf7-4e09-a0e7-17dd2bbe7a35",
+      "data": [
+        {
+          "text": "how many",
+          "alias": "op2",
+          "meta": "@aggregation-op",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "procedures",
+          "alias": "row",
+          "meta": "@row",
+          "userDefined": false
+        },
+        {
+          "text": " were done"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "fa8358f2-687f-49d1-8b82-9ae84723ae3d",
+      "data": [
+        {
+          "text": "total",
+          "alias": "op1",
+          "meta": "@aggregation-op",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "scan time",
+          "alias": "aggregable1",
+          "meta": "@aggregable",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "and",
+          "meta": "@sys.ignore",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "read time",
+          "alias": "aggregable2",
+          "meta": "@aggregable",
+          "userDefined": true
+        },
+        {
+          "text": " per "
+        },
+        {
+          "text": "indication",
+          "alias": "groupable1",
+          "meta": "@groupable",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "570d4a56-aa32-48da-9b51-e70d599c38c4",
+      "data": [
+        {
+          "text": "mean",
+          "alias": "op1",
+          "meta": "@aggregation-op",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "read time",
+          "alias": "aggregable1",
+          "meta": "@aggregable",
+          "userDefined": true
+        },
+        {
+          "text": " per "
+        },
+        {
+          "text": "indication",
+          "alias": "groupable1",
+          "meta": "@groupable",
+          "userDefined": true
+        },
+        {
+          "text": " per "
+        },
+        {
+          "text": "physician",
+          "alias": "groupable2",
+          "meta": "@groupable",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "c39c166a-27d4-4c54-9ad6-54a34459445a",
+      "data": [
+        {
+          "text": "mean",
+          "alias": "op1",
+          "meta": "@aggregation-op",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "read time",
+          "alias": "aggregable1",
+          "meta": "@aggregable",
+          "userDefined": false
+        },
+        {
+          "text": " and "
+        },
+        {
+          "text": "scan time",
+          "alias": "aggregable2",
+          "meta": "@aggregable",
+          "userDefined": true
+        },
+        {
+          "text": " per "
+        },
+        {
+          "text": "indication",
+          "alias": "groupable1",
+          "meta": "@groupable",
+          "userDefined": false
+        },
+        {
+          "text": " per "
+        },
+        {
+          "text": "physican",
+          "alias": "groupable2",
+          "meta": "@groupable",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "ebd1e51d-d122-4813-9fe5-ea7ab9b73f93",
+      "data": [
+        {
+          "text": "mean",
+          "alias": "op1",
+          "meta": "@aggregation-op",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "revenue",
+          "alias": "aggregable1",
+          "meta": "@aggregable",
+          "userDefined": false
+        },
+        {
+          "text": " and "
+        },
+        {
+          "text": "expense",
+          "alias": "aggregable2",
+          "meta": "@aggregable",
+          "userDefined": false
+        },
+        {
+          "text": " per "
+        },
+        {
+          "text": "cpt code",
+          "alias": "groupable1",
+          "meta": "@groupable",
+          "userDefined": true
+        },
+        {
+          "text": " per "
+        },
+        {
+          "text": "hospital",
+          "alias": "groupable2",
+          "meta": "@groupable",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "c82f4830-6729-47ca-816f-2af3fd5b10f1",
+      "data": [
+        {
+          "text": "how many",
+          "alias": "op2",
+          "meta": "@aggregation-op",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "patients",
+          "alias": "aggregable2",
+          "meta": "@aggregable",
+          "userDefined": true
+        },
+        {
+          "text": " per "
+        },
+        {
+          "text": "indication",
+          "alias": "groupable2",
+          "meta": "@groupable",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "09424df5-3636-4091-8ae6-59bdbd6aa823",
+      "data": [
+        {
+          "text": "how many",
+          "alias": "op2",
+          "meta": "@aggregation-op",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "female",
+          "alias": "filter",
+          "meta": "@filter",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "patients",
+          "alias": "row1",
+          "meta": "@row",
+          "userDefined": false
+        },
+        {
+          "text": " per "
+        },
+        {
+          "text": "indication",
+          "alias": "groupable2",
+          "meta": "@groupable",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "cfa507e8-fad8-42d6-8962-e36ea5e7aa46",
+      "data": [
+        {
+          "text": "what "
+        },
+        {
+          "text": "is",
+          "meta": "@sys.ignore",
+          "userDefined": false
+        },
+        {
+          "text": " the "
+        },
+        {
+          "text": "least likely",
+          "alias": "op",
+          "meta": "@aggregation-op",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "scar presence",
+          "alias": "aggregable",
+          "meta": "@aggregable",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    }
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "dataType": "@groupable",
+          "name": "groupable",
+          "value": "$groupable"
+        },
+        {
+          "dataType": "@aggregation-op",
+          "name": "op",
+          "value": "$op"
+        },
+        {
+          "dataType": "@aggregable",
+          "name": "aggregable",
+          "value": "$aggregable"
+        },
+        {
+          "dataType": "@groupable",
+          "name": "groupable1",
+          "value": "$groupable1"
+        },
+        {
+          "dataType": "@groupable",
+          "name": "groupable2",
+          "value": "$groupable2"
+        },
+        {
+          "dataType": "@age_in_years",
+          "name": "age_in_years",
+          "value": "$age_in_years"
+        },
+        {
+          "dataType": "@aggregation-op",
+          "name": "op1",
+          "value": "$op1"
+        },
+        {
+          "dataType": "@aggregation-op",
+          "name": "op2",
+          "value": "$op2"
+        },
+        {
+          "dataType": "@row",
+          "name": "row",
+          "value": "$row"
+        },
+        {
+          "dataType": "@aggregable",
+          "name": "aggregable1",
+          "value": "$aggregable1"
+        },
+        {
+          "dataType": "@comparison-filter",
+          "name": "comparison-filter",
+          "value": "$comparison-filter"
+        },
+        {
+          "dataType": "@aggregable",
+          "name": "aggregable2",
+          "value": "$aggregable2"
+        },
+        {
+          "dataType": "@col",
+          "name": "col",
+          "value": "$col"
+        },
+        {
+          "dataType": "@col",
+          "name": "col1",
+          "value": "$col1"
+        },
+        {
+          "dataType": "@filter",
+          "name": "filter",
+          "value": "$filter"
+        },
+        {
+          "dataType": "@row",
+          "name": "row1",
+          "value": "$row1"
+        }
+      ],
+      "speech": "[handleDataQuery]"
+    }
+  ],
+  "state": "LEARNED",
+  "priority": 500000,
+  "webhookUsed": false,
+  "fallbackIntent": false
+}

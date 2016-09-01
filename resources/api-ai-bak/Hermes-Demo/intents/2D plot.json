@@ -1,0 +1,405 @@
+{
+  "id": "0e6ae42d-c894-4185-a897-16d6fd6bd4d4",
+  "name": "2D plot",
+  "auto": true,
+  "contexts": [],
+  "userSays": [
+    {
+      "id": "64bfe2a1-47e3-4310-a58a-9011ea8cb1b9",
+      "data": [
+        {
+          "text": "display a "
+        },
+        {
+          "text": "scatter",
+          "alias": "plot-type",
+          "meta": "@plot-type",
+          "userDefined": true
+        },
+        {
+          "text": " plot of "
+        },
+        {
+          "text": "age",
+          "alias": "x",
+          "meta": "@col",
+          "userDefined": true
+        },
+        {
+          "text": " vs "
+        },
+        {
+          "text": "LVEF",
+          "alias": "y",
+          "meta": "@col",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "6ce972ab-323e-43db-a617-7dd243b7e66f",
+      "data": [
+        {
+          "text": "plot "
+        },
+        {
+          "text": "patient",
+          "alias": "row",
+          "meta": "@row",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "height",
+          "alias": "x",
+          "meta": "@col",
+          "userDefined": true
+        },
+        {
+          "text": " vs "
+        },
+        {
+          "text": "mass",
+          "alias": "y",
+          "meta": "@col",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "c17c506f-9e43-404e-8f40-76ba86e0aa79",
+      "data": [
+        {
+          "text": "scatter",
+          "alias": "plot-type",
+          "meta": "@plot-type",
+          "userDefined": true
+        },
+        {
+          "text": " plot "
+        },
+        {
+          "text": "LVEDV",
+          "alias": "x",
+          "meta": "@col",
+          "userDefined": true
+        },
+        {
+          "text": " vs "
+        },
+        {
+          "text": "LV Mass",
+          "alias": "y",
+          "meta": "@col",
+          "userDefined": true
+        },
+        {
+          "text": " for all "
+        },
+        {
+          "text": "patients",
+          "alias": "row",
+          "meta": "@row",
+          "userDefined": true
+        },
+        {
+          "text": " with "
+        },
+        {
+          "text": "HCM",
+          "alias": "filter",
+          "meta": "@filter",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "ae3604e3-3fec-4a6f-a42f-991649a1a5f2",
+      "data": [
+        {
+          "text": "plot "
+        },
+        {
+          "text": "average",
+          "alias": "aggregation-op",
+          "meta": "@aggregation-op",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "profit margin",
+          "alias": "aggregable",
+          "meta": "@aggregable",
+          "userDefined": false
+        },
+        {
+          "text": " per "
+        },
+        {
+          "text": "hospital",
+          "alias": "groupable",
+          "meta": "@groupable",
+          "userDefined": false
+        },
+        {
+          "text": " in a "
+        },
+        {
+          "text": "bar",
+          "alias": "plot-type",
+          "meta": "@plot-type",
+          "userDefined": true
+        },
+        {
+          "text": " chart"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "241aca69-b81a-401b-95a2-bcedc1a8406f",
+      "data": [
+        {
+          "text": "create "
+        },
+        {
+          "text": "marked line",
+          "alias": "plot-type",
+          "meta": "@plot-type",
+          "userDefined": false
+        },
+        {
+          "text": " plot"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "19363abf-ff2e-4bdd-91fd-cd529b9cb0bd",
+      "data": [
+        {
+          "text": "display "
+        },
+        {
+          "text": "pie chart",
+          "alias": "plot-type",
+          "meta": "@plot-type",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "feb1e199-511f-4315-be0b-761bf87f1b8b",
+      "data": [
+        {
+          "text": "show "
+        },
+        {
+          "text": "exploded pie chart",
+          "alias": "plot-type",
+          "meta": "@plot-type",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "c7c572de-cb07-4fad-bfb9-be595ead97e8",
+      "data": [
+        {
+          "text": "bar plot",
+          "alias": "plot-type",
+          "meta": "@plot-type",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "LVEDV,",
+          "alias": "col",
+          "meta": "@col",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "LVESV,",
+          "alias": "col1",
+          "meta": "@col",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "LVSV",
+          "alias": "col2",
+          "meta": "@col",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "a9496efa-8c73-4602-8d45-37f25164db90",
+      "data": [
+        {
+          "text": "line",
+          "alias": "plot-type",
+          "meta": "@plot-type",
+          "userDefined": false
+        },
+        {
+          "text": " plot "
+        },
+        {
+          "text": "height",
+          "alias": "col",
+          "meta": "@col",
+          "userDefined": true
+        },
+        {
+          "text": " and "
+        },
+        {
+          "text": "mass",
+          "alias": "col1",
+          "meta": "@col",
+          "userDefined": true
+        },
+        {
+          "text": " over "
+        },
+        {
+          "text": "age",
+          "alias": "x",
+          "meta": "@col",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "cce427ed-4d32-4eab-8b6c-fc5fbdc1b1e5",
+      "data": [
+        {
+          "text": "scatter plot",
+          "alias": "plot-type",
+          "meta": "@plot-type",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "LVSV",
+          "alias": "col",
+          "meta": "@col",
+          "userDefined": true
+        },
+        {
+          "text": " vs "
+        },
+        {
+          "text": "LV mass",
+          "alias": "col1",
+          "meta": "@col",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    }
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "dataType": "@col",
+          "name": "x",
+          "value": "$x"
+        },
+        {
+          "dataType": "@col",
+          "name": "y",
+          "value": "$y"
+        },
+        {
+          "required": false,
+          "dataType": "@plot-type",
+          "name": "plot-type",
+          "value": "$plot-type",
+          "prompts": [
+            "What type of plot would you like?"
+          ]
+        },
+        {
+          "dataType": "@row",
+          "name": "row",
+          "value": "$row"
+        },
+        {
+          "dataType": "@filter",
+          "name": "filter",
+          "value": "$filter"
+        },
+        {
+          "dataType": "@aggregation-op",
+          "name": "aggregation-op",
+          "value": "$aggregation-op"
+        },
+        {
+          "dataType": "@aggregable",
+          "name": "aggregable",
+          "value": "$aggregable"
+        },
+        {
+          "dataType": "@groupable",
+          "name": "groupable",
+          "value": "$groupable"
+        },
+        {
+          "dataType": "@col",
+          "name": "col",
+          "value": "$col"
+        },
+        {
+          "dataType": "@col",
+          "name": "col1",
+          "value": "$col1"
+        },
+        {
+          "dataType": "@col",
+          "name": "col2",
+          "value": "$col2"
+        }
+      ],
+      "speech": "[handlePlotData]"
+    }
+  ],
+  "state": "LEARNED",
+  "priority": 500000,
+  "webhookUsed": false,
+  "fallbackIntent": false
+}

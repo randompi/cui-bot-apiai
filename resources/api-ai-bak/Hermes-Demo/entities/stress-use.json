@@ -1,0 +1,29 @@
+{
+  "id": "33dc7a07-7157-42e8-81fa-36948c1ec522",
+  "name": "stress-use",
+  "isOverridable": true,
+  "entries": [
+    {
+      "value": "True",
+      "synonyms": [
+        "with stress",
+        "yes",
+        "Yes",
+        "y"
+      ]
+    },
+    {
+      "value": "False",
+      "synonyms": [
+        "without stress",
+        "no stress",
+        "non-stress",
+        "no",
+        "No",
+        "n"
+      ]
+    }
+  ],
+  "isEnum": false,
+  "automatedExpansion": false
+}

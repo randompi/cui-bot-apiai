@@ -1,0 +1,259 @@
+{
+  "id": "3a51a7b2-cdc0-4625-8b34-66128003872d",
+  "name": "col",
+  "isOverridable": true,
+  "entries": [
+    {
+      "value": "Gender",
+      "synonyms": [
+        "gender",
+        "sex"
+      ]
+    },
+    {
+      "value": "Indication",
+      "synonyms": [
+        "indication"
+      ]
+    },
+    {
+      "value": "Age",
+      "synonyms": [
+        "age",
+        "years old"
+      ]
+    },
+    {
+      "value": "LV scar presence",
+      "synonyms": [
+        "LV scar presence",
+        "lv scar"
+      ]
+    },
+    {
+      "value": "CPT codes",
+      "synonyms": [
+        "CPT codes"
+      ]
+    },
+    {
+      "value": "Patient ID",
+      "synonyms": [
+        "patient ID",
+        "patient identifier",
+        "patient id"
+      ]
+    },
+    {
+      "value": "Height",
+      "synonyms": [
+        "height"
+      ]
+    },
+    {
+      "value": "Body Mass",
+      "synonyms": [
+        "body mass",
+        "body weight",
+        "weight"
+      ]
+    },
+    {
+      "value": "BMI",
+      "synonyms": [
+        "bmi",
+        "body mass index",
+        "BMI"
+      ]
+    },
+    {
+      "value": "BSA",
+      "synonyms": [
+        "bsa",
+        "body surface area",
+        "BSA"
+      ]
+    },
+    {
+      "value": "Study ID",
+      "synonyms": [
+        "study ID",
+        "study identifier",
+        "study id"
+      ]
+    },
+    {
+      "value": "Scan Time",
+      "synonyms": [
+        "scan time",
+        "scanning time",
+        "time in scanner",
+        "scan times"
+      ]
+    },
+    {
+      "value": "Read Time",
+      "synonyms": [
+        "read time",
+        "reading time",
+        "analysis time",
+        "read times",
+        "analysis times"
+      ]
+    },
+    {
+      "value": "reading physician",
+      "synonyms": [
+        "reading physician",
+        "physician reader",
+        "physician"
+      ]
+    },
+    {
+      "value": "LVEDV",
+      "synonyms": [
+        "lvedv",
+        "lv edv",
+        "left ventricular end diastolic volume",
+        "left ventricle edv",
+        "LVEDV"
+      ]
+    },
+    {
+      "value": "LVESV",
+      "synonyms": [
+        "lvesv",
+        "lv esv",
+        "left ventricular end systolic volume",
+        "left ventricle esv",
+        "LVESV"
+      ]
+    },
+    {
+      "value": "LVSV",
+      "synonyms": [
+        "lvsv",
+        "lv sv",
+        "left ventricular stroke volume",
+        "left ventricle sv",
+        "LVSV"
+      ]
+    },
+    {
+      "value": "LVEF",
+      "synonyms": [
+        "lvef",
+        "left ventricular ejection fraction",
+        "left ventricle ef",
+        "LVEF"
+      ]
+    },
+    {
+      "value": "lv mass",
+      "synonyms": [
+        "lv mass",
+        "left ventricular mass"
+      ]
+    },
+    {
+      "value": "lv scar type",
+      "synonyms": [
+        "lv scar",
+        "lv scar type",
+        "scar location",
+        "scar profile",
+        "left ventricular scar profile"
+      ]
+    },
+    {
+      "value": "procedure ID",
+      "synonyms": [
+        "procedure ID",
+        "procedure billing id"
+      ]
+    },
+    {
+      "value": "cpt description",
+      "synonyms": [
+        "cpt description",
+        "cpt code description"
+      ]
+    },
+    {
+      "value": "contrast",
+      "synonyms": [
+        "contrast",
+        "contrast agent"
+      ]
+    },
+    {
+      "value": "stress",
+      "synonyms": [
+        "stress",
+        "stress agent"
+      ]
+    },
+    {
+      "value": "reimbursement",
+      "synonyms": [
+        "reimbursement",
+        "cms reimbursement",
+        "insurance payment"
+      ]
+    },
+    {
+      "value": "hospital name",
+      "synonyms": [
+        "hospital name",
+        "hospital"
+      ]
+    },
+    {
+      "value": "revenue",
+      "synonyms": [
+        "revenue",
+        "income"
+      ]
+    },
+    {
+      "value": "expense",
+      "synonyms": [
+        "expense",
+        "costs"
+      ]
+    },
+    {
+      "value": "profit",
+      "synonyms": [
+        "profit"
+      ]
+    },
+    {
+      "value": "profit margin",
+      "synonyms": [
+        "profit margin",
+        "profit %"
+      ]
+    },
+    {
+      "value": "cpt code",
+      "synonyms": [
+        "cpt code"
+      ]
+    },
+    {
+      "value": "mass",
+      "synonyms": [
+        "mass"
+      ]
+    },
+    {
+      "value": "scan",
+      "synonyms": [
+        "scan"
+      ]
+    }
+  ],
+  "isEnum": false,
+  "automatedExpansion": false
+}

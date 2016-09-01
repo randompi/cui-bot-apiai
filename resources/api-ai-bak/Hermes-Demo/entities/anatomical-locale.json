@@ -1,0 +1,16 @@
+{
+  "id": "34a16a5f-8cb2-42f5-b83f-869532626f13",
+  "name": "anatomical-locale",
+  "isOverridable": true,
+  "entries": [
+    {
+      "value": "cardiac",
+      "synonyms": [
+        "cardiac",
+        "heart"
+      ]
+    }
+  ],
+  "isEnum": false,
+  "automatedExpansion": false
+}

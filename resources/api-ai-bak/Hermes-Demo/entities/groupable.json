@@ -1,0 +1,77 @@
+{
+  "id": "a08883ab-c716-4769-8a43-cef1955012d5",
+  "name": "groupable",
+  "isOverridable": true,
+  "entries": [
+    {
+      "value": "physician",
+      "synonyms": [
+        "physician"
+      ]
+    },
+    {
+      "value": "hospital",
+      "synonyms": [
+        "hospital"
+      ]
+    },
+    {
+      "value": "indication",
+      "synonyms": [
+        "indication"
+      ]
+    },
+    {
+      "value": "procedure billing code",
+      "synonyms": [
+        "procedure billing code",
+        "billing code"
+      ]
+    },
+    {
+      "value": "scar pattern",
+      "synonyms": [
+        "scar pattern",
+        "scar presence"
+      ]
+    },
+    {
+      "value": "patients",
+      "synonyms": [
+        "patients"
+      ]
+    },
+    {
+      "value": "gender",
+      "synonyms": [
+        "gender"
+      ]
+    },
+    {
+      "value": "cpt code",
+      "synonyms": [
+        "cpt code"
+      ]
+    },
+    {
+      "value": "HCM",
+      "synonyms": [
+        "HCM"
+      ]
+    },
+    {
+      "value": "physican",
+      "synonyms": [
+        "physican"
+      ]
+    },
+    {
+      "value": "male",
+      "synonyms": [
+        "male"
+      ]
+    }
+  ],
+  "isEnum": false,
+  "automatedExpansion": false
+}

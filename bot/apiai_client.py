@@ -34,3 +34,7 @@ class ApiaiDevClient(object):
             'Authorization': ('Bearer %s' % self.dev_access_token)
         }
 
+
+class ApiaiResponseParser(object):
+    def __init__(self, response):
+        self.resp = response

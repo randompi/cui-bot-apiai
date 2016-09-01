@@ -1,0 +1,29 @@
+{
+  "id": "a8435aae-afa7-442a-abe1-2bc7caa83a36",
+  "name": "image-modality",
+  "isOverridable": true,
+  "entries": [
+    {
+      "value": "MRI",
+      "synonyms": [
+        "MRI",
+        "mri",
+        "magnetic resonance imaging"
+      ]
+    },
+    {
+      "value": "CT",
+      "synonyms": [
+        "CT",
+        "ct",
+        "ct scan",
+        "cat scan",
+        "cat",
+        "computed tomography",
+        "computerized tomography"
+      ]
+    }
+  ],
+  "isEnum": false,
+  "automatedExpansion": false
+}

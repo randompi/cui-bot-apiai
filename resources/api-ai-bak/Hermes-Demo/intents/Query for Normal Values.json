@@ -1,0 +1,337 @@
+{
+  "id": "81f29be7-c3df-4527-b85a-5ad065015c32",
+  "name": "Query for Normal Values",
+  "auto": true,
+  "contexts": [],
+  "userSays": [
+    {
+      "id": "6c5166ae-159f-48eb-8ffd-4f77d956e05f",
+      "data": [
+        {
+          "text": "What is the normal "
+        },
+        {
+          "text": "LV",
+          "alias": "ventricle",
+          "meta": "@cardiology-acronym",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "ESV",
+          "alias": "hcv",
+          "meta": "@cardiology-acronym",
+          "userDefined": false
+        },
+        {
+          "text": " for a "
+        },
+        {
+          "text": "36 year old",
+          "alias": "age_in_years",
+          "meta": "@age_in_years",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "female",
+          "alias": "gender",
+          "meta": "@gender",
+          "userDefined": true
+        },
+        {
+          "text": "?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "fc4711b3-066c-4db2-b4ce-d7e35c31525b",
+      "data": [
+        {
+          "text": "Can you tell me a normal value?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "7b278b0d-c078-4bc4-987a-89bf787805fc",
+      "data": [
+        {
+          "text": "What is a normal "
+        },
+        {
+          "text": "right ventricle",
+          "alias": "ventricle",
+          "meta": "@cardiology-acronym",
+          "userDefined": true
+        },
+        {
+          "text": " value?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "f1b9b31a-34c8-4001-a067-d1e59fcc91a2",
+      "data": [
+        {
+          "text": "What\u0027s a normal cardiac value for a "
+        },
+        {
+          "text": "man",
+          "alias": "gender",
+          "meta": "@gender",
+          "userDefined": true
+        },
+        {
+          "text": " of "
+        },
+        {
+          "text": "age 32",
+          "alias": "age_in_years",
+          "meta": "@age_in_years",
+          "userDefined": true
+        },
+        {
+          "text": "?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "b758c038-530d-4961-a801-d711f2b5a110",
+      "data": [
+        {
+          "text": "I\u0027m interested in the normal "
+        },
+        {
+          "text": "ejection fraction",
+          "alias": "hcv",
+          "meta": "@cardiology-acronym",
+          "userDefined": true
+        },
+        {
+          "text": " of an "
+        },
+        {
+          "text": "LV",
+          "alias": "ventricle",
+          "meta": "@cardiology-acronym",
+          "userDefined": true
+        },
+        {
+          "text": "."
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "d62c5ee0-0b0c-47a1-bd87-c5b1ef96ae57",
+      "data": [
+        {
+          "text": "normal value for "
+        },
+        {
+          "text": "80",
+          "alias": "age_in_years",
+          "meta": "@age_in_years",
+          "userDefined": true
+        },
+        {
+          "text": " year old "
+        },
+        {
+          "text": "male",
+          "alias": "gender",
+          "meta": "@gender",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "EDV",
+          "alias": "hcv",
+          "meta": "@cardiology-acronym",
+          "userDefined": true
+        },
+        {
+          "text": " of the "
+        },
+        {
+          "text": "LV",
+          "alias": "ventricle",
+          "meta": "@cardiology-acronym",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "7d42ae7c-d261-4639-bc9c-24170cf06477",
+      "data": [
+        {
+          "text": "LV",
+          "alias": "ventricle",
+          "meta": "@cardiology-acronym",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "EF",
+          "alias": "hcv",
+          "meta": "@cardiology-acronym",
+          "userDefined": true
+        },
+        {
+          "text": " normal value for "
+        },
+        {
+          "text": "70 yo",
+          "alias": "age_in_years",
+          "meta": "@age_in_years",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "man",
+          "alias": "gender",
+          "meta": "@gender",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "0958d236-a010-45e1-abc0-04aa2b7cf3d0",
+      "data": [
+        {
+          "text": "ESV",
+          "alias": "hcv",
+          "meta": "@cardiology-acronym",
+          "userDefined": true
+        },
+        {
+          "text": " normal value "
+        },
+        {
+          "text": "RV",
+          "alias": "ventricle",
+          "meta": "@cardiology-acronym",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "dafda516-7e29-45de-a1c1-1a540fffb168",
+      "data": [
+        {
+          "text": "What is the normal value for "
+        },
+        {
+          "text": "LV",
+          "alias": "ventricle",
+          "meta": "@cardiology-acronym",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "EDV",
+          "alias": "hcv",
+          "meta": "@cardiology-acronym",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "female",
+          "alias": "gender",
+          "meta": "@gender",
+          "userDefined": true
+        },
+        {
+          "text": " that is "
+        },
+        {
+          "text": "45 years old",
+          "alias": "age_in_years",
+          "meta": "@age_in_years",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    }
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "lookupNormalValue",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "required": true,
+          "dataType": "@cardiology-acronym",
+          "name": "ventricle",
+          "value": "$ventricle",
+          "prompts": [
+            "Which ventricle?"
+          ]
+        },
+        {
+          "required": true,
+          "dataType": "@cardiology-acronym",
+          "name": "hcv",
+          "value": "$hcv",
+          "prompts": [
+            "Which heart chamber value?"
+          ]
+        },
+        {
+          "required": true,
+          "dataType": "@gender",
+          "name": "gender",
+          "value": "$gender",
+          "prompts": [
+            "Male or female?"
+          ]
+        },
+        {
+          "required": true,
+          "dataType": "@age_in_years",
+          "name": "age_in_years",
+          "value": "$age_in_years",
+          "prompts": [
+            "How old is the patient?"
+          ]
+        }
+      ],
+      "speech": "[lookupNormalValue]"
+    }
+  ],
+  "state": "LEARNED",
+  "priority": 500000,
+  "webhookUsed": false,
+  "fallbackIntent": false
+}

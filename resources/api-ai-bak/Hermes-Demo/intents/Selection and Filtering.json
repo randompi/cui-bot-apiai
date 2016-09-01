@@ -1,0 +1,1430 @@
+{
+  "id": "a7a3d6e5-ba5b-4208-9116-a8fb3b84f3ce",
+  "name": "Selection and Filtering",
+  "auto": true,
+  "contexts": [],
+  "userSays": [
+    {
+      "id": "7fe61b7e-e705-449e-9651-e9f1c23dda39",
+      "data": [
+        {
+          "text": "Show me all "
+        },
+        {
+          "text": "female",
+          "alias": "filter1",
+          "meta": "@filter",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "patients",
+          "alias": "row",
+          "meta": "@row",
+          "userDefined": true
+        },
+        {
+          "text": " with "
+        },
+        {
+          "text": "ischemic heart disease.",
+          "alias": "filter2",
+          "meta": "@filter",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "5d71fb14-6e5e-4060-8744-34740bccc860",
+      "data": [
+        {
+          "text": "Select all the "
+        },
+        {
+          "text": "studies",
+          "alias": "row",
+          "meta": "@row",
+          "userDefined": false
+        },
+        {
+          "text": "."
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "b1c87467-38d1-4b60-9eb9-a45b08c9fcc2",
+      "data": [
+        {
+          "text": "Find all "
+        },
+        {
+          "text": "patients",
+          "alias": "row",
+          "meta": "@row",
+          "userDefined": true
+        },
+        {
+          "text": " with "
+        },
+        {
+          "text": "diffuse",
+          "alias": "filter1",
+          "meta": "@filter",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "LV scar presence",
+          "alias": "col1",
+          "meta": "@col",
+          "userDefined": true
+        },
+        {
+          "text": " and an "
+        },
+        {
+          "text": "HCM",
+          "alias": "filter2",
+          "meta": "@filter",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "indication",
+          "alias": "col2",
+          "meta": "@col",
+          "userDefined": true
+        },
+        {
+          "text": "."
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "ee116582-c015-4cd1-a8e3-9b7011c9888e",
+      "data": [
+        {
+          "text": "Show me all the "
+        },
+        {
+          "text": "CPT codes",
+          "alias": "col",
+          "meta": "@col",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "c53a23a1-6785-44f3-98b1-ce1fd37b7ef6",
+      "data": [
+        {
+          "text": "All "
+        },
+        {
+          "text": "studies",
+          "alias": "row",
+          "meta": "@row",
+          "userDefined": false
+        },
+        {
+          "text": " read by "
+        },
+        {
+          "text": "physician A",
+          "alias": "filter",
+          "meta": "@filter",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "9492a9a0-800b-416e-9fef-05beac41272b",
+      "data": [
+        {
+          "text": "Patients",
+          "alias": "row",
+          "meta": "@row",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "physician B",
+          "alias": "filter1",
+          "meta": "@filter",
+          "userDefined": false
+        },
+        {
+          "text": " has analyzed"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "4ce4120f-693e-4152-a5aa-2873a140f06a",
+      "data": [
+        {
+          "text": "Find all "
+        },
+        {
+          "text": "studies",
+          "alias": "row",
+          "meta": "@row",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "physician C",
+          "alias": "filter1",
+          "meta": "@filter",
+          "userDefined": true
+        },
+        {
+          "text": " has analyzed with "
+        },
+        {
+          "text": "DCM",
+          "alias": "filter2",
+          "meta": "@filter",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "34a18c91-60d2-4d24-9465-a8f6bdbc0c9e",
+      "data": [
+        {
+          "text": "all "
+        },
+        {
+          "text": "patients",
+          "alias": "row",
+          "meta": "@row",
+          "userDefined": false
+        },
+        {
+          "text": " with "
+        },
+        {
+          "text": "arvc",
+          "alias": "filter1",
+          "meta": "@filter",
+          "userDefined": true
+        },
+        {
+          "text": " that "
+        },
+        {
+          "text": "physician f",
+          "alias": "filter2",
+          "meta": "@filter",
+          "userDefined": false
+        },
+        {
+          "text": " has read"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "2c47e22f-5a4c-4f71-8623-3c0f84bcf0cc",
+      "data": [
+        {
+          "text": "patients",
+          "alias": "row",
+          "meta": "@row",
+          "userDefined": false
+        },
+        {
+          "text": " with "
+        },
+        {
+          "text": "LVEF",
+          "alias": "col1",
+          "meta": "@col",
+          "userDefined": true
+        },
+        {
+          "text": " of "
+        },
+        {
+          "text": "less than",
+          "alias": "comparison-filter1",
+          "meta": "@comparison-filter",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "35%",
+          "alias": "filter1-percentage",
+          "meta": "@sys.percentage",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "4946e610-3f13-4d35-9464-42b56982da0f",
+      "data": [
+        {
+          "text": "studies",
+          "alias": "row",
+          "meta": "@row",
+          "userDefined": false
+        },
+        {
+          "text": " with "
+        },
+        {
+          "text": "LVEDV",
+          "alias": "col1",
+          "meta": "@col",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "above",
+          "alias": "comparison-filter1",
+          "meta": "@comparison-filter",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "150",
+          "alias": "number1",
+          "meta": "@sys.number",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "f31dc73b-cf34-4d08-9dd1-73faec87f82e",
+      "data": [
+        {
+          "text": "all "
+        },
+        {
+          "text": "female",
+          "alias": "filter",
+          "meta": "@filter",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "patients",
+          "alias": "row",
+          "meta": "@row",
+          "userDefined": true
+        },
+        {
+          "text": " with "
+        },
+        {
+          "text": "LVESV",
+          "alias": "col1",
+          "meta": "@col",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "below",
+          "alias": "comparison-filter1",
+          "meta": "@comparison-filter",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "75",
+          "alias": "number1",
+          "meta": "@sys.number",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "ae2cf7d1-0285-4cf3-90ec-0ce554f180b3",
+      "data": [
+        {
+          "text": "LVNC",
+          "alias": "filter1",
+          "meta": "@filter",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "studies",
+          "alias": "row",
+          "meta": "@row",
+          "userDefined": false
+        },
+        {
+          "text": " read by "
+        },
+        {
+          "text": "doctor E",
+          "alias": "filter2",
+          "meta": "@filter",
+          "userDefined": false
+        },
+        {
+          "text": " with "
+        },
+        {
+          "text": "read time",
+          "alias": "col3",
+          "meta": "@col",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "less than",
+          "alias": "comparison-filter3",
+          "meta": "@comparison-filter",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "20",
+          "alias": "number3",
+          "meta": "@sys.number",
+          "userDefined": true
+        },
+        {
+          "text": " min"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "ccf8b944-c388-4e43-b904-524aacf42b26",
+      "data": [
+        {
+          "text": "all "
+        },
+        {
+          "text": "studies",
+          "alias": "row",
+          "meta": "@row",
+          "userDefined": false
+        },
+        {
+          "text": " with a "
+        },
+        {
+          "text": "scan time",
+          "alias": "col",
+          "meta": "@col",
+          "userDefined": true
+        },
+        {
+          "text": " of "
+        },
+        {
+          "text": "below",
+          "alias": "comparison-filter",
+          "meta": "@comparison-filter",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "45",
+          "alias": "number",
+          "meta": "@sys.number",
+          "userDefined": true
+        },
+        {
+          "text": " min and "
+        },
+        {
+          "text": "read time",
+          "alias": "col1",
+          "meta": "@col",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "less than",
+          "alias": "comparison-filter1",
+          "meta": "@comparison-filter",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "20",
+          "alias": "number1",
+          "meta": "@sys.number",
+          "userDefined": true
+        },
+        {
+          "text": "min"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "a61c49a5-6285-4600-a375-a3b1d6613f32",
+      "data": [
+        {
+          "text": "male",
+          "alias": "filter",
+          "meta": "@filter",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "patients",
+          "alias": "row",
+          "meta": "@row",
+          "userDefined": false
+        },
+        {
+          "text": " with "
+        },
+        {
+          "text": "BMI",
+          "alias": "col1",
+          "meta": "@col",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "more than",
+          "alias": "comparison-filter1",
+          "meta": "@comparison-filter",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "30",
+          "alias": "number1",
+          "meta": "@sys.number",
+          "userDefined": true
+        },
+        {
+          "text": " and "
+        },
+        {
+          "text": "LVEF",
+          "alias": "col2",
+          "meta": "@col",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "less than",
+          "alias": "comparison-filter2",
+          "meta": "@comparison-filter",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "40",
+          "alias": "number2",
+          "meta": "@sys.number",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "617f19e4-5e09-4dca-97b3-4755f5e08599",
+      "data": [
+        {
+          "text": "return "
+        },
+        {
+          "text": "patients",
+          "alias": "row",
+          "meta": "@row",
+          "userDefined": true
+        },
+        {
+          "text": " of "
+        },
+        {
+          "text": "doctor D",
+          "alias": "filter1",
+          "meta": "@filter",
+          "userDefined": true
+        },
+        {
+          "text": " referred for "
+        },
+        {
+          "text": "ischemic heart disease",
+          "alias": "filter2",
+          "meta": "@filter",
+          "userDefined": true
+        },
+        {
+          "text": " with "
+        },
+        {
+          "text": "scan times",
+          "alias": "col",
+          "meta": "@col",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "below",
+          "alias": "comparison-filter",
+          "meta": "@comparison-filter",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "50",
+          "alias": "number",
+          "meta": "@sys.number",
+          "userDefined": true
+        },
+        {
+          "text": " min"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "9d66f11c-a77c-44a5-82c2-d4e6f08ae35a",
+      "data": [
+        {
+          "text": "females",
+          "alias": "filter",
+          "meta": "@filter",
+          "userDefined": false
+        },
+        {
+          "text": " with a "
+        },
+        {
+          "text": "height",
+          "alias": "col",
+          "meta": "@col",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "greater than",
+          "alias": "comparison-filter",
+          "meta": "@comparison-filter",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "1.83",
+          "alias": "number",
+          "meta": "@sys.number",
+          "userDefined": true
+        },
+        {
+          "text": "m"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "546fd885-d09d-40e7-96a6-512c1c8cdafb",
+      "data": [
+        {
+          "text": "return all "
+        },
+        {
+          "text": "procedures",
+          "alias": "row",
+          "meta": "@row",
+          "userDefined": false
+        },
+        {
+          "text": " with a "
+        },
+        {
+          "text": "cpt code",
+          "alias": "col1",
+          "meta": "@col",
+          "userDefined": true
+        },
+        {
+          "text": " of "
+        },
+        {
+          "text": "75557",
+          "alias": "filter1",
+          "meta": "@filter",
+          "userDefined": true
+        },
+        {
+          "text": " for "
+        },
+        {
+          "text": "Hospital B",
+          "alias": "filter2",
+          "meta": "@filter",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "62c6b368-f646-4f73-b722-25ff4a86c3e7",
+      "data": [
+        {
+          "text": "all "
+        },
+        {
+          "text": "procedures",
+          "alias": "row",
+          "meta": "@row",
+          "userDefined": false
+        },
+        {
+          "text": " with a "
+        },
+        {
+          "text": "cpt code",
+          "alias": "col1",
+          "meta": "@col",
+          "userDefined": true
+        },
+        {
+          "text": " of "
+        },
+        {
+          "text": "75561",
+          "alias": "filter1",
+          "meta": "@filter",
+          "userDefined": true
+        },
+        {
+          "text": " for "
+        },
+        {
+          "text": "Hospital A",
+          "alias": "filter",
+          "meta": "@filter",
+          "userDefined": false
+        },
+        {
+          "text": " with a "
+        },
+        {
+          "text": "profit margin",
+          "alias": "col2",
+          "meta": "@col",
+          "userDefined": true
+        },
+        {
+          "text": " of "
+        },
+        {
+          "text": "less than",
+          "alias": "comparison-filter2",
+          "meta": "@comparison-filter",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "0",
+          "alias": "number2",
+          "meta": "@sys.number",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "cb887d9f-c0ee-4d60-8f9e-961ad6025bd3",
+      "data": [
+        {
+          "text": "find all "
+        },
+        {
+          "text": "HCM",
+          "alias": "filter",
+          "meta": "@filter",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "patients",
+          "alias": "row",
+          "meta": "@row",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "scar profile",
+          "alias": "col1",
+          "meta": "@col",
+          "userDefined": false
+        },
+        {
+          "text": " that "
+        },
+        {
+          "text": "is",
+          "meta": "@sys.ignore",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "diffuse",
+          "alias": "filter1",
+          "meta": "@filter",
+          "userDefined": false
+        },
+        {
+          "text": " with an "
+        },
+        {
+          "text": "LVEF",
+          "alias": "col2",
+          "meta": "@col",
+          "userDefined": true
+        },
+        {
+          "text": " of "
+        },
+        {
+          "text": "below",
+          "alias": "comparison-filter2",
+          "meta": "@comparison-filter",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "40%",
+          "alias": "filter2-percentage",
+          "meta": "@sys.percentage",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "e8081233-5ca6-4962-af6e-64cf1b8056ac",
+      "data": [
+        {
+          "text": "all "
+        },
+        {
+          "text": "dcm",
+          "alias": "filter",
+          "meta": "@filter",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "patients",
+          "alias": "row",
+          "meta": "@row",
+          "userDefined": false
+        },
+        {
+          "text": " with "
+        },
+        {
+          "text": "mid-wall",
+          "alias": "filter1",
+          "meta": "@filter",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "lv scar",
+          "alias": "col3",
+          "meta": "@col",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "7f3c6143-6fea-4f1d-9256-4e3ebcb57ddd",
+      "data": [
+        {
+          "text": "find me all "
+        },
+        {
+          "text": "procedures",
+          "alias": "row",
+          "meta": "@row",
+          "userDefined": false
+        },
+        {
+          "text": " that used "
+        },
+        {
+          "text": "contrast agent",
+          "alias": "filter",
+          "meta": "@filter",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "1d13b920-94aa-4f0e-86a8-626541e72691",
+      "data": [
+        {
+          "text": "all "
+        },
+        {
+          "text": "hcm",
+          "alias": "filter",
+          "meta": "@filter",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "patients",
+          "alias": "row",
+          "meta": "@row",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "b03a1e2b-8862-48de-a776-e61a765cdb32",
+      "data": [
+        {
+          "text": "find me all "
+        },
+        {
+          "text": "dcm",
+          "alias": "filter",
+          "meta": "@filter",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "patients",
+          "alias": "row",
+          "meta": "@row",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "0074521b-e15b-477d-8f18-1e9d3397fc96",
+      "data": [
+        {
+          "text": "all "
+        },
+        {
+          "text": "patients",
+          "alias": "row",
+          "meta": "@row",
+          "userDefined": false
+        },
+        {
+          "text": " with "
+        },
+        {
+          "text": "dcm",
+          "alias": "filter",
+          "meta": "@filter",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "6d0608e9-bdb4-40f2-b41d-248d365401ba",
+      "data": [
+        {
+          "text": "find me all "
+        },
+        {
+          "text": "hcm",
+          "alias": "filter",
+          "meta": "@filter",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "patients",
+          "alias": "row",
+          "meta": "@row",
+          "userDefined": false
+        },
+        {
+          "text": " read by "
+        },
+        {
+          "text": "physician b",
+          "alias": "filter1",
+          "meta": "@filter",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "198f8602-cb61-40e4-a44b-13fd476bb76c",
+      "data": [
+        {
+          "text": "all "
+        },
+        {
+          "text": "patients",
+          "alias": "row",
+          "meta": "@row",
+          "userDefined": true
+        },
+        {
+          "text": " with "
+        },
+        {
+          "text": "diffuse",
+          "alias": "filter",
+          "meta": "@filter",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "lv scar",
+          "alias": "col",
+          "meta": "@col",
+          "userDefined": true
+        },
+        {
+          "text": " and an "
+        },
+        {
+          "text": "LVEF",
+          "alias": "col1",
+          "meta": "@col",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "less than",
+          "alias": "comparison-filter2",
+          "meta": "@comparison-filter",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "35%",
+          "alias": "filter1-percentage",
+          "meta": "@sys.percentage",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "6de3abfd-8c66-41ef-9c66-f2a018bc82da",
+      "data": [
+        {
+          "text": " show me "
+        },
+        {
+          "text": "procedures",
+          "alias": "row",
+          "meta": "@row",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "expense",
+          "alias": "col1",
+          "meta": "@col",
+          "userDefined": true
+        },
+        {
+          "text": ", "
+        },
+        {
+          "text": "revenue",
+          "alias": "col2",
+          "meta": "@col",
+          "userDefined": true
+        },
+        {
+          "text": ", and "
+        },
+        {
+          "text": "profit margin",
+          "alias": "col3",
+          "meta": "@col",
+          "userDefined": true
+        },
+        {
+          "text": " for "
+        },
+        {
+          "text": "hospital A",
+          "alias": "filter",
+          "meta": "@filter",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "0ca43faf-6ed9-43eb-b31a-4aac421a0447",
+      "data": [
+        {
+          "text": "all "
+        },
+        {
+          "text": "patients",
+          "alias": "row",
+          "meta": "@row",
+          "userDefined": true
+        },
+        {
+          "text": " with "
+        },
+        {
+          "text": "HCM",
+          "alias": "filter",
+          "meta": "@filter",
+          "userDefined": true
+        },
+        {
+          "text": " and "
+        },
+        {
+          "text": "LVEF",
+          "alias": "col1",
+          "meta": "@col",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "less than",
+          "alias": "comparison-filter1",
+          "meta": "@comparison-filter",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "50%",
+          "alias": "filter1-percentage",
+          "meta": "@sys.percentage",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "3f83c8e0-54a5-4ce8-9664-12d07e5c20bb",
+      "data": [
+        {
+          "text": "which "
+        },
+        {
+          "text": "procedures",
+          "alias": "row",
+          "meta": "@row",
+          "userDefined": false
+        },
+        {
+          "text": " have a "
+        },
+        {
+          "text": "profit",
+          "alias": "col",
+          "meta": "@col",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "less than",
+          "alias": "comparison-filter",
+          "meta": "@comparison-filter",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "0",
+          "alias": "filter",
+          "meta": "@filter",
+          "userDefined": true
+        },
+        {
+          "text": "?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "9372b041-f17c-451f-92f1-008ad4227dc6",
+      "data": [
+        {
+          "text": " which "
+        },
+        {
+          "text": "procedures",
+          "alias": "row",
+          "meta": "@row",
+          "userDefined": false
+        },
+        {
+          "text": " have a "
+        },
+        {
+          "text": "profit margin",
+          "alias": "col1",
+          "meta": "@col",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "greater than",
+          "alias": "comparison-filter1",
+          "meta": "@comparison-filter",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "6%",
+          "alias": "filter1-percentage",
+          "meta": "@sys.percentage",
+          "userDefined": false
+        },
+        {
+          "text": "?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    }
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "dataType": "@row",
+          "name": "row",
+          "value": "$row"
+        },
+        {
+          "dataType": "@filter",
+          "name": "filter1",
+          "value": "$filter1"
+        },
+        {
+          "dataType": "@filter",
+          "name": "filter2",
+          "value": "$filter2"
+        },
+        {
+          "dataType": "@col",
+          "name": "col2",
+          "value": "$col2"
+        },
+        {
+          "dataType": "@col",
+          "name": "col1",
+          "value": "$col1"
+        },
+        {
+          "dataType": "@col",
+          "name": "col",
+          "value": "$col"
+        },
+        {
+          "dataType": "@comparison-filter",
+          "name": "comparison-filter",
+          "value": "$comparison-filter"
+        },
+        {
+          "dataType": "@comparison-filter",
+          "name": "comparison-filter1",
+          "value": "$comparison-filter1"
+        },
+        {
+          "dataType": "@filter",
+          "name": "filter",
+          "value": "$filter"
+        },
+        {
+          "dataType": "@sys.number",
+          "name": "number1",
+          "value": "$number1"
+        },
+        {
+          "dataType": "@col",
+          "name": "col3",
+          "value": "$col3"
+        },
+        {
+          "dataType": "@comparison-filter",
+          "name": "comparison-filter3",
+          "value": "$comparison-filter3"
+        },
+        {
+          "dataType": "@sys.number",
+          "name": "number3",
+          "value": "$number3"
+        },
+        {
+          "dataType": "@sys.number",
+          "name": "number",
+          "value": "$number"
+        },
+        {
+          "dataType": "@comparison-filter",
+          "name": "comparison-filter2",
+          "value": "$comparison-filter2"
+        },
+        {
+          "dataType": "@sys.number",
+          "name": "number2",
+          "value": "$number2"
+        },
+        {
+          "dataType": "@sys.percentage",
+          "name": "filter1-percentage",
+          "value": "$filter1-percentage"
+        },
+        {
+          "dataType": "@sys.percentage",
+          "name": "filter2-percentage",
+          "value": "$filter2-percentage"
+        }
+      ],
+      "speech": "[handleSelectData]"
+    }
+  ],
+  "state": "LEARNED",
+  "priority": 500000,
+  "webhookUsed": false,
+  "fallbackIntent": false
+}

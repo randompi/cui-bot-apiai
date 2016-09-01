@@ -1,0 +1,132 @@
+{
+  "id": "13618f1d-c215-4200-8cbb-9e0a55acd18c",
+  "name": "Find Disease Indication Protocol",
+  "auto": true,
+  "contexts": [],
+  "userSays": [
+    {
+      "id": "b5ddec7f-7ffa-41c3-9236-51a29adb8937",
+      "data": [
+        {
+          "text": "What is the image acquisition protocol for suspected "
+        },
+        {
+          "text": "iron overload",
+          "alias": "myocardial_disease",
+          "meta": "@myocardial-disease-indication",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "3ccf5665-b637-491f-a29c-fcf53d34e42b",
+      "data": [
+        {
+          "text": "how would i scan for a "
+        },
+        {
+          "text": "DCM",
+          "alias": "myocardial_disease",
+          "meta": "@myocardial-disease-indication",
+          "userDefined": true
+        },
+        {
+          "text": " indication"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "c7172cf2-8c1f-47b1-a730-4bfd6a2063bc",
+      "data": [
+        {
+          "text": "HCM",
+          "alias": "myocardial_disease",
+          "meta": "@myocardial-disease-indication",
+          "userDefined": true
+        },
+        {
+          "text": " indication scan"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "558789cc-423d-4a6d-8c28-b47c2adeb216",
+      "data": [
+        {
+          "text": "LVNC",
+          "alias": "myocardial_disease",
+          "meta": "@myocardial-disease-indication",
+          "userDefined": true
+        },
+        {
+          "text": " scan"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "e819bd76-e16d-48a4-916c-90238c5bf9d8",
+      "data": [
+        {
+          "text": "i need a scanning prototcol for a specific disease"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "f3c54908-d203-4447-acaf-d5d0b58fba72",
+      "data": [
+        {
+          "text": "scan protocol for a disease"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "80fc6bab-e5e6-4f40-9f12-57efa23c3795",
+      "data": [
+        {
+          "text": "what is the scanning protocol for "
+        },
+        {
+          "text": "lvnc",
+          "alias": "myocardial_disease",
+          "meta": "@myocardial-disease-indication",
+          "userDefined": true
+        },
+        {
+          "text": "?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    }
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "dataType": "@myocardial-disease-indication",
+          "name": "myocardial_disease",
+          "value": "$myocardial_disease"
+        }
+      ],
+      "speech": "[lookupProtocol]"
+    }
+  ],
+  "state": "LEARNED",
+  "priority": 500000,
+  "webhookUsed": false,
+  "fallbackIntent": false
+}

@@ -1,0 +1,221 @@
+{
+  "id": "ec095085-b445-4115-b30c-0549a45fbd3f",
+  "name": "Find a Billing Code",
+  "auto": true,
+  "contexts": [],
+  "userSays": [
+    {
+      "id": "637d73d4-3598-4de0-b999-d277a17e3698",
+      "data": [
+        {
+          "text": "What is the "
+        },
+        {
+          "text": "CPT",
+          "alias": "billing_code_type",
+          "meta": "@billing-code-type",
+          "userDefined": false
+        },
+        {
+          "text": " billing code for a "
+        },
+        {
+          "text": "cardiac",
+          "alias": "anatomical_locale",
+          "meta": "@anatomical-locale",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "MRI",
+          "alias": "image_modality",
+          "meta": "@image-modality",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "with contrast",
+          "alias": "contrast_use",
+          "meta": "@contrast-use",
+          "userDefined": true
+        },
+        {
+          "text": " and "
+        },
+        {
+          "text": "without stress",
+          "alias": "stress_use",
+          "meta": "@stress-use",
+          "userDefined": true
+        },
+        {
+          "text": "?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "0f3fe2b9-42e9-483b-b071-4802f6053004",
+      "data": [
+        {
+          "text": "How can I find the "
+        },
+        {
+          "text": "CPT",
+          "alias": "billing_code_type",
+          "meta": "@billing-code-type",
+          "userDefined": false
+        },
+        {
+          "text": " billing code to the "
+        },
+        {
+          "text": "MRI",
+          "alias": "image_modality",
+          "meta": "@image-modality",
+          "userDefined": false
+        },
+        {
+          "text": " procedure we just preformed?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "ad465f2d-d330-454b-9a07-702b54d1c274",
+      "data": [
+        {
+          "text": "What is the "
+        },
+        {
+          "text": "CPT",
+          "alias": "billing_code_type",
+          "meta": "@billing-code-type",
+          "userDefined": false
+        },
+        {
+          "text": " billing code?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "895454ed-b360-4d9e-b886-7a02f0fc0da8",
+      "data": [
+        {
+          "text": "What is the billing code for a "
+        },
+        {
+          "text": "cardiac",
+          "alias": "anatomical_locale",
+          "meta": "@anatomical-locale",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "MRI",
+          "alias": "image_modality",
+          "meta": "@image-modality",
+          "userDefined": false
+        },
+        {
+          "text": "?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "81aa471a-9aa6-4411-b0f8-96ca9b299175",
+      "data": [
+        {
+          "text": "i need a billing code for an "
+        },
+        {
+          "text": "mri",
+          "alias": "image_modality",
+          "meta": "@image-modality",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "without contrast",
+          "alias": "contrast_use",
+          "meta": "@contrast-use",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    }
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "dataType": "@billing-code-type",
+          "name": "billing_code_type",
+          "value": "$billing_code_type"
+        },
+        {
+          "required": true,
+          "dataType": "@anatomical-locale",
+          "name": "anatomical_locale",
+          "value": "$anatomical_locale",
+          "prompts": [
+            "Can you tell me what anatomic part it involved?"
+          ]
+        },
+        {
+          "required": true,
+          "dataType": "@image-modality",
+          "name": "image_modality",
+          "value": "$image_modality",
+          "prompts": [
+            "What image modality was used?"
+          ]
+        },
+        {
+          "required": true,
+          "dataType": "@contrast-use",
+          "name": "contrast_use",
+          "value": "$contrast_use",
+          "prompts": [
+            "Was contrast agent used?"
+          ]
+        },
+        {
+          "required": true,
+          "dataType": "@stress-use",
+          "name": "stress_use",
+          "value": "$stress_use",
+          "prompts": [
+            "Was the patient scanned using stress imaging?"
+          ]
+        },
+        {
+          "name": "sql_select",
+          "value": "Find a Billing Code"
+        }
+      ],
+      "speech": "[lookupBillingCode]"
+    }
+  ],
+  "state": "LEARNED",
+  "priority": 500000,
+  "webhookUsed": false,
+  "fallbackIntent": false
+}
