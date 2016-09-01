@@ -174,6 +174,7 @@ class DataModels(object):
 
         else:
             agg_map = {}
+            ops = self._to_valid_ops(ops)
             #TODO: We need to handle a map of op -> aggregable
             for aggregable in aggregables:
                 agg_map[aggregable[0][1]] = ops
@@ -185,6 +186,10 @@ class DataModels(object):
         self.prev_ret_data = result
         return result
 
+
+    def _to_valid_ops(self, ops):
+        ops[:] = ['value_counts' for op in ops if 'frequent' in op]
+        return ops
 
     def _can_chain_data_query(self, prev_data, **kwargs):
         """ Checks to see if the columns referenced by iterables in kwargs
