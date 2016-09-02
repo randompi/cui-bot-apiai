@@ -188,7 +188,9 @@ class DataModels(object):
 
 
     def _to_valid_ops(self, ops):
-        ops[:] = ['value_counts' for op in ops if 'frequent' in op]
+        for i, op in enumerate(ops):
+            if 'frequent' in op:
+                ops[i] = 'value_counts'
         return ops
 
     def _can_chain_data_query(self, prev_data, **kwargs):
