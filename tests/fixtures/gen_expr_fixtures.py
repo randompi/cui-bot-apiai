@@ -66,7 +66,7 @@ if __name__ == "__main__":
                 user_txt += data_obj['text']
 
             resp = make_apiai_request(apiai_cli, user_txt)
-            intent_exprs.append({user_txt:resp})
+            intent_exprs.append({'expr': user_txt, 'resp':resp})
 
         intent_to_exprs[intent_name] = intent_exprs
 

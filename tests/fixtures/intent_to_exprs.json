@@ -1,14 +1,15 @@
 {
     "Get an Acronym Definition": [
         {
-            "What does EDV stand for?": {
+            "expr": "What does EDV stand for?", 
+            "resp": {
                 "status": {
                     "errorType": "success", 
                     "code": 200
                 }, 
-                "timestamp": "2016-09-06T17:36:25.553Z", 
-                "sessionId": "12d9ac6db4344e9ead42038f47c9a780", 
-                "id": "41a2e0ee-01ef-47a3-9a30-4b097e047942", 
+                "timestamp": "2016-09-07T22:33:48.529Z", 
+                "sessionId": "a0f0c467c84443edbac6ebf900baf747", 
+                "id": "1378e139-a301-43a3-9c47-4abfa0708e05", 
                 "result": {
                     "parameters": {
                         "acronym": "EDV"
@@ -31,14 +32,15 @@
             }
         }, 
         {
-            "What does SV mean?": {
+            "expr": "What does SV mean?", 
+            "resp": {
                 "status": {
                     "errorType": "success", 
                     "code": 200
                 }, 
-                "timestamp": "2016-09-06T17:36:26.932Z", 
-                "sessionId": "12d9ac6db4344e9ead42038f47c9a780", 
-                "id": "1d3229d0-4fc2-4c25-9ff2-e00110198dfa", 
+                "timestamp": "2016-09-07T22:33:49.218Z", 
+                "sessionId": "a0f0c467c84443edbac6ebf900baf747", 
+                "id": "e76e0ed3-9910-46d0-83c4-6fbd4b751960", 
                 "result": {
                     "parameters": {
                         "acronym": "SV"
@@ -61,14 +63,15 @@
             }
         }, 
         {
-            "ESV definition?": {
+            "expr": "ESV definition?", 
+            "resp": {
                 "status": {
                     "errorType": "success", 
                     "code": 200
                 }, 
-                "timestamp": "2016-09-06T17:36:28.325Z", 
-                "sessionId": "12d9ac6db4344e9ead42038f47c9a780", 
-                "id": "f2b6e4db-db71-4f62-90b4-762496698d1d", 
+                "timestamp": "2016-09-07T22:33:50.177Z", 
+                "sessionId": "a0f0c467c84443edbac6ebf900baf747", 
+                "id": "40b3d0ab-6781-428d-850d-7a1962b20a10", 
                 "result": {
                     "parameters": {
                         "acronym": "ESV"
@@ -91,14 +94,15 @@
             }
         }, 
         {
-            "EF means?": {
+            "expr": "EF means?", 
+            "resp": {
                 "status": {
                     "errorType": "success", 
                     "code": 200
                 }, 
-                "timestamp": "2016-09-06T17:36:29.74Z", 
-                "sessionId": "12d9ac6db4344e9ead42038f47c9a780", 
-                "id": "90c3e6ed-dc2b-4382-b0e2-28c4cba4fdf8", 
+                "timestamp": "2016-09-07T22:33:50.841Z", 
+                "sessionId": "a0f0c467c84443edbac6ebf900baf747", 
+                "id": "9154723e-5fe2-4af3-84d1-24db8d24ec73", 
                 "result": {
                     "parameters": {
                         "acronym": "EF"
@@ -121,14 +125,15 @@
             }
         }, 
         {
-            "Define Mass": {
+            "expr": "Define Mass", 
+            "resp": {
                 "status": {
                     "errorType": "success", 
                     "code": 200
                 }, 
-                "timestamp": "2016-09-06T17:36:31.18Z", 
-                "sessionId": "12d9ac6db4344e9ead42038f47c9a780", 
-                "id": "a2d9069b-c80a-4417-b8c3-aa5625685035", 
+                "timestamp": "2016-09-07T22:33:51.512Z", 
+                "sessionId": "a0f0c467c84443edbac6ebf900baf747", 
+                "id": "7bf31d23-7644-4566-b589-deb2d3b25e04", 
                 "result": {
                     "parameters": {
                         "acronym": "MASS"
@@ -153,14 +158,15 @@
     ], 
     "Selection and Filtering": [
         {
-            "Show me all female patients with ischemic\u00a0heart\u00a0disease.": {
+            "expr": "Show me all female patients with ischemic\u00a0heart\u00a0disease.", 
+            "resp": {
                 "status": {
                     "errorType": "success", 
                     "code": 200
                 }, 
-                "timestamp": "2016-09-06T17:36:32.602Z", 
-                "sessionId": "12d9ac6db4344e9ead42038f47c9a780", 
-                "id": "b59085b1-25a5-4ba1-bcac-29e0853cd00d", 
+                "timestamp": "2016-09-07T22:33:52.194Z", 
+                "sessionId": "a0f0c467c84443edbac6ebf900baf747", 
+                "id": "63d57c9e-7444-468b-8b61-c9b883e92ae7", 
                 "result": {
                     "parameters": {
                         "comparison-filter": "", 
@@ -200,14 +206,15 @@
             }
         }, 
         {
-            "Select all the studies.": {
+            "expr": "Select all the studies.", 
+            "resp": {
                 "status": {
                     "errorType": "success", 
                     "code": 200
                 }, 
-                "timestamp": "2016-09-06T17:36:34.045Z", 
-                "sessionId": "12d9ac6db4344e9ead42038f47c9a780", 
-                "id": "f1db53ed-aa14-46c3-ab4a-1865c1d3c338", 
+                "timestamp": "2016-09-07T22:33:52.894Z", 
+                "sessionId": "a0f0c467c84443edbac6ebf900baf747", 
+                "id": "58b7b051-6901-4b8b-a549-de03b774f864", 
                 "result": {
                     "parameters": {
                         "comparison-filter": "", 
@@ -247,14 +254,15 @@
             }
         }, 
         {
-            "Find all patients with diffuse LV\u00a0scar\u00a0presence and an HCM indication.": {
+            "expr": "Find all patients with diffuse LV\u00a0scar\u00a0presence and an HCM indication.", 
+            "resp": {
                 "status": {
                     "errorType": "success", 
                     "code": 200
                 }, 
-                "timestamp": "2016-09-06T17:36:35.466Z", 
-                "sessionId": "12d9ac6db4344e9ead42038f47c9a780", 
-                "id": "81ceb22f-e95c-4a6b-9093-177c8d1ab568", 
+                "timestamp": "2016-09-07T22:33:53.57Z", 
+                "sessionId": "a0f0c467c84443edbac6ebf900baf747", 
+                "id": "ab7dd39a-7413-4cb4-b188-3d23f136793b", 
                 "result": {
                     "parameters": {
                         "comparison-filter": "", 
@@ -294,14 +302,15 @@
             }
         }, 
         {
-            "Show me all the CPT\u00a0codes": {
+            "expr": "Show me all the CPT\u00a0codes", 
+            "resp": {
                 "status": {
                     "errorType": "success", 
                     "code": 200
                 }, 
-                "timestamp": "2016-09-06T17:36:36.87Z", 
-                "sessionId": "12d9ac6db4344e9ead42038f47c9a780", 
-                "id": "305b5fae-01bd-41c5-ba40-190a4f7b12d7", 
+                "timestamp": "2016-09-07T22:33:54.257Z", 
+                "sessionId": "a0f0c467c84443edbac6ebf900baf747", 
+                "id": "27c4e8be-a4b0-489e-8387-98a2992e6008", 
                 "result": {
                     "parameters": {
                         "comparison-filter": "", 
@@ -341,14 +350,15 @@
             }
         }, 
         {
-            "All studies read by physician A": {
+            "expr": "All studies read by physician A", 
+            "resp": {
                 "status": {
                     "errorType": "success", 
                     "code": 200
                 }, 
-                "timestamp": "2016-09-06T17:36:38.263Z", 
-                "sessionId": "12d9ac6db4344e9ead42038f47c9a780", 
-                "id": "0304619e-bcd1-4c34-ae06-30022c95dc41", 
+                "timestamp": "2016-09-07T22:33:54.956Z", 
+                "sessionId": "a0f0c467c84443edbac6ebf900baf747", 
+                "id": "6f6e8743-b697-4e3c-8313-fe27ddd480fe", 
                 "result": {
                     "parameters": {
                         "comparison-filter": "", 
@@ -388,14 +398,15 @@
             }
         }, 
         {
-            "Patients physician B has analyzed": {
+            "expr": "Patients physician B has analyzed", 
+            "resp": {
                 "status": {
                     "errorType": "success", 
                     "code": 200
                 }, 
-                "timestamp": "2016-09-06T17:36:39.673Z", 
-                "sessionId": "12d9ac6db4344e9ead42038f47c9a780", 
-                "id": "54cd1250-33db-4596-a42e-4f2be69f2ad0", 
+                "timestamp": "2016-09-07T22:33:55.611Z", 
+                "sessionId": "a0f0c467c84443edbac6ebf900baf747", 
+                "id": "e8f58a80-f553-490d-8da9-c7e1e1359b5b", 
                 "result": {
                     "parameters": {
                         "comparison-filter": "", 
@@ -435,14 +446,15 @@
             }
         }, 
         {
-            "Find all studies physician\u00a0C has analyzed with DCM": {
+            "expr": "Find all studies physician\u00a0C has analyzed with DCM", 
+            "resp": {
                 "status": {
                     "errorType": "success", 
                     "code": 200
                 }, 
-                "timestamp": "2016-09-06T17:36:41.059Z", 
-                "sessionId": "12d9ac6db4344e9ead42038f47c9a780", 
-                "id": "a5d3a8e8-b6f3-4342-a2dd-4ba0306d6de4", 
+                "timestamp": "2016-09-07T22:33:56.401Z", 
+                "sessionId": "a0f0c467c84443edbac6ebf900baf747", 
+                "id": "c260d6f7-6f26-4196-a97b-2aeca2600a93", 
                 "result": {
                     "parameters": {
                         "comparison-filter": "", 
@@ -482,14 +494,15 @@
             }
         }, 
         {
-            "all patients with arvc that physician\u00a0f has read": {
+            "expr": "all patients with arvc that physician\u00a0f has read", 
+            "resp": {
                 "status": {
                     "errorType": "success", 
                     "code": 200
                 }, 
-                "timestamp": "2016-09-06T17:36:42.447Z", 
-                "sessionId": "12d9ac6db4344e9ead42038f47c9a780", 
-                "id": "ed016c82-686a-414a-bc3c-2428141b46af", 
+                "timestamp": "2016-09-07T22:33:57.061Z", 
+                "sessionId": "a0f0c467c84443edbac6ebf900baf747", 
+                "id": "fbcaa4bb-42d3-42a7-baea-d1793921e8a5", 
                 "result": {
                     "parameters": {
                         "comparison-filter": "", 
@@ -529,14 +542,15 @@
             }
         }, 
         {
-            "patients with LVEF of less\u00a0than 35%": {
+            "expr": "patients with LVEF of less\u00a0than 35%", 
+            "resp": {
                 "status": {
                     "errorType": "success", 
                     "code": 200
                 }, 
-                "timestamp": "2016-09-06T17:36:43.883Z", 
-                "sessionId": "12d9ac6db4344e9ead42038f47c9a780", 
-                "id": "876ed0db-bb54-49ef-8aa0-9c34b8c4a889", 
+                "timestamp": "2016-09-07T22:33:57.768Z", 
+                "sessionId": "a0f0c467c84443edbac6ebf900baf747", 
+                "id": "4f490b1a-2a6d-487c-a9b6-a1a3802b8059", 
                 "result": {
                     "parameters": {
                         "comparison-filter": "", 
@@ -576,14 +590,15 @@
             }
         }, 
         {
-            "studies with LVEDV above 150": {
+            "expr": "studies with LVEDV above 150", 
+            "resp": {
                 "status": {
                     "errorType": "success", 
                     "code": 200
                 }, 
-                "timestamp": "2016-09-06T17:36:45.26Z", 
-                "sessionId": "12d9ac6db4344e9ead42038f47c9a780", 
-                "id": "9cd05a1e-b2cb-4179-aac9-8e0523c9171c", 
+                "timestamp": "2016-09-07T22:33:58.458Z", 
+                "sessionId": "a0f0c467c84443edbac6ebf900baf747", 
+                "id": "598563c4-5328-4611-87b7-14ee2f881ce3", 
                 "result": {
                     "parameters": {
                         "comparison-filter": "", 
@@ -623,14 +638,15 @@
             }
         }, 
         {
-            "all female patients with LVESV below 75": {
+            "expr": "all female patients with LVESV below 75", 
+            "resp": {
                 "status": {
                     "errorType": "success", 
                     "code": 200
                 }, 
-                "timestamp": "2016-09-06T17:36:46.666Z", 
-                "sessionId": "12d9ac6db4344e9ead42038f47c9a780", 
-                "id": "51289b5f-1ca0-4989-b2a6-42fae3bfbce5", 
+                "timestamp": "2016-09-07T22:33:59.115Z", 
+                "sessionId": "a0f0c467c84443edbac6ebf900baf747", 
+                "id": "729d11c3-ac73-4827-93e9-19a5fa6b6e9b", 
                 "result": {
                     "parameters": {
                         "comparison-filter": "", 
@@ -670,14 +686,15 @@
             }
         }, 
         {
-            "LVNC studies read by doctor\u00a0E with read\u00a0time less\u00a0than 20 min": {
+            "expr": "LVNC studies read by doctor\u00a0E with read\u00a0time less\u00a0than 20 min", 
+            "resp": {
                 "status": {
                     "errorType": "success", 
                     "code": 200
                 }, 
-                "timestamp": "2016-09-06T17:36:48.066Z", 
-                "sessionId": "12d9ac6db4344e9ead42038f47c9a780", 
-                "id": "4b6dbff4-d5ad-446b-88be-9c7b3dbdf5fa", 
+                "timestamp": "2016-09-07T22:33:59.784Z", 
+                "sessionId": "a0f0c467c84443edbac6ebf900baf747", 
+                "id": "7b3750be-53c0-4e27-ae1e-fea1cb20a985", 
                 "result": {
                     "parameters": {
                         "comparison-filter": "", 
@@ -717,14 +734,15 @@
             }
         }, 
         {
-            "all studies with a scan\u00a0time of below 45 min and read\u00a0time less\u00a0than 20min": {
+            "expr": "all studies with a scan\u00a0time of below 45 min and read\u00a0time less\u00a0than 20min", 
+            "resp": {
                 "status": {
                     "errorType": "success", 
                     "code": 200
                 }, 
-                "timestamp": "2016-09-06T17:36:49.511Z", 
-                "sessionId": "12d9ac6db4344e9ead42038f47c9a780", 
-                "id": "c92e64a4-d902-487e-b7a1-9958457961e8", 
+                "timestamp": "2016-09-07T22:34:00.494Z", 
+                "sessionId": "a0f0c467c84443edbac6ebf900baf747", 
+                "id": "36c098e5-2321-47b1-99e9-fcfc7089ae17", 
                 "result": {
                     "parameters": {
                         "comparison-filter": "less than", 
@@ -764,14 +782,15 @@
             }
         }, 
         {
-            "male patients with BMI more\u00a0than 30 and LVEF less\u00a0than 40": {
+            "expr": "male patients with BMI more\u00a0than 30 and LVEF less\u00a0than 40", 
+            "resp": {
                 "status": {
                     "errorType": "success", 
                     "code": 200
                 }, 
-                "timestamp": "2016-09-06T17:36:50.908Z", 
-                "sessionId": "12d9ac6db4344e9ead42038f47c9a780", 
-                "id": "a7d891ad-eb1f-42b3-a5de-51ceb675a2f1", 
+                "timestamp": "2016-09-07T22:34:01.155Z", 
+                "sessionId": "a0f0c467c84443edbac6ebf900baf747", 
+                "id": "688cd417-fbd0-4847-bda7-88948bc51959", 
                 "result": {
                     "parameters": {
                         "comparison-filter": "", 
@@ -811,14 +830,15 @@
             }
         }, 
         {
-            "return patients of doctor\u00a0D referred for ischemic\u00a0heart\u00a0disease with scan\u00a0times below 50 min": {
+            "expr": "return patients of doctor\u00a0D referred for ischemic\u00a0heart\u00a0disease with scan\u00a0times below 50 min", 
+            "resp": {
                 "status": {
                     "errorType": "success", 
                     "code": 200
                 }, 
-                "timestamp": "2016-09-06T17:36:52.33Z", 
-                "sessionId": "12d9ac6db4344e9ead42038f47c9a780", 
-                "id": "3c86eaf3-e18b-4d1b-a74f-ccb172c52ee5", 
+                "timestamp": "2016-09-07T22:34:01.876Z", 
+                "sessionId": "a0f0c467c84443edbac6ebf900baf747", 
+                "id": "8fc005f6-8041-48b1-8f72-650005117b63", 
                 "result": {
                     "parameters": {
                         "comparison-filter": "less than", 
@@ -858,14 +878,15 @@
             }
         }, 
         {
-            "females with a height greater\u00a0than 1.83m": {
+            "expr": "females with a height greater\u00a0than 1.83m", 
+            "resp": {
                 "status": {
                     "errorType": "success", 
                     "code": 200
                 }, 
-                "timestamp": "2016-09-06T17:36:53.72Z", 
-                "sessionId": "12d9ac6db4344e9ead42038f47c9a780", 
-                "id": "8fcd17bf-df4c-4101-9dc3-00268a6a86bb", 
+                "timestamp": "2016-09-07T22:34:02.552Z", 
+                "sessionId": "a0f0c467c84443edbac6ebf900baf747", 
+                "id": "4deeff6d-421b-48d7-8c76-4768dfc7282d", 
                 "result": {
                     "parameters": {
                         "comparison-filter": "greater than", 
@@ -905,14 +926,15 @@
             }
         }, 
         {
-            "return all procedures with a cpt\u00a0code of 75557 for Hospital\u00a0B": {
+            "expr": "return all procedures with a cpt\u00a0code of 75557 for Hospital\u00a0B", 
+            "resp": {
                 "status": {
                     "errorType": "success", 
                     "code": 200
                 }, 
-                "timestamp": "2016-09-06T17:36:55.109Z", 
-                "sessionId": "12d9ac6db4344e9ead42038f47c9a780", 
-                "id": "7f84b462-19ba-432c-8387-84012d078dd7", 
+                "timestamp": "2016-09-07T22:34:03.23Z", 
+                "sessionId": "a0f0c467c84443edbac6ebf900baf747", 
+                "id": "e94a8381-95ea-45d6-aa86-b48c80b0934b", 
                 "result": {
                     "parameters": {
                         "comparison-filter": "", 
@@ -952,14 +974,15 @@
             }
         }, 
         {
-            "all procedures with a cpt\u00a0code of 75561 for Hospital\u00a0A with a profit\u00a0margin of less\u00a0than 0": {
+            "expr": "all procedures with a cpt\u00a0code of 75561 for Hospital\u00a0A with a profit\u00a0margin of less\u00a0than 0", 
+            "resp": {
                 "status": {
                     "errorType": "success", 
                     "code": 200
                 }, 
-                "timestamp": "2016-09-06T17:36:56.498Z", 
-                "sessionId": "12d9ac6db4344e9ead42038f47c9a780", 
-                "id": "61994877-4242-40a0-97af-be1fd632adaf", 
+                "timestamp": "2016-09-07T22:34:03.884Z", 
+                "sessionId": "a0f0c467c84443edbac6ebf900baf747", 
+                "id": "be002077-47a5-40c6-9208-5f4db059ddd9", 
                 "result": {
                     "parameters": {
                         "comparison-filter": "", 
@@ -999,14 +1022,15 @@
             }
         }, 
         {
-            "find all HCM patients scar\u00a0profile that is diffuse with an LVEF of below 40%": {
+            "expr": "find all HCM patients scar\u00a0profile that is diffuse with an LVEF of below 40%", 
+            "resp": {
                 "status": {
                     "errorType": "success", 
                     "code": 200
                 }, 
-                "timestamp": "2016-09-06T17:36:57.91Z", 
-                "sessionId": "12d9ac6db4344e9ead42038f47c9a780", 
-                "id": "2979ed7f-5c55-485f-b86a-4db1389ee6b5", 
+                "timestamp": "2016-09-07T22:34:04.574Z", 
+                "sessionId": "a0f0c467c84443edbac6ebf900baf747", 
+                "id": "e38dca4c-f008-40b0-ac68-1b08d71b74be", 
                 "result": {
                     "parameters": {
                         "comparison-filter": "", 
@@ -1046,14 +1070,15 @@
             }
         }, 
         {
-            "all dcm patients with mid-wall lv\u00a0scar": {
+            "expr": "all dcm patients with mid-wall lv\u00a0scar", 
+            "resp": {
                 "status": {
                     "errorType": "success", 
                     "code": 200
                 }, 
-                "timestamp": "2016-09-06T17:36:59.321Z", 
-                "sessionId": "12d9ac6db4344e9ead42038f47c9a780", 
-                "id": "032b45d1-15cd-421b-b5e9-9871f0f9023e", 
+                "timestamp": "2016-09-07T22:34:05.248Z", 
+                "sessionId": "a0f0c467c84443edbac6ebf900baf747", 
+                "id": "257aaf77-a61e-426a-9065-3c6aaa3c94aa", 
                 "result": {
                     "parameters": {
                         "comparison-filter": "", 
@@ -1093,14 +1118,15 @@
             }
         }, 
         {
-            "find me all procedures that used contrast\u00a0agent": {
+            "expr": "find me all procedures that used contrast\u00a0agent", 
+            "resp": {
                 "status": {
                     "errorType": "success", 
                     "code": 200
                 }, 
-                "timestamp": "2016-09-06T17:37:00.697Z", 
-                "sessionId": "12d9ac6db4344e9ead42038f47c9a780", 
-                "id": "a933b2aa-f071-4957-b74c-6f2e20965912", 
+                "timestamp": "2016-09-07T22:34:05.889Z", 
+                "sessionId": "a0f0c467c84443edbac6ebf900baf747", 
+                "id": "d1cd4366-a43e-4346-841b-b3a004f6a8d7", 
                 "result": {
                     "parameters": {
                         "comparison-filter": "", 
@@ -1140,14 +1166,15 @@
             }
         }, 
         {
-            "all hcm patients": {
+            "expr": "all hcm patients", 
+            "resp": {
                 "status": {
                     "errorType": "success", 
                     "code": 200
                 }, 
-                "timestamp": "2016-09-06T17:37:02.095Z", 
-                "sessionId": "12d9ac6db4344e9ead42038f47c9a780", 
-                "id": "628ceb4b-28ea-43fc-a0b3-bb5c827cdd14", 
+                "timestamp": "2016-09-07T22:34:06.546Z", 
+                "sessionId": "a0f0c467c84443edbac6ebf900baf747", 
+                "id": "080980d6-ac27-4b0a-a47e-5d81d6bb0b50", 
                 "result": {
                     "parameters": {
                         "comparison-filter": "", 
@@ -1187,14 +1214,15 @@
             }
         }, 
         {
-            "find me all dcm patients": {
+            "expr": "find me all dcm patients", 
+            "resp": {
                 "status": {
                     "errorType": "success", 
                     "code": 200
                 }, 
-                "timestamp": "2016-09-06T17:37:03.474Z", 
-                "sessionId": "12d9ac6db4344e9ead42038f47c9a780", 
-                "id": "e92675af-5fad-4887-a803-f408e14ad503", 
+                "timestamp": "2016-09-07T22:34:07.316Z", 
+                "sessionId": "a0f0c467c84443edbac6ebf900baf747", 
+                "id": "183e8e78-490a-4b4f-9ce4-09057bdfdfac", 
                 "result": {
                     "parameters": {
                         "comparison-filter": "", 
@@ -1234,14 +1262,15 @@
             }
         }, 
         {
-            "all patients with dcm": {
+            "expr": "all patients with dcm", 
+            "resp": {
                 "status": {
                     "errorType": "success", 
                     "code": 200
                 }, 
-                "timestamp": "2016-09-06T17:37:04.863Z", 
-                "sessionId": "12d9ac6db4344e9ead42038f47c9a780", 
-                "id": "a5ff28d3-82da-4106-b630-6b63f5180ea1", 
+                "timestamp": "2016-09-07T22:34:08.002Z", 
+                "sessionId": "a0f0c467c84443edbac6ebf900baf747", 
+                "id": "a9bd661a-dccd-493e-9cde-628b5a57c81f", 
                 "result": {
                     "parameters": {
                         "comparison-filter": "", 
@@ -1281,14 +1310,15 @@
             }
         }, 
         {
-            "find me all hcm patients read by physician\u00a0b": {
+            "expr": "find me all hcm patients read by physician\u00a0b", 
+            "resp": {
                 "status": {
                     "errorType": "success", 
                     "code": 200
                 }, 
-                "timestamp": "2016-09-06T17:37:06.274Z", 
-                "sessionId": "12d9ac6db4344e9ead42038f47c9a780", 
-                "id": "cbb89812-833b-4104-9a6a-b8b222ea6aa5", 
+                "timestamp": "2016-09-07T22:34:08.684Z", 
+                "sessionId": "a0f0c467c84443edbac6ebf900baf747", 
+                "id": "c2d9d702-f8a1-4722-b4da-a79c72e8ec8d", 
                 "result": {
                     "parameters": {
                         "comparison-filter": "", 
@@ -1328,14 +1358,15 @@
             }
         }, 
         {
-            "all patients with diffuse lv\u00a0scar and an LVEF less\u00a0than 35%": {
+            "expr": "all patients with diffuse lv\u00a0scar and an LVEF less\u00a0than 35%", 
+            "resp": {
                 "status": {
                     "errorType": "success", 
                     "code": 200
                 }, 
-                "timestamp": "2016-09-06T17:37:07.668Z", 
-                "sessionId": "12d9ac6db4344e9ead42038f47c9a780", 
-                "id": "9dacab79-65d6-4c1d-a01f-7f0d1e985c99", 
+                "timestamp": "2016-09-07T22:34:09.359Z", 
+                "sessionId": "a0f0c467c84443edbac6ebf900baf747", 
+                "id": "2469dbfb-0ab1-4cd4-984c-6d90fdc859a9", 
                 "result": {
                     "parameters": {
                         "comparison-filter": "", 
@@ -1375,14 +1406,15 @@
             }
         }, 
         {
-            " show me procedures expense, revenue, and profit\u00a0margin for hospital\u00a0A": {
+            "expr": " show me procedures expense, revenue, and profit\u00a0margin for hospital\u00a0A", 
+            "resp": {
                 "status": {
                     "errorType": "success", 
                     "code": 200
                 }, 
-                "timestamp": "2016-09-06T17:37:09.053Z", 
-                "sessionId": "12d9ac6db4344e9ead42038f47c9a780", 
-                "id": "f0682a28-1ee9-40af-a19c-452ea89d291c", 
+                "timestamp": "2016-09-07T22:34:10.017Z", 
+                "sessionId": "a0f0c467c84443edbac6ebf900baf747", 
+                "id": "d2ec747e-ba3e-41e3-b877-48b07137cce0", 
                 "result": {
                     "parameters": {
                         "comparison-filter": "", 
@@ -1422,14 +1454,15 @@
             }
         }, 
         {
-            "all patients with HCM and LVEF less\u00a0than 50%": {
+            "expr": "all patients with HCM and LVEF less\u00a0than 50%", 
+            "resp": {
                 "status": {
                     "errorType": "success", 
                     "code": 200
                 }, 
-                "timestamp": "2016-09-06T17:37:10.478Z", 
-                "sessionId": "12d9ac6db4344e9ead42038f47c9a780", 
-                "id": "25c78fcc-f767-40e3-a648-7ae8ee9627ff", 
+                "timestamp": "2016-09-07T22:34:10.951Z", 
+                "sessionId": "a0f0c467c84443edbac6ebf900baf747", 
+                "id": "3328bd0c-892b-4390-893a-a323340ada97", 
                 "result": {
                     "parameters": {
                         "comparison-filter": "", 
@@ -1469,14 +1502,15 @@
             }
         }, 
         {
-            "which procedures have a profit less\u00a0than 0?": {
+            "expr": "which procedures have a profit less\u00a0than 0?", 
+            "resp": {
                 "status": {
                     "errorType": "success", 
                     "code": 200
                 }, 
-                "timestamp": "2016-09-06T17:37:11.859Z", 
-                "sessionId": "12d9ac6db4344e9ead42038f47c9a780", 
-                "id": "b7978e28-d8ad-4854-bc5d-3c3f3ba64f95", 
+                "timestamp": "2016-09-07T22:34:11.838Z", 
+                "sessionId": "a0f0c467c84443edbac6ebf900baf747", 
+                "id": "1a1a9b33-b755-440f-8668-f07ced71c074", 
                 "result": {
                     "parameters": {
                         "comparison-filter": "less than", 
@@ -1516,14 +1550,15 @@
             }
         }, 
         {
-            " which procedures have a profit margin greater than 6%?": {
+            "expr": " which procedures have a profit margin greater than 6%?", 
+            "resp": {
                 "status": {
                     "errorType": "success", 
                     "code": 200
                 }, 
-                "timestamp": "2016-09-06T17:37:13.301Z", 
-                "sessionId": "12d9ac6db4344e9ead42038f47c9a780", 
-                "id": "933b09a1-cb3f-4835-a7bc-9a4ca60eee0b", 
+                "timestamp": "2016-09-07T22:34:12.837Z", 
+                "sessionId": "a0f0c467c84443edbac6ebf900baf747", 
+                "id": "074f137d-6943-4256-8252-770d2c747b85", 
                 "result": {
                     "parameters": {
                         "comparison-filter": "", 
@@ -1565,14 +1600,15 @@
     ], 
     "Find Disease Indication Protocol": [
         {
-            "What is the image acquisition protocol for suspected iron\u00a0overload": {
+            "expr": "What is the image acquisition protocol for suspected iron\u00a0overload", 
+            "resp": {
                 "status": {
                     "errorType": "success", 
                     "code": 200
                 }, 
-                "timestamp": "2016-09-06T17:37:14.693Z", 
-                "sessionId": "12d9ac6db4344e9ead42038f47c9a780", 
-                "id": "1eaa592d-0c99-4be6-b84b-a8a6448d0ed6", 
+                "timestamp": "2016-09-07T22:34:13.513Z", 
+                "sessionId": "a0f0c467c84443edbac6ebf900baf747", 
+                "id": "0e874389-2d8a-444c-a8b9-e0303052b072", 
                 "result": {
                     "parameters": {
                         "myocardial_disease": "Iron Overload"
@@ -1595,14 +1631,15 @@
             }
         }, 
         {
-            "how would i scan for a DCM indication": {
+            "expr": "how would i scan for a DCM indication", 
+            "resp": {
                 "status": {
                     "errorType": "success", 
                     "code": 200
                 }, 
-                "timestamp": "2016-09-06T17:37:16.078Z", 
-                "sessionId": "12d9ac6db4344e9ead42038f47c9a780", 
-                "id": "dd1b86f3-2a43-4033-af3f-07f933150d2d", 
+                "timestamp": "2016-09-07T22:34:14.153Z", 
+                "sessionId": "a0f0c467c84443edbac6ebf900baf747", 
+                "id": "c2228ca9-b82c-46a2-acc8-84ac1d686f9f", 
                 "result": {
                     "parameters": {
                         "myocardial_disease": "DCM"
@@ -1625,14 +1662,15 @@
             }
         }, 
         {
-            "HCM indication scan": {
+            "expr": "HCM indication scan", 
+            "resp": {
                 "status": {
                     "errorType": "success", 
                     "code": 200
                 }, 
-                "timestamp": "2016-09-06T17:37:17.461Z", 
-                "sessionId": "12d9ac6db4344e9ead42038f47c9a780", 
-                "id": "d7f94dd7-e9b8-46c3-86f9-a58d4b899da4", 
+                "timestamp": "2016-09-07T22:34:15.101Z", 
+                "sessionId": "a0f0c467c84443edbac6ebf900baf747", 
+                "id": "911a4519-51e8-4f93-b7a5-8056c0861718", 
                 "result": {
                     "parameters": {
                         "myocardial_disease": "HCM"
@@ -1655,14 +1693,15 @@
             }
         }, 
         {
-            "LVNC scan": {
+            "expr": "LVNC scan", 
+            "resp": {
                 "status": {
                     "errorType": "success", 
                     "code": 200
                 }, 
-                "timestamp": "2016-09-06T17:37:18.844Z", 
-                "sessionId": "12d9ac6db4344e9ead42038f47c9a780", 
-                "id": "33330cf4-46cd-4632-8963-ee8a0dcd20a3", 
+                "timestamp": "2016-09-07T22:34:15.74Z", 
+                "sessionId": "a0f0c467c84443edbac6ebf900baf747", 
+                "id": "2e3b9fc0-3685-4e25-aa16-40ae0cf62d82", 
                 "result": {
                     "parameters": {
                         "myocardial_disease": "LVNC"
@@ -1685,14 +1724,15 @@
             }
         }, 
         {
-            "i need a scanning prototcol for a specific disease": {
+            "expr": "i need a scanning prototcol for a specific disease", 
+            "resp": {
                 "status": {
                     "errorType": "success", 
                     "code": 200
                 }, 
-                "timestamp": "2016-09-06T17:37:20.228Z", 
-                "sessionId": "12d9ac6db4344e9ead42038f47c9a780", 
-                "id": "de9a47c1-f628-49d8-b253-a96af25eb6fa", 
+                "timestamp": "2016-09-07T22:34:16.429Z", 
+                "sessionId": "a0f0c467c84443edbac6ebf900baf747", 
+                "id": "8b16670a-fa33-4853-b190-a509533b94a3", 
                 "result": {
                     "parameters": {
                         "myocardial_disease": ""
@@ -1715,14 +1755,15 @@
             }
         }, 
         {
-            "scan protocol for a disease": {
+            "expr": "scan protocol for a disease", 
+            "resp": {
                 "status": {
                     "errorType": "success", 
                     "code": 200
                 }, 
-                "timestamp": "2016-09-06T17:37:21.614Z", 
-                "sessionId": "12d9ac6db4344e9ead42038f47c9a780", 
-                "id": "45d11b3d-495f-4912-bd58-728edc4dba30", 
+                "timestamp": "2016-09-07T22:34:17.096Z", 
+                "sessionId": "a0f0c467c84443edbac6ebf900baf747", 
+                "id": "ab10ed27-ec8b-4790-ab8e-ee0b52e560dc", 
                 "result": {
                     "parameters": {
                         "myocardial_disease": ""
@@ -1745,14 +1786,15 @@
             }
         }, 
         {
-            "what is the scanning protocol for lvnc?": {
+            "expr": "what is the scanning protocol for lvnc?", 
+            "resp": {
                 "status": {
                     "errorType": "success", 
                     "code": 200
                 }, 
-                "timestamp": "2016-09-06T17:37:22.999Z", 
-                "sessionId": "12d9ac6db4344e9ead42038f47c9a780", 
-                "id": "cd45b161-96d5-4983-b8fb-931e3b08f1b8", 
+                "timestamp": "2016-09-07T22:34:17.77Z", 
+                "sessionId": "a0f0c467c84443edbac6ebf900baf747", 
+                "id": "44380e0d-4932-4811-8bcb-8c3390f961c1", 
                 "result": {
                     "parameters": {
                         "myocardial_disease": "LVNC"
@@ -1777,14 +1819,15 @@
     ], 
     "Query for Normal Values": [
         {
-            "What is the normal LV ESV for a 36\u00a0year\u00a0old female?": {
+            "expr": "What is the normal LV ESV for a 36\u00a0year\u00a0old female?", 
+            "resp": {
                 "status": {
                     "errorType": "success", 
                     "code": 200
                 }, 
-                "timestamp": "2016-09-06T17:37:24.399Z", 
-                "sessionId": "12d9ac6db4344e9ead42038f47c9a780", 
-                "id": "b898d704-9d5a-4d39-a39d-9b7bc60eb0cd", 
+                "timestamp": "2016-09-07T22:34:18.446Z", 
+                "sessionId": "a0f0c467c84443edbac6ebf900baf747", 
+                "id": "b945ddfa-41ed-4fd7-a78d-c347b6c2a247", 
                 "result": {
                     "parameters": {
                         "gender": "female", 
@@ -1812,14 +1855,15 @@
             }
         }, 
         {
-            "Can you tell me a normal value?": {
+            "expr": "Can you tell me a normal value?", 
+            "resp": {
                 "status": {
                     "errorType": "success", 
                     "code": 200
                 }, 
-                "timestamp": "2016-09-06T17:37:25.919Z", 
-                "sessionId": "12d9ac6db4344e9ead42038f47c9a780", 
-                "id": "cc1c7a51-42bf-4821-b245-ae637c0e08e8", 
+                "timestamp": "2016-09-07T22:34:19.095Z", 
+                "sessionId": "a0f0c467c84443edbac6ebf900baf747", 
+                "id": "ba545003-ab2f-41d8-9247-7428cba637b0", 
                 "result": {
                     "parameters": {
                         "gender": "", 
@@ -1888,14 +1932,15 @@
             }
         }, 
         {
-            "What is a normal right ventricle value?": {
+            "expr": "What is a normal right ventricle value?", 
+            "resp": {
                 "status": {
                     "errorType": "success", 
                     "code": 200
                 }, 
-                "timestamp": "2016-09-06T17:37:27.342Z", 
-                "sessionId": "12d9ac6db4344e9ead42038f47c9a780", 
-                "id": "d9fa9725-ca79-4560-b79e-a08ea51866a5", 
+                "timestamp": "2016-09-07T22:34:19.803Z", 
+                "sessionId": "a0f0c467c84443edbac6ebf900baf747", 
+                "id": "53244f10-707c-497d-9418-520c3c2460db", 
                 "result": {
                     "parameters": {
                         "gender": "", 
@@ -1964,14 +2009,15 @@
             }
         }, 
         {
-            "What's a normal cardiac value for a man of age\u00a032?": {
+            "expr": "What's a normal cardiac value for a man of age\u00a032?", 
+            "resp": {
                 "status": {
                     "errorType": "success", 
                     "code": 200
                 }, 
-                "timestamp": "2016-09-06T17:37:28.815Z", 
-                "sessionId": "12d9ac6db4344e9ead42038f47c9a780", 
-                "id": "6799c38b-43eb-4e5a-8e7c-7b4d08115461", 
+                "timestamp": "2016-09-07T22:34:20.58Z", 
+                "sessionId": "a0f0c467c84443edbac6ebf900baf747", 
+                "id": "57ce44d6-fb10-47ba-8104-ca8a0ed5e424", 
                 "result": {
                     "parameters": {
                         "gender": "male", 
@@ -2051,14 +2097,15 @@
             }
         }, 
         {
-            "I'm interested in the normal ejection\u00a0fraction of an LV.": {
+            "expr": "I'm interested in the normal ejection\u00a0fraction of an LV.", 
+            "resp": {
                 "status": {
                     "errorType": "success", 
                     "code": 200
                 }, 
-                "timestamp": "2016-09-06T17:37:30.307Z", 
-                "sessionId": "12d9ac6db4344e9ead42038f47c9a780", 
-                "id": "d7132e12-cd5c-4373-9088-5145e24f35a2", 
+                "timestamp": "2016-09-07T22:34:21.311Z", 
+                "sessionId": "a0f0c467c84443edbac6ebf900baf747", 
+                "id": "3625e31d-1cbb-4c1a-a412-8cf138bc0284", 
                 "result": {
                     "parameters": {
                         "gender": "male", 
@@ -2086,14 +2133,15 @@
             }
         }, 
         {
-            "normal value for 80 year old male EDV of the LV": {
+            "expr": "normal value for 80 year old male EDV of the LV", 
+            "resp": {
                 "status": {
                     "errorType": "success", 
                     "code": 200
                 }, 
-                "timestamp": "2016-09-06T17:37:31.7Z", 
-                "sessionId": "12d9ac6db4344e9ead42038f47c9a780", 
-                "id": "c45e6aa9-3f34-47af-9efb-77d6cc46b581", 
+                "timestamp": "2016-09-07T22:34:21.989Z", 
+                "sessionId": "a0f0c467c84443edbac6ebf900baf747", 
+                "id": "25527cb6-ba98-45d9-89cb-ad46b210f872", 
                 "result": {
                     "parameters": {
                         "gender": "male", 
@@ -2121,14 +2169,15 @@
             }
         }, 
         {
-            "LV EF normal value for 70\u00a0yo man": {
+            "expr": "LV EF normal value for 70\u00a0yo man", 
+            "resp": {
                 "status": {
                     "errorType": "success", 
                     "code": 200
                 }, 
-                "timestamp": "2016-09-06T17:37:33.087Z", 
-                "sessionId": "12d9ac6db4344e9ead42038f47c9a780", 
-                "id": "a77e9da7-d7dc-4c61-b4d3-74e691f30851", 
+                "timestamp": "2016-09-07T22:34:22.645Z", 
+                "sessionId": "a0f0c467c84443edbac6ebf900baf747", 
+                "id": "3c5cb881-4408-4e17-b35c-5ec52dacb08e", 
                 "result": {
                     "parameters": {
                         "gender": "male", 
@@ -2156,14 +2205,15 @@
             }
         }, 
         {
-            "ESV normal value RV": {
+            "expr": "ESV normal value RV", 
+            "resp": {
                 "status": {
                     "errorType": "success", 
                     "code": 200
                 }, 
-                "timestamp": "2016-09-06T17:37:34.506Z", 
-                "sessionId": "12d9ac6db4344e9ead42038f47c9a780", 
-                "id": "e853fe97-2acf-4f19-a997-42ad536f06e3", 
+                "timestamp": "2016-09-07T22:34:23.329Z", 
+                "sessionId": "a0f0c467c84443edbac6ebf900baf747", 
+                "id": "76220a69-4b70-4050-b5e6-2a1c590d56ca", 
                 "result": {
                     "parameters": {
                         "gender": "", 
@@ -2232,14 +2282,15 @@
             }
         }, 
         {
-            "What is the normal value for LV EDV female that is 45\u00a0years\u00a0old": {
+            "expr": "What is the normal value for LV EDV female that is 45\u00a0years\u00a0old", 
+            "resp": {
                 "status": {
                     "errorType": "success", 
                     "code": 200
                 }, 
-                "timestamp": "2016-09-06T17:37:36.14Z", 
-                "sessionId": "12d9ac6db4344e9ead42038f47c9a780", 
-                "id": "a7e90370-958a-4a31-ab81-78e4167cfcd8", 
+                "timestamp": "2016-09-07T22:34:24.268Z", 
+                "sessionId": "a0f0c467c84443edbac6ebf900baf747", 
+                "id": "b25e9999-748e-4b9d-81f1-ec5870073181", 
                 "result": {
                     "parameters": {
                         "gender": "female", 
@@ -2269,14 +2320,15 @@
     ], 
     "2D plot": [
         {
-            "display a scatter plot of age vs LVEF": {
+            "expr": "display a scatter plot of age vs LVEF", 
+            "resp": {
                 "status": {
                     "errorType": "success", 
                     "code": 200
                 }, 
-                "timestamp": "2016-09-06T17:37:37.566Z", 
-                "sessionId": "12d9ac6db4344e9ead42038f47c9a780", 
-                "id": "a2c8dc1f-7707-4115-bc83-5421e23e9390", 
+                "timestamp": "2016-09-07T22:34:24.941Z", 
+                "sessionId": "a0f0c467c84443edbac6ebf900baf747", 
+                "id": "9630ab9a-7eb2-41a2-bf2b-19477adb9be1", 
                 "result": {
                     "parameters": {
                         "aggregation-op": "", 
@@ -2309,14 +2361,15 @@
             }
         }, 
         {
-            "plot patient height vs mass": {
+            "expr": "plot patient height vs mass", 
+            "resp": {
                 "status": {
                     "errorType": "success", 
                     "code": 200
                 }, 
-                "timestamp": "2016-09-06T17:37:38.984Z", 
-                "sessionId": "12d9ac6db4344e9ead42038f47c9a780", 
-                "id": "8021f8b7-dce7-440e-9449-6bcdc9fa1fc1", 
+                "timestamp": "2016-09-07T22:34:25.586Z", 
+                "sessionId": "a0f0c467c84443edbac6ebf900baf747", 
+                "id": "6c5e2e07-baa5-4e31-9f26-98ae40566620", 
                 "result": {
                     "parameters": {
                         "aggregation-op": "", 
@@ -2349,14 +2402,15 @@
             }
         }, 
         {
-            "scatter plot LVEDV vs LV\u00a0Mass for all patients with HCM": {
+            "expr": "scatter plot LVEDV vs LV\u00a0Mass for all patients with HCM", 
+            "resp": {
                 "status": {
                     "errorType": "success", 
                     "code": 200
                 }, 
-                "timestamp": "2016-09-06T17:37:40.352Z", 
-                "sessionId": "12d9ac6db4344e9ead42038f47c9a780", 
-                "id": "f8acce01-1ad3-4af3-9975-5e631b6c4415", 
+                "timestamp": "2016-09-07T22:34:26.258Z", 
+                "sessionId": "a0f0c467c84443edbac6ebf900baf747", 
+                "id": "62d0e2b9-7f52-4150-9dd6-4405865a73f1", 
                 "result": {
                     "parameters": {
                         "aggregation-op": "", 
@@ -2389,14 +2443,15 @@
             }
         }, 
         {
-            "plot average profit\u00a0margin per hospital in a bar chart": {
+            "expr": "plot average profit\u00a0margin per hospital in a bar chart", 
+            "resp": {
                 "status": {
                     "errorType": "success", 
                     "code": 200
                 }, 
-                "timestamp": "2016-09-06T17:37:41.754Z", 
-                "sessionId": "12d9ac6db4344e9ead42038f47c9a780", 
-                "id": "5546333c-ffcf-4855-8d8e-650d504e89e8", 
+                "timestamp": "2016-09-07T22:34:26.918Z", 
+                "sessionId": "a0f0c467c84443edbac6ebf900baf747", 
+                "id": "e5daffc1-9371-41d7-bb07-b00e12110b82", 
                 "result": {
                     "parameters": {
                         "aggregation-op": "mean", 
@@ -2429,14 +2484,15 @@
             }
         }, 
         {
-            "create marked line plot": {
+            "expr": "create marked line plot", 
+            "resp": {
                 "status": {
                     "errorType": "success", 
                     "code": 200
                 }, 
-                "timestamp": "2016-09-06T17:37:43.178Z", 
-                "sessionId": "12d9ac6db4344e9ead42038f47c9a780", 
-                "id": "4924ffb1-46e9-46f1-bf0a-ca2172578ae6", 
+                "timestamp": "2016-09-07T22:34:27.617Z", 
+                "sessionId": "a0f0c467c84443edbac6ebf900baf747", 
+                "id": "4ad7821b-1fe2-437e-8f4c-c4114ce0bfb4", 
                 "result": {
                     "parameters": {
                         "aggregation-op": "", 
@@ -2469,14 +2525,15 @@
             }
         }, 
         {
-            "display pie chart": {
+            "expr": "display pie chart", 
+            "resp": {
                 "status": {
                     "errorType": "success", 
                     "code": 200
                 }, 
-                "timestamp": "2016-09-06T17:37:44.578Z", 
-                "sessionId": "12d9ac6db4344e9ead42038f47c9a780", 
-                "id": "3d190c8f-325f-469f-bfe1-efae6578e948", 
+                "timestamp": "2016-09-07T22:34:28.344Z", 
+                "sessionId": "a0f0c467c84443edbac6ebf900baf747", 
+                "id": "3229cfd8-9fcd-432e-bf47-3cdfcf5c9bac", 
                 "result": {
                     "parameters": {
                         "aggregation-op": "", 
@@ -2509,14 +2566,15 @@
             }
         }, 
         {
-            "show exploded pie chart": {
+            "expr": "show exploded pie chart", 
+            "resp": {
                 "status": {
                     "errorType": "success", 
                     "code": 200
                 }, 
-                "timestamp": "2016-09-06T17:37:45.97Z", 
-                "sessionId": "12d9ac6db4344e9ead42038f47c9a780", 
-                "id": "0fd005c4-d4c2-429b-aa21-4cf291ddf476", 
+                "timestamp": "2016-09-07T22:34:28.988Z", 
+                "sessionId": "a0f0c467c84443edbac6ebf900baf747", 
+                "id": "80e2c170-98df-4805-97ee-b46da5dcf1db", 
                 "result": {
                     "parameters": {
                         "aggregation-op": "", 
@@ -2549,14 +2607,15 @@
             }
         }, 
         {
-            "bar\u00a0plot LVEDV, LVESV, LVSV": {
+            "expr": "bar\u00a0plot LVEDV, LVESV, LVSV", 
+            "resp": {
                 "status": {
                     "errorType": "success", 
                     "code": 200
                 }, 
-                "timestamp": "2016-09-06T17:37:47.339Z", 
-                "sessionId": "12d9ac6db4344e9ead42038f47c9a780", 
-                "id": "4763cf07-b01d-4d3e-9a50-ae7b15edb89a", 
+                "timestamp": "2016-09-07T22:34:29.645Z", 
+                "sessionId": "a0f0c467c84443edbac6ebf900baf747", 
+                "id": "41b1d97d-b7a0-4ba3-8a23-5dedf9fbd355", 
                 "result": {
                     "parameters": {
                         "aggregation-op": "", 
@@ -2589,14 +2648,15 @@
             }
         }, 
         {
-            "line plot height and mass over age": {
+            "expr": "line plot height and mass over age", 
+            "resp": {
                 "status": {
                     "errorType": "success", 
                     "code": 200
                 }, 
-                "timestamp": "2016-09-06T17:37:48.741Z", 
-                "sessionId": "12d9ac6db4344e9ead42038f47c9a780", 
-                "id": "4ba587de-94c3-4cfa-aead-5ea17b8408c7", 
+                "timestamp": "2016-09-07T22:34:30.308Z", 
+                "sessionId": "a0f0c467c84443edbac6ebf900baf747", 
+                "id": "f5ba6cf0-cf89-4e0c-954e-335f16972c90", 
                 "result": {
                     "parameters": {
                         "aggregation-op": "", 
@@ -2629,14 +2689,15 @@
             }
         }, 
         {
-            "scatter\u00a0plot LVSV vs LV\u00a0mass": {
+            "expr": "scatter\u00a0plot LVSV vs LV\u00a0mass", 
+            "resp": {
                 "status": {
                     "errorType": "success", 
                     "code": 200
                 }, 
-                "timestamp": "2016-09-06T17:37:50.139Z", 
-                "sessionId": "12d9ac6db4344e9ead42038f47c9a780", 
-                "id": "5d3a7340-7df7-4aa5-b8f9-b1fe0b6e1d5d", 
+                "timestamp": "2016-09-07T22:34:31.001Z", 
+                "sessionId": "a0f0c467c84443edbac6ebf900baf747", 
+                "id": "8481976a-abf2-44d4-8234-b782f4552d9e", 
                 "result": {
                     "parameters": {
                         "aggregation-op": "", 
@@ -2671,14 +2732,15 @@
     ], 
     "Find a Billing Code": [
         {
-            "What is the CPT billing code for a cardiac MRI with\u00a0contrast and without\u00a0stress?": {
+            "expr": "What is the CPT billing code for a cardiac MRI with\u00a0contrast and without\u00a0stress?", 
+            "resp": {
                 "status": {
                     "errorType": "success", 
                     "code": 200
                 }, 
-                "timestamp": "2016-09-06T17:37:51.544Z", 
-                "sessionId": "12d9ac6db4344e9ead42038f47c9a780", 
-                "id": "9ec85645-4077-4830-b045-0c12234f31b0", 
+                "timestamp": "2016-09-07T22:34:31.652Z", 
+                "sessionId": "a0f0c467c84443edbac6ebf900baf747", 
+                "id": "0a6e31e9-8e7b-4197-8d51-0afbd8f5eb4f", 
                 "result": {
                     "parameters": {
                         "stress_use": "False", 
@@ -2706,14 +2768,15 @@
             }
         }, 
         {
-            "How can I find the CPT billing code to the MRI procedure we just preformed?": {
+            "expr": "How can I find the CPT billing code to the MRI procedure we just preformed?", 
+            "resp": {
                 "status": {
                     "errorType": "success", 
                     "code": 200
                 }, 
-                "timestamp": "2016-09-06T17:37:52.915Z", 
-                "sessionId": "12d9ac6db4344e9ead42038f47c9a780", 
-                "id": "e1d4d2d0-f077-42ce-8d68-73ea91ec1020", 
+                "timestamp": "2016-09-07T22:34:32.326Z", 
+                "sessionId": "a0f0c467c84443edbac6ebf900baf747", 
+                "id": "fd2004dc-e9bb-4cb5-ab0a-c6c6a6497ad3", 
                 "result": {
                     "parameters": {
                         "stress_use": "", 
@@ -2796,14 +2859,15 @@
             }
         }, 
         {
-            "What is the CPT billing code?": {
+            "expr": "What is the CPT billing code?", 
+            "resp": {
                 "status": {
                     "errorType": "success", 
                     "code": 200
                 }, 
-                "timestamp": "2016-09-06T17:37:54.311Z", 
-                "sessionId": "12d9ac6db4344e9ead42038f47c9a780", 
-                "id": "8f68323d-81f2-456d-8d4e-7ef24f0ca593", 
+                "timestamp": "2016-09-07T22:34:32.986Z", 
+                "sessionId": "a0f0c467c84443edbac6ebf900baf747", 
+                "id": "d37066da-68d8-4c82-bdcc-8806ef1acecf", 
                 "result": {
                     "parameters": {
                         "stress_use": "", 
@@ -2886,14 +2950,15 @@
             }
         }, 
         {
-            "What is the billing code for a cardiac MRI?": {
+            "expr": "What is the billing code for a cardiac MRI?", 
+            "resp": {
                 "status": {
                     "errorType": "success", 
                     "code": 200
                 }, 
-                "timestamp": "2016-09-06T17:37:55.744Z", 
-                "sessionId": "12d9ac6db4344e9ead42038f47c9a780", 
-                "id": "1bc50297-e5d8-4532-b976-565bb7337bea", 
+                "timestamp": "2016-09-07T22:34:33.984Z", 
+                "sessionId": "a0f0c467c84443edbac6ebf900baf747", 
+                "id": "99a97bc3-752c-4a1b-80ed-82eeaad7501f", 
                 "result": {
                     "parameters": {
                         "stress_use": "", 
@@ -2976,14 +3041,15 @@
             }
         }, 
         {
-            "i need a billing code for an mri without\u00a0contrast": {
+            "expr": "i need a billing code for an mri without\u00a0contrast", 
+            "resp": {
                 "status": {
                     "errorType": "success", 
                     "code": 200
                 }, 
-                "timestamp": "2016-09-06T17:37:57.225Z", 
-                "sessionId": "12d9ac6db4344e9ead42038f47c9a780", 
-                "id": "4b5e2352-f3b8-43b4-95ca-439db64c36d3", 
+                "timestamp": "2016-09-07T22:34:34.712Z", 
+                "sessionId": "a0f0c467c84443edbac6ebf900baf747", 
+                "id": "c69473da-7ae5-4e17-9587-4745852b48f4", 
                 "result": {
                     "parameters": {
                         "stress_use": "", 
@@ -3068,14 +3134,15 @@
     ], 
     "Aggregations for Groupables": [
         {
-            "What is the average reading\u00a0time for each physician?": {
+            "expr": "What is the average reading\u00a0time for each physician?", 
+            "resp": {
                 "status": {
                     "errorType": "success", 
                     "code": 200
                 }, 
-                "timestamp": "2016-09-06T17:37:58.656Z", 
-                "sessionId": "12d9ac6db4344e9ead42038f47c9a780", 
-                "id": "9ff5d508-f437-469e-a2df-11f6c6f4d904", 
+                "timestamp": "2016-09-07T22:34:35.44Z", 
+                "sessionId": "a0f0c467c84443edbac6ebf900baf747", 
+                "id": "098fee55-3342-47d0-9ce1-11ddea09a668", 
                 "result": {
                     "parameters": {
                         "aggregable2": "", 
@@ -3264,14 +3331,15 @@
             }
         }, 
         {
-            "What is the average scan\u00a0time per indication?": {
+            "expr": "What is the average scan\u00a0time per indication?", 
+            "resp": {
                 "status": {
                     "errorType": "success", 
                     "code": 200
                 }, 
-                "timestamp": "2016-09-06T17:38:00.066Z", 
-                "sessionId": "12d9ac6db4344e9ead42038f47c9a780", 
-                "id": "7cc54e79-566d-41f8-9f3f-783baa3e061a", 
+                "timestamp": "2016-09-07T22:34:36.124Z", 
+                "sessionId": "a0f0c467c84443edbac6ebf900baf747", 
+                "id": "d97bc680-e481-4567-bb28-6cbed5a50465", 
                 "result": {
                     "parameters": {
                         "aggregable2": "", 
@@ -3410,14 +3478,15 @@
             }
         }, 
         {
-            "What is the average scan\u00a0time per physician per indication?": {
+            "expr": "What is the average scan\u00a0time per physician per indication?", 
+            "resp": {
                 "status": {
                     "errorType": "success", 
                     "code": 200
                 }, 
-                "timestamp": "2016-09-06T17:38:01.463Z", 
-                "sessionId": "12d9ac6db4344e9ead42038f47c9a780", 
-                "id": "324e5e92-f747-4bef-9dab-8600718170b4", 
+                "timestamp": "2016-09-07T22:34:36.8Z", 
+                "sessionId": "a0f0c467c84443edbac6ebf900baf747", 
+                "id": "9f32abd2-332c-476a-ac82-edbf446d8ff1", 
                 "result": {
                     "parameters": {
                         "aggregable2": "", 
@@ -3455,14 +3524,15 @@
             }
         }, 
         {
-            "How\u00a0many studies has each physician read?": {
+            "expr": "How\u00a0many studies has each physician read?", 
+            "resp": {
                 "status": {
                     "errorType": "success", 
                     "code": 200
                 }, 
-                "timestamp": "2016-09-06T17:38:02.852Z", 
-                "sessionId": "12d9ac6db4344e9ead42038f47c9a780", 
-                "id": "96a0103e-36d4-47fd-877b-6a11a75e9532", 
+                "timestamp": "2016-09-07T22:34:37.471Z", 
+                "sessionId": "a0f0c467c84443edbac6ebf900baf747", 
+                "id": "f43f6beb-87a5-4c7f-86ee-7436b211efbe", 
                 "result": {
                     "parameters": {
                         "aggregable2": "", 
@@ -3500,14 +3570,15 @@
             }
         }, 
         {
-            "What is the average profit\u00a0margin per hospital?": {
+            "expr": "What is the average profit\u00a0margin per hospital?", 
+            "resp": {
                 "status": {
                     "errorType": "success", 
                     "code": 200
                 }, 
-                "timestamp": "2016-09-06T17:38:04.265Z", 
-                "sessionId": "12d9ac6db4344e9ead42038f47c9a780", 
-                "id": "ff3f23d6-d910-4088-825b-eb3666317633", 
+                "timestamp": "2016-09-07T22:34:38.146Z", 
+                "sessionId": "a0f0c467c84443edbac6ebf900baf747", 
+                "id": "31bbbe70-6283-400a-aa61-0c65795525b3", 
                 "result": {
                     "parameters": {
                         "aggregable2": "", 
@@ -3545,14 +3616,15 @@
             }
         }, 
         {
-            "What is the average profit\u00a0margin per procedure billing code?": {
+            "expr": "What is the average profit\u00a0margin per procedure billing code?", 
+            "resp": {
                 "status": {
                     "errorType": "success", 
                     "code": 200
                 }, 
-                "timestamp": "2016-09-06T17:38:05.666Z", 
-                "sessionId": "12d9ac6db4344e9ead42038f47c9a780", 
-                "id": "156cd6e2-958d-4b02-a021-7945bbc38b6c", 
+                "timestamp": "2016-09-07T22:34:38.805Z", 
+                "sessionId": "a0f0c467c84443edbac6ebf900baf747", 
+                "id": "91a46bc9-95e3-4b41-ad6f-068dedae3820", 
                 "result": {
                     "parameters": {
                         "aggregable2": "", 
@@ -3590,14 +3662,15 @@
             }
         }, 
         {
-            "What are the most\u00a0frequent clinical indications?": {
+            "expr": "What are the most\u00a0frequent clinical indications?", 
+            "resp": {
                 "status": {
                     "errorType": "success", 
                     "code": 200
                 }, 
-                "timestamp": "2016-09-06T17:38:07.049Z", 
-                "sessionId": "12d9ac6db4344e9ead42038f47c9a780", 
-                "id": "2b556a68-dcb1-4478-9ce7-3fc7fa8107b9", 
+                "timestamp": "2016-09-07T22:34:39.466Z", 
+                "sessionId": "a0f0c467c84443edbac6ebf900baf747", 
+                "id": "49ceef2a-323c-4dec-8852-52bcae955fb5", 
                 "result": {
                     "parameters": {
                         "aggregable2": "", 
@@ -3635,14 +3708,15 @@
             }
         }, 
         {
-            "What are the most\u00a0frequent clinical indications per hospital?": {
+            "expr": "What are the most\u00a0frequent clinical indications per hospital?", 
+            "resp": {
                 "status": {
                     "errorType": "success", 
                     "code": 200
                 }, 
-                "timestamp": "2016-09-06T17:38:08.46Z", 
-                "sessionId": "12d9ac6db4344e9ead42038f47c9a780", 
-                "id": "492a8627-5ede-4726-844b-50d71e620c4d", 
+                "timestamp": "2016-09-07T22:34:40.128Z", 
+                "sessionId": "a0f0c467c84443edbac6ebf900baf747", 
+                "id": "f54a1eb8-bcce-49c9-b704-83402a8ca01e", 
                 "result": {
                     "parameters": {
                         "aggregable2": "", 
@@ -3680,14 +3754,15 @@
             }
         }, 
         {
-            "Average LVEF for all females over 50\u00a0years\u00a0old": {
+            "expr": "Average LVEF for all females over 50\u00a0years\u00a0old", 
+            "resp": {
                 "status": {
                     "errorType": "success", 
                     "code": 200
                 }, 
-                "timestamp": "2016-09-06T17:38:09.864Z", 
-                "sessionId": "12d9ac6db4344e9ead42038f47c9a780", 
-                "id": "cceb2983-2c28-4196-9484-d68e07ddd5c2", 
+                "timestamp": "2016-09-07T22:34:40.804Z", 
+                "sessionId": "a0f0c467c84443edbac6ebf900baf747", 
+                "id": "f7fcc6ed-82f8-4e2c-949c-4a8b9a1c8cb5", 
                 "result": {
                     "parameters": {
                         "aggregable2": "", 
@@ -3727,14 +3802,15 @@
             }
         }, 
         {
-            "Average LV\u00a0Mass for all males over 40\u00a0years\u00a0old with HCM": {
+            "expr": "Average LV\u00a0Mass for all males over 40\u00a0years\u00a0old with HCM", 
+            "resp": {
                 "status": {
                     "errorType": "success", 
                     "code": 200
                 }, 
-                "timestamp": "2016-09-06T17:38:11.268Z", 
-                "sessionId": "12d9ac6db4344e9ead42038f47c9a780", 
-                "id": "12d0f433-99b9-47c6-ada2-dda2cf75b748", 
+                "timestamp": "2016-09-07T22:34:41.47Z", 
+                "sessionId": "a0f0c467c84443edbac6ebf900baf747", 
+                "id": "98f8e27c-a777-42cd-9853-31f2e608556a", 
                 "result": {
                     "parameters": {
                         "aggregable2": "", 
@@ -3774,14 +3850,15 @@
             }
         }, 
         {
-            "What is the primary scar\u00a0pattern of all the patients with ischemic heart disease?": {
+            "expr": "What is the primary scar\u00a0pattern of all the patients with ischemic heart disease?", 
+            "resp": {
                 "status": {
                     "errorType": "success", 
                     "code": 200
                 }, 
-                "timestamp": "2016-09-06T17:38:12.658Z", 
-                "sessionId": "12d9ac6db4344e9ead42038f47c9a780", 
-                "id": "0a02bc76-0e10-44c7-9dc8-ae6280e7b8a7", 
+                "timestamp": "2016-09-07T22:34:42.117Z", 
+                "sessionId": "a0f0c467c84443edbac6ebf900baf747", 
+                "id": "c414181f-cda2-41b4-9f85-92665534b315", 
                 "result": {
                     "parameters": {
                         "aggregable2": "", 
@@ -3819,14 +3896,15 @@
             }
         }, 
         {
-            "What is the average LVEF for all the patients with ischemic\u00a0heart\u00a0disease?": {
+            "expr": "What is the average LVEF for all the patients with ischemic\u00a0heart\u00a0disease?", 
+            "resp": {
                 "status": {
                     "errorType": "success", 
                     "code": 200
                 }, 
-                "timestamp": "2016-09-06T17:38:14.031Z", 
-                "sessionId": "12d9ac6db4344e9ead42038f47c9a780", 
-                "id": "7ecc2454-f960-4405-bf8c-c5730092e13e", 
+                "timestamp": "2016-09-07T22:34:42.798Z", 
+                "sessionId": "a0f0c467c84443edbac6ebf900baf747", 
+                "id": "9b996f3b-00bf-41ad-ac7b-59b608e282e4", 
                 "result": {
                     "parameters": {
                         "aggregable2": "", 
@@ -3864,14 +3942,15 @@
             }
         }, 
         {
-            "Median age for all male patients": {
+            "expr": "Median age for all male patients", 
+            "resp": {
                 "status": {
                     "errorType": "success", 
                     "code": 200
                 }, 
-                "timestamp": "2016-09-06T17:38:15.42Z", 
-                "sessionId": "12d9ac6db4344e9ead42038f47c9a780", 
-                "id": "047cddf7-a924-46c7-bf56-8db00bfc5d73", 
+                "timestamp": "2016-09-07T22:34:43.457Z", 
+                "sessionId": "a0f0c467c84443edbac6ebf900baf747", 
+                "id": "d01de30b-da24-4b9e-a848-12f821eda4c4", 
                 "result": {
                     "parameters": {
                         "aggregable2": "", 
@@ -3909,14 +3988,15 @@
             }
         }, 
         {
-            "What is the least\u00a0frequent clinical indication?": {
+            "expr": "What is the least\u00a0frequent clinical indication?", 
+            "resp": {
                 "status": {
                     "errorType": "success", 
                     "code": 200
                 }, 
-                "timestamp": "2016-09-06T17:38:16.808Z", 
-                "sessionId": "12d9ac6db4344e9ead42038f47c9a780", 
-                "id": "e347c589-66b9-4288-9f9f-1e3377dc6865", 
+                "timestamp": "2016-09-07T22:34:44.129Z", 
+                "sessionId": "a0f0c467c84443edbac6ebf900baf747", 
+                "id": "2a578b13-4809-472b-b7a9-fb29aec1ba5f", 
                 "result": {
                     "parameters": {
                         "aggregable2": "", 
@@ -3954,14 +4034,15 @@
             }
         }, 
         {
-            "What is the min, max, and average age per gender?": {
+            "expr": "What is the min, max, and average age per gender?", 
+            "resp": {
                 "status": {
                     "errorType": "success", 
                     "code": 200
                 }, 
-                "timestamp": "2016-09-06T17:38:18.183Z", 
-                "sessionId": "12d9ac6db4344e9ead42038f47c9a780", 
-                "id": "85698e7d-1597-4dd5-9282-d3020e3ced4c", 
+                "timestamp": "2016-09-07T22:34:44.789Z", 
+                "sessionId": "a0f0c467c84443edbac6ebf900baf747", 
+                "id": "fcde8af9-40cf-4a23-83b1-e913151fc4e2", 
                 "result": {
                     "parameters": {
                         "aggregable2": "", 
@@ -3999,14 +4080,15 @@
             }
         }, 
         {
-            "average procedure expense per hospital": {
+            "expr": "average procedure expense per hospital", 
+            "resp": {
                 "status": {
                     "errorType": "success", 
                     "code": 200
                 }, 
-                "timestamp": "2016-09-06T17:38:19.608Z", 
-                "sessionId": "12d9ac6db4344e9ead42038f47c9a780", 
-                "id": "720e761e-05ea-45ae-add8-5679e0de5fe2", 
+                "timestamp": "2016-09-07T22:34:45.474Z", 
+                "sessionId": "a0f0c467c84443edbac6ebf900baf747", 
+                "id": "ce897aeb-32e3-47f4-ac8e-91d4a7976274", 
                 "result": {
                     "parameters": {
                         "aggregable2": "", 
@@ -4044,14 +4126,15 @@
             }
         }, 
         {
-            "what is the median BMI for all females": {
+            "expr": "what is the median BMI for all females", 
+            "resp": {
                 "status": {
                     "errorType": "success", 
                     "code": 200
                 }, 
-                "timestamp": "2016-09-06T17:38:21.023Z", 
-                "sessionId": "12d9ac6db4344e9ead42038f47c9a780", 
-                "id": "627b1b2a-33d7-4c0a-afd7-1a0d58df259f", 
+                "timestamp": "2016-09-07T22:34:46.132Z", 
+                "sessionId": "a0f0c467c84443edbac6ebf900baf747", 
+                "id": "a4cb5c19-49f9-4020-b1c0-4be0495bfd12", 
                 "result": {
                     "parameters": {
                         "aggregable2": "", 
@@ -4089,14 +4172,15 @@
             }
         }, 
         {
-            "average bsa for all males": {
+            "expr": "average bsa for all males", 
+            "resp": {
                 "status": {
                     "errorType": "success", 
                     "code": 200
                 }, 
-                "timestamp": "2016-09-06T17:38:22.413Z", 
-                "sessionId": "12d9ac6db4344e9ead42038f47c9a780", 
-                "id": "2296b384-b009-42d4-ac6e-68a8fc2e04af", 
+                "timestamp": "2016-09-07T22:34:46.791Z", 
+                "sessionId": "a0f0c467c84443edbac6ebf900baf747", 
+                "id": "60be3626-c129-44d8-b65f-8819ed1560d3", 
                 "result": {
                     "parameters": {
                         "aggregable2": "", 
@@ -4134,14 +4218,15 @@
             }
         }, 
         {
-            "mean profit\u00a0margin per cpt\u00a0code": {
+            "expr": "mean profit\u00a0margin per cpt\u00a0code", 
+            "resp": {
                 "status": {
                     "errorType": "success", 
                     "code": 200
                 }, 
-                "timestamp": "2016-09-06T17:38:23.818Z", 
-                "sessionId": "12d9ac6db4344e9ead42038f47c9a780", 
-                "id": "00e24b47-2810-463f-9faa-6503a6ea2f0e", 
+                "timestamp": "2016-09-07T22:34:47.449Z", 
+                "sessionId": "a0f0c467c84443edbac6ebf900baf747", 
+                "id": "c9ef812a-b938-408e-a7a4-0d86f120292b", 
                 "result": {
                     "parameters": {
                         "aggregable2": "", 
@@ -4179,14 +4264,15 @@
             }
         }, 
         {
-            "what is the mean revenue and expense for each hospital": {
+            "expr": "what is the mean revenue and expense for each hospital", 
+            "resp": {
                 "status": {
                     "errorType": "success", 
                     "code": 200
                 }, 
-                "timestamp": "2016-09-06T17:38:25.231Z", 
-                "sessionId": "12d9ac6db4344e9ead42038f47c9a780", 
-                "id": "c8094ddd-98a4-4c4a-8ed0-4ec2740518e0", 
+                "timestamp": "2016-09-07T22:34:48.566Z", 
+                "sessionId": "a0f0c467c84443edbac6ebf900baf747", 
+                "id": "e57b730a-f403-41e5-bce0-95791bac0250", 
                 "result": {
                     "parameters": {
                         "aggregable2": "", 
@@ -4224,14 +4310,15 @@
             }
         }, 
         {
-            "mean, min, max scan\u00a0time and read\u00a0time for each indication": {
+            "expr": "mean, min, max scan\u00a0time and read\u00a0time for each indication", 
+            "resp": {
                 "status": {
                     "errorType": "success", 
                     "code": 200
                 }, 
-                "timestamp": "2016-09-06T17:38:27.151Z", 
-                "sessionId": "12d9ac6db4344e9ead42038f47c9a780", 
-                "id": "47cb82c7-4668-4c50-933e-98e564cb38bb", 
+                "timestamp": "2016-09-07T22:34:49.223Z", 
+                "sessionId": "a0f0c467c84443edbac6ebf900baf747", 
+                "id": "156f187d-eba6-4d8d-8341-553e84c3ad74", 
                 "result": {
                     "parameters": {
                         "aggregable2": "", 
@@ -4269,14 +4356,15 @@
             }
         }, 
         {
-            "what is the mean revenue, expense and profit margin for each hospital?": {
+            "expr": "what is the mean revenue, expense and profit margin for each hospital?", 
+            "resp": {
                 "status": {
                     "errorType": "success", 
                     "code": 200
                 }, 
-                "timestamp": "2016-09-06T17:38:28.553Z", 
-                "sessionId": "12d9ac6db4344e9ead42038f47c9a780", 
-                "id": "47c82f2a-4bed-41a1-8c1a-5a122793b747", 
+                "timestamp": "2016-09-07T22:34:49.877Z", 
+                "sessionId": "a0f0c467c84443edbac6ebf900baf747", 
+                "id": "aa9beb47-8869-40e5-b239-3570805447f0", 
                 "result": {
                     "parameters": {
                         "aggregable2": "profit margin", 
@@ -4314,14 +4402,15 @@
             }
         }, 
         {
-            "mean, min, max scan and read\u00a0times for each indication": {
+            "expr": "mean, min, max scan and read\u00a0times for each indication", 
+            "resp": {
                 "status": {
                     "errorType": "success", 
                     "code": 200
                 }, 
-                "timestamp": "2016-09-06T17:38:29.947Z", 
-                "sessionId": "12d9ac6db4344e9ead42038f47c9a780", 
-                "id": "9a70b6b4-5520-4626-b7e9-68ac8ecf866b", 
+                "timestamp": "2016-09-07T22:34:50.54Z", 
+                "sessionId": "a0f0c467c84443edbac6ebf900baf747", 
+                "id": "8a1232a6-2b58-41f2-beab-f68dda20da35", 
                 "result": {
                     "parameters": {
                         "aggregable2": "", 
@@ -4359,14 +4448,15 @@
             }
         }, 
         {
-            "mean LVEF for patients with HCM?": {
+            "expr": "mean LVEF for patients with HCM?", 
+            "resp": {
                 "status": {
                     "errorType": "success", 
                     "code": 200
                 }, 
-                "timestamp": "2016-09-06T17:38:31.338Z", 
-                "sessionId": "12d9ac6db4344e9ead42038f47c9a780", 
-                "id": "362f06ee-0105-4c12-b63b-1294891e992d", 
+                "timestamp": "2016-09-07T22:34:51.2Z", 
+                "sessionId": "a0f0c467c84443edbac6ebf900baf747", 
+                "id": "640e5e6a-8d8b-4f48-84fd-aa4b2d798670", 
                 "result": {
                     "parameters": {
                         "aggregable2": "", 
@@ -4404,14 +4494,15 @@
             }
         }, 
         {
-            "what is the total revenue and expense for each hospital": {
+            "expr": "what is the total revenue and expense for each hospital", 
+            "resp": {
                 "status": {
                     "errorType": "success", 
                     "code": 200
                 }, 
-                "timestamp": "2016-09-06T17:38:32.733Z", 
-                "sessionId": "12d9ac6db4344e9ead42038f47c9a780", 
-                "id": "c3b52620-4e45-4e12-a816-c81b03f16eab", 
+                "timestamp": "2016-09-07T22:34:51.872Z", 
+                "sessionId": "a0f0c467c84443edbac6ebf900baf747", 
+                "id": "98decdf0-6bb3-41a5-b9fb-0eaab5b3e2b4", 
                 "result": {
                     "parameters": {
                         "aggregable2": "", 
@@ -4449,14 +4540,15 @@
             }
         }, 
         {
-            "how many procedures were done": {
+            "expr": "how many procedures were done", 
+            "resp": {
                 "status": {
                     "errorType": "success", 
                     "code": 200
                 }, 
-                "timestamp": "2016-09-06T17:38:34.133Z", 
-                "sessionId": "12d9ac6db4344e9ead42038f47c9a780", 
-                "id": "033160ff-6a7c-48c9-9cf2-1248da77c0e1", 
+                "timestamp": "2016-09-07T22:34:52.532Z", 
+                "sessionId": "a0f0c467c84443edbac6ebf900baf747", 
+                "id": "64d1c9c5-1099-45e5-9b27-d1cd4cb1c5f9", 
                 "result": {
                     "parameters": {
                         "aggregable2": "", 
@@ -4494,14 +4586,15 @@
             }
         }, 
         {
-            "total scan\u00a0time and read\u00a0time per indication": {
+            "expr": "total scan\u00a0time and read\u00a0time per indication", 
+            "resp": {
                 "status": {
                     "errorType": "success", 
                     "code": 200
                 }, 
-                "timestamp": "2016-09-06T17:38:35.496Z", 
-                "sessionId": "12d9ac6db4344e9ead42038f47c9a780", 
-                "id": "8ec1bf5d-b01d-458a-ade7-86c428f563e5", 
+                "timestamp": "2016-09-07T22:34:53.192Z", 
+                "sessionId": "a0f0c467c84443edbac6ebf900baf747", 
+                "id": "d4fc063c-4f22-444a-aaca-36e173f2d8c4", 
                 "result": {
                     "parameters": {
                         "aggregable2": "reading\u00a0time", 
@@ -4539,14 +4632,15 @@
             }
         }, 
         {
-            "mean read\u00a0time per indication per physician": {
+            "expr": "mean read\u00a0time per indication per physician", 
+            "resp": {
                 "status": {
                     "errorType": "success", 
                     "code": 200
                 }, 
-                "timestamp": "2016-09-06T17:38:36.921Z", 
-                "sessionId": "12d9ac6db4344e9ead42038f47c9a780", 
-                "id": "1eb3d0df-18f4-49ce-92a8-f396806eec95", 
+                "timestamp": "2016-09-07T22:34:53.846Z", 
+                "sessionId": "a0f0c467c84443edbac6ebf900baf747", 
+                "id": "5351e1e8-005b-403c-b0a9-421d5ee5525f", 
                 "result": {
                     "parameters": {
                         "aggregable2": "", 
@@ -4584,14 +4678,15 @@
             }
         }, 
         {
-            "mean read\u00a0time and scan\u00a0time per indication per physican": {
+            "expr": "mean read\u00a0time and scan\u00a0time per indication per physican", 
+            "resp": {
                 "status": {
                     "errorType": "success", 
                     "code": 200
                 }, 
-                "timestamp": "2016-09-06T17:38:38.341Z", 
-                "sessionId": "12d9ac6db4344e9ead42038f47c9a780", 
-                "id": "0de7035f-0824-43a2-a3de-36de5e64f320", 
+                "timestamp": "2016-09-07T22:34:54.5Z", 
+                "sessionId": "a0f0c467c84443edbac6ebf900baf747", 
+                "id": "72b9b047-68f6-47e0-824b-45f2fa0af6e1", 
                 "result": {
                     "parameters": {
                         "aggregable2": "scan time", 
@@ -4629,14 +4724,15 @@
             }
         }, 
         {
-            "mean revenue and expense per cpt\u00a0code per hospital": {
+            "expr": "mean revenue and expense per cpt\u00a0code per hospital", 
+            "resp": {
                 "status": {
                     "errorType": "success", 
                     "code": 200
                 }, 
-                "timestamp": "2016-09-06T17:38:39.753Z", 
-                "sessionId": "12d9ac6db4344e9ead42038f47c9a780", 
-                "id": "17dbbf75-5f70-4a3f-b30b-0c9514038aae", 
+                "timestamp": "2016-09-07T22:34:55.176Z", 
+                "sessionId": "a0f0c467c84443edbac6ebf900baf747", 
+                "id": "4e79a07d-5dce-46f6-921e-875466f8d873", 
                 "result": {
                     "parameters": {
                         "aggregable2": "expense", 
@@ -4674,14 +4770,15 @@
             }
         }, 
         {
-            "how\u00a0many patients per indication": {
+            "expr": "how\u00a0many patients per indication", 
+            "resp": {
                 "status": {
                     "errorType": "success", 
                     "code": 200
                 }, 
-                "timestamp": "2016-09-06T17:38:41.143Z", 
-                "sessionId": "12d9ac6db4344e9ead42038f47c9a780", 
-                "id": "d5384ddd-5f6f-4b96-b2c2-edcff344f67a", 
+                "timestamp": "2016-09-07T22:34:55.842Z", 
+                "sessionId": "a0f0c467c84443edbac6ebf900baf747", 
+                "id": "87867ffc-d32e-4569-a5e9-76268a963353", 
                 "result": {
                     "parameters": {
                         "aggregable2": "patients", 
@@ -4719,14 +4816,15 @@
             }
         }, 
         {
-            "how\u00a0many female patients per indication": {
+            "expr": "how\u00a0many female patients per indication", 
+            "resp": {
                 "status": {
                     "errorType": "success", 
                     "code": 200
                 }, 
-                "timestamp": "2016-09-06T17:38:42.533Z", 
-                "sessionId": "12d9ac6db4344e9ead42038f47c9a780", 
-                "id": "1faca4a2-9093-4930-8e47-80aeb7ad4c7e", 
+                "timestamp": "2016-09-07T22:34:56.514Z", 
+                "sessionId": "a0f0c467c84443edbac6ebf900baf747", 
+                "id": "fba76ab5-8452-4235-9de7-10b4882a51fc", 
                 "result": {
                     "parameters": {
                         "aggregable2": "", 
@@ -4764,14 +4862,15 @@
             }
         }, 
         {
-            "what is the least likely scar presence": {
+            "expr": "what is the least likely scar presence", 
+            "resp": {
                 "status": {
                     "errorType": "success", 
                     "code": 200
                 }, 
-                "timestamp": "2016-09-06T17:38:43.93Z", 
-                "sessionId": "12d9ac6db4344e9ead42038f47c9a780", 
-                "id": "68438898-57d2-4696-8151-2a3867b015ae", 
+                "timestamp": "2016-09-07T22:34:57.184Z", 
+                "sessionId": "a0f0c467c84443edbac6ebf900baf747", 
+                "id": "5e6e8ca5-9150-4605-be0e-d63a22ee4bf3", 
                 "result": {
                     "parameters": {
                         "aggregable2": "", 

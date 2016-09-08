@@ -9,7 +9,9 @@ mock==2.0.0
 numpy==1.11.0
 pandas==0.18.1
 pbr==1.9.1
+py==1.4.31
 pyparsing==2.1.7
+pytest==3.0.2
 python-daemon==2.1.1
 python-dateutil==2.5.3
 python-Levenshtein==0.12.0

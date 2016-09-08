@@ -627,10 +627,11 @@ class RtmEventHandler(object):
             self.msg_writer.send_message(event['channel'], 'Found matching intent: `{}`'.format(resp['result']['metadata']['intentName']))
             columns = table_to_map.get('columns')
             entities = resp['result']['parameters'].keys()
-            self.msg_writer.send_message(event['channel'],
-                                         'Please equate which columns in your table: `{}`\n map to these entities: `{}`\n (e.g. you can write: `{}={}, {}={}`)'.format(columns, entities, columns[0].get('name'), entities[0], columns[1].get('name'), entities[1]))
             self.context['mapping_columns'] = True
             del self.context['confirm_intent']
+            return 'Please equate which columns in your table: `{}`\n map to these entities: `{}`\n (e.g. you can write: `{}={}, {}={}`)'.format(
+                                             columns, entities, columns[0].get('name'), entities[0],
+                                             columns[1].get('name'), entities[1])
         else:
             self.msg_writer.send_message(event['channel'], 'I couldn\'t find a matching intent. :frowning:')
             del self.context['is_mapping_schema']
@@ -675,7 +676,9 @@ class RtmEventHandler(object):
             resp_txt = response.read()
             resp = json.loads(resp_txt)
             end = time.time()
-            response_handler(resp, event)
+            msg_reply = response_handler(resp, event)
+            if msg_reply:
+                self.msg_writer.send_message(event['channel'], msg_reply)
             if self.dbg_ctx:
                 self.msg_writer.send_message(event['channel'],
                                              '```{}```\n> _Took {} secs_'.format(resp_txt, end - start))
@@ -730,25 +733,19 @@ class RtmEventHandler(object):
                     else:
                         logger.error('Undefined action: {} parsed in response message: {}'.format(action, msg_resp))
                 # end for action
-                if msg_resp:
-                    self.msg_writer.send_message(event['channel'], msg_resp)
+                return msg_resp
             else:
                 if resp['result']['source'] == 'agent':
-                    low_confidence_msg = "I'm sorry, I haven't been trained enough to understand that query yet."
-                    self.msg_writer.send_message(event['channel'], low_confidence_msg)
+                    return "I'm sorry, I haven't been trained enough to understand that query yet."
                 elif resp['result']['source'] == 'domains':
                     speech_resp = resp['result'].get('fulfillment').get('speech')
                     if speech_resp:
-                        self.msg_writer.send_message(event['channel'], speech_resp)
-                    else:
-                        query = urllib.urlencode({'q': event['text']})
-                        google_search_url = 'http://www.google.com/search?' + query
-                        self.msg_writer.send_message(event['channel'], "I don't know, but you could try: {}".format(google_search_url))
-                else:
-                    self.msg_writer.send_message(event['channel'], "Sorry I don't know how to answer that yet.")
+                        return speech_resp
+
+                return "Sorry I don't know how to answer that yet."
         except Exception as e:
             logger.exception('Failed to parse response from api.ai: {}', resp)
-            self.msg_writer.send_message(event['channel'], "_Please see my logs for an error I encountered._")
+            return "_Please see my logs for an error I encountered._"
 
 
     def _cleanse(self, data):
