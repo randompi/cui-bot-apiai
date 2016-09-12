@@ -1,0 +1,125 @@
+{
+  "id": "1954b3a3-f609-4564-8c05-6d2b5e178763",
+  "name": "plot-type",
+  "isOverridable": true,
+  "entries": [
+    {
+      "value": "scatter",
+      "synonyms": [
+        "scatter",
+        "scatter plot"
+      ]
+    },
+    {
+      "value": "stacked bar",
+      "synonyms": [
+        "stacked bar",
+        "stacked bar plot",
+        "stacked bar chart"
+      ]
+    },
+    {
+      "value": "clustered bar",
+      "synonyms": [
+        "clustered bar",
+        "clustered bar plot",
+        "clustered bar chart"
+      ]
+    },
+    {
+      "value": "stacked column",
+      "synonyms": [
+        "stacked column",
+        "stacked column plot",
+        "stacked column chart"
+      ]
+    },
+    {
+      "value": "clustered column",
+      "synonyms": [
+        "clustered column",
+        "stacked column plot",
+        "stacked column chart"
+      ]
+    },
+    {
+      "value": "line",
+      "synonyms": [
+        "line"
+      ]
+    },
+    {
+      "value": "marked line",
+      "synonyms": [
+        "marked line"
+      ]
+    },
+    {
+      "value": "pie",
+      "synonyms": [
+        "pie",
+        "pie chart"
+      ]
+    },
+    {
+      "value": "exploded pie",
+      "synonyms": [
+        "exploded pie",
+        "exploded pie chart"
+      ]
+    },
+    {
+      "value": "area",
+      "synonyms": [
+        "area",
+        "area plot"
+      ]
+    },
+    {
+      "value": "stacked area",
+      "synonyms": [
+        "stacked area",
+        "stacked area plot"
+      ]
+    },
+    {
+      "value": "bar",
+      "synonyms": [
+        "bar",
+        "bar plot",
+        "bar chart"
+      ]
+    },
+    {
+      "value": "barh",
+      "synonyms": [
+        "barh",
+        "horiztonal bar"
+      ]
+    },
+    {
+      "value": "box",
+      "synonyms": [
+        "box",
+        "boxplot",
+        "box plot"
+      ]
+    },
+    {
+      "value": "kde",
+      "synonyms": [
+        "kde",
+        "density"
+      ]
+    },
+    {
+      "value": "hexbin",
+      "synonyms": [
+        "hexbin",
+        "hexagonal bin plot"
+      ]
+    }
+  ],
+  "isEnum": false,
+  "automatedExpansion": false
+}

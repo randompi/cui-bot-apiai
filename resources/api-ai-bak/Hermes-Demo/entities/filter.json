@@ -1,0 +1,240 @@
+{
+  "id": "a268f68c-8345-4a66-8e06-5f088485dc84",
+  "name": "filter",
+  "isOverridable": true,
+  "entries": [
+    {
+      "value": "F",
+      "synonyms": [
+        "F",
+        "female",
+        "Female"
+      ]
+    },
+    {
+      "value": "M",
+      "synonyms": [
+        "M",
+        "male",
+        "Male"
+      ]
+    },
+    {
+      "value": "HCM",
+      "synonyms": [
+        "HCM",
+        "hcm",
+        "hypertrophic cardiomyopathy"
+      ]
+    },
+    {
+      "value": "IRON",
+      "synonyms": [
+        "IRON",
+        "iron",
+        "iron overload"
+      ]
+    },
+    {
+      "value": "DCM",
+      "synonyms": [
+        "DCM",
+        "dcm",
+        "dilated cardiomyopathy"
+      ]
+    },
+    {
+      "value": "ARVC",
+      "synonyms": [
+        "ARVC",
+        "arvc",
+        "arrhythmogenic right ventricular cardiomyopathy"
+      ]
+    },
+    {
+      "value": "ISCH_CHD",
+      "synonyms": [
+        "ISCH_CHD",
+        "isch_chd",
+        "ischemic heart disease"
+      ]
+    },
+    {
+      "value": "LVNC",
+      "synonyms": [
+        "LVNC",
+        "lvnc",
+        "lv non-compaction"
+      ]
+    },
+    {
+      "value": "None",
+      "synonyms": [
+        "None",
+        "none"
+      ]
+    },
+    {
+      "value": "diffuse",
+      "synonyms": [
+        "diffuse",
+        "Diffuse"
+      ]
+    },
+    {
+      "value": "mid-wall",
+      "synonyms": [
+        "mid-wall",
+        "Mid-wall",
+        "mid wall"
+      ]
+    },
+    {
+      "value": "sub-endo",
+      "synonyms": [
+        "sub-endo",
+        "Sub-endo",
+        "sub endo"
+      ]
+    },
+    {
+      "value": "transmural",
+      "synonyms": [
+        "transmural",
+        "Transmural"
+      ]
+    },
+    {
+      "value": "N",
+      "synonyms": [
+        "N",
+        "no"
+      ]
+    },
+    {
+      "value": "Y",
+      "synonyms": [
+        "Y",
+        "yes"
+      ]
+    },
+    {
+      "value": "Hospital A",
+      "synonyms": [
+        "hospital a",
+        "hosp A",
+        "Hospital A"
+      ]
+    },
+    {
+      "value": "Hospital B",
+      "synonyms": [
+        "hospital b",
+        "hosp B",
+        "Hospital B"
+      ]
+    },
+    {
+      "value": "75557",
+      "synonyms": [
+        "75557"
+      ]
+    },
+    {
+      "value": "75559",
+      "synonyms": [
+        "75559"
+      ]
+    },
+    {
+      "value": "75561",
+      "synonyms": [
+        "75561"
+      ]
+    },
+    {
+      "value": "75563",
+      "synonyms": [
+        "75563"
+      ]
+    },
+    {
+      "value": "Physician A",
+      "synonyms": [
+        "physician a",
+        "doctor A",
+        "Physician A"
+      ]
+    },
+    {
+      "value": "Physician B",
+      "synonyms": [
+        "physician b",
+        "doctor b",
+        "Physician B"
+      ]
+    },
+    {
+      "value": "Physician C",
+      "synonyms": [
+        "physician c",
+        "doctor c",
+        "Physician C"
+      ]
+    },
+    {
+      "value": "Physician D",
+      "synonyms": [
+        "physician d",
+        "doctor d",
+        "Physician D"
+      ]
+    },
+    {
+      "value": "Physician E",
+      "synonyms": [
+        "physician e",
+        "doctor e",
+        "Physician E"
+      ]
+    },
+    {
+      "value": "Physician F",
+      "synonyms": [
+        "physician f",
+        "doctor f",
+        "Physician F"
+      ]
+    },
+    {
+      "value": "Hospital C",
+      "synonyms": [
+        "Hospital C",
+        "hospital c",
+        "hosp C"
+      ]
+    },
+    {
+      "value": "Hospital D",
+      "synonyms": [
+        "Hospital D",
+        "hospital d",
+        "hosp d"
+      ]
+    },
+    {
+      "value": "0",
+      "synonyms": [
+        "0"
+      ]
+    },
+    {
+      "value": "contrast agent",
+      "synonyms": [
+        "contrast agent"
+      ]
+    }
+  ],
+  "isEnum": false,
+  "automatedExpansion": false
+}

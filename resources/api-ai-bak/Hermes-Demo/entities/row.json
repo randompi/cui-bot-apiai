@@ -1,0 +1,50 @@
+{
+  "id": "4ba59976-7c43-4c9b-ac19-28412a4efbc6",
+  "name": "row",
+  "isOverridable": true,
+  "entries": [
+    {
+      "value": "patient",
+      "synonyms": [
+        "patient",
+        "patients",
+        "females",
+        "males"
+      ]
+    },
+    {
+      "value": "study",
+      "synonyms": [
+        "study",
+        "studies"
+      ]
+    },
+    {
+      "value": "billing code",
+      "synonyms": [
+        "billing code",
+        "billing codes",
+        "codes",
+        "CPT codes"
+      ]
+    },
+    {
+      "value": "procedure",
+      "synonyms": [
+        "procedure",
+        "billable procedure",
+        "procedures"
+      ]
+    },
+    {
+      "value": "physician",
+      "synonyms": [
+        "physician",
+        "physicians",
+        "doctors"
+      ]
+    }
+  ],
+  "isEnum": false,
+  "automatedExpansion": false
+}

@@ -1,0 +1,44 @@
+{
+  "id": "4666a85a-7789-41b1-a198-27ab25d33a69",
+  "name": "comparison-filter",
+  "isOverridable": true,
+  "entries": [
+    {
+      "value": "less than",
+      "synonyms": [
+        "less than",
+        "below"
+      ]
+    },
+    {
+      "value": "greater than",
+      "synonyms": [
+        "greater than",
+        "more than",
+        "above"
+      ]
+    },
+    {
+      "value": "equals",
+      "synonyms": [
+        "equals",
+        "is"
+      ]
+    },
+    {
+      "value": "not equals",
+      "synonyms": [
+        "not equals",
+        "is not"
+      ]
+    },
+    {
+      "value": "over",
+      "synonyms": [
+        "over"
+      ]
+    }
+  ],
+  "isEnum": false,
+  "automatedExpansion": false
+}

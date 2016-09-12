@@ -1,0 +1,96 @@
+{
+  "id": "68221214-194e-482a-b703-c6e25ebcf838",
+  "name": "cardiac-scan-protocol",
+  "isOverridable": true,
+  "entries": [
+    {
+      "value": "anatomy",
+      "synonyms": [
+        "anatomy"
+      ]
+    },
+    {
+      "value": "lv function",
+      "synonyms": [
+        "lv function"
+      ]
+    },
+    {
+      "value": "rv function",
+      "synonyms": [
+        "rv function"
+      ]
+    },
+    {
+      "value": "perfusion",
+      "synonyms": [
+        "perfusion"
+      ]
+    },
+    {
+      "value": "early gd enhancement",
+      "synonyms": [
+        "early gd enhancement",
+        "ege"
+      ]
+    },
+    {
+      "value": "late gd enhancement",
+      "synonyms": [
+        "late gd enhancement",
+        "lge"
+      ]
+    },
+    {
+      "value": "phase contrast velocity encoding",
+      "synonyms": [
+        "phase contrast velocity encoding",
+        "venc"
+      ]
+    },
+    {
+      "value": "edema",
+      "synonyms": [
+        "edema"
+      ]
+    },
+    {
+      "value": "angiography",
+      "synonyms": [
+        "angiography"
+      ]
+    },
+    {
+      "value": "coronary artery imaging",
+      "synonyms": [
+        "coronary artery imaging"
+      ]
+    },
+    {
+      "value": "tagging",
+      "synonyms": [
+        "tagging"
+      ]
+    },
+    {
+      "value": "t1 mapping",
+      "synonyms": [
+        "t1 mapping"
+      ]
+    },
+    {
+      "value": "t2* mapping",
+      "synonyms": [
+        "t2* mapping"
+      ]
+    },
+    {
+      "value": "t2 mapping",
+      "synonyms": [
+        "t2 mapping"
+      ]
+    }
+  ],
+  "isEnum": false,
+  "automatedExpansion": false
+}

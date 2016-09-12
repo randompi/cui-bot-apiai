@@ -1,0 +1,113 @@
+{
+  "id": "a1a13e91-800a-48af-8e7b-17fe9e50f8b2",
+  "name": "Get an Acronym Definition",
+  "auto": true,
+  "contexts": [],
+  "userSays": [
+    {
+      "id": "777b340a-83f1-49b9-9fbe-f1afe8cfb9f2",
+      "data": [
+        {
+          "text": "What does "
+        },
+        {
+          "text": "EDV",
+          "alias": "acronym",
+          "meta": "@cardiology-acronym",
+          "userDefined": true
+        },
+        {
+          "text": " stand for?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "162a1646-3c32-4882-ae0f-15f230bd7537",
+      "data": [
+        {
+          "text": "What does "
+        },
+        {
+          "text": "SV",
+          "alias": "acronym",
+          "meta": "@cardiology-acronym",
+          "userDefined": true
+        },
+        {
+          "text": " mean?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "530ac6a7-abe0-4f42-96af-38636bd254a3",
+      "data": [
+        {
+          "text": "ESV",
+          "alias": "acronym",
+          "meta": "@cardiology-acronym",
+          "userDefined": true
+        },
+        {
+          "text": " definition?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "d9d6f93c-8f27-4679-8049-35b3fd021a47",
+      "data": [
+        {
+          "text": "EF",
+          "alias": "acronym",
+          "meta": "@cardiology-acronym",
+          "userDefined": true
+        },
+        {
+          "text": " means?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "ba7844a1-5cae-4a6b-8650-6c8bf55bf7e6",
+      "data": [
+        {
+          "text": "Define "
+        },
+        {
+          "text": "Mass",
+          "alias": "acronym",
+          "meta": "@cardiology-acronym",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    }
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "lookupAcronym",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "dataType": "@cardiology-acronym",
+          "name": "acronym",
+          "value": "$acronym"
+        }
+      ],
+      "speech": "`$acronym` stands for: [lookupAcronym]"
+    }
+  ],
+  "state": "LEARNED",
+  "priority": 500000,
+  "webhookUsed": false,
+  "fallbackIntent": false
+}

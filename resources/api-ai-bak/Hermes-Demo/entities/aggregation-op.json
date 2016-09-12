@@ -1,0 +1,90 @@
+{
+  "id": "433bf42f-2a32-4ac9-9a2e-ff0132e512c0",
+  "name": "aggregation-op",
+  "isOverridable": true,
+  "entries": [
+    {
+      "value": "mean",
+      "synonyms": [
+        "average",
+        "mean",
+        "avg",
+        "Average",
+        "Mean"
+      ]
+    },
+    {
+      "value": "count",
+      "synonyms": [
+        "count",
+        "number of",
+        "how many"
+      ]
+    },
+    {
+      "value": "sum",
+      "synonyms": [
+        "sum",
+        "total"
+      ]
+    },
+    {
+      "value": "median",
+      "synonyms": [
+        "median"
+      ]
+    },
+    {
+      "value": "most frequent",
+      "synonyms": [
+        "most frequent",
+        "highest frequency",
+        "most occurring",
+        "most likely"
+      ]
+    },
+    {
+      "value": "least frequent",
+      "synonyms": [
+        "least frequent",
+        "lowest frequency",
+        "least occurring",
+        "least likely"
+      ]
+    },
+    {
+      "value": "min",
+      "synonyms": [
+        "min",
+        "minimum",
+        "smallest"
+      ]
+    },
+    {
+      "value": "max",
+      "synonyms": [
+        "max",
+        "maximum",
+        "largest"
+      ]
+    },
+    {
+      "value": "std",
+      "synonyms": [
+        "std",
+        "standard deviation",
+        "deviation",
+        "sd"
+      ]
+    },
+    {
+      "value": "var",
+      "synonyms": [
+        "var",
+        "variance"
+      ]
+    }
+  ],
+  "isEnum": false,
+  "automatedExpansion": false
+}

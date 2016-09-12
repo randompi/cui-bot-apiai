@@ -1,0 +1,45 @@
+{
+  "id": "c1dd2dbc-d6f5-44da-94af-ef25f0c84092",
+  "name": "age_in_years",
+  "isOverridable": true,
+  "entries": [
+    {
+      "value": "@sys.number-integer:age years old",
+      "synonyms": [
+        "36 year old"
+      ]
+    },
+    {
+      "value": "@sys.number-integer:age year old",
+      "synonyms": [
+        "@sys.number-integer:age year old"
+      ]
+    },
+    {
+      "value": "of age @sys.number-integer:age",
+      "synonyms": [
+        "of age @sys.number-integer:age"
+      ]
+    },
+    {
+      "value": "aged @sys.number-integer:age",
+      "synonyms": [
+        "aged @sys.number-integer:age"
+      ]
+    },
+    {
+      "value": "age @sys.number-integer:age",
+      "synonyms": [
+        "age @sys.number-integer:age"
+      ]
+    },
+    {
+      "value": "@sys.number-integer:age",
+      "synonyms": [
+        "@sys.number-integer:age"
+      ]
+    }
+  ],
+  "isEnum": true,
+  "automatedExpansion": false
+}

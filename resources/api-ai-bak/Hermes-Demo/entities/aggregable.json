@@ -1,0 +1,164 @@
+{
+  "id": "b035a6fa-0404-4f35-b0ea-13c01ab87004",
+  "name": "aggregable",
+  "isOverridable": true,
+  "entries": [
+    {
+      "value": "reading time",
+      "synonyms": [
+        "reading time",
+        "read time"
+      ]
+    },
+    {
+      "value": "scan time",
+      "synonyms": [
+        "scan time"
+      ]
+    },
+    {
+      "value": "profit margin",
+      "synonyms": [
+        "profit margin"
+      ]
+    },
+    {
+      "value": "height",
+      "synonyms": [
+        "height"
+      ]
+    },
+    {
+      "value": "weight",
+      "synonyms": [
+        "weight",
+        "mass",
+        "body mass"
+      ]
+    },
+    {
+      "value": "BMI",
+      "synonyms": [
+        "BMI",
+        "body mass index"
+      ]
+    },
+    {
+      "value": "BSA",
+      "synonyms": [
+        "BSA",
+        "body surface area"
+      ]
+    },
+    {
+      "value": "reimbursement",
+      "synonyms": [
+        "Reimbursement",
+        "CMS Reimbursement"
+      ]
+    },
+    {
+      "value": "revenue",
+      "synonyms": [
+        "revenue"
+      ]
+    },
+    {
+      "value": "expense",
+      "synonyms": [
+        "expense"
+      ]
+    },
+    {
+      "value": "profit",
+      "synonyms": [
+        "profit"
+      ]
+    },
+    {
+      "value": "LVEDV",
+      "synonyms": [
+        "LVEDV",
+        "LV EDV",
+        "left ventricular end-diastolic volume"
+      ]
+    },
+    {
+      "value": "LVESV",
+      "synonyms": [
+        "LVESV",
+        "LV ESV",
+        "left ventricular end-systolic volume"
+      ]
+    },
+    {
+      "value": "LVEF",
+      "synonyms": [
+        "LVEF",
+        "LV EF",
+        "left ventricular ejection fraction"
+      ]
+    },
+    {
+      "value": "LV Mass",
+      "synonyms": [
+        "LV Mass",
+        "LV myo mass",
+        "left ventricular myocardial mass"
+      ]
+    },
+    {
+      "value": "LVSV",
+      "synonyms": [
+        "LVSV",
+        "LV SV",
+        "left ventricular stroke volume"
+      ]
+    },
+    {
+      "value": "studies",
+      "synonyms": [
+        "studies"
+      ]
+    },
+    {
+      "value": "age",
+      "synonyms": [
+        "age"
+      ]
+    },
+    {
+      "value": "read",
+      "synonyms": [
+        "read"
+      ]
+    },
+    {
+      "value": "patients",
+      "synonyms": [
+        "patients"
+      ]
+    },
+    {
+      "value": "female",
+      "synonyms": [
+        "female"
+      ]
+    },
+    {
+      "value": "indication",
+      "synonyms": [
+        "indication"
+      ]
+    },
+    {
+      "value": "scar presence",
+      "synonyms": [
+        "scar presence",
+        "LV scar presence"
+      ]
+    }
+  ],
+  "isEnum": false,
+  "automatedExpansion": false
+}

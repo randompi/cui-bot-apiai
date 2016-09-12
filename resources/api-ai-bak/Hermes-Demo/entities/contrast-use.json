@@ -1,0 +1,28 @@
+{
+  "id": "3e8319e2-6887-4caf-9855-61ea26bae047",
+  "name": "contrast-use",
+  "isOverridable": true,
+  "entries": [
+    {
+      "value": "yes",
+      "synonyms": [
+        "with contrast",
+        "Yes",
+        "y"
+      ]
+    },
+    {
+      "value": "no",
+      "synonyms": [
+        "without contrast",
+        "no contrast",
+        "non-contrast",
+        "no",
+        "No",
+        "n"
+      ]
+    }
+  ],
+  "isEnum": false,
+  "automatedExpansion": false
+}

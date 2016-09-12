@@ -1,0 +1,23 @@
+{
+  "id": "cc097f09-4ae4-498a-a98e-b52c35fd92c6",
+  "name": "test-ent",
+  "isOverridable": true,
+  "entries": [
+    {
+      "value": "JK",
+      "synonyms": [
+        "JK",
+        "just kidding"
+      ]
+    },
+    {
+      "value": "jfk",
+      "synonyms": [
+        "jfk",
+        "john f kennedy"
+      ]
+    }
+  ],
+  "isEnum": false,
+  "automatedExpansion": false
+}

@@ -1,0 +1,85 @@
+{
+  "id": "52bb4680-6aaa-4247-8177-cbeaf069d26e",
+  "name": "myocardial-disease-indication",
+  "isOverridable": true,
+  "entries": [
+    {
+      "value": "HCM",
+      "synonyms": [
+        "HCM",
+        "hypertrophic cardiomyopathy"
+      ]
+    },
+    {
+      "value": "Iron Overload",
+      "synonyms": [
+        "iron overload",
+        "iron overload cardiomyopathy"
+      ]
+    },
+    {
+      "value": "DCM",
+      "synonyms": [
+        "DCM",
+        "dialated cardiomyopathy"
+      ]
+    },
+    {
+      "value": "LVNC",
+      "synonyms": [
+        "LVNC",
+        "LV non-compaction",
+        "left ventricular non-compaction",
+        "non compaction"
+      ]
+    },
+    {
+      "value": "ARVC",
+      "synonyms": [
+        "ARVC",
+        "arrhythmogenic right ventricular cardiomyopathy"
+      ]
+    },
+    {
+      "value": "Amyloidosis",
+      "synonyms": [
+        "Amyloidosis"
+      ]
+    },
+    {
+      "value": "Sarcoidosis",
+      "synonyms": [
+        "Sarcoidosis"
+      ]
+    },
+    {
+      "value": "Endomyocardial Fibrosis",
+      "synonyms": [
+        "Endomyocardial Fibrosis"
+      ]
+    },
+    {
+      "value": "Tako-Tsubo Cardiomyopathy",
+      "synonyms": [
+        "Tako-Tsubo Cardiomyopathy",
+        "Tako-Tsubo",
+        "Tako Tsubo"
+      ]
+    },
+    {
+      "value": "Myocarditis",
+      "synonyms": [
+        "Myocarditis"
+      ]
+    },
+    {
+      "value": "ISCH_CHD",
+      "synonyms": [
+        "ischemic heart disease",
+        "Ischemic Heart Disease"
+      ]
+    }
+  ],
+  "isEnum": false,
+  "automatedExpansion": false
+}

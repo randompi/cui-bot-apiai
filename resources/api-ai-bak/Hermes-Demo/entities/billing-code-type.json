@@ -1,0 +1,15 @@
+{
+  "id": "69ba58e2-c816-4eef-ae2a-c8d2a9970ee2",
+  "name": "billing-code-type",
+  "isOverridable": true,
+  "entries": [
+    {
+      "value": "CPT",
+      "synonyms": [
+        "CPT"
+      ]
+    }
+  ],
+  "isEnum": false,
+  "automatedExpansion": false
+}
