@@ -59,13 +59,7 @@ class DataModels(object):
         results.append('> api.ai Parameters: {}'.format(non_empty_params))
         results.append('> column constraints: {}'.format(col_queries))
 
-        if self.prev_ret_data is not None:
-            # check to see if query references elements in prior data object
-            logger.debug('Checking _can_chain_data_query')
-            frame = self._can_chain_data_query(self.prev_ret_data, col_queries=col_queries)
-        else:
-            logger.debug('Using frame: {}'.format(frame))
-            frame = self.data_frames[frame]
+        frame = self._auto_select_data_frame(self.prev_ret_data, self.data_frames[frame], col_queries=col_queries)
 
         if col_queries and len(col_queries) > 0:
             # query data by columns
@@ -128,11 +122,7 @@ class DataModels(object):
         if needs_select_filter:
             self.selectData(parameters, frame)
 
-        if self.prev_ret_data is not None:
-            # check to see if query references elements in prior data object
-            df = self._can_chain_data_query(self.prev_ret_data, groupables=groupables, aggregables=aggregables)
-        else:
-            df = self.data_frames[frame]
+        df = self._auto_select_data_frame(self.prev_ret_data, self.data_frames[frame], groupables=groupables, aggregables=aggregables)
 
         group_bys = []
         for groupable in groupables:
@@ -193,31 +183,40 @@ class DataModels(object):
                 ops[i] = 'value_counts'
         return ops
 
-    def _can_chain_data_query(self, prev_data, **kwargs):
+    def _auto_select_data_frame(self, prev_ret_data, curr_sel_data, **kwargs):
         """ Checks to see if the columns referenced by iterables in kwargs
             occur in the prev data we are trying to continue a chained query with,
-            otherwise raises exception with hint to reset context
+            otherwise returns the curr_sel_data data frame and thus starting a new query
         """
-        reset_hint = 'Invoke `;reset` to start new query.'
-        cols = prev_data.columns
-        if kwargs is not None:
+        if prev_ret_data is None:
+            return curr_sel_data
+        else:
+            if kwargs is None:
+                # assume we are doing a brand new query
+                return curr_sel_data
+
+            cols = prev_ret_data.columns
+            logger.debug("prev_ret_data.columns: {}".format(cols))
             if 'groupables' in kwargs:
                 for groupable in kwargs['groupables']:
                     if groupable[0][1] not in cols:
-                        raise Exception(
-                            '`{}` does not appear in previous data context :point_up:\n{}'.format(groupable[0][1], reset_hint))
+                        logger.info("Resetting data context, `{}` does not appear in previously returned data".format(groupable[0][1]))
+                        return curr_sel_data
+
             if 'aggregables' in kwargs:
                 for agg in kwargs['aggregables']:
                     if agg[0][1] not in cols:
-                        raise Exception(
-                            '`{}` does not appear in previous data context :point_up:\n{}'.format(agg[0][1], reset_hint))
+                        logger.info("Resetting data context, `{}` does not appear in previously returned data".format(agg[0][1]))
+                        return curr_sel_data
+
             if 'col_queries' in kwargs:
                 for col_q in kwargs['col_queries']:
+                    logger.debug('Checking if col_q: {} in cols: {}'.format(col_q, cols))
                     if col_q.col not in cols:
-                        raise Exception(
-                            '`{}` does not appear in previous data context :point_up:\n{}'.format(col_q.col,
-                                                                                                  reset_hint))
-        return prev_data
+                        logger.info("Resetting data context, `{}` does not appear in previously returned data".format(col_q.col))
+                        return curr_sel_data
+
+            return prev_ret_data
 
 
     def plotData(self, params):

@@ -3,9 +3,7 @@
 import logging
 import mock
 import unittest
-import sys
-import os
-import json
+import pandas.util.testing as pdt
 
 import bot.data_models as dm
 
@@ -167,3 +165,36 @@ class TestDataModels(unittest.TestCase):
         expected = self.dms.ColQuery(col='Profit_Margin', filter=0.05, comp='>')
         self.assertEqual(result, [expected])
 
+
+    def test_auto_select_data_frame(self):
+        current_sel_df = self.dms.data_frames['Study_List']
+        ret_df = self.dms._auto_select_data_frame(None, current_sel_df)
+        pdt.assert_frame_equal(ret_df, current_sel_df)
+
+        prev_ret_data = self.dms.data_frames['Procedure_Revenue'][['Hospital_Name', 'Total_Revenue', 'Profit_Margin']]
+        ret_df = self.dms._auto_select_data_frame(prev_ret_data, current_sel_df)
+        pdt.assert_frame_equal(ret_df, prev_ret_data)
+
+        groupables = [[('Study_List', 'Indication', 0.9)]]
+        ret_df = self.dms._auto_select_data_frame(prev_ret_data, current_sel_df, groupables=groupables)
+        pdt.assert_frame_equal(ret_df, current_sel_df)
+
+        groupables = [[('Procedure_Revenue', 'Total_Revenue', 0.9)],[('Procedure_Revenue', 'Hospital_Name', 0.95)]]
+        ret_df = self.dms._auto_select_data_frame(prev_ret_data, current_sel_df, groupables=groupables)
+        pdt.assert_frame_equal(ret_df, prev_ret_data)
+
+        aggregables = [[('Study_List', 'Indication', 0.9)]]
+        ret_df = self.dms._auto_select_data_frame(prev_ret_data, current_sel_df, aggregables=aggregables)
+        pdt.assert_frame_equal(ret_df, current_sel_df)
+
+        aggregables = [[('Procedure_Revenue', 'Total_Revenue', 0.9)], [('Procedure_Revenue', 'Hospital_Name', 0.95)]]
+        ret_df = self.dms._auto_select_data_frame(prev_ret_data, current_sel_df, aggregables=aggregables)
+        pdt.assert_frame_equal(ret_df, prev_ret_data)
+
+        col_queries = [self.dms.ColQuery(col='Hospital_Name', filter='Hospital A', comp='==')]
+        ret_df = self.dms._auto_select_data_frame(prev_ret_data, current_sel_df, col_queries=col_queries)
+        pdt.assert_frame_equal(ret_df, prev_ret_data)
+
+        col_queries = [self.dms.ColQuery(col='Gender', filter='F', comp='==')]
+        ret_df = self.dms._auto_select_data_frame(prev_ret_data, current_sel_df, col_queries=col_queries)
+        pdt.assert_frame_equal(ret_df, current_sel_df)
