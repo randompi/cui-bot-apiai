@@ -5,7 +5,7 @@
   "contexts": [],
   "userSays": [
     {
-      "id": "64bfe2a1-47e3-4310-a58a-9011ea8cb1b9",
+      "id": "36dc9ca1-1878-4891-a801-3e0e404ea2a2",
       "data": [
         {
           "text": "display a "
@@ -39,7 +39,7 @@
       "count": 0
     },
     {
-      "id": "6ce972ab-323e-43db-a617-7dd243b7e66f",
+      "id": "2e9efad0-0377-4d0d-9feb-040705248dca",
       "data": [
         {
           "text": "plot "
@@ -73,7 +73,7 @@
       "count": 0
     },
     {
-      "id": "c17c506f-9e43-404e-8f40-76ba86e0aa79",
+      "id": "f53f2780-df40-446f-b277-99f11a2a363c",
       "data": [
         {
           "text": "scatter",
@@ -122,7 +122,7 @@
       "count": 0
     },
     {
-      "id": "ae3604e3-3fec-4a6f-a42f-991649a1a5f2",
+      "id": "d07b8170-a939-4e54-bc6f-f8b70544aa24",
       "data": [
         {
           "text": "plot "
@@ -168,7 +168,7 @@
       "count": 0
     },
     {
-      "id": "241aca69-b81a-401b-95a2-bcedc1a8406f",
+      "id": "a7956bb7-8b20-4d91-a55c-e6e3ec611aaa",
       "data": [
         {
           "text": "create "
@@ -187,7 +187,7 @@
       "count": 0
     },
     {
-      "id": "19363abf-ff2e-4bdd-91fd-cd529b9cb0bd",
+      "id": "7f4f3264-ecbf-4a55-bf6a-369f0c469bc4",
       "data": [
         {
           "text": "display "
@@ -203,7 +203,7 @@
       "count": 0
     },
     {
-      "id": "feb1e199-511f-4315-be0b-761bf87f1b8b",
+      "id": "00fdec6b-f313-4b2f-a7ec-4f9d99604a23",
       "data": [
         {
           "text": "show "
@@ -219,7 +219,7 @@
       "count": 0
     },
     {
-      "id": "c7c572de-cb07-4fad-bfb9-be595ead97e8",
+      "id": "dafd7a95-01ec-4284-b01d-3d7b7566ab6e",
       "data": [
         {
           "text": "bar plot",
@@ -259,7 +259,7 @@
       "count": 0
     },
     {
-      "id": "a9496efa-8c73-4602-8d45-37f25164db90",
+      "id": "baf8db45-2fae-4294-a03e-6922a7f24701",
       "data": [
         {
           "text": "line",
@@ -299,7 +299,7 @@
       "count": 0
     },
     {
-      "id": "cce427ed-4d32-4eab-8b6c-fc5fbdc1b1e5",
+      "id": "88a6be9d-529f-418a-96a1-540cfced9f32",
       "data": [
         {
           "text": "scatter plot",

@@ -157,6 +157,18 @@
         "scar presence",
         "LV scar presence"
       ]
+    },
+    {
+      "value": "cpt code",
+      "synonyms": [
+        "cpt code"
+      ]
+    },
+    {
+      "value": "procedures",
+      "synonyms": [
+        "procedures"
+      ]
     }
   ],
   "isEnum": false,

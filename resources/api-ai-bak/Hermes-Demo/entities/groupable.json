@@ -32,7 +32,8 @@
       "value": "scar pattern",
       "synonyms": [
         "scar pattern",
-        "scar presence"
+        "scar presence",
+        "scar type"
       ]
     },
     {
@@ -69,6 +70,12 @@
       "value": "male",
       "synonyms": [
         "male"
+      ]
+    },
+    {
+      "value": "lv scar presence",
+      "synonyms": [
+        "lv scar presence"
       ]
     }
   ],
