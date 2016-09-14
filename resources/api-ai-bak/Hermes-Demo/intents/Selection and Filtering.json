@@ -5,6 +5,85 @@
   "contexts": [],
   "userSays": [
     {
+      "id": "a1a9953e-a50d-4c27-8031-855c8ea2ff98",
+      "data": [
+        {
+          "text": "find all "
+        },
+        {
+          "text": "HCM",
+          "alias": "filter",
+          "meta": "@filter",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "patients",
+          "alias": "row",
+          "meta": "@row",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "scar profile",
+          "alias": "col1",
+          "meta": "@col",
+          "userDefined": true
+        },
+        {
+          "text": " that "
+        },
+        {
+          "text": "is",
+          "alias": "comparison-filter1",
+          "meta": "@comparison-filter",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "diffuse",
+          "alias": "filter1",
+          "meta": "@filter",
+          "userDefined": true
+        },
+        {
+          "text": " with an "
+        },
+        {
+          "text": "LVEF",
+          "alias": "col2",
+          "meta": "@col",
+          "userDefined": true
+        },
+        {
+          "text": " of "
+        },
+        {
+          "text": "below",
+          "alias": "comparison-filter2",
+          "meta": "@comparison-filter",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "40%",
+          "alias": "filter-percentage",
+          "meta": "@sys.percentage",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
       "id": "7fe61b7e-e705-449e-9651-e9f1c23dda39",
       "data": [
         {
@@ -29,7 +108,7 @@
           "text": " with "
         },
         {
-          "text": "ischemic heart disease.",
+          "text": "ischemic heart disease.",
           "alias": "filter2",
           "meta": "@filter",
           "userDefined": true
@@ -48,7 +127,7 @@
           "text": "studies",
           "alias": "row",
           "meta": "@row",
-          "userDefined": false
+          "userDefined": true
         },
         {
           "text": "."
@@ -82,7 +161,7 @@
           "text": " "
         },
         {
-          "text": "LV scar presence",
+          "text": "LV scar presence",
           "alias": "col1",
           "meta": "@col",
           "userDefined": true
@@ -119,7 +198,7 @@
           "text": "Show me all the "
         },
         {
-          "text": "CPT codes",
+          "text": "CPT codes",
           "alias": "col",
           "meta": "@col",
           "userDefined": true
@@ -138,7 +217,7 @@
           "text": "studies",
           "alias": "row",
           "meta": "@row",
-          "userDefined": false
+          "userDefined": true
         },
         {
           "text": " read by "
@@ -147,7 +226,7 @@
           "text": "physician A",
           "alias": "filter",
           "meta": "@filter",
-          "userDefined": false
+          "userDefined": true
         }
       ],
       "isTemplate": false,
@@ -160,7 +239,7 @@
           "text": "Patients",
           "alias": "row",
           "meta": "@row",
-          "userDefined": false
+          "userDefined": true
         },
         {
           "text": " "
@@ -169,7 +248,7 @@
           "text": "physician B",
           "alias": "filter1",
           "meta": "@filter",
-          "userDefined": false
+          "userDefined": true
         },
         {
           "text": " has analyzed"
@@ -188,13 +267,13 @@
           "text": "studies",
           "alias": "row",
           "meta": "@row",
-          "userDefined": false
+          "userDefined": true
         },
         {
           "text": " "
         },
         {
-          "text": "physician C",
+          "text": "physician C",
           "alias": "filter1",
           "meta": "@filter",
           "userDefined": true
@@ -222,7 +301,7 @@
           "text": "patients",
           "alias": "row",
           "meta": "@row",
-          "userDefined": false
+          "userDefined": true
         },
         {
           "text": " with "
@@ -237,10 +316,10 @@
           "text": " that "
         },
         {
-          "text": "physician f",
+          "text": "physician f",
           "alias": "filter2",
           "meta": "@filter",
-          "userDefined": false
+          "userDefined": true
         },
         {
           "text": " has read"
@@ -256,7 +335,7 @@
           "text": "patients",
           "alias": "row",
           "meta": "@row",
-          "userDefined": false
+          "userDefined": true
         },
         {
           "text": " with "
@@ -271,10 +350,10 @@
           "text": " of "
         },
         {
-          "text": "less than",
+          "text": "less than",
           "alias": "comparison-filter1",
           "meta": "@comparison-filter",
-          "userDefined": false
+          "userDefined": true
         },
         {
           "text": " "
@@ -296,7 +375,7 @@
           "text": "studies",
           "alias": "row",
           "meta": "@row",
-          "userDefined": false
+          "userDefined": true
         },
         {
           "text": " with "
@@ -314,7 +393,7 @@
           "text": "above",
           "alias": "comparison-filter1",
           "meta": "@comparison-filter",
-          "userDefined": false
+          "userDefined": true
         },
         {
           "text": " "
@@ -366,7 +445,7 @@
           "text": "below",
           "alias": "comparison-filter1",
           "meta": "@comparison-filter",
-          "userDefined": false
+          "userDefined": true
         },
         {
           "text": " "
@@ -397,22 +476,22 @@
           "text": "studies",
           "alias": "row",
           "meta": "@row",
-          "userDefined": false
+          "userDefined": true
         },
         {
           "text": " read by "
         },
         {
-          "text": "doctor E",
+          "text": "doctor E",
           "alias": "filter2",
           "meta": "@filter",
-          "userDefined": false
+          "userDefined": true
         },
         {
           "text": " with "
         },
         {
-          "text": "read time",
+          "text": "read time",
           "alias": "col3",
           "meta": "@col",
           "userDefined": true
@@ -421,10 +500,10 @@
           "text": " "
         },
         {
-          "text": "less than",
+          "text": "less than",
           "alias": "comparison-filter3",
           "meta": "@comparison-filter",
-          "userDefined": false
+          "userDefined": true
         },
         {
           "text": " "
@@ -452,13 +531,13 @@
           "text": "studies",
           "alias": "row",
           "meta": "@row",
-          "userDefined": false
+          "userDefined": true
         },
         {
           "text": " with a "
         },
         {
-          "text": "scan time",
+          "text": "scan time",
           "alias": "col",
           "meta": "@col",
           "userDefined": true
@@ -470,7 +549,7 @@
           "text": "below",
           "alias": "comparison-filter",
           "meta": "@comparison-filter",
-          "userDefined": false
+          "userDefined": true
         },
         {
           "text": " "
@@ -485,7 +564,7 @@
           "text": " min and "
         },
         {
-          "text": "read time",
+          "text": "read time",
           "alias": "col1",
           "meta": "@col",
           "userDefined": true
@@ -494,10 +573,10 @@
           "text": " "
         },
         {
-          "text": "less than",
+          "text": "less than",
           "alias": "comparison-filter1",
           "meta": "@comparison-filter",
-          "userDefined": false
+          "userDefined": true
         },
         {
           "text": " "
@@ -531,7 +610,7 @@
           "text": "patients",
           "alias": "row",
           "meta": "@row",
-          "userDefined": false
+          "userDefined": true
         },
         {
           "text": " with "
@@ -546,10 +625,10 @@
           "text": " "
         },
         {
-          "text": "more than",
+          "text": "more than",
           "alias": "comparison-filter1",
           "meta": "@comparison-filter",
-          "userDefined": false
+          "userDefined": true
         },
         {
           "text": " "
@@ -573,10 +652,10 @@
           "text": " "
         },
         {
-          "text": "less than",
+          "text": "less than",
           "alias": "comparison-filter2",
           "meta": "@comparison-filter",
-          "userDefined": false
+          "userDefined": true
         },
         {
           "text": " "
@@ -607,7 +686,7 @@
           "text": " of "
         },
         {
-          "text": "doctor D",
+          "text": "doctor D",
           "alias": "filter1",
           "meta": "@filter",
           "userDefined": true
@@ -616,7 +695,7 @@
           "text": " referred for "
         },
         {
-          "text": "ischemic heart disease",
+          "text": "ischemic heart disease",
           "alias": "filter2",
           "meta": "@filter",
           "userDefined": true
@@ -625,7 +704,7 @@
           "text": " with "
         },
         {
-          "text": "scan times",
+          "text": "scan times",
           "alias": "col",
           "meta": "@col",
           "userDefined": true
@@ -637,7 +716,7 @@
           "text": "below",
           "alias": "comparison-filter",
           "meta": "@comparison-filter",
-          "userDefined": false
+          "userDefined": true
         },
         {
           "text": " "
@@ -662,14 +741,14 @@
           "text": "females",
           "alias": "filter",
           "meta": "@filter",
-          "userDefined": false
+          "userDefined": true
         },
         {
           "text": " with a "
         },
         {
           "text": "height",
-          "alias": "col",
+          "alias": "col1",
           "meta": "@col",
           "userDefined": true
         },
@@ -677,17 +756,17 @@
           "text": " "
         },
         {
-          "text": "greater than",
-          "alias": "comparison-filter",
+          "text": "greater than",
+          "alias": "comparison-filter1",
           "meta": "@comparison-filter",
-          "userDefined": false
+          "userDefined": true
         },
         {
           "text": " "
         },
         {
           "text": "1.83",
-          "alias": "number",
+          "alias": "number1",
           "meta": "@sys.number",
           "userDefined": true
         },
@@ -708,13 +787,13 @@
           "text": "procedures",
           "alias": "row",
           "meta": "@row",
-          "userDefined": false
+          "userDefined": true
         },
         {
           "text": " with a "
         },
         {
-          "text": "cpt code",
+          "text": "cpt code",
           "alias": "col1",
           "meta": "@col",
           "userDefined": true
@@ -732,7 +811,7 @@
           "text": " for "
         },
         {
-          "text": "Hospital B",
+          "text": "Hospital B",
           "alias": "filter2",
           "meta": "@filter",
           "userDefined": true
@@ -751,13 +830,13 @@
           "text": "procedures",
           "alias": "row",
           "meta": "@row",
-          "userDefined": false
+          "userDefined": true
         },
         {
           "text": " with a "
         },
         {
-          "text": "cpt code",
+          "text": "cpt code",
           "alias": "col1",
           "meta": "@col",
           "userDefined": true
@@ -775,16 +854,16 @@
           "text": " for "
         },
         {
-          "text": "Hospital A",
+          "text": "Hospital A",
           "alias": "filter",
           "meta": "@filter",
-          "userDefined": false
+          "userDefined": true
         },
         {
           "text": " with a "
         },
         {
-          "text": "profit margin",
+          "text": "profit margin",
           "alias": "col2",
           "meta": "@col",
           "userDefined": true
@@ -793,10 +872,10 @@
           "text": " of "
         },
         {
-          "text": "less than",
+          "text": "less than",
           "alias": "comparison-filter2",
           "meta": "@comparison-filter",
-          "userDefined": false
+          "userDefined": true
         },
         {
           "text": " "
@@ -805,84 +884,6 @@
           "text": "0",
           "alias": "number2",
           "meta": "@sys.number",
-          "userDefined": true
-        }
-      ],
-      "isTemplate": false,
-      "count": 0
-    },
-    {
-      "id": "cb887d9f-c0ee-4d60-8f9e-961ad6025bd3",
-      "data": [
-        {
-          "text": "find all "
-        },
-        {
-          "text": "HCM",
-          "alias": "filter",
-          "meta": "@filter",
-          "userDefined": true
-        },
-        {
-          "text": " "
-        },
-        {
-          "text": "patients",
-          "alias": "row",
-          "meta": "@row",
-          "userDefined": false
-        },
-        {
-          "text": " "
-        },
-        {
-          "text": "scar profile",
-          "alias": "col1",
-          "meta": "@col",
-          "userDefined": false
-        },
-        {
-          "text": " that "
-        },
-        {
-          "text": "is",
-          "meta": "@sys.ignore",
-          "userDefined": false
-        },
-        {
-          "text": " "
-        },
-        {
-          "text": "diffuse",
-          "alias": "filter1",
-          "meta": "@filter",
-          "userDefined": false
-        },
-        {
-          "text": " with an "
-        },
-        {
-          "text": "LVEF",
-          "alias": "col2",
-          "meta": "@col",
-          "userDefined": true
-        },
-        {
-          "text": " of "
-        },
-        {
-          "text": "below",
-          "alias": "comparison-filter2",
-          "meta": "@comparison-filter",
-          "userDefined": false
-        },
-        {
-          "text": " "
-        },
-        {
-          "text": "40%",
-          "alias": "filter2-percentage",
-          "meta": "@sys.percentage",
           "userDefined": true
         }
       ],
@@ -908,7 +909,7 @@
           "text": "patients",
           "alias": "row",
           "meta": "@row",
-          "userDefined": false
+          "userDefined": true
         },
         {
           "text": " with "
@@ -923,10 +924,10 @@
           "text": " "
         },
         {
-          "text": "lv scar",
+          "text": "lv scar",
           "alias": "col3",
           "meta": "@col",
-          "userDefined": false
+          "userDefined": true
         }
       ],
       "isTemplate": false,
@@ -942,16 +943,16 @@
           "text": "procedures",
           "alias": "row",
           "meta": "@row",
-          "userDefined": false
+          "userDefined": true
         },
         {
           "text": " that used "
         },
         {
-          "text": "contrast agent",
+          "text": "contrast agent",
           "alias": "filter",
           "meta": "@filter",
-          "userDefined": false
+          "userDefined": true
         }
       ],
       "isTemplate": false,
@@ -976,7 +977,7 @@
           "text": "patients",
           "alias": "row",
           "meta": "@row",
-          "userDefined": false
+          "userDefined": true
         }
       ],
       "isTemplate": false,
@@ -1017,7 +1018,7 @@
           "text": "patients",
           "alias": "row",
           "meta": "@row",
-          "userDefined": false
+          "userDefined": true
         },
         {
           "text": " with "
@@ -1051,13 +1052,13 @@
           "text": "patients",
           "alias": "row",
           "meta": "@row",
-          "userDefined": false
+          "userDefined": true
         },
         {
           "text": " read by "
         },
         {
-          "text": "physician b",
+          "text": "physician b",
           "alias": "filter1",
           "meta": "@filter",
           "userDefined": true
@@ -1085,13 +1086,13 @@
           "text": "diffuse",
           "alias": "filter",
           "meta": "@filter",
-          "userDefined": false
+          "userDefined": true
         },
         {
           "text": " "
         },
         {
-          "text": "lv scar",
+          "text": "lv scar",
           "alias": "col",
           "meta": "@col",
           "userDefined": true
@@ -1109,10 +1110,10 @@
           "text": " "
         },
         {
-          "text": "less than",
-          "alias": "comparison-filter2",
+          "text": "less than",
+          "alias": "comparison-filter1",
           "meta": "@comparison-filter",
-          "userDefined": false
+          "userDefined": true
         },
         {
           "text": " "
@@ -1121,7 +1122,7 @@
           "text": "35%",
           "alias": "filter1-percentage",
           "meta": "@sys.percentage",
-          "userDefined": false
+          "userDefined": true
         }
       ],
       "isTemplate": false,
@@ -1161,7 +1162,7 @@
           "text": ", and "
         },
         {
-          "text": "profit margin",
+          "text": "profit margin",
           "alias": "col3",
           "meta": "@col",
           "userDefined": true
@@ -1170,7 +1171,7 @@
           "text": " for "
         },
         {
-          "text": "hospital A",
+          "text": "hospital A",
           "alias": "filter",
           "meta": "@filter",
           "userDefined": true
@@ -1213,7 +1214,7 @@
           "text": " "
         },
         {
-          "text": "less than",
+          "text": "less than",
           "alias": "comparison-filter1",
           "meta": "@comparison-filter",
           "userDefined": true
@@ -1241,7 +1242,7 @@
           "text": "procedures",
           "alias": "row",
           "meta": "@row",
-          "userDefined": false
+          "userDefined": true
         },
         {
           "text": " have a "
@@ -1256,7 +1257,7 @@
           "text": " "
         },
         {
-          "text": "less than",
+          "text": "less than",
           "alias": "comparison-filter",
           "meta": "@comparison-filter",
           "userDefined": true
@@ -1269,9 +1270,6 @@
           "alias": "filter",
           "meta": "@filter",
           "userDefined": true
-        },
-        {
-          "text": "?"
         }
       ],
       "isTemplate": false,
@@ -1287,7 +1285,7 @@
           "text": "procedures",
           "alias": "row",
           "meta": "@row",
-          "userDefined": false
+          "userDefined": true
         },
         {
           "text": " have a "
@@ -1296,7 +1294,7 @@
           "text": "profit margin",
           "alias": "col1",
           "meta": "@col",
-          "userDefined": false
+          "userDefined": true
         },
         {
           "text": " "
@@ -1305,7 +1303,7 @@
           "text": "greater than",
           "alias": "comparison-filter1",
           "meta": "@comparison-filter",
-          "userDefined": false
+          "userDefined": true
         },
         {
           "text": " "
@@ -1314,10 +1312,7 @@
           "text": "6%",
           "alias": "filter1-percentage",
           "meta": "@sys.percentage",
-          "userDefined": false
-        },
-        {
-          "text": "?"
+          "userDefined": true
         }
       ],
       "isTemplate": false,
@@ -1416,8 +1411,8 @@
         },
         {
           "dataType": "@sys.percentage",
-          "name": "filter2-percentage",
-          "value": "$filter2-percentage"
+          "name": "filter-percentage",
+          "value": "$filter-percentage"
         }
       ],
       "speech": "[handleSelectData]"

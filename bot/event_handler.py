@@ -665,6 +665,8 @@ class RtmEventHandler(object):
     def _request_to_apiai(self, msg_txt, event, response_handler):
         session_id = event['channel'] + ":" + event['user']
         self.clients.send_user_typing_pause(event['channel'], sleep_time=0.0)
+        if msg_txt.endswith('?'):
+            msg_txt = msg_txt[:-1] # remove trailing ? mark, confuses intent matching in api.ai
         logger.debug(
             'Sending message: {} to apiai_client for session_id: {} with self.context: {}'.format(msg_txt, session_id,
                                                                                                   self.context))
