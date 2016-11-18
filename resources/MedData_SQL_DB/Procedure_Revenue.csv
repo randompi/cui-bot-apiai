@@ -1,383 +1,383 @@
-Procedure_Billing_ID,CPT_Code,Code_Description,Contrast,Stress,CMS_Reimbursement,Hospital_Name,Total_Revenue,Total_Expense,Profit,Profit_Margin
-1,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital A,319.94,310.51,9.43,2.95%
-2,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital A,437.82,416.65,21.17,4.83%
-3,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital A,427.92,428.66,-0.74,-0.17%
-4,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital A,506.61,492.36,14.25,2.81%
-5,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital A,319.94,304.91,15.03,4.70%
-6,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital A,437.82,435.2,2.62,0.60%
-7,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital A,427.92,427.56,0.36,0.08%
-8,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital A,506.61,495.67,10.94,2.16%
-9,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital A,319.94,307.61,12.33,3.85%
-10,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital A,437.82,419.2,18.62,4.25%
-11,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital A,427.92,418.8,9.12,2.13%
-12,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital A,506.61,494.08,12.53,2.47%
-13,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital A,319.94,302.54,17.4,5.44%
-14,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital A,437.82,416.56,21.26,4.86%
-15,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital A,427.92,405.25,22.67,5.30%
-16,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital A,506.61,475.39,31.22,6.16%
-17,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital A,319.94,302.78,17.16,5.36%
-18,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital A,437.82,427.47,10.35,2.36%
-19,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital A,427.92,415.93,11.99,2.80%
-20,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital A,506.61,494.72,11.89,2.35%
-21,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital A,319.94,305.52,14.42,4.51%
-22,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital A,437.82,400.34,37.48,8.56%
-23,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital A,427.92,424.71,3.21,0.75%
-24,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital A,506.61,496.89,9.72,1.92%
-25,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital A,319.94,305.57,14.37,4.49%
-26,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital A,437.82,417.52,20.3,4.64%
-27,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital A,427.92,414.28,13.64,3.19%
-28,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital A,506.61,500.21,6.4,1.26%
-29,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital A,319.94,297.87,22.07,6.90%
-30,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital A,437.82,426.05,11.77,2.69%
-31,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital A,427.92,423.4,4.52,1.06%
-32,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital A,506.61,488.88,17.73,3.50%
-33,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital A,319.94,311.23,8.71,2.72%
-34,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital A,437.82,419.01,18.81,4.30%
-35,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital A,427.92,414.87,13.05,3.05%
-36,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital A,506.61,498.32,8.29,1.64%
-37,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital A,319.94,306.18,13.76,4.30%
-38,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital A,437.82,430.62,7.2,1.64%
-39,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital A,427.92,414.23,13.69,3.20%
-40,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital A,506.61,494.88,11.73,2.32%
-41,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital A,319.94,318.72,1.22,0.38%
-42,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital A,437.82,428.95,8.87,2.03%
-43,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital A,427.92,418.35,9.57,2.24%
-44,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital A,506.61,500.01,6.6,1.30%
-45,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital A,319.94,310.81,9.13,2.85%
-46,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital A,437.82,421.2,16.62,3.80%
-47,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital A,427.92,424.04,3.88,0.91%
-48,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital B,506.61,474.72,31.89,6.30%
-49,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital B,319.94,289.87,30.07,9.40%
-50,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital B,437.82,420.46,17.36,3.97%
-51,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital B,427.92,392.34,35.58,8.31%
-52,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital B,506.61,458.73,47.88,9.45%
-53,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital B,319.94,309.48,10.46,3.27%
-54,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital B,437.82,408.81,29.01,6.63%
-55,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital B,427.92,402.01,25.91,6.06%
-56,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital B,506.61,482.03,24.58,4.85%
-57,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital B,319.94,306.77,13.17,4.11%
-58,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital B,437.82,407.79,30.03,6.86%
-59,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital B,427.92,396.07,31.85,7.44%
-60,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital B,506.61,468.52,38.09,7.52%
-61,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital B,319.94,299.62,20.32,6.35%
-62,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital B,437.82,419.83,17.99,4.11%
-63,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital B,427.92,394.15,33.77,7.89%
-64,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital B,506.61,464.28,42.33,8.35%
-65,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital B,319.94,299.56,20.38,6.37%
-66,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital B,437.82,416.85,20.97,4.79%
-67,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital B,427.92,415.45,12.47,2.92%
-68,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital B,506.61,469.94,36.67,7.24%
-69,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital B,319.94,290.73,29.21,9.13%
-70,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital B,437.82,410.03,27.79,6.35%
-71,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital B,427.92,411.3,16.62,3.88%
-72,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital B,506.61,460.54,46.07,9.09%
-73,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital B,319.94,303.16,16.78,5.24%
-74,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital B,437.82,419.9,17.92,4.09%
-75,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital B,427.92,374.34,53.58,12.52%
-76,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital B,506.61,467.06,39.55,7.81%
-77,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital B,319.94,300.29,19.65,6.14%
-78,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital B,437.82,397.11,40.71,9.30%
-79,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital B,427.92,412.56,15.36,3.59%
-80,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital B,506.61,477.18,29.43,5.81%
-81,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital B,319.94,285.39,34.55,10.80%
-82,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital B,437.82,400.52,37.3,8.52%
-83,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital B,427.92,391.23,36.69,8.57%
-84,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital B,506.61,456.24,50.37,9.94%
-85,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital B,319.94,300.77,19.17,5.99%
-86,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital B,437.82,434.99,2.83,0.65%
-87,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital B,427.92,398.34,29.58,6.91%
-88,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital B,506.61,480.2,26.41,5.21%
-89,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital B,319.94,287.86,32.08,10.03%
-90,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital B,437.82,415.44,22.38,5.11%
-91,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital B,427.92,399.26,28.66,6.70%
-92,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital B,506.61,462.59,44.02,8.69%
-93,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital B,319.94,295.3,24.64,7.70%
-94,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital B,437.82,426.19,11.63,2.66%
-95,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital B,427.92,395.31,32.61,7.62%
-96,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital B,506.61,483.25,23.36,4.61%
-97,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital C,319.94,310.51,9.43,2.95%
-98,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital C,437.82,416.65,21.17,4.83%
-99,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital C,427.92,428.66,-0.74,-0.17%
-100,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital C,506.61,492.36,14.25,2.81%
-101,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital C,319.94,304.91,15.03,4.70%
-102,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital C,437.82,435.2,2.62,0.60%
-103,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital C,427.92,427.56,0.36,0.08%
-104,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital C,506.61,495.67,10.94,2.16%
-105,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital C,319.94,307.61,12.33,3.85%
-106,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital C,437.82,419.2,18.62,4.25%
-107,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital C,427.92,418.8,9.12,2.13%
-108,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital C,506.61,494.08,12.53,2.47%
-109,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital C,319.94,302.54,17.4,5.44%
-110,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital C,437.82,416.56,21.26,4.86%
-111,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital C,427.92,405.25,22.67,5.30%
-112,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital C,506.61,475.39,31.22,6.16%
-113,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital C,319.94,302.78,17.16,5.36%
-114,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital C,437.82,427.47,10.35,2.36%
-115,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital C,427.92,415.93,11.99,2.80%
-116,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital C,506.61,494.72,11.89,2.35%
-117,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital C,437.82,410.03,27.79,6.35%
-118,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital C,427.92,411.3,16.62,3.88%
-119,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital C,506.61,460.54,46.07,9.09%
-120,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital C,319.94,303.16,16.78,5.24%
-121,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital C,437.82,419.9,17.92,4.09%
-122,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital C,427.92,374.34,53.58,12.52%
-123,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital C,506.61,467.06,39.55,7.81%
-124,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital C,319.94,300.29,19.65,6.14%
-125,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital C,437.82,397.11,40.71,9.30%
-126,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital C,427.92,412.56,15.36,3.59%
-127,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital C,506.61,477.18,29.43,5.81%
-128,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital C,319.94,285.39,34.55,10.80%
-129,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital C,437.82,400.52,37.3,8.52%
-130,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital C,427.92,391.23,36.69,8.57%
-131,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital C,506.61,456.24,50.37,9.94%
-132,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital C,319.94,300.77,19.17,5.99%
-133,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital C,437.82,434.99,2.83,0.65%
-134,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital C,427.92,398.34,29.58,6.91%
-135,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital C,506.61,480.2,26.41,5.21%
-136,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital C,319.94,287.86,32.08,10.03%
-137,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital C,437.82,415.44,22.38,5.11%
-138,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital C,427.92,399.26,28.66,6.70%
-139,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital C,506.61,462.59,44.02,8.69%
-140,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital C,319.94,295.3,24.64,7.70%
-141,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital C,437.82,426.19,11.63,2.66%
-142,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital C,427.92,395.31,32.61,7.62%
-143,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital C,506.61,483.25,23.36,4.61%
-144,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital D,319.94,305.52,14.42,4.51%
-145,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital D,437.82,400.34,37.48,8.56%
-146,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital D,427.92,424.71,3.21,0.75%
-147,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital D,506.61,496.89,9.72,1.92%
-148,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital D,319.94,305.57,14.37,4.49%
-149,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital D,437.82,417.52,20.3,4.64%
-150,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital D,427.92,414.28,13.64,3.19%
-151,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital D,506.61,500.21,6.4,1.26%
-152,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital D,319.94,297.87,22.07,6.90%
-153,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital D,437.82,426.05,11.77,2.69%
-154,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital D,427.92,423.4,4.52,1.06%
-155,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital D,506.61,488.88,17.73,3.50%
-156,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital D,319.94,311.23,8.71,2.72%
-157,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital D,437.82,419.01,18.81,4.30%
-158,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital D,427.92,414.87,13.05,3.05%
-159,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital D,506.61,498.32,8.29,1.64%
-160,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital D,319.94,306.18,13.76,4.30%
-161,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital D,437.82,430.62,7.2,1.64%
-162,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital D,427.92,414.23,13.69,3.20%
-163,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital D,506.61,494.88,11.73,2.32%
-164,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital D,319.94,318.72,1.22,0.38%
-165,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital D,437.82,428.95,8.87,2.03%
-166,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital D,427.92,418.35,9.57,2.24%
-167,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital D,506.61,500.01,6.6,1.30%
-168,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital D,319.94,310.81,9.13,2.85%
-169,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital D,437.82,421.2,16.62,3.80%
-170,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital D,427.92,424.04,3.88,0.91%
-171,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital D,506.61,474.72,31.89,6.30%
-172,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital D,319.94,289.87,30.07,9.40%
-173,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital D,437.82,420.46,17.36,3.97%
-174,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital D,427.92,392.34,35.58,8.31%
-175,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital D,506.61,458.73,47.88,9.45%
-176,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital D,319.94,309.48,10.46,3.27%
-177,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital D,437.82,408.81,29.01,6.63%
-178,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital D,427.92,402.01,25.91,6.06%
-179,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital D,506.61,482.03,24.58,4.85%
-180,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital D,319.94,306.77,13.17,4.11%
-181,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital D,437.82,407.79,30.03,6.86%
-182,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital D,427.92,396.07,31.85,7.44%
-183,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital D,506.61,468.52,38.09,7.52%
-184,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital D,319.94,299.62,20.32,6.35%
-185,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital D,437.82,419.83,17.99,4.11%
-186,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital D,427.92,394.15,33.77,7.89%
-187,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital D,506.61,464.28,42.33,8.35%
-188,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital D,319.94,299.56,20.38,6.37%
-189,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital D,437.82,416.85,20.97,4.79%
-190,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital D,427.92,415.45,12.47,2.92%
-191,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital D,506.61,469.94,36.67,7.24%
-192,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital A,319.94,310.51,9.43,2.95%
-193,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital A,437.82,416.65,21.17,4.83%
-194,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital A,427.92,428.66,-0.74,-0.17%
-195,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital A,506.61,492.36,14.25,2.81%
-196,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital A,319.94,304.91,15.03,4.70%
-197,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital A,437.82,435.2,2.62,0.60%
-198,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital A,427.92,427.56,0.36,0.08%
-199,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital A,506.61,495.67,10.94,2.16%
-200,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital A,319.94,307.61,12.33,3.85%
-201,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital A,437.82,419.2,18.62,4.25%
-202,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital A,427.92,418.8,9.12,2.13%
-203,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital A,506.61,494.08,12.53,2.47%
-204,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital A,319.94,302.54,17.4,5.44%
-205,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital A,437.82,416.56,21.26,4.86%
-206,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital A,427.92,405.25,22.67,5.30%
-207,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital A,506.61,475.39,31.22,6.16%
-208,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital A,319.94,302.78,17.16,5.36%
-209,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital A,437.82,427.47,10.35,2.36%
-210,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital A,427.92,415.93,11.99,2.80%
-211,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital A,506.61,494.72,11.89,2.35%
-212,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital A,319.94,305.52,14.42,4.51%
-213,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital A,437.82,400.34,37.48,8.56%
-214,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital A,427.92,424.71,3.21,0.75%
-215,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital A,506.61,496.89,9.72,1.92%
-216,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital A,319.94,305.57,14.37,4.49%
-217,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital A,437.82,417.52,20.3,4.64%
-218,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital A,427.92,414.28,13.64,3.19%
-219,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital A,506.61,500.21,6.4,1.26%
-220,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital A,319.94,297.87,22.07,6.90%
-221,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital A,437.82,426.05,11.77,2.69%
-222,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital A,427.92,423.4,4.52,1.06%
-223,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital A,506.61,488.88,17.73,3.50%
-224,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital A,319.94,311.23,8.71,2.72%
-225,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital A,437.82,419.01,18.81,4.30%
-226,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital A,427.92,414.87,13.05,3.05%
-227,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital A,506.61,498.32,8.29,1.64%
-228,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital A,319.94,306.18,13.76,4.30%
-229,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital A,437.82,430.62,7.2,1.64%
-230,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital A,427.92,414.23,13.69,3.20%
-231,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital A,506.61,494.88,11.73,2.32%
-232,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital A,319.94,318.72,1.22,0.38%
-233,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital A,437.82,428.95,8.87,2.03%
-234,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital A,427.92,418.35,9.57,2.24%
-235,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital A,506.61,500.01,6.6,1.30%
-236,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital A,319.94,310.81,9.13,2.85%
-237,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital A,437.82,421.2,16.62,3.80%
-238,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital A,427.92,424.04,3.88,0.91%
-239,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital B,506.61,474.72,31.89,6.30%
-240,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital B,319.94,289.87,30.07,9.40%
-241,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital B,437.82,420.46,17.36,3.97%
-242,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital B,427.92,392.34,35.58,8.31%
-243,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital B,506.61,458.73,47.88,9.45%
-244,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital B,319.94,309.48,10.46,3.27%
-245,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital B,437.82,408.81,29.01,6.63%
-246,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital B,427.92,402.01,25.91,6.06%
-247,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital B,506.61,482.03,24.58,4.85%
-248,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital B,319.94,306.77,13.17,4.11%
-249,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital B,437.82,407.79,30.03,6.86%
-250,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital B,427.92,396.07,31.85,7.44%
-251,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital B,506.61,468.52,38.09,7.52%
-252,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital B,319.94,299.62,20.32,6.35%
-253,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital B,437.82,419.83,17.99,4.11%
-254,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital B,427.92,394.15,33.77,7.89%
-255,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital B,506.61,464.28,42.33,8.35%
-256,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital B,319.94,299.56,20.38,6.37%
-257,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital B,437.82,416.85,20.97,4.79%
-258,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital B,427.92,415.45,12.47,2.92%
-259,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital B,506.61,469.94,36.67,7.24%
-260,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital B,319.94,290.73,29.21,9.13%
-261,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital B,437.82,410.03,27.79,6.35%
-262,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital B,427.92,411.3,16.62,3.88%
-263,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital B,506.61,460.54,46.07,9.09%
-264,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital B,319.94,303.16,16.78,5.24%
-265,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital B,437.82,419.9,17.92,4.09%
-266,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital B,427.92,374.34,53.58,12.52%
-267,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital B,506.61,467.06,39.55,7.81%
-268,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital B,319.94,300.29,19.65,6.14%
-269,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital B,437.82,397.11,40.71,9.30%
-270,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital B,427.92,412.56,15.36,3.59%
-271,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital B,506.61,477.18,29.43,5.81%
-272,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital B,319.94,285.39,34.55,10.80%
-273,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital B,437.82,400.52,37.3,8.52%
-274,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital B,427.92,391.23,36.69,8.57%
-275,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital B,506.61,456.24,50.37,9.94%
-276,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital B,319.94,300.77,19.17,5.99%
-277,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital B,437.82,434.99,2.83,0.65%
-278,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital B,427.92,398.34,29.58,6.91%
-279,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital B,506.61,480.2,26.41,5.21%
-280,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital B,319.94,287.86,32.08,10.03%
-281,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital B,437.82,415.44,22.38,5.11%
-282,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital B,427.92,399.26,28.66,6.70%
-283,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital B,506.61,462.59,44.02,8.69%
-284,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital B,319.94,295.3,24.64,7.70%
-285,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital B,437.82,426.19,11.63,2.66%
-286,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital B,427.92,395.31,32.61,7.62%
-287,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital B,506.61,483.25,23.36,4.61%
-288,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital C,319.94,310.51,9.43,2.95%
-289,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital C,437.82,416.65,21.17,4.83%
-290,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital C,427.92,428.66,-0.74,-0.17%
-291,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital C,506.61,492.36,14.25,2.81%
-292,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital C,319.94,304.91,15.03,4.70%
-293,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital C,437.82,435.2,2.62,0.60%
-294,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital C,427.92,427.56,0.36,0.08%
-295,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital C,506.61,495.67,10.94,2.16%
-296,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital C,319.94,307.61,12.33,3.85%
-297,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital C,437.82,419.2,18.62,4.25%
-298,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital C,427.92,418.8,9.12,2.13%
-299,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital C,506.61,494.08,12.53,2.47%
-300,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital C,319.94,302.54,17.4,5.44%
-301,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital C,437.82,416.56,21.26,4.86%
-302,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital C,427.92,405.25,22.67,5.30%
-303,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital C,506.61,475.39,31.22,6.16%
-304,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital C,319.94,302.78,17.16,5.36%
-305,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital C,437.82,427.47,10.35,2.36%
-306,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital C,427.92,415.93,11.99,2.80%
-307,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital C,506.61,494.72,11.89,2.35%
-308,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital C,437.82,410.03,27.79,6.35%
-309,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital C,427.92,411.3,16.62,3.88%
-310,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital C,506.61,460.54,46.07,9.09%
-311,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital C,319.94,303.16,16.78,5.24%
-312,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital C,437.82,419.9,17.92,4.09%
-313,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital C,427.92,374.34,53.58,12.52%
-314,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital C,506.61,467.06,39.55,7.81%
-315,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital C,319.94,300.29,19.65,6.14%
-316,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital C,437.82,397.11,40.71,9.30%
-317,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital C,427.92,412.56,15.36,3.59%
-318,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital C,506.61,477.18,29.43,5.81%
-319,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital C,319.94,285.39,34.55,10.80%
-320,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital C,437.82,400.52,37.3,8.52%
-321,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital C,427.92,391.23,36.69,8.57%
-322,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital C,506.61,456.24,50.37,9.94%
-323,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital C,319.94,300.77,19.17,5.99%
-324,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital C,437.82,434.99,2.83,0.65%
-325,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital C,427.92,398.34,29.58,6.91%
-326,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital C,506.61,480.2,26.41,5.21%
-327,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital C,319.94,287.86,32.08,10.03%
-328,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital C,437.82,415.44,22.38,5.11%
-329,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital C,427.92,399.26,28.66,6.70%
-330,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital C,506.61,462.59,44.02,8.69%
-331,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital C,319.94,295.3,24.64,7.70%
-332,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital C,437.82,426.19,11.63,2.66%
-333,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital C,427.92,395.31,32.61,7.62%
-334,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital C,506.61,483.25,23.36,4.61%
-335,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital D,319.94,305.52,14.42,4.51%
-336,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital D,437.82,400.34,37.48,8.56%
-337,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital D,427.92,424.71,3.21,0.75%
-338,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital D,506.61,496.89,9.72,1.92%
-339,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital D,319.94,305.57,14.37,4.49%
-340,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital D,437.82,417.52,20.3,4.64%
-341,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital D,427.92,414.28,13.64,3.19%
-342,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital D,506.61,500.21,6.4,1.26%
-343,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital D,319.94,297.87,22.07,6.90%
-344,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital D,437.82,426.05,11.77,2.69%
-345,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital D,427.92,423.4,4.52,1.06%
-346,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital D,506.61,488.88,17.73,3.50%
-347,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital D,319.94,311.23,8.71,2.72%
-348,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital D,437.82,419.01,18.81,4.30%
-349,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital D,427.92,414.87,13.05,3.05%
-350,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital D,506.61,498.32,8.29,1.64%
-351,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital D,319.94,306.18,13.76,4.30%
-352,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital D,437.82,430.62,7.2,1.64%
-353,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital D,427.92,414.23,13.69,3.20%
-354,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital D,506.61,494.88,11.73,2.32%
-355,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital D,319.94,318.72,1.22,0.38%
-356,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital D,437.82,428.95,8.87,2.03%
-357,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital D,427.92,418.35,9.57,2.24%
-358,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital D,506.61,500.01,6.6,1.30%
-359,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital D,319.94,310.81,9.13,2.85%
-360,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital D,437.82,421.2,16.62,3.80%
-361,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital D,427.92,424.04,3.88,0.91%
-362,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital D,506.61,474.72,31.89,6.30%
-363,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital D,319.94,289.87,30.07,9.40%
-364,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital D,437.82,420.46,17.36,3.97%
-365,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital D,427.92,392.34,35.58,8.31%
-366,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital D,506.61,458.73,47.88,9.45%
-367,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital D,319.94,309.48,10.46,3.27%
-368,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital D,437.82,408.81,29.01,6.63%
-369,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital D,427.92,402.01,25.91,6.06%
-370,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital D,506.61,482.03,24.58,4.85%
-371,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital D,319.94,306.77,13.17,4.11%
-372,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital D,437.82,407.79,30.03,6.86%
-373,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital D,427.92,396.07,31.85,7.44%
-374,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital D,506.61,468.52,38.09,7.52%
-375,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital D,319.94,299.62,20.32,6.35%
-376,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital D,437.82,419.83,17.99,4.11%
-377,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital D,427.92,394.15,33.77,7.89%
-378,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital D,506.61,464.28,42.33,8.35%
-379,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital D,319.94,299.56,20.38,6.37%
-380,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital D,437.82,416.85,20.97,4.79%
-381,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital D,427.92,415.45,12.47,2.92%
-382,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital D,506.61,469.94,36.67,7.24%
+Procedure_Billing_ID,Performed_On,CPT_Code,Code_Description,Contrast,Stress,CMS_Reimbursement,Hospital_Name,Total_Revenue,Total_Expense,Profit,Profit_Margin
+1,2015-07-25T00:36:14Z,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital A,319.94,310.51,9.43,2.95%
+2,2014-08-25T03:59:25Z,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital A,437.82,416.65,21.17,4.83%
+3,2016-11-11T18:44:40Z,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital A,427.92,428.66,-0.74,-0.17%
+4,2015-07-26T18:05:28Z,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital A,506.61,492.36,14.25,2.81%
+5,2016-05-25T23:18:45Z,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital A,319.94,304.91,15.03,4.70%
+6,2016-03-05T20:44:55Z,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital A,437.82,435.2,2.62,0.60%
+7,2016-01-06T21:21:28Z,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital A,427.92,427.56,0.36,0.08%
+8,2016-05-15T16:15:11Z,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital A,506.61,495.67,10.94,2.16%
+9,2014-09-15T09:57:41Z,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital A,319.94,307.61,12.33,3.85%
+10,2014-11-13T19:35:58Z,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital A,437.82,419.2,18.62,4.25%
+11,2016-03-26T10:40:21Z,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital A,427.92,418.8,9.12,2.13%
+12,2014-11-02T13:52:07Z,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital A,506.61,494.08,12.53,2.47%
+13,2016-06-25T21:13:23Z,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital A,319.94,302.54,17.4,5.44%
+14,2016-04-07T15:14:33Z,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital A,437.82,416.56,21.26,4.86%
+15,2015-06-09T21:55:44Z,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital A,427.92,405.25,22.67,5.30%
+16,2015-04-04T08:15:51Z,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital A,506.61,475.39,31.22,6.16%
+17,2015-11-03T08:08:11Z,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital A,319.94,302.78,17.16,5.36%
+18,2015-07-26T00:54:27Z,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital A,437.82,427.47,10.35,2.36%
+19,2015-03-21T13:25:00Z,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital A,427.92,415.93,11.99,2.80%
+20,2015-05-09T03:04:40Z,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital A,506.61,494.72,11.89,2.35%
+21,2015-10-27T12:23:21Z,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital A,319.94,305.52,14.42,4.51%
+22,2015-10-29T05:53:22Z,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital A,437.82,400.34,37.48,8.56%
+23,2016-08-11T20:06:02Z,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital A,427.92,424.71,3.21,0.75%
+24,2015-05-22T06:59:26Z,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital A,506.61,496.89,9.72,1.92%
+25,2016-01-12T08:20:57Z,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital A,319.94,305.57,14.37,4.49%
+26,2015-02-17T18:08:43Z,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital A,437.82,417.52,20.3,4.64%
+27,2015-03-19T20:51:05Z,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital A,427.92,414.28,13.64,3.19%
+28,2015-10-17T08:50:04Z,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital A,506.61,500.21,6.4,1.26%
+29,2015-11-10T18:31:32Z,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital A,319.94,297.87,22.07,6.90%
+30,2016-01-13T17:06:19Z,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital A,437.82,426.05,11.77,2.69%
+31,2016-02-11T10:28:19Z,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital A,427.92,423.4,4.52,1.06%
+32,2014-07-14T09:56:51Z,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital A,506.61,488.88,17.73,3.50%
+33,2015-01-24T01:09:38Z,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital A,319.94,311.23,8.71,2.72%
+34,2014-11-23T07:08:19Z,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital A,437.82,419.01,18.81,4.30%
+35,2015-11-01T13:07:37Z,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital A,427.92,414.87,13.05,3.05%
+36,2016-01-14T07:23:35Z,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital A,506.61,498.32,8.29,1.64%
+37,2014-07-17T00:31:41Z,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital A,319.94,306.18,13.76,4.30%
+38,2015-09-11T09:13:56Z,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital A,437.82,430.62,7.2,1.64%
+39,2015-09-24T09:10:20Z,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital A,427.92,414.23,13.69,3.20%
+40,2015-12-22T10:05:13Z,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital A,506.61,494.88,11.73,2.32%
+41,2016-01-04T11:58:36Z,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital A,319.94,318.72,1.22,0.38%
+42,2016-04-22T17:42:36Z,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital A,437.82,428.95,8.87,2.03%
+43,2015-03-05T23:32:39Z,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital A,427.92,418.35,9.57,2.24%
+44,2014-10-27T12:17:25Z,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital A,506.61,500.01,6.6,1.30%
+45,2016-10-12T17:59:01Z,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital A,319.94,310.81,9.13,2.85%
+46,2016-01-20T07:29:04Z,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital A,437.82,421.2,16.62,3.80%
+47,2014-11-07T06:51:49Z,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital A,427.92,424.04,3.88,0.91%
+48,2014-12-24T20:12:37Z,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital B,506.61,474.72,31.89,6.30%
+49,2016-06-22T08:33:12Z,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital B,319.94,289.87,30.07,9.40%
+50,2015-12-15T08:33:10Z,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital B,437.82,420.46,17.36,3.97%
+51,2015-12-06T01:43:26Z,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital B,427.92,392.34,35.58,8.31%
+52,2016-07-02T23:08:42Z,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital B,506.61,458.73,47.88,9.45%
+53,2016-03-11T21:45:55Z,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital B,319.94,309.48,10.46,3.27%
+54,2014-12-01T12:13:05Z,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital B,437.82,408.81,29.01,6.63%
+55,2016-04-09T09:39:20Z,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital B,427.92,402.01,25.91,6.06%
+56,2015-05-04T14:02:18Z,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital B,506.61,482.03,24.58,4.85%
+57,2015-09-17T03:43:36Z,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital B,319.94,306.77,13.17,4.11%
+58,2014-12-23T17:15:00Z,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital B,437.82,407.79,30.03,6.86%
+59,2014-10-21T04:03:54Z,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital B,427.92,396.07,31.85,7.44%
+60,2016-04-24T23:56:07Z,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital B,506.61,468.52,38.09,7.52%
+61,2014-08-25T20:41:35Z,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital B,319.94,299.62,20.32,6.35%
+62,2016-09-17T02:37:26Z,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital B,437.82,419.83,17.99,4.11%
+63,2016-04-26T19:25:38Z,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital B,427.92,394.15,33.77,7.89%
+64,2015-11-14T07:11:41Z,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital B,506.61,464.28,42.33,8.35%
+65,2015-12-28T04:53:11Z,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital B,319.94,299.56,20.38,6.37%
+66,2016-06-01T12:49:31Z,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital B,437.82,416.85,20.97,4.79%
+67,2015-06-13T03:49:13Z,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital B,427.92,415.45,12.47,2.92%
+68,2014-11-21T03:05:18Z,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital B,506.61,469.94,36.67,7.24%
+69,2016-09-20T05:47:53Z,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital B,319.94,290.73,29.21,9.13%
+70,2016-03-22T13:49:48Z,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital B,437.82,410.03,27.79,6.35%
+71,2015-12-28T20:37:41Z,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital B,427.92,411.3,16.62,3.88%
+72,2016-04-06T04:34:02Z,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital B,506.61,460.54,46.07,9.09%
+73,2014-11-10T18:27:14Z,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital B,319.94,303.16,16.78,5.24%
+74,2016-04-18T20:08:10Z,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital B,437.82,419.9,17.92,4.09%
+75,2015-01-08T16:12:03Z,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital B,427.92,374.34,53.58,12.52%
+76,2015-11-17T10:00:51Z,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital B,506.61,467.06,39.55,7.81%
+77,2015-09-11T23:02:00Z,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital B,319.94,300.29,19.65,6.14%
+78,2015-08-10T00:22:50Z,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital B,437.82,397.11,40.71,9.30%
+79,2016-02-09T06:51:04Z,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital B,427.92,412.56,15.36,3.59%
+80,2016-05-31T20:08:43Z,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital B,506.61,477.18,29.43,5.81%
+81,2015-06-14T12:50:43Z,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital B,319.94,285.39,34.55,10.80%
+82,2015-05-31T07:02:43Z,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital B,437.82,400.52,37.3,8.52%
+83,2014-09-28T12:47:34Z,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital B,427.92,391.23,36.69,8.57%
+84,2016-10-12T23:26:17Z,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital B,506.61,456.24,50.37,9.94%
+85,2015-07-20T02:45:49Z,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital B,319.94,300.77,19.17,5.99%
+86,2015-01-13T13:19:21Z,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital B,437.82,434.99,2.83,0.65%
+87,2016-09-06T09:44:10Z,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital B,427.92,398.34,29.58,6.91%
+88,2016-10-11T16:11:44Z,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital B,506.61,480.2,26.41,5.21%
+89,2015-02-05T17:54:45Z,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital B,319.94,287.86,32.08,10.03%
+90,2015-07-03T10:30:18Z,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital B,437.82,415.44,22.38,5.11%
+91,2016-09-25T07:45:50Z,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital B,427.92,399.26,28.66,6.70%
+92,2016-08-15T00:20:39Z,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital B,506.61,462.59,44.02,8.69%
+93,2016-08-13T21:15:46Z,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital B,319.94,295.3,24.64,7.70%
+94,2015-07-30T20:05:34Z,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital B,437.82,426.19,11.63,2.66%
+95,2015-09-04T05:09:29Z,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital B,427.92,395.31,32.61,7.62%
+96,2016-02-11T08:29:55Z,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital B,506.61,483.25,23.36,4.61%
+97,2014-09-19T10:25:36Z,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital C,319.94,310.51,9.43,2.95%
+98,2015-07-01T06:48:33Z,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital C,437.82,416.65,21.17,4.83%
+99,2016-05-14T14:03:14Z,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital C,427.92,428.66,-0.74,-0.17%
+100,2015-02-09T20:16:35Z,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital C,506.61,492.36,14.25,2.81%
+101,,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital C,319.94,304.91,15.03,4.70%
+102,,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital C,437.82,435.2,2.62,0.60%
+103,,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital C,427.92,427.56,0.36,0.08%
+104,,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital C,506.61,495.67,10.94,2.16%
+105,,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital C,319.94,307.61,12.33,3.85%
+106,,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital C,437.82,419.2,18.62,4.25%
+107,,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital C,427.92,418.8,9.12,2.13%
+108,,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital C,506.61,494.08,12.53,2.47%
+109,,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital C,319.94,302.54,17.4,5.44%
+110,,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital C,437.82,416.56,21.26,4.86%
+111,,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital C,427.92,405.25,22.67,5.30%
+112,,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital C,506.61,475.39,31.22,6.16%
+113,,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital C,319.94,302.78,17.16,5.36%
+114,,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital C,437.82,427.47,10.35,2.36%
+115,,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital C,427.92,415.93,11.99,2.80%
+116,,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital C,506.61,494.72,11.89,2.35%
+117,,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital C,437.82,410.03,27.79,6.35%
+118,,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital C,427.92,411.3,16.62,3.88%
+119,,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital C,506.61,460.54,46.07,9.09%
+120,,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital C,319.94,303.16,16.78,5.24%
+121,,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital C,437.82,419.9,17.92,4.09%
+122,,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital C,427.92,374.34,53.58,12.52%
+123,,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital C,506.61,467.06,39.55,7.81%
+124,,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital C,319.94,300.29,19.65,6.14%
+125,,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital C,437.82,397.11,40.71,9.30%
+126,,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital C,427.92,412.56,15.36,3.59%
+127,,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital C,506.61,477.18,29.43,5.81%
+128,,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital C,319.94,285.39,34.55,10.80%
+129,,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital C,437.82,400.52,37.3,8.52%
+130,,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital C,427.92,391.23,36.69,8.57%
+131,,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital C,506.61,456.24,50.37,9.94%
+132,,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital C,319.94,300.77,19.17,5.99%
+133,,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital C,437.82,434.99,2.83,0.65%
+134,,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital C,427.92,398.34,29.58,6.91%
+135,,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital C,506.61,480.2,26.41,5.21%
+136,,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital C,319.94,287.86,32.08,10.03%
+137,,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital C,437.82,415.44,22.38,5.11%
+138,,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital C,427.92,399.26,28.66,6.70%
+139,,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital C,506.61,462.59,44.02,8.69%
+140,,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital C,319.94,295.3,24.64,7.70%
+141,,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital C,437.82,426.19,11.63,2.66%
+142,,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital C,427.92,395.31,32.61,7.62%
+143,,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital C,506.61,483.25,23.36,4.61%
+144,,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital D,319.94,305.52,14.42,4.51%
+145,,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital D,437.82,400.34,37.48,8.56%
+146,,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital D,427.92,424.71,3.21,0.75%
+147,,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital D,506.61,496.89,9.72,1.92%
+148,,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital D,319.94,305.57,14.37,4.49%
+149,,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital D,437.82,417.52,20.3,4.64%
+150,,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital D,427.92,414.28,13.64,3.19%
+151,,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital D,506.61,500.21,6.4,1.26%
+152,,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital D,319.94,297.87,22.07,6.90%
+153,,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital D,437.82,426.05,11.77,2.69%
+154,,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital D,427.92,423.4,4.52,1.06%
+155,,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital D,506.61,488.88,17.73,3.50%
+156,,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital D,319.94,311.23,8.71,2.72%
+157,,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital D,437.82,419.01,18.81,4.30%
+158,,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital D,427.92,414.87,13.05,3.05%
+159,,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital D,506.61,498.32,8.29,1.64%
+160,,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital D,319.94,306.18,13.76,4.30%
+161,,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital D,437.82,430.62,7.2,1.64%
+162,,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital D,427.92,414.23,13.69,3.20%
+163,,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital D,506.61,494.88,11.73,2.32%
+164,,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital D,319.94,318.72,1.22,0.38%
+165,,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital D,437.82,428.95,8.87,2.03%
+166,,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital D,427.92,418.35,9.57,2.24%
+167,,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital D,506.61,500.01,6.6,1.30%
+168,,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital D,319.94,310.81,9.13,2.85%
+169,,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital D,437.82,421.2,16.62,3.80%
+170,,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital D,427.92,424.04,3.88,0.91%
+171,,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital D,506.61,474.72,31.89,6.30%
+172,,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital D,319.94,289.87,30.07,9.40%
+173,,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital D,437.82,420.46,17.36,3.97%
+174,,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital D,427.92,392.34,35.58,8.31%
+175,,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital D,506.61,458.73,47.88,9.45%
+176,,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital D,319.94,309.48,10.46,3.27%
+177,,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital D,437.82,408.81,29.01,6.63%
+178,,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital D,427.92,402.01,25.91,6.06%
+179,,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital D,506.61,482.03,24.58,4.85%
+180,,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital D,319.94,306.77,13.17,4.11%
+181,,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital D,437.82,407.79,30.03,6.86%
+182,,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital D,427.92,396.07,31.85,7.44%
+183,,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital D,506.61,468.52,38.09,7.52%
+184,,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital D,319.94,299.62,20.32,6.35%
+185,,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital D,437.82,419.83,17.99,4.11%
+186,,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital D,427.92,394.15,33.77,7.89%
+187,,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital D,506.61,464.28,42.33,8.35%
+188,,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital D,319.94,299.56,20.38,6.37%
+189,,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital D,437.82,416.85,20.97,4.79%
+190,,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital D,427.92,415.45,12.47,2.92%
+191,,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital D,506.61,469.94,36.67,7.24%
+192,,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital A,319.94,310.51,9.43,2.95%
+193,,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital A,437.82,416.65,21.17,4.83%
+194,,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital A,427.92,428.66,-0.74,-0.17%
+195,,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital A,506.61,492.36,14.25,2.81%
+196,,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital A,319.94,304.91,15.03,4.70%
+197,,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital A,437.82,435.2,2.62,0.60%
+198,,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital A,427.92,427.56,0.36,0.08%
+199,,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital A,506.61,495.67,10.94,2.16%
+200,,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital A,319.94,307.61,12.33,3.85%
+201,,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital A,437.82,419.2,18.62,4.25%
+202,,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital A,427.92,418.8,9.12,2.13%
+203,,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital A,506.61,494.08,12.53,2.47%
+204,,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital A,319.94,302.54,17.4,5.44%
+205,,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital A,437.82,416.56,21.26,4.86%
+206,,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital A,427.92,405.25,22.67,5.30%
+207,,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital A,506.61,475.39,31.22,6.16%
+208,,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital A,319.94,302.78,17.16,5.36%
+209,,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital A,437.82,427.47,10.35,2.36%
+210,,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital A,427.92,415.93,11.99,2.80%
+211,,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital A,506.61,494.72,11.89,2.35%
+212,,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital A,319.94,305.52,14.42,4.51%
+213,,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital A,437.82,400.34,37.48,8.56%
+214,,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital A,427.92,424.71,3.21,0.75%
+215,,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital A,506.61,496.89,9.72,1.92%
+216,,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital A,319.94,305.57,14.37,4.49%
+217,,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital A,437.82,417.52,20.3,4.64%
+218,,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital A,427.92,414.28,13.64,3.19%
+219,,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital A,506.61,500.21,6.4,1.26%
+220,,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital A,319.94,297.87,22.07,6.90%
+221,,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital A,437.82,426.05,11.77,2.69%
+222,,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital A,427.92,423.4,4.52,1.06%
+223,,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital A,506.61,488.88,17.73,3.50%
+224,,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital A,319.94,311.23,8.71,2.72%
+225,,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital A,437.82,419.01,18.81,4.30%
+226,,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital A,427.92,414.87,13.05,3.05%
+227,,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital A,506.61,498.32,8.29,1.64%
+228,,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital A,319.94,306.18,13.76,4.30%
+229,,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital A,437.82,430.62,7.2,1.64%
+230,,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital A,427.92,414.23,13.69,3.20%
+231,,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital A,506.61,494.88,11.73,2.32%
+232,,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital A,319.94,318.72,1.22,0.38%
+233,,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital A,437.82,428.95,8.87,2.03%
+234,,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital A,427.92,418.35,9.57,2.24%
+235,,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital A,506.61,500.01,6.6,1.30%
+236,,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital A,319.94,310.81,9.13,2.85%
+237,,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital A,437.82,421.2,16.62,3.80%
+238,,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital A,427.92,424.04,3.88,0.91%
+239,,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital B,506.61,474.72,31.89,6.30%
+240,,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital B,319.94,289.87,30.07,9.40%
+241,,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital B,437.82,420.46,17.36,3.97%
+242,,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital B,427.92,392.34,35.58,8.31%
+243,,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital B,506.61,458.73,47.88,9.45%
+244,,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital B,319.94,309.48,10.46,3.27%
+245,,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital B,437.82,408.81,29.01,6.63%
+246,,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital B,427.92,402.01,25.91,6.06%
+247,,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital B,506.61,482.03,24.58,4.85%
+248,,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital B,319.94,306.77,13.17,4.11%
+249,,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital B,437.82,407.79,30.03,6.86%
+250,,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital B,427.92,396.07,31.85,7.44%
+251,,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital B,506.61,468.52,38.09,7.52%
+252,,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital B,319.94,299.62,20.32,6.35%
+253,,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital B,437.82,419.83,17.99,4.11%
+254,,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital B,427.92,394.15,33.77,7.89%
+255,,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital B,506.61,464.28,42.33,8.35%
+256,,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital B,319.94,299.56,20.38,6.37%
+257,,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital B,437.82,416.85,20.97,4.79%
+258,,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital B,427.92,415.45,12.47,2.92%
+259,,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital B,506.61,469.94,36.67,7.24%
+260,,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital B,319.94,290.73,29.21,9.13%
+261,,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital B,437.82,410.03,27.79,6.35%
+262,,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital B,427.92,411.3,16.62,3.88%
+263,,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital B,506.61,460.54,46.07,9.09%
+264,,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital B,319.94,303.16,16.78,5.24%
+265,,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital B,437.82,419.9,17.92,4.09%
+266,,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital B,427.92,374.34,53.58,12.52%
+267,,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital B,506.61,467.06,39.55,7.81%
+268,,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital B,319.94,300.29,19.65,6.14%
+269,,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital B,437.82,397.11,40.71,9.30%
+270,,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital B,427.92,412.56,15.36,3.59%
+271,,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital B,506.61,477.18,29.43,5.81%
+272,,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital B,319.94,285.39,34.55,10.80%
+273,,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital B,437.82,400.52,37.3,8.52%
+274,,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital B,427.92,391.23,36.69,8.57%
+275,,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital B,506.61,456.24,50.37,9.94%
+276,,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital B,319.94,300.77,19.17,5.99%
+277,,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital B,437.82,434.99,2.83,0.65%
+278,,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital B,427.92,398.34,29.58,6.91%
+279,,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital B,506.61,480.2,26.41,5.21%
+280,,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital B,319.94,287.86,32.08,10.03%
+281,,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital B,437.82,415.44,22.38,5.11%
+282,,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital B,427.92,399.26,28.66,6.70%
+283,,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital B,506.61,462.59,44.02,8.69%
+284,,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital B,319.94,295.3,24.64,7.70%
+285,,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital B,437.82,426.19,11.63,2.66%
+286,,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital B,427.92,395.31,32.61,7.62%
+287,,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital B,506.61,483.25,23.36,4.61%
+288,,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital C,319.94,310.51,9.43,2.95%
+289,,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital C,437.82,416.65,21.17,4.83%
+290,,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital C,427.92,428.66,-0.74,-0.17%
+291,,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital C,506.61,492.36,14.25,2.81%
+292,,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital C,319.94,304.91,15.03,4.70%
+293,,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital C,437.82,435.2,2.62,0.60%
+294,,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital C,427.92,427.56,0.36,0.08%
+295,,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital C,506.61,495.67,10.94,2.16%
+296,,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital C,319.94,307.61,12.33,3.85%
+297,,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital C,437.82,419.2,18.62,4.25%
+298,,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital C,427.92,418.8,9.12,2.13%
+299,,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital C,506.61,494.08,12.53,2.47%
+300,,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital C,319.94,302.54,17.4,5.44%
+301,,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital C,437.82,416.56,21.26,4.86%
+302,,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital C,427.92,405.25,22.67,5.30%
+303,,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital C,506.61,475.39,31.22,6.16%
+304,,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital C,319.94,302.78,17.16,5.36%
+305,,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital C,437.82,427.47,10.35,2.36%
+306,,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital C,427.92,415.93,11.99,2.80%
+307,,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital C,506.61,494.72,11.89,2.35%
+308,,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital C,437.82,410.03,27.79,6.35%
+309,,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital C,427.92,411.3,16.62,3.88%
+310,,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital C,506.61,460.54,46.07,9.09%
+311,,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital C,319.94,303.16,16.78,5.24%
+312,,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital C,437.82,419.9,17.92,4.09%
+313,,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital C,427.92,374.34,53.58,12.52%
+314,,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital C,506.61,467.06,39.55,7.81%
+315,,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital C,319.94,300.29,19.65,6.14%
+316,,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital C,437.82,397.11,40.71,9.30%
+317,,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital C,427.92,412.56,15.36,3.59%
+318,,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital C,506.61,477.18,29.43,5.81%
+319,,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital C,319.94,285.39,34.55,10.80%
+320,,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital C,437.82,400.52,37.3,8.52%
+321,,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital C,427.92,391.23,36.69,8.57%
+322,,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital C,506.61,456.24,50.37,9.94%
+323,,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital C,319.94,300.77,19.17,5.99%
+324,,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital C,437.82,434.99,2.83,0.65%
+325,,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital C,427.92,398.34,29.58,6.91%
+326,,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital C,506.61,480.2,26.41,5.21%
+327,,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital C,319.94,287.86,32.08,10.03%
+328,,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital C,437.82,415.44,22.38,5.11%
+329,,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital C,427.92,399.26,28.66,6.70%
+330,,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital C,506.61,462.59,44.02,8.69%
+331,,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital C,319.94,295.3,24.64,7.70%
+332,,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital C,437.82,426.19,11.63,2.66%
+333,,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital C,427.92,395.31,32.61,7.62%
+334,,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital C,506.61,483.25,23.36,4.61%
+335,,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital D,319.94,305.52,14.42,4.51%
+336,,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital D,437.82,400.34,37.48,8.56%
+337,,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital D,427.92,424.71,3.21,0.75%
+338,,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital D,506.61,496.89,9.72,1.92%
+339,,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital D,319.94,305.57,14.37,4.49%
+340,,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital D,437.82,417.52,20.3,4.64%
+341,,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital D,427.92,414.28,13.64,3.19%
+342,,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital D,506.61,500.21,6.4,1.26%
+343,,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital D,319.94,297.87,22.07,6.90%
+344,,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital D,437.82,426.05,11.77,2.69%
+345,,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital D,427.92,423.4,4.52,1.06%
+346,,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital D,506.61,488.88,17.73,3.50%
+347,,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital D,319.94,311.23,8.71,2.72%
+348,,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital D,437.82,419.01,18.81,4.30%
+349,,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital D,427.92,414.87,13.05,3.05%
+350,,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital D,506.61,498.32,8.29,1.64%
+351,,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital D,319.94,306.18,13.76,4.30%
+352,,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital D,437.82,430.62,7.2,1.64%
+353,,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital D,427.92,414.23,13.69,3.20%
+354,,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital D,506.61,494.88,11.73,2.32%
+355,,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital D,319.94,318.72,1.22,0.38%
+356,,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital D,437.82,428.95,8.87,2.03%
+357,,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital D,427.92,418.35,9.57,2.24%
+358,,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital D,506.61,500.01,6.6,1.30%
+359,,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital D,319.94,310.81,9.13,2.85%
+360,,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital D,437.82,421.2,16.62,3.80%
+361,,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital D,427.92,424.04,3.88,0.91%
+362,,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital D,506.61,474.72,31.89,6.30%
+363,,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital D,319.94,289.87,30.07,9.40%
+364,,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital D,437.82,420.46,17.36,3.97%
+365,,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital D,427.92,392.34,35.58,8.31%
+366,,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital D,506.61,458.73,47.88,9.45%
+367,,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital D,319.94,309.48,10.46,3.27%
+368,,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital D,437.82,408.81,29.01,6.63%
+369,,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital D,427.92,402.01,25.91,6.06%
+370,,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital D,506.61,482.03,24.58,4.85%
+371,,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital D,319.94,306.77,13.17,4.11%
+372,,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital D,437.82,407.79,30.03,6.86%
+373,,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital D,427.92,396.07,31.85,7.44%
+374,,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital D,506.61,468.52,38.09,7.52%
+375,,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital D,319.94,299.62,20.32,6.35%
+376,,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital D,437.82,419.83,17.99,4.11%
+377,,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital D,427.92,394.15,33.77,7.89%
+378,,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital D,506.61,464.28,42.33,8.35%
+379,,75557,Cardiac magnetic resonance imaging for morphology and function without contrast material,N,N,319.94,Hospital D,319.94,299.56,20.38,6.37%
+380,,75559,Cardiac magnetic resonance imaging for morphology and function without contrast material; with stress imaging,N,Y,437.82,Hospital D,437.82,416.85,20.97,4.79%
+381,,75561,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences",Y,N,427.92,Hospital D,427.92,415.45,12.47,2.92%
+382,,75563,"Cardiac magnetic resonance imaging for morphology and function without contrast material(s), followed by contrast material(s) and further sequences; with stress imaging",Y,Y,506.61,Hospital D,506.61,469.94,36.67,7.24%
